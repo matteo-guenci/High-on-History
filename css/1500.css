@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body {
+    font-family: 'EB Garamond', serif;
+    letter-spacing: -1px;
+  }
+
+h1, h2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-transform: uppercase; 
+    margin:0;
+    text-align: center;
+}
+
+h3 { 
+    display: flex;
+    flex-wrap: nowrap;
+    margin:0;
+    text-align: center;
+}
+
+h4 {
+    color:red
+}
+
+p::first-letter {
+    padding-left: 2rem;
+    color: red;
+    /* maybe take away colour cause in pure Garamond it was not used (?) */
+    float: left;
+    font-size: 3rem;
+    line-height: 0.65;
+    margin: 0.1em 0.1em 0.1em 0;
+  }
