@@ -3,10 +3,12 @@
 body {
     font-family: 'EB Garamond', serif;
     letter-spacing: -1px;
+    justify-content: center; 
+    text-align: justify; 
   }
 
 h1, h2 {
-    display: flex;
+    padding-top: 2rem;
     flex-direction: column;
     flex-wrap: nowrap;
     text-transform: uppercase; 
@@ -22,15 +24,44 @@ h3 {
 }
 
 h4 {
-    color:red
+    /* font-family:  different from the other one; */
 }
 
 p::first-letter {
     padding-left: 2rem;
-    color: red;
     /* maybe take away colour cause in pure Garamond it was not used (?) */
     float: left;
     font-size: 3rem;
     line-height: 0.65;
     margin: 0.1em 0.1em 0.1em 0;
   }
+
+p::first-line {
+    text-transform: uppercase;
+}
+
+.insert {
+    border-style: double;
+    border-color: black;
+    margin: 2rem;
+    padding: 6%;
+}
+
+.quote {
+    font-style: italic;
+    /* stand out but how????? */
+    /* forse da togliere perché non scrivevano in italics? */
+
+}
+
+.border {
+    border: 100px solid black;
+    padding: 20px;
+    border-image-source: url(/imgs/gmd19.jpg);
+    border-image-width: 8rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10%;
+    /* fix border because it's weird - it has to end with text */
+}
+
+
