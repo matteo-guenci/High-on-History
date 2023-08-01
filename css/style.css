@@ -1,0 +1,31 @@
+.first-div {
+    height: 90vh; width: 100vw;
+    
+}
+
+#title {
+    text-align: center; padding-top: 0.2em; font-size: 5em;
+    transition: transform 0.5s linear;
+}
+
+.second-div {
+    margin: 2% 3% 3% 3%; border: 0.5em solid black; height: 90%; overflow-y: scroll; position: relative; display: flex; flex-wrap: wrap; flex-direction: row; 
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.nav-boot {
+    padding-left: 20%;
+    width:100%;
+    flex: 3;
+}
+
+.text {
+    width: 78%;
+    overflow: scroll;
+    height: 90%
+}
+
+aside {
+    width: 22%; border-left: 0.3em solid black; border-top: 0.3em solid;  position: sticky;
+}
