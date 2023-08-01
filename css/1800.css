@@ -1,6 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
-
+@font-face {
+    font-family: 'Trinigan';
+    src: url(/fonts/trinigan.ttf);
+}
 
 body {
     font-family: 'Bodoni Moda', serif;
+    justify-content: center; 
+    text-align: justify; 
+}
+
+h1, h2 {
+    font-family: 'Trinigan';
+    font-size: 3rem;
+    border-top-style: double;
+    padding-top: 2rem;
+    /* insert img instead of double line */
+}
+
+h3 {
+    font-family: 'Trinigan';
+    font-size: 2rem;
+}
+
+.border {
+    background-color: beige;
+    padding: 10%;
+}
+
+.quote {
+    padding-left: 10%;
+    font-style: italic;
+    /* make it stand out maybe without using italics */
+}
+
+p::first-letter {
+    font-family: 'Trinigan';
+    float: left;
+    font-size: 3rem;
+    line-height: 0.75;
+    margin: 0.1em 0.2em 0.1em 0;
+}
+
+.insert {
+    padding: 5%;
+    border-style:double;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#author {
+    font-size: small;
+    padding-left: 5%;
+}
+
+#author::first-letter {
+    font-family: 'Bodoni Moda', serif;
+    font-size: unset;
+    line-height: unset;
+    margin: unset;
 }

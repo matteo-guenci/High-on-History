@@ -64,4 +64,8 @@ p::first-line {
     /* fix border because it's weird - it has to end with text */
 }
 
+#author {
+    font-size: small;
+}
+
 

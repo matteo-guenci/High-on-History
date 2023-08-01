@@ -1,0 +1,36 @@
+Trinigan FG
+-----------
+An Art Nouveau typeface well-known via advertising and the silver screen. 
+This font goes by quite a number of names: "Goodfellow", "PS Bluegum Forest", "Burton's Nightmare". P22 sells this face as "Victorian Swash" saying it was inspired by a historical face called "...'Columbian', which has also been known in recent years as 'Glorietta'..." (P22.com).
+
+This "Glorietta" is in the "Solotype Catalogues", a collection of old typefaces by Dan X. Solo, published by Dover. (See his bio on myfonts.com.) Probably that printed sample was directly or indirectly the mother of all these typefaces.
+
+Trinigan has an extended western and Turkish charset and 108 Kern pairs. Germandbls, Euro symbol and a few other characters were created new. First published in 2002. Revised and amplified in 2013 as version 1.10.
+
+Use
+---
+You may use this font software free of charge for both personal and commercial use. 
+
+Conversion and modification
+---------------------------
+You may convert this font to other formats including web font formats or modify it for your own purposes. You may use web font formats of this font to display text on your web pages, but you may not explicitly offer converted or modified versions of this font software for download or re-use by others, unless you have received permission in writing to do so.
+
+Distribution
+------------
+You may distribute this font on digital media or as a download on your website as long as you comply with the following rules. Violation of one or more of these rules terminates your distribution license and you have to stop distribution immediately:
+
+1. You may offer the font only in form of a ZIP file containing only the font software and this readme file. 
+2. You are not allowed to distribute the font software without this text file.
+3. You may not redistribute modified or converted copies of the font software (see above).
+4. You may not add advertising messages in text or graphics form to the zip file.
+5. You are not allowed to create a self-extracting executable file containing the font software or require the user 6. to run or install a download manager or other software to get the download.
+7. You may not charge money for the download. 
+8. If you want to distribute this font on storage media (CD DVD) produced in numbers of more than 50 identical copies, you must send me a specimen copy.
+
+Updates
+-------
+Updates of this font may be published on my web site fontgrube.de. Have fun with this font.
+
+Andreas Höfeld (Fontgrube AH)
+
+www.fontgrube.de
