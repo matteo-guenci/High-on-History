@@ -23,9 +23,9 @@ h3 {
     text-align: center;
 }
 
-h4 {
+/* h4 {
     /* font-family:  different from the other one; */
-}
+
 
 p::first-letter {
     padding-left: 2rem;
