@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en"/>
+    <title>High on History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <style>
+        #map {position: relative; padding:22%; width:100vw; height:100vh}
+    </style>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <style>
+        .btn-spin {
+            border: 0;
+            background: transparent;
+            box-sizing: border-box;
+            width: 0;
+            z-index: 3;
+            position: absolute;
+            left:5%;
+            bottom: 20%;
+            
+            height:37px;
+
+            border-color: transparent transparent transparent white;
+            transition: 100ms all ease;
+            cursor: pointer;
+
+            border-style: double;
+            border-width: 0px 0px 0px 30px;
+        }
+            
+
+        .btn-spin.pause {
+                border-style: solid;
+                border-width: 18.5px 0px 18.5px 30px;
+                height:37px;
+            }
+
+        .btn-spin:hover {
+                border-color: transparent transparent transparent #ffffff83;
+            }
+        
+
+        #main-title {
+            font: bold 80px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            color: white;
+            position: absolute;
+            top:15%;
+            left:50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+
+        .container {
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+    </style>
+
+<!-- Navbar section  -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top">
+        <div class="container-fluid" style="padding-left: 20%">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Issues
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 1</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 2</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 3</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Themes
+                    </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Theme 1</a></li>
+                    <li><a class="dropdown-item" href="#">Theme 2</a></li>
+                    <li><a class="dropdown-item" href="#">Theme 3</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link scrollto" href="#documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scrollto" href="#about">About</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search" style="margin-right: 10%">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+<!-- Map section -->
+    
+    <div id="map">
+        <!-- <button class="btn-spin" onclick="playpause()"></button> -->
+        <button id="button" class="btn-spin" onclick="myFunction()"></button>
+        <div id="main-title"><text>High on History</text></div>
+
+        <script>
+            // TO MAKE THE MAP APPEAR YOU MUST
+            // ADD YOUR ACCESS TOKEN FROM
+            // https://account.mapbox.com
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/sorre33/cljslj8gt01ap01o45bwr4m5b',
+        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+        zoom: 1.2,
+        center: [-90, 40]
+        });
+        
+        map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+        });
+        
+        // The following values can be changed to control rotation speed:
+        
+        // At low zooms, complete a revolution every two minutes.
+        const secondsPerRevolution = 120;
+        // Above zoom level 5, do not rotate.
+        const maxSpinZoom = 5;
+        // Rotate at intermediate speeds between zoom levels 3 and 5.
+        const slowSpinZoom = 3;
+        
+        let userInteracting = false;
+        let spinEnabled = true;
+        
+        function spinGlobe() {
+            const zoom = map.getZoom();
+            if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+            let distancePerSecond = 360 / secondsPerRevolution;
+            if (zoom > slowSpinZoom) {
+            // Slow spinning at higher zooms
+            const zoomDif =
+            (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+            distancePerSecond *= zoomDif;
+            }
+            const center = map.getCenter();
+            center.lng -= distancePerSecond;
+            // Smoothly animate the map over one second.
+            // When this animation is complete, it calls a 'moveend' event.
+            map.easeTo({ center, duration: 1000, easing: (n) => n });
+            }
+        }
+        
+        // Pause spinning on interaction
+        map.on('mousedown', () => {
+        userInteracting = true;
+        });
+        
+        // Restart spinning the globe when interaction is complete
+        map.on('mouseup', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        
+        // These events account for cases where the mouse has moved
+        // off the map, so 'mouseup' will not be fired.
+        map.on('dragend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        map.on('pitchend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        map.on('rotateend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        
+        // When animation is complete, start spinning if there is no ongoing interaction
+        map.on('moveend', () => {
+        spinGlobe();
+        });
+
+        // function playpause() {
+        //     var btn = document.getElementsByClassName('btn-spin');
+        //     spinEnabled = !spinEnabled;
+        //     if (spinEnabled) {
+        //         document.addEventListener('click', (e) => {
+        //             spinGlobe();
+        //         });
+        //     } else {
+        //         map.stop();
+        //         btn[0].classList.toggle("pause");
+        //     }
+        // }
+
+
+        function myFunction() {
+            var element = document.getElementById("button");
+            element.classList.toggle("pause");
+            spinEnabled = !spinEnabled;
+            if (spinEnabled) {
+                     spinGlobe();
+             } else {
+                 map.stop();
+             }
+            }
+
+        spinGlobe();
+        </script>
+    </div>
+
+<!-- Issues section  -->
+
+<div id="issues" class="container">
+    <h2>Issues</h2>
+    <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="issue-img">
+              <img src="assassins-the-users-of-hashish.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 1</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="issue-img">
+              <img src="https___prod.static9.net.au_fs_726d326e-d6f5-44bb-8424-1840cac8484d" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 2</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+            <div class="issue-img">
+              <img src="g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 3</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- Documentation section  -->
+
+<div id="documentation" class="container">
+    <h2>Documentation</h2>
+    <div class="row">
+    <div class="col-md-3 col-sm-1 d-none d-md-block" id="menu-card">
+        <nav id="navbar-documentation" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+            <h2 class="navbar-brand mb-3" href="#item-1">Menu</h2>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1" id="it1">High on History</a>
+                <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#item-1-1" id="it1-1">The concept</a>
+                <a class="nav-link ms-3 my-1" href="#item-1-2" id="it1-2">How to use it</a>
+                </nav>
+                <a class="nav-link" href="#item-2" id="it2">Layout and typographic styles</a>
+                <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#item-2-1" id="it2-1">Renaissance</a>
+                <a class="nav-link ms-3 my-1" href="#item-2-2" id="it2-2">Secession</a>
+                <a class="nav-link ms-3 my-1" href="#item-2-3" id="it2-3">1980s</a>
+                <a class="nav-link ms-3 my-1" href="#item-2-4" id="it2-4">Future</a>
+                </nav>
+            </nav>
+        </nav>
+    </div>
+    <div class="col-md-9" id="content-documentation">
+        DOCUMENTATION ELEMENTS 
+    </div>
+    </div>
+</div> 
+
+<!-- About section  -->
+
+<div id="about" class="container">
+    <h2>About</h2>
+    <div class="row">
+        team members + scope of the project (web development and technologies for fabio vitali)
+    </div>
+</div>
+
+</body>
+</html>
