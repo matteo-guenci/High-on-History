@@ -47,11 +47,9 @@ p::first-line {
     padding: 6%;
 }
 
-.quote {
+blockquote {
     font-style: italic;
     /* stand out but how????? */
-    /* forse da togliere perché non scrivevano in italics? */
-
 }
 
 .border {
