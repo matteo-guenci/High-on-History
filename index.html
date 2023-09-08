@@ -65,7 +65,7 @@
         </div>
         </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <div id="map">
+    <!--<div id="map">
         <button id="btn-spin">Pause rotation</button>
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST
@@ -74,15 +74,35 @@
             mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
         const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/sorre33/cljslj8gt01ap01o45bwr4m5b',
-        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+        style: 'mapbox://styles/sorre33/clm9iatis016j01r714o489li',
+        projection: 'mercator', // Display the map as a globe, since satellite-v9 defaults to Mercator
         zoom: 1.5,
         center: [-90, 40]
         });
+        map.on('click', (event) => {
+            
+        const features = map.queryRenderedFeatures(event.point, {
+        layers: ['highonhistory']
+        });
+        if (!features.length) {
+        return;
+        }
+        const feature = features[0];
         
+        const popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(
+        `<h3>${feature.properties.title}</h3><a href="index.html">${feature.properties.description}</a>` 
+        )
+        .addTo(map);
+        });
         map.on('style.load', () => {
         map.setFog({}); // Set the default atmosphere style
         });
+
+        
+
+       
         
         // The following values can be changed to control rotation speed:
         
@@ -157,8 +177,115 @@
         });
         
         spinGlobe();
+
         </script>
-    </div>
+    </div> -->
+    <div id="map"></div>
+    <button id="btn-spin">Pause rotation</button>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/sorre33/clm9iatis016j01r714o489li',
+projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+center: [-87.661557, 41.893748],
+zoom: 10.7
+});
+ 
+map.on('click', (event) => {
+const features = map.queryRenderedFeatures(event.point, {
+layers: ['highonhistory']
+});
+if (!features.length) {
+return;
+}
+const feature = features[0];
+ 
+const popup = new mapboxgl.Popup({ offset: [0, -15] })
+.setLngLat(feature.geometry.coordinates)
+.setHTML(
+`<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+)
+.addTo(map);
+});
+map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+        });
+
+// The following values can be changed to control rotation speed:
+        
+        // At low zooms, complete a revolution every two minutes.
+        const secondsPerRevolution = 120;
+        // Above zoom level 5, do not rotate.
+        const maxSpinZoom = 5;
+        // Rotate at intermediate speeds between zoom levels 3 and 5.
+        const slowSpinZoom = 3;
+        
+        let userInteracting = false;
+        let spinEnabled = true;
+        
+        function spinGlobe() {
+        const zoom = map.getZoom();
+        if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+        let distancePerSecond = 360 / secondsPerRevolution;
+        if (zoom > slowSpinZoom) {
+        // Slow spinning at higher zooms
+        const zoomDif =
+        (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+        distancePerSecond *= zoomDif;
+        }
+        const center = map.getCenter();
+        center.lng -= distancePerSecond;
+        // Smoothly animate the map over one second.
+        // When this animation is complete, it calls a 'moveend' event.
+        map.easeTo({ center, duration: 1000, easing: (n) => n });
+        }
+        }
+        
+        // Pause spinning on interaction
+        map.on('mousedown', () => {
+        userInteracting = true;
+        });
+        
+        // Restart spinning the globe when interaction is complete
+        map.on('mouseup', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        
+        // These events account for cases where the mouse has moved
+        // off the map, so 'mouseup' will not be fired.
+        map.on('dragend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        map.on('pitchend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        map.on('rotateend', () => {
+        userInteracting = false;
+        spinGlobe();
+        });
+        
+        // When animation is complete, start spinning if there is no ongoing interaction
+        map.on('moveend', () => {
+        spinGlobe();
+        });
+        
+        document.getElementById('btn-spin').addEventListener('click', (e) => {
+        spinEnabled = !spinEnabled;
+        if (spinEnabled) {
+        spinGlobe();
+        e.target.innerHTML = 'Pause rotation';
+        } else {
+        map.stop(); // Immediately end ongoing animation
+        e.target.innerHTML = 'Start rotation';
+        }
+        });
+        
+        spinGlobe();
+</script>
 
 </body>
 </html>
