@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Righteous&display=swap');
+
+.sfondo {
+    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#title {
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase
+}
+
+.btn {
+    background-color: firebrick !important;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: firebrick !important;
+}
