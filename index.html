@@ -5,127 +5,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link href="css/indexcss.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <style>
-        #map { position: absolute; padding: 0%; width:100%; height:100%}
-    </style>
+    
 </head>
 <body style="font-family: 'Times New Roman', Times, serif;">
-    <style>
-        #btn-spin {
-        font: bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        background-color: #3386c0;
-        color: #fff;
-        position: relative;
-        top: 20px;
-        left: 50%;
-        z-index: 1;
-        border: none;
-        width: 200px;
-        margin-left: -100px;
-        display: block;
-        cursor: pointer;
-        padding: 10px 20px;
-        border-radius: 3px;
-        }
-        #btn-spin:hover {
-        background-color: #4ea0da;
-        }
-        .settings-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
 
-.settings-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1; /* Ensure the button is on top */
-}
+<!-- Navbar section  -->
 
-.settings-menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 10px;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    z-index: 2; /* Set the menu above the button */
-    max-height: calc(100vh - 100px); /* Limit the height to the visible portion of the screen */
-    overflow-y: auto; /* Enable vertical scrolling if necessary */
-}
-
-.settings-menu.show {
-    display: flex;
-    animation: slide-fade 0.3s ease-in-out forwards;
-}
-
-.circle-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-@keyframes slide-fade {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-    </style>
-    <div class="settings-container">
-        <button id="settings-button" class="settings-button">Settings</button>
-        <div id="settings-menu" class="settings-menu">
-            <!-- Circular buttons for different visualization styles -->
-            <button class="circle-button">Style 1</button>
-            <button class="circle-button">Style 2</button>
-            <button class="circle-button">Style 3</button>
-            <!-- Add more buttons as needed -->
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top">
         <div class="container-fluid" style="padding-left: 20%">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Issues
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 1</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 2</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 3</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Themes
+                    </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Theme 1</a></li>
+                    <li><a class="dropdown-item" href="#">Theme 2</a></li>
+                    <li><a class="dropdown-item" href="#">Theme 3</a></li>
                 </ul>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link scrollto" href="#documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scrollto" href="#about">About</a>
                 </li>
             </ul>
             <form class="d-flex" role="search" style="margin-right: 10%">
@@ -136,22 +54,28 @@
         </div>
         </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <!--<div id="map">
-        <button id="btn-spin">Pause rotation</button>
+    
+<!-- Map section -->
+    
+    <div id="map">
+        <!-- <button class="btn-spin" onclick="playpause()"></button> -->
+        <button id="button" class="btn-spin" onclick="myFunction()"></button>
+        <div id="main-title"><text>High on History</text></div>
+
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST
             // ADD YOUR ACCESS TOKEN FROM
             // https://account.mapbox.com
-            mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
         const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/sorre33/clm9iatis016j01r714o489li',
-        projection: 'mercator', // Display the map as a globe, since satellite-v9 defaults to Mercator
-        zoom: 1.5,
+        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+        zoom: 1.6,
         center: [-90, 40]
         });
+
         map.on('click', (event) => {
-            
         const features = map.queryRenderedFeatures(event.point, {
         layers: ['highonhistory']
         });
@@ -163,17 +87,14 @@
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
         .setLngLat(feature.geometry.coordinates)
         .setHTML(
-        `<h3>${feature.properties.title}</h3><a href="index.html">${feature.properties.description}</a>` 
+        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
         )
         .addTo(map);
         });
+        
         map.on('style.load', () => {
         map.setFog({}); // Set the default atmosphere style
         });
-
-        
-
-       
         
         // The following values can be changed to control rotation speed:
         
@@ -188,21 +109,21 @@
         let spinEnabled = true;
         
         function spinGlobe() {
-        const zoom = map.getZoom();
-        if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
-        let distancePerSecond = 360 / secondsPerRevolution;
-        if (zoom > slowSpinZoom) {
-        // Slow spinning at higher zooms
-        const zoomDif =
-        (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
-        distancePerSecond *= zoomDif;
-        }
-        const center = map.getCenter();
-        center.lng -= distancePerSecond;
-        // Smoothly animate the map over one second.
-        // When this animation is complete, it calls a 'moveend' event.
-        map.easeTo({ center, duration: 1000, easing: (n) => n });
-        }
+            const zoom = map.getZoom();
+            if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+            let distancePerSecond = 360 / secondsPerRevolution;
+            if (zoom > slowSpinZoom) {
+            // Slow spinning at higher zooms
+            const zoomDif =
+            (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+            distancePerSecond *= zoomDif;
+            }
+            const center = map.getCenter();
+            center.lng -= distancePerSecond;
+            // Smoothly animate the map over one second.
+            // When this animation is complete, it calls a 'moveend' event.
+            map.easeTo({ center, duration: 1000, easing: (n) => n });
+            }
         }
         
         // Pause spinning on interaction
@@ -235,135 +156,178 @@
         map.on('moveend', () => {
         spinGlobe();
         });
-        
-        document.getElementById('btn-spin').addEventListener('click', (e) => {
-        spinEnabled = !spinEnabled;
-        if (spinEnabled) {
-        spinGlobe();
-        e.target.innerHTML = 'Pause rotation';
-        } else {
-        map.stop(); // Immediately end ongoing animation
-        e.target.innerHTML = 'Start rotation';
-        }
-        });
-        
-        spinGlobe();
 
+        // function playpause() {
+        //     var btn = document.getElementsByClassName('btn-spin');
+        //     spinEnabled = !spinEnabled;
+        //     if (spinEnabled) {
+        //         document.addEventListener('click', (e) => {
+        //             spinGlobe();
+        //         });
+        //     } else {
+        //         map.stop();
+        //         btn[0].classList.toggle("pause");
+        //     }
+        // }
+
+
+        function myFunction() {
+            var element = document.getElementById("button");
+            element.classList.toggle("pause");
+            spinEnabled = !spinEnabled;
+            if (spinEnabled) {
+                     spinGlobe();
+             } else {
+                 map.stop();
+             }
+            }
+
+        spinGlobe();
         </script>
-    </div> -->
-    <!-- <div id="map"></div> -->
-    <button id="btn-spin">Pause rotation</button>
-    <script>const settingsButton = document.getElementById("settings-button");
-        const settingsMenu = document.getElementById("settings-menu");
-        
-        settingsButton.addEventListener("click", () => {
-            settingsMenu.classList.toggle("show");
-        });</script>
-<script>
-    
-mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/sorre33/clm9iatis016j01r714o489li',
-projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
-center: [-87.661557, 41.893748],
-zoom: 10.7
-});
- 
-map.on('click', (event) => {
-const features = map.queryRenderedFeatures(event.point, {
-layers: ['highonhistory']
-});
-if (!features.length) {
-return;
-}
-const feature = features[0];
- 
-const popup = new mapboxgl.Popup({ offset: [0, -15] })
-.setLngLat(feature.geometry.coordinates)
-.setHTML(
-`<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
-)
-.addTo(map);
-});
-map.on('style.load', () => {
-        map.setFog({}); // Set the default atmosphere style
-        });
+    </div>
 
-// The following values can be changed to control rotation speed:
-        
-        // At low zooms, complete a revolution every two minutes.
-        const secondsPerRevolution = 120;
-        // Above zoom level 5, do not rotate.
-        const maxSpinZoom = 5;
-        // Rotate at intermediate speeds between zoom levels 3 and 5.
-        const slowSpinZoom = 3;
-        
-        let userInteracting = false;
-        let spinEnabled = true;
-        
-        function spinGlobe() {
-        const zoom = map.getZoom();
-        if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
-        let distancePerSecond = 360 / secondsPerRevolution;
-        if (zoom > slowSpinZoom) {
-        // Slow spinning at higher zooms
-        const zoomDif =
-        (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
-        distancePerSecond *= zoomDif;
-        }
-        const center = map.getCenter();
-        center.lng -= distancePerSecond;
-        // Smoothly animate the map over one second.
-        // When this animation is complete, it calls a 'moveend' event.
-        map.easeTo({ center, duration: 1000, easing: (n) => n });
-        }
-        }
-        
-        // Pause spinning on interaction
-        map.on('mousedown', () => {
-        userInteracting = true;
-        });
-        
-        // Restart spinning the globe when interaction is complete
-        map.on('mouseup', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        
-        // These events account for cases where the mouse has moved
-        // off the map, so 'mouseup' will not be fired.
-        map.on('dragend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        map.on('pitchend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        map.on('rotateend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        
-        // When animation is complete, start spinning if there is no ongoing interaction
-        map.on('moveend', () => {
-        spinGlobe();
-        });
-        
-        document.getElementById('btn-spin').addEventListener('click', (e) => {
-        spinEnabled = !spinEnabled;
-        if (spinEnabled) {
-        spinGlobe();
-        e.target.innerHTML = 'Pause rotation';
-        } else {
-        map.stop(); // Immediately end ongoing animation
-        e.target.innerHTML = 'Start rotation';
-        }
-        });
-        
-        spinGlobe();
-</script>
+<!-- Issues section  -->
+
+<div id="issues" class="container">
+    <h2>Issues</h2>
+    <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="issue-img">
+              <img src="assassins-the-users-of-hashish.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 1</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="issue-img">
+              <img src="https___prod.static9.net.au_fs_726d326e-d6f5-44bb-8424-1840cac8484d" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 2</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+            <div class="issue-img">
+              <img src="g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="issue-info">
+              <h4>Issue 3</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- Documentation section  -->
+
+<div id="documentation" class="container">
+    <h2>Documentation</h2>
+    <div class="row">
+    <div class="col-md-3 col-sm-1 d-none d-md-block" id="menu-card">
+        <nav id="navbar-documentation" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+            <h2 class="navbar-brand mb-3" href="#item-1">Menu</h2>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#main" id="it1">High on History</a>
+                <nav class="nav nav-pills flex-column">
+                <!-- <a class="nav-link ms-3 my-1" href="#item-1-1" id="it1-1">The concept</a> -->
+                <a class="nav-link ms-3 my-1" href="#how" id="it1-2">How to use it</a>
+                </nav>
+                <a class="nav-link" href="#layout" id="it2">Layout and typographic styles</a>
+                <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#16thcen" id="it2-1">Early Sixteenth century</a>
+                <a class="nav-link ms-3 my-1" href="#19thcen" id="it2-2">Nineteenth century</a>
+                <a class="nav-link ms-3 my-1" href="#20thbeginning" id="it2-3">First half of Twentieth Century</a>
+                <a class="nav-link ms-3 my-1" href="#half20th" id="it2-4">Second half of Twentieth Century</a>
+                <a class="nav-link ms-3 my-1" href="#late20th" id="it2-3">Late Twentieth Century</a>
+                <a class="nav-link ms-3 my-1" href="#2030" id="it2-4">the Future: 2030</a>
+                </nav>
+            </nav>
+        </nav>
+    </div>
+    <div class="col-md-9 col-xs-11">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-documentation" data-bs-offset="35" class="scrollspy p-4" tabindex="0" id="main-background">
+            <h3 id="main" class="mb-3 mt-1">High on History</h3>
+            <p><b><i>High on History</i></b> is a MMMM (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual time-travelling experience across past and future typography trends. Nine articles related to the topic of the usage of drugs in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is geo-referenced and its metadata are accessible to the user. 
+
+            <hr>
+
+            <h5 id="how" class="mb-3 mt-1" >How to Use it</h5>
+            <p>Insert text</p>
+
+            <hr>
+
+            <h5 id="layout" class="mb-3 mt-1" >Layout and typographic styles</h5>
+
+            <p>
+                The themes were designed according to the organizational characteristics of a historical style in depending on the related time period, and maps are also converted to the graphical style of the chosen time span. Overall, the whole website changes aspect in depending on the style the users chooses. 
+            </p>
+
+            <hr>
+
+            <h5 id="16thcen" class="mb-3 mt-1" >Early sixteenth century</h5>
+
+            <p>
+                For the general layout of the page, the inspiring document was 
+                "Chapter 24 - The Emergence of Modern Printing Technique" in Guity Novin's History of Graphic Design. 
+                Overall, the webpage aims to resemble the publication of Historia Florentina (1478) by Poggio Bracciolini. 
+                The font chosen is Garamond, that owes its name and style to the design of the typeface designer and punch-cutter Claude Garamond (ca. 1480–1561). Italics is used because it is an invention belonging to the European Reinassance, and the colour red of the first word of each paragraph is a feature that appears in the book "Qvesta opra da ogni parte e un libro doro" (1476), by Johannes Müller von Königsberg. The border is also inspired by an edition of Aristotle (1495-98) by the prominent Venetian publisher and printer Aldus Manutius. 
+            </p>
+
+            <hr>
+
+            <h5 id="19thcen" class="mb-3 mt-1" >Nineteenth century</h5>
+
+            <p>
+                The webpage aims to resemble a publication of the Nineteenth century, which is why the chosen font is Bodoni. Indeed, Bodoni owes its name and style to the Italian printer Giambattista Bodoni (1740-1813), who designed several modern typefaces between the end of the Eighteenth century and the beginning of the Nineteenth.
+                However, the headlines of the text are displayed in the font "Trinigan", which aims to resemble the labels on the old cigar boxes displayed in "   Chapter 25 - Pioneers of the Art Nouveau, Chromolithography and the emergence of the modern poster and cigar box labels" in Guity Novin's History of Graphic Design. 
+                The colours of the page are also inspired by the cigar box labels of the late Nineteenth century, whereas the border of the page was chosen as a typical expression of Art Nouveau in publications at that time, as shown in "Chapter 64 - A History of Magazine Covers" in Guity Novin's History of Graphic Design. 
+            </p>
+
+            <hr>
+
+            <h5 id="20thbeginning" class="mb-3 mt-1" >First half of Twentieth Century</h5>
+
+            <p>insert text</p>
+
+            <hr>
+
+            <h5 id="half20th" class="mb-3 mt-1" >Second half of Twentieth Century</h5>
+
+            <p>insert text</p>
+
+            <hr>
+
+            <h5 id="late20th" class="mb-3 mt-1" >Late Twentieth Century</h5>
+
+            <p>insert text</p>
+
+            <hr>
+
+            <h5 id="2030" class="mb-3 mt-1" >the Future: 2030</h5>
+
+            <p>insert text</p>
+
+    </div>
+    </div>
+</div> 
+
+<!-- About section  -->
+
+<div id="about" class="container">
+    <h2>About</h2>
+    <div class="row">
+        team members + scope of the project (web development and technologies for fabio vitali)
+    </div>
+</div>
 
 </body>
 </html>
