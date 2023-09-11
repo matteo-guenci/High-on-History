@@ -13,7 +13,7 @@
 }
 
 #title {
-    text-align: center; padding-top: 0.2em; padding-bottom: 0%; margin-bottom: 0%; font-size: 5em;
+    text-align: center; padding-top: 0.2em; padding-bottom: 0%; margin-bottom: 0%; font-size: 9vh;
     transition: transform 0.5s linear;
 }
 
