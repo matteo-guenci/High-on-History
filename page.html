@@ -1016,15 +1016,23 @@
         if (scrollableDiv.scrollTop <30) {
             
             document.querySelector("#title").style.transform = "scale(1)";
-            document.querySelector(".wrapper").style.transform = "scale(1)";
+            document.querySelector(".wrapper").style.height = "90%";
+            document.querySelector(".wrapper").style.marginBottom = "3%";
             document.querySelector("#title").style.height = "1.3em";
+            document.querySelector("#title").style.paddingTop = "0.2em";
+            document.querySelector(".wrapper").style.marginTop = "2%";
                 
-            // Your custom logic when the div is at the top
+            
         }
         else {
             document.querySelector("#title").style.transform = "scale(0.4)";
-            document.querySelector(".wrapper").style.transform = "scale(1, 1.05)";
+            document.querySelector(".wrapper").style.height = "97%";
+            document.querySelector("#title").style.paddingTop = "0%";
+            document.querySelector("#title").style.marginTop = "0%";
+            document.querySelector("#title").style.paddingBottom = "0%";
+            document.querySelector("#title").style.marginBottom = "0%";
             document.querySelector("#title").style.height = "1em";
+            document.querySelector(".wrapper").style.marginTop = "0%";
         }
         });
 
