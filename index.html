@@ -31,7 +31,78 @@
         #btn-spin:hover {
         background-color: #4ea0da;
         }
+        .settings-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.settings-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1; /* Ensure the button is on top */
+}
+
+.settings-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2; /* Set the menu above the button */
+    max-height: calc(100vh - 100px); /* Limit the height to the visible portion of the screen */
+    overflow-y: auto; /* Enable vertical scrolling if necessary */
+}
+
+.settings-menu.show {
+    display: flex;
+    animation: slide-fade 0.3s ease-in-out forwards;
+}
+
+.circle-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+@keyframes slide-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
+    <div class="settings-container">
+        <button id="settings-button" class="settings-button">Settings</button>
+        <div id="settings-menu" class="settings-menu">
+            <!-- Circular buttons for different visualization styles -->
+            <button class="circle-button">Style 1</button>
+            <button class="circle-button">Style 2</button>
+            <button class="circle-button">Style 3</button>
+            <!-- Add more buttons as needed -->
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" style="padding-left: 20%">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -180,9 +251,16 @@
 
         </script>
     </div> -->
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
     <button id="btn-spin">Pause rotation</button>
+    <script>const settingsButton = document.getElementById("settings-button");
+        const settingsMenu = document.getElementById("settings-menu");
+        
+        settingsButton.addEventListener("click", () => {
+            settingsMenu.classList.toggle("show");
+        });</script>
 <script>
+    
 mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
 const map = new mapboxgl.Map({
 container: 'map',
