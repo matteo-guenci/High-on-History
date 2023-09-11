@@ -13,7 +13,7 @@
 }
 
 #title {
-    text-align: center; padding-top: 0.2em; font-size: 5em;
+    text-align: center; padding-top: 0.2em; padding-bottom: 0%; margin-bottom: 0%; font-size: 5em;
     transition: transform 0.5s linear;
 }
 
@@ -24,7 +24,7 @@
 }*/
 
 .wrapper {
-    margin: 2% 3% 3% 3%; border: 0.2em solid black; height: 80.5vh; overflow-y: scroll; position: relative;
+    margin: 2% 3% 3% 3%; border: 0.2em solid black; height: 90%; overflow-y: scroll; position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
     display: flex;
