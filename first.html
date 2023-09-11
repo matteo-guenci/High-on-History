@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <div class="first-div">
         <header>
-            <h1 id="title">High On History</h1>
+            <h1 id="title"><a href="index.html" style="text-decoration:none">High On History</a></h1>
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
@@ -104,16 +104,12 @@
                         </ul>
                         <nav aria-label="Page navigation example" style="margin-top: 1%">
                             <ul class="pagination justify-content-center">
+                                
+                                <li class="page-item"><a class="page-link" href="first.html">1</a></li>
+                                <li class="page-item"><a class="page-link" href="second.html">2</a></li>
+                                <li class="page-item"><a class="page-link" href="third.html">3</a></li>
                                 <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#OldManMountain">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
+                                <a class="page-link" href="second.html" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                                 </li>
@@ -2263,6 +2259,36 @@
         }
         });
 
+    </script>
+    <script>
+        // looking for hash in URL
+        if (location.hash) {
+        let desiredHash = window.location.hash.split('#')[1]; //getting data from the left and right from #, and calling the right one by '[1]'  
+        desiredFunction(desiredHash); // calling function and sending hash
+        }
+
+        // better to use some class like '.accordionLink' and check a link for it so other links with '#' will work as they should, without a conflict
+        $('a[href*="#"].accordionLink').click(function (e) {		
+        e.preventDefault();
+        let linkId = $.attr(this, 'href').split('#')[1]; //getting data from the left and right from #, and calling the right one by '[1]'  
+        desiredFunction(linkId); // calling function and sending hash
+        });
+
+        function desiredFunction(desiredId) {
+        // checking if element with this ID exists and if the element inside of accordion
+        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+        if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+            // showing the closes parent '.collapse' of our ID
+            $('#'+desiredId).closest('.collapse').collapse('show'); 
+            setTimeout(function () {
+            // smooth animation to our ID
+            $('html, body').animate({
+                scrollTop: $('#'+desiredId).offset().top
+            }, 500);
+            }, 300); // this interval is necessary for bootstrap to complete the accordion animation
+        }	
+        
+        }
     </script>
 </body>
 </html>
