@@ -1428,11 +1428,14 @@
             $('#'+desiredId).closest('.collapse').collapse('show'); 
             setTimeout(function () {
             // smooth animation to our ID
-            $('html, body').animate({
-                scrollTop: $('#'+desiredId).offset().top
-            }, 500);
+            document.getElementById(window.location.hash.split('#')[1]).scrollIntoView({
+
+            // behavior: 'auto',
+                // block: 'center',
+                // inline: 'center'
+            });
             }, 300); // this interval is necessary for bootstrap to complete the accordion animation
-        }	
+        }
         
         }
     </script>
