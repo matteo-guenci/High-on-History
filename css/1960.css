@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=PT+Sans+Narrow:wght@700&display=swap');
+
+#title {
+    font-size: 9vh;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    background-color: rgb(214, 46, 31);
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body {
+    font-family: 'David Libre', serif;
+}
+
+#home {
+    
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    background-color: rgb(214, 46, 31);
+    text-transform: uppercase;
+    margin-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar {
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#search {
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#search_button {
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:rgb(214, 46, 31);
+    border-color: rgb(214, 46, 31);
+}
+
+#search_button:hover {
+    color:white;
+    border-color: white;
+    background-color: rgb(214, 46, 31)
+}
+
+#banner {
+    display: flex; justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    background-color: rgb(214, 46, 31);
+    z-index: 999;
+}
+
+#date {
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding: 10px;
+    padding-left: 5%
+}
+
+#ad{
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding-right: 17%;
+    padding-top: 10px
+}
+
+#banner_image {
+    display:inline-block;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    z-index: 999;
+}
+

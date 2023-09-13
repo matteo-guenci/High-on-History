@@ -6,21 +6,22 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <link href="css/indexcss.css" rel="stylesheet">
+    <!-- <link href="css/1960.css" rel="stylesheet"> -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     
 </head>
-<body style="font-family: 'Times New Roman', Times, serif;">
+<body>
 
 <!-- Navbar section  -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top">
-        <div class="container-fluid" style="padding-left: 20%">
+        <div class="container-fluid" style="padding-left: 5%">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="padding-left: 5%">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Issues
                 </a>
@@ -29,7 +30,7 @@
                     <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 2</a></li>
                     <li><a class="dropdown-item nav-link scrollto" href="#issues">Issue 3</a></li>
                 </ul>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="padding-left: 5%">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Themes
                     </a>
@@ -39,16 +40,16 @@
                     <li><a class="dropdown-item" href="#">Theme 3</a></li>
                 </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="padding-left: 5%">
                 <a class="nav-link scrollto" href="#documentation">Documentation</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="padding-left: 5%">
                     <a class="nav-link scrollto" href="#about">About</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search" style="margin-right: 10%">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex" role="search" style="margin-right: 5%">
+                <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search_button" class="btn btn-outline-success" type="submit">Search</button>
             </form>
             </div>
         </div>
@@ -56,11 +57,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
 <!-- Map section -->
-    
+<div id="banner"><p id="date"></p><p id="ad">Brought to you by</p></div>
+<div id="banner_image"><img id="theImage" src="imgs/coke.png" style="width: 80%"></div>
+<script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = "High on History \xa0\xa0\xa0"+ m + "/" + d + "/" + y;
+</script>
+<script type="text/javascript">
+    (function() {
+  var urls = ['imgs/cigarettes', 'imgs/coke', 'imgs/ford'];
+  function swap() {
+    console.log(Math.round(Math.random() * (urls.length)));
+    document.getElementById('theImage').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
+  }
+
+  // Mozilla, Opera and webkit nightlies currently support this event
+  if ( document.addEventListener ) {
+    window.addEventListener( 'load', swap, false );
+  // If IE event model is used
+  } 
+})();
+  </script>
     <div id="map">
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
         <button id="button" class="btn-spin" onclick="myFunction()"></button>
-        <div id="main-title"><text>High on History</text></div>
+        <div id="main-title"><h1 id="title">High on History</text></div>
 
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST

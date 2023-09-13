@@ -1,4 +1,4 @@
-#map { padding: 0%; width:100vw; height:100vh}
+#map { padding: 0%; width:100vw; height:93vh}
 
 
 .btn-spin {
@@ -33,7 +33,8 @@
     }
 
 
-#main-title {
+#title {
+    font-size: 9vh;
     font: bold 80px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     color: white;
     position: absolute;
@@ -47,4 +48,11 @@
 .container {
     padding-top: 5%;
     padding-bottom: 5%;
+}
+#banner {
+    display:none;
+}
+
+#banner_image {
+    display: none;
 }

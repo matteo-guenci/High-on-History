@@ -24,7 +24,7 @@
 }*/
 
 .wrapper {
-    margin: 2% 3% 3% 3%; border: 0.2em solid black; height: 80.5vh; overflow-y: scroll; position: relative;
+    margin: 2% 3% 3% 3%; border: 0.05em solid black; height: 80.5vh; overflow-y: scroll; position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
     display: flex;

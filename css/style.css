@@ -29,3 +29,13 @@
 aside {
     width: 22%; border-left: 0.3em solid black; border-top: 0.3em solid;  position: sticky;
 }
+
+#banner #date #theImage{
+    display:none;
+}
+
+#banner_image {
+    display: none;
+}
+
+
