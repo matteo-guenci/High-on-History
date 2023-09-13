@@ -40,15 +40,29 @@
 
         if (currentIndex < elements.length) {
             elements[currentIndex].classList.add("highlight");
-            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+            
+            // showing the closes parent '.collapse' of our ID
+            $(elements[currentIndex]).closest('.collapse').collapse('show');
+
+            // smooth animation to our ID
+            
+            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+                inline: 'center' });
             currentIndex++;
         }
         if (currentIndex == elements.length) {
             elements[elements.length - 1].classList.remove("highlight");
             currentIndex = 0;
             elements[currentIndex].classList.add("highlight");
-            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+            
+            // showing the closes parent '.collapse' of our ID
+            $(elements[currentIndex]).closest('.collapse').collapse('show');
+             // this interval is necessary for bootstrap to complete the accordion animation
+        
+            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+                inline: 'center' });
         }
+
 
         currentClassName = className;
     }
@@ -174,7 +188,7 @@
                 </nav>
                 
                 <div class="col-12" style="float: left; padding: 2%">
-                    <!-- <div class="accordion col-12" id="accordionExample">
+                    <div class="accordion col-12" id="accordionExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -182,7 +196,7 @@
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body"> 
                                 <h1><span id="Fortyrod">Forty-rod</span>, Blue Ruin & Oh Be Joyful: Civil War Alcohol Abuse</h1>
                                                 With a plethora of colorful nicknames, <span class="alcohol">alcohol</span> was widely abused in 
                                                 both <span id="Union">Union</span> and <span id="Confederate">Confederate</span> armies 
@@ -932,7 +946,7 @@
                                 
                                         
                                 
-                            <!-- </div>
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -942,7 +956,7 @@
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body">
                                 <h1><span id="Drugs">Drugs</span>, alcohol, and the First World War</h1>
                                     <p>The plethora of comment and reflection on the <span  id="FirstWorldWar">First World
                                         War</span> has overlooked the importance of that war for <span id="drug">drug</span> and
@@ -1203,7 +1217,7 @@
                                 <a href="#alcohol">alcohol</a>
                                 <a href="#FirstWorldWar">Great War</a>
                             
-                            <!-- </div>
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -1213,7 +1227,7 @@
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body"> 
 
                                     <h1>How <span id="Metamphetamine">Methamphetamine</span> Became a Key Part of <span id="Nazi">Nazi</span> Military Strategy</h1>
                                     
@@ -1402,9 +1416,9 @@
                                     <h5>Adapted from Killer High: A History of War in Six Drugs by Peter Andreas with permission from Oxford University Press, Inc. Copyright © 2020 by Oxford University Press.</h5>
                                     
                                     
-                            <!-- </div>
+                            </div>
                           </div>
-                        </div> -->
+                        </div> 
                     </div>
                 </div>
                     </div>

@@ -40,15 +40,29 @@
 
         if (currentIndex < elements.length) {
             elements[currentIndex].classList.add("highlight");
-            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+            
+            // showing the closes parent '.collapse' of our ID
+            $(elements[currentIndex]).closest('.collapse').collapse('show');
+
+            // smooth animation to our ID
+            
+            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+                inline: 'center' });
             currentIndex++;
         }
         if (currentIndex == elements.length) {
             elements[elements.length - 1].classList.remove("highlight");
             currentIndex = 0;
             elements[currentIndex].classList.add("highlight");
-            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+            
+            // showing the closes parent '.collapse' of our ID
+            $(elements[currentIndex]).closest('.collapse').collapse('show');
+             // this interval is necessary for bootstrap to complete the accordion animation
+        
+            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+                inline: 'center' });
         }
+
 
         currentClassName = className;
     }
@@ -168,7 +182,7 @@
                     </div>
                 </nav>
                 
-                <!-- <div class="col-12" style="float: left; padding: 2%">
+                <div class="col-12" style="float: left; padding: 2%">
                     <div class="accordion col-12" id="accordionExample">
                         <div class="accordion-item" id="accordion-1">
                           <h2 class="accordion-header">
@@ -177,7 +191,7 @@
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body"> 
                                 <h1>The <span class="OldManMountain">Old Man of the Mountain</span></h1>
                                 <h2>The <span id="Assassins">Assassins</span> in Fact and Fiction</h2>
                                 
@@ -1004,7 +1018,7 @@
                                         </div>  
                                 
                                 
-                            <!-- </div>
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -1014,7 +1028,7 @@
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body"> 
                                 <h1><span id="Hashish">Hashish</span>, Assassins, and the Love of God</h1>
                                 <h4>By Jerry Mandel</h4>
                                 
@@ -1434,7 +1448,7 @@
                                 <a href="#marijuana">Marijuana</a>
                                 <a href="#Assassins">Assassins</a>
                             
-                            <!-- </div>
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -1444,7 +1458,7 @@
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"> -->
+                            <div class="accordion-body"> 
                                 <h1>
                                     <span id="Sagas">Sagas of the Solanaceae</span>: Speculative ethnobotanical perspectives on the
                                     <span id="norse">Norse</span> <span id="berserkers">berserkers</span>
