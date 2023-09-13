@@ -46,7 +46,7 @@
 
             // smooth animation to our ID
             
-            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
                 inline: 'center' });
             currentIndex++;
         }
@@ -59,7 +59,7 @@
             $(elements[currentIndex]).closest('.collapse').collapse('show');
              // this interval is necessary for bootstrap to complete the accordion animation
         
-            elements[currentIndex].scrollIntoView({ behavior: "auto", block: 'center',
+            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
                 inline: 'center' });
         }
 
@@ -2335,7 +2335,7 @@
         e.preventDefault();
         let linkId = $.attr(this, 'href').split('#')[1]; //getting data from the left and right from #, and calling the right one by '[1]'  
         desiredFunction(linkId); // calling function and sending hash
-        $('#'+linkId).scrollIntoView();
+        //$('#'+linkId).scrollIntoView();
         });
 
         function desiredFunction(desiredId) {
