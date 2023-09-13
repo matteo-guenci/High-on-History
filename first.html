@@ -12,6 +12,55 @@
     <link href="css/style2.css" rel="stylesheet"> 
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
+
+<!-- SCRIPT E STYLE PER EXPERIMENTO CON EVIDENZIAZIONE METADATI -->
+<!-- ho reso #OldManMountain una classe -->
+
+<script>
+    
+    var currentIndex = 0;
+    var currentClassName = "";
+
+    function highlightElement(className) {
+        var elements = document.querySelectorAll(className);
+
+        if (currentClassName !== className) {
+            currentIndex = 0;
+            if (currentClassName) {
+                var prevElements = document.querySelectorAll(currentClassName);
+                prevElements.forEach(function (element) {
+                    element.classList.remove("highlight");
+                });
+            }
+        }
+
+        if (currentIndex > 0 && currentIndex !== elements.length) {
+            elements[currentIndex - 1].classList.remove("highlight");
+        }
+
+        if (currentIndex < elements.length) {
+            elements[currentIndex].classList.add("highlight");
+            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+            currentIndex++;
+        }
+        if (currentIndex == elements.length) {
+            elements[elements.length - 1].classList.remove("highlight");
+            currentIndex = 0;
+            elements[currentIndex].classList.add("highlight");
+            elements[currentIndex].scrollIntoView({ behavior: "smooth" });
+        }
+
+        currentClassName = className;
+    }
+    
+</script>
+
+<style>
+    .highlight {
+      background-color: yellow;
+    }
+</style>
+
 </head>
 <body class="sfondo" onReady="scroll()">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -48,10 +97,10 @@
                         <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">People</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a href="#">Page 1</a>
+                                <button onclick="highlightElement('.OldManMountain')">Old Man of the Mountain</button>
                             </li>
                             <li>
                                 <a href="#">Page 2</a>
@@ -89,10 +138,10 @@
                             </li>
                             <li class="nav-item dropdown">
                             <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Random
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -119,17 +168,17 @@
                     </div>
                 </nav>
                 
-                <div class="col-12" style="float: left; padding: 2%">
+                <!-- <div class="col-12" style="float: left; padding: 2%">
                     <div class="accordion col-12" id="accordionExample">
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="accordion-1">
                           <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             The Old Man of the Mountain
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <h1>The <span id="OldManMountain">Old Man of the Mountain</span></h1>
+                            <div class="accordion-body"> -->
+                                <h1>The <span class="OldManMountain">Old Man of the Mountain</span></h1>
                                 <h2>The <span id="Assassins">Assassins</span> in Fact and Fiction</h2>
                                 
                                 <h4>By <span id="CaroleHillenbrand">Carole Hillenbrand</span></h4>
@@ -144,7 +193,7 @@
                                     sparked modern-day imaginations like the <span id="Assassins">Assassins</span>. 
                                     Viewed as mystical and deadly, they were said to be led 
                                     in <span class="location" id="Syria">Syria</span> by a charismatic figure known 
-                                    as the <span id="OldManMountain">Old Man of the Mountain</span>.
+                                    as the <span class="OldManMountain">Old Man of the Mountain</span>.
                                     What can we really know about them?</p>
                                 <a href="#MiddleAges">Middle Ages</a>
                                 <a href="#Syria">Syria</a>
@@ -152,13 +201,13 @@
                                 <a href="#OldManMountain">Old Man of the Mountain</a>
                                 
                                 <p>The defining narrative in medieval times about the myth of 
-                                    the <span id="OldManMountain">Old Man of the Mountain</span> (Shaykh al-Jabal) is that of 
+                                    the <span class="OldManMountain">Old Man of the Mountain</span> (Shaykh al-Jabal) is that of 
                                     <span id="MarcoPolo">Marco Polo</span>, which was written down in the early fouthteenth century. The account consists of legendary and 
                                     folkloric material that had been spread across the Middle 
                                     East and Europe by Sunni Muslims, <span id="Crusaders">Crusaders</span>, and Jewish, Christian, and Muslim travellers who visited <span class="location" id="Syria">Syria</span>, 
                                     <span class="location" id="Egypt">Egypt</span>, the <span class="location" id="HolyLand">Holy Land</span>, and <span class="location" id="Iran">Iran</span> from the twelfth century onwards. Marco Polo’s account remained the definitive one for 
                                     many centuries. He does not name the geographical location of 
-                                    the territory of the <span id="OldManMountain">Old Man of the Mountain</span> – he just names it 
+                                    the territory of the <span class="OldManMountain">Old Man of the Mountain</span> – he just names it 
                                     as a country of Mulahet, which he says means ‘heretics’ according to the law of the Saracens. Here 
                                     is a typical passage from <span id="MarcoPolo">Marco Polo</span>’s account:</p>
                                 <a href="#OldManMountain">Old Man of the Mountain</a>
@@ -169,7 +218,7 @@
                                 <a href="#MarcoPolo">Marco Polo</a>
                                 <a href="#Crusaders">Crusaders</a>
                                 
-                                <p class="quote">"The <span id="OldManMountain">Old Man</span> was called in their language <span id="Alaedin">Alaedin</span>… 
+                                <p class="quote">"The <span class="OldManMountain">Old Man</span> was called in their language <span id="Alaedin">Alaedin</span>… 
                                     He had made in a valley between two 
                                     mountains the biggest and most beautiful garden that was ever seen… There were ladies 
                                     there and damsels, the loveliest in the 
@@ -180,7 +229,7 @@
                                     was Paradise… No-one ever 
                                     entered the garden except 
                                     those who he wished to make 
-                                    <span id="Assassins">Assassins</span>... The <span id="OldManMountain">Old Man</span> kept 
+                                    <span id="Assassins">Assassins</span>... The <span class="OldManMountain">Old Man</span> kept 
                                     with him at his court all the youths from 
                                     12 to 20… He used to put some of these 
                                     youths in this Paradise four at a time, or 
@@ -204,7 +253,7 @@
                                     including those by <span id="BenjaminTudela">Benjamin of Tudela</span>, <span id="BurchardStrasbourg">Burchard of Strasbourg</span>, 
                                     <span id="ArnoldLübeck">Arnold of Lübeck</span>, and 
                                     <span id="GregoryBarHebraeus">Gregory Bar Hebraeus</span> – that offer similar 
-                                    stories: this <span id="OldManMountain">Old Man of the Mountain</span> was 
+                                    stories: this <span class="OldManMountain">Old Man of the Mountain</span> was 
                                     a mysterious figure who commanded the 
                                     black arts of magic. His followers were said 
                                     to follow no laws, to abuse women, and to 
@@ -303,7 +352,7 @@
                                     foothold in the mountains of Northern <span class="location" id="Syria">Syria</span> 
                                     far from their mother centre in <span class="location" id="Iran">Iran</span>, the Syrian 
                                     <span id="Nizari">Nizaris</span> acquired their most famous and longruling leader, <span id="RashidSinan">Rashid al-Din Sinan</span>, the Shaykh 
-                                    al-Jabal, the <span id="OldManMountain">Old Man of the Mountain</span> – a title 
+                                    al-Jabal, the <span class="OldManMountain">Old Man of the Mountain</span> – a title 
                                     that suggests both noble stock and an aura of 
                                     mystery. He took over the leadership at Masyaf 
                                     in 1169, ruling there for thirty years. He found 
@@ -733,7 +782,7 @@
                                     escaped to a nearby church. He was soon 
                                     dragged out, interrogated, and killed. This 
                                     second attacker confessed that he had 
-                                    been sent by the <span id="OldManMountain">Old Man of the Mountain</span> to kill the Marquis, and that he and 
+                                    been sent by the <span class="OldManMountain">Old Man of the Mountain</span> to kill the Marquis, and that he and 
                                     his colleague had “been in the Marquis’ 
                                     service a long time, awaiting a suitable 
                                     moment to carry out the deed."</p>
@@ -792,7 +841,7 @@
                                 
                                             <p>In the year 1238 an envoy arrived in Western 
                                                 Europe from Islamic lands, said to be sent by 
-                                                the <span id="OldManMountain">Old Man of the Mountain</span> himself. He 
+                                                the <span class="OldManMountain">Old Man of the Mountain</span> himself. He 
                                                 went to the courts of the kings of France and 
                                                 England, to warn them of a new threat from 
                                                 the East - the Mongols. The envoy warned that 
@@ -897,7 +946,7 @@
                                 
                                 <p><span id="RashidSinan">Rashid al-Din Sinan</span> would die in 
                                     1193, but his successors would take on the 
-                                    title of <span id="OldManMountain">Old Man of the Mountains</span>. Their 
+                                    title of <span class="OldManMountain">Old Man of the Mountains</span>. Their 
                                     small state in the Syrian mountains would 
                                     last until the 1260s, finally being defeated 
                                     by the Mamluk leader <span id="Baybars">Baybars</span>. It was also 
@@ -955,7 +1004,7 @@
                                         </div>  
                                 
                                 
-                            </div>
+                            <!-- </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -965,7 +1014,7 @@
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> -->
                                 <h1><span id="Hashish">Hashish</span>, Assassins, and the Love of God</h1>
                                 <h4>By Jerry Mandel</h4>
                                 
@@ -1092,7 +1141,7 @@
                             
                             <p>The fullest story about The <span id="Assassins">Assassins</span> in an article on <span id="marijuana">marijuana</span> or
                                 <span id="hashish">hashish</span>, is in the 1912 Medical Review of Reviews. It was quickly for-
-                                gotten. <span id="Robinson">Robinson</span>, the author, gives this interpretation of The <span id="OldManMountain">Old Man of the Mountains</span> 
+                                gotten. <span id="Robinson">Robinson</span>, the author, gives this interpretation of The <span class="OldManMountain">Old Man of the Mountains</span> 
                                 cited in <span id="MarcoPolo">Marco Polo</span>:</p>
                                 <a href="#MarcoPolo">Marco Polo</a>
                                 <a href="#Assassins">Assassins</a>
@@ -1142,14 +1191,14 @@
                                 <a href="#MarcoPolo">Marco Polo</a>
                                 <a href="#Robinson">Robinson</a>
                                 
-                            <blockquote>In a valley between two mountains (The <span id="OldManMountain">Old Man</span>) had made the larg-
+                            <blockquote>In a valley between two mountains (The <span class="OldManMountain">Old Man</span>) had made the larg-
                                 est and finest garden that ever was seen. In it there were all the good
                                 fruits in the world ... the fairest houses and the most beautiful pal-
                                 aces . . . covered with gilding, and adorned with the pictures of all the
                                 beautiful things of the earth . . . conduits . . . flowed <span id="wine">wine</span> . . . milk
                                 . . . honey, and . . . water. There were also ladies and damsels there,
                                 the fairest on earth, who could play on all kinds of instruments, and sang
-                                and danced better than other women. And the <span id="OldManMountain">Old Man</span> made his people
+                                and danced better than other women. And the <span class="OldManMountain">Old Man</span> made his people
                                 believe that this garden was Paradise.</blockquote>
                                 <a href="#OldManMountain">Old Man of the Mountain</a>
                                 <a href="#wine">Wine</a>
@@ -1160,9 +1209,9 @@
                                 <a href="#MarcoPolo">Marco Polo</a>
                             
                             <blockquote>Into that garden no man ever entered except those he wished to make
-                                <span id="Assassins">Assassins</span>. . . . The <span id="OldManMountain">Old Man</span> 
+                                <span id="Assassins">Assassins</span>. . . . The <span class="OldManMountain">Old Man</span> 
                                 kept with him at his court all the young
-                                men of the district, from twelve to twenty years of age. . . . The <span id="OldManMountain">Old Man</span>
+                                men of the district, from twelve to twenty years of age. . . . The <span class="OldManMountain">Old Man</span>
                                 used to have these youths put in the garden ... he did it in the
                                 following way: he had a potion given them as a result of which they
                                 straightaway fell asleep; then he had them taken up and put into the
@@ -1171,13 +1220,13 @@
                                 mained with them all day . . . and the young men had their pleasure
                                 of them. So these youths had all they could desire, and would never have
                                 left the place of their own free will. 
-                                When the <span id="OldManMountain">Old Man</span>  wanted to send any of his men anywhere to kill
+                                When the <span class="OldManMountain">Old Man</span>  wanted to send any of his men anywhere to kill
                                 some person, he would order the potion to be given to a certain num-
                                 ber of them, and once they were asleep, he would have them taken up
                                 and brought into his palace. When the youths awoke . . . they would
                                 be greatly amazed and by no means pleased. . . . They would now go
-                                into the presence of the <span id="OldManMountain">Old Man</span>  . . . believing that they were in the
-                                presence of a great Prophet. The <span id="OldManMountain">Old Man</span>  would then ask them whence
+                                into the presence of the <span class="OldManMountain">Old Man</span>  . . . believing that they were in the
+                                presence of a great Prophet. The <span class="OldManMountain">Old Man</span>  would then ask them whence
                                 they came, and they would answer they came from Paradise. The other
                                 youths, who had not been there and were present at the narrative, would
                                 then be consumed by the desire to go to the Paradise, feeling ready to
@@ -1256,7 +1305,7 @@
                                 There are two dissenting views. <span id="EdwardFitzgerald">Edward Fitzgerald</span>, 
                                 until his death the leading translator and
                                 commentator on <span id="OmarKayyam">OmarKayyam</span>, suggests that Assassin may derive from
-                                <span id="HassanbenSabbah">Hassan</span> (The <span id="OldManMountain">Old Man</span>), 
+                                <span id="HassanbenSabbah">Hassan</span> (The <span class="OldManMountain">Old Man</span>), 
                                 not <span id="hashish">hashish</span>. <span id="BernardLewis">Lewis</span> mentions "a Jewish writer
                                 in Constantinople in the mid-twelfth century . . . (who) says that the
                                 Hashishiyah were so called because they dismissed the things of this world
@@ -1342,9 +1391,9 @@
                                 understandable.) Murdering to regain the paradise of either <span id="hashish">hashish</span> or the
                                 love of a beautiful woman is based on the scarcity principal. Were love
                                 and beautiful women everywhere abundant than the cuckolded killer
-                                would be merely a fool. Likewise, the mythical <span id="OldManMountain">Old Man of the Mountain</span> 
+                                would be merely a fool. Likewise, the mythical <span class="OldManMountain">Old Man of the Mountain</span> 
                                 thrived because of scarcity. Were the joys of <span id="hashish">hashish</span> and paradise on
-                                earth available to all, the <span id="OldManMountain">Old Man</span> would be but another forgotten tribal
+                                earth available to all, the <span class="OldManMountain">Old Man</span> would be but another forgotten tribal
                                 chief, a leader without followers. The lesson for America of the 1930's
                                 would then have been to make <span id="marijuana">marijuana</span> available for all, cheaply.</p>
                                 <a href="#OldManMountain">Old Man of the Mountain</a>
@@ -1385,7 +1434,7 @@
                                 <a href="#marijuana">Marijuana</a>
                                 <a href="#Assassins">Assassins</a>
                             
-                            </div>
+                            <!-- </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -1395,7 +1444,7 @@
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> -->
                                 <h1>
                                     <span id="Sagas">Sagas of the Solanaceae</span>: Speculative ethnobotanical perspectives on the
                                     <span id="norse">Norse</span> <span id="berserkers">berserkers</span>
