@@ -34,7 +34,7 @@
             }
         }
 
-        if (currentIndex > 0) {
+        if (currentIndex > 0 && currentIndex !== elements.length) {
             elements[currentIndex - 1].classList.remove("highlight");
         }
 
@@ -43,7 +43,7 @@
             elements[currentIndex].scrollIntoView({ behavior: "smooth" });
             currentIndex++;
         }
-        else if (currentIndex > elements.length) {
+        if (currentIndex == elements.length) {
             elements[elements.length - 1].classList.remove("highlight");
             currentIndex = 0;
             elements[currentIndex].classList.add("highlight");
@@ -52,6 +52,7 @@
 
         currentClassName = className;
     }
+    
 </script>
 
 <style>
@@ -60,13 +61,7 @@
     }
 </style>
 
-
-
-
 </head>
-
-
-
 
 <body class="sfondo">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -179,7 +174,7 @@
                 </nav>
                 
                 <div class="col-12" style="float: left; padding: 2%">
-                    <div class="accordion col-12" id="accordionExample">
+                    <!-- <div class="accordion col-12" id="accordionExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -187,7 +182,7 @@
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> -->
                                 <h1><span id="Fortyrod">Forty-rod</span>, Blue Ruin & Oh Be Joyful: Civil War Alcohol Abuse</h1>
                                                 With a plethora of colorful nicknames, <span class="alcohol">alcohol</span> was widely abused in 
                                                 both <span id="Union">Union</span> and <span id="Confederate">Confederate</span> armies 
@@ -937,7 +932,7 @@
                                 
                                         
                                 
-                            </div>
+                            <!-- </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -947,7 +942,7 @@
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> -->
                                 <h1><span id="Drugs">Drugs</span>, alcohol, and the First World War</h1>
                                     <p>The plethora of comment and reflection on the <span  id="FirstWorldWar">First World
                                         War</span> has overlooked the importance of that war for <span id="drug">drug</span> and
@@ -1208,7 +1203,7 @@
                                 <a href="#alcohol">alcohol</a>
                                 <a href="#FirstWorldWar">Great War</a>
                             
-                            </div>
+                            <!-- </div>
                           </div>
                         </div>
                         <div class="accordion-item">
@@ -1218,7 +1213,7 @@
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> -->
 
                                     <h1>How <span id="Metamphetamine">Methamphetamine</span> Became a Key Part of <span id="Nazi">Nazi</span> Military Strategy</h1>
                                     
@@ -1407,9 +1402,9 @@
                                     <h5>Adapted from Killer High: A History of War in Six Drugs by Peter Andreas with permission from Oxford University Press, Inc. Copyright © 2020 by Oxford University Press.</h5>
                                     
                                     
-                            </div>
+                            <!-- </div>
                           </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                     </div>
