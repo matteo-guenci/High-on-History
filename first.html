@@ -39,28 +39,61 @@
         }
 
         if (currentIndex < elements.length) {
-            elements[currentIndex].classList.add("highlight");
+            desiredFunction(elements[currentIndex])
+            function desiredFunction(elemento) {
+        // checking if element with this ID exists and if the element inside of accordion
+        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+            if (elemento) {
+            // showing the closes parent '.collapse' of our ID
+            elemento.classList.add("highlight");
             
             // showing the closes parent '.collapse' of our ID
-            $(elements[currentIndex]).closest('.collapse').collapse('show');
+            $(elemento).closest('.collapse').collapse('show');
 
             // smooth animation to our ID
             
-            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
-                inline: 'center' });
             currentIndex++;
+            setTimeout(function () {
+            // smooth animation to our ID
+            elemento.scrollIntoView({ behavior: "smooth", block: 'center',
+                inline: 'center' });
+
+            // behavior: 'auto',
+                // block: 'center',
+                // inline: 'center'
+            }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+        }
+        
+        }
         }
         if (currentIndex == elements.length) {
             elements[elements.length - 1].classList.remove("highlight");
             currentIndex = 0;
-            elements[currentIndex].classList.add("highlight");
+            desiredFunction(elements[currentIndex])
+            function desiredFunction(elemento) {
+        // checking if element with this ID exists and if the element inside of accordion
+        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+            if (elemento) {
+            // showing the closes parent '.collapse' of our ID
+            elemento.classList.add("highlight");
             
             // showing the closes parent '.collapse' of our ID
-            $(elements[currentIndex]).closest('.collapse').collapse('show');
-             // this interval is necessary for bootstrap to complete the accordion animation
-        
-            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
+            $(elemento).closest('.collapse').collapse('show');
+
+            // smooth animation to our ID
+            
+            setTimeout(function () {
+            // smooth animation to our ID
+            elemento.scrollIntoView({ behavior: "smooth", block: 'center',
                 inline: 'center' });
+
+            // behavior: 'auto',
+                // block: 'center',
+                // inline: 'center'
+            }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+        }
+        
+        }
         }
 
 
@@ -182,7 +215,7 @@
                     </div>
                 </nav>
                 
-                <div class="col-12" style="float: left; padding: 2%">
+                <div class="col-12" style="float: left; padding: 2%; position: relative;">
                     <div class="accordion col-12" id="accordionExample">
                         <div class="accordion-item" id="accordion-1">
                           <h2 class="accordion-header">
@@ -2273,9 +2306,13 @@
                           </div>
                         </div>
                     </div>
+                    
                 </div>
-                    </div>
+                
             </div>
+            
+            </div>
+            
         </div>
     </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -2302,8 +2339,8 @@
         if (scrollableDiv.scrollTop <30) {
             
             document.querySelector("#title").style.transform = "scale(1)";
-            document.querySelector(".wrapper").style.height = "81vh";
-            document.querySelector(".wrapper").style.marginBottom = "3%";
+            document.querySelector(".wrapper").style.height = "94.3%";
+            document.querySelector(".wrapper").style.marginBottom = "0%";
             document.querySelector("#title").style.height = "9vh";
             document.querySelector("#title").style.paddingTop = "0.2em";
             document.querySelector(".wrapper").style.marginTop = "3.5%";
@@ -2312,7 +2349,7 @@
         }
         else {
             document.querySelector("#title").style.transform = "scale(0.4)";
-            document.querySelector(".wrapper").style.height = "87.5vh";
+            document.querySelector(".wrapper").style.height = "91vh";
             document.querySelector("#title").style.paddingTop = "0%";
             document.querySelector("#title").style.marginTop = "0%";
             document.querySelector("#title").style.paddingBottom = "0%";
