@@ -13,7 +13,7 @@
 }
 
 #title {
-    text-align: center; padding-top: 0.2em; padding-bottom: 0%; margin-bottom: 0%; font-size: 9vh;
+    text-align: center; padding-top: 0.2em; padding-bottom: 0%; margin-bottom: 1%; font-size: 9vh;
     transition: transform 0.5s linear;
 }
 
@@ -24,7 +24,7 @@
 }*/
 
 .wrapper {
-    margin: 2% 3% 3% 3%; border: 0.05em solid black; height: 80.5vh; overflow-y: scroll; position: relative;
+    margin: 0% 0% 0% 0%; border: 0em solid black; height: 95.2%; overflow-y: scroll; position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
     display: flex;
@@ -130,11 +130,15 @@ span:target {
     background-color: #ffa;
  }
 
- span {
+span {
     scroll-margin-top: 130px;
  }
 
- .alcohol {
-    scroll-margin-top: 130px;
- }
+.footer {
+    position: absolute;
+    bottom: 0 !important;
+    width: 100%;
+    background-color: black;
+    height: 5vh;
+}
 
