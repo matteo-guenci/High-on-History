@@ -118,52 +118,57 @@
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
-                <div class="sidebar-header">
+                <!-- <div class="sidebar-header">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                </div>
+                </div> -->
         
                 <ul class="list-unstyled components">
-                    <p>Dummy Heading</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="#">Home 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 3</a>
-                            </li>
+                        <a href="#drugSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Drugs</a>
+                        <ul class="collapse list-unstyled" id="drugSubmenu">
+
+
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Drugs</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <button onclick="highlightElement('.alcohol')">Alcohol</button>
-                            </li>
-                            <li>
-                                <a href="#">Page 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 3</a>
-                            </li>
+
+
+                    <li class="active">
+                        <a href="#pplSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">People</a>
+                        <ul class="collapse list-unstyled" id="pplSubmenu">
+
+
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Portfolio</a>
+
+                    <li class="active">
+                        <a href="#placeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Places</a>
+                        <ul class="collapse list-unstyled" id="placeSubmenu">
+                            <!-- <button onclick="highlightElement('.Iceland')">Iceland</button>
+                            <button onclick="highlightElement('.Syria')">Syria</button>
+                            <button onclick="highlightElement('.Egypt')">Egypt</button>
+                            <button onclick="highlightElement('.Iran')">Iran</button>
+                            <button onclick="highlightElement('.HolyLand')">Holy Land</button>
+                            <button onclick="highlightElement('.Scandinavia')">Scandinavia</button>
+                            <button onclick="highlightElement('.Siberia')">Siberia</button> -->
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">Contact</a>
+
+                    <li class="active">
+                        <a href="#timeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Time</a>
+                        <ul class="collapse list-unstyled" id="timeSubmenu">
+                            <!-- <button onclick="highlightElement('.Iceland')">Iceland</button>
+                            <button onclick="highlightElement('.Syria')">Syria</button>
+                            <button onclick="highlightElement('.Egypt')">Egypt</button>
+                            <button onclick="highlightElement('.Iran')">Iran</button>
+                            <button onclick="highlightElement('.HolyLand')">Holy Land</button>
+                            <button onclick="highlightElement('.Scandinavia')">Scandinavia</button>
+                            <button onclick="highlightElement('.Siberia')">Siberia</button> -->
+                        </ul>
                     </li>
+
                 </ul>
             </nav>
             <div class="text" id="prova" >
@@ -179,7 +184,7 @@
                             </li>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" style="margin-left: 5%">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 5%">Home</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -206,9 +211,9 @@
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="first.html">1</a></li>
-                                <li class="page-item"><a class="page-link" href="second.html">2</a></li>
-                                <li class="page-item"><a class="page-link" href="third.html">3</a></li>
+                                <li class="page-item"><a class="page-link" href="first.html">Issue 1</a></li>
+                                <li class="page-item"><a class="page-link" href="second.html">Issue 2</a></li>
+                                <li class="page-item"><a class="page-link" href="third.html">Issue 3</a></li>
                                 <li class="page-item">
                                 <a class="page-link" href="third.html" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
@@ -230,95 +235,94 @@
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body"> 
-                                <h1><span id="Fortyrod">Forty-rod</span>, Blue Ruin & Oh Be Joyful: Civil War Alcohol Abuse</h1>
-                                                With a plethora of colorful nicknames, <span class="alcohol">alcohol</span> was widely abused in 
-                                                both <span id="Union">Union</span> and <span id="Confederate">Confederate</span> armies 
-                                                during the <span id="CivilWar">Civil War</span>.
-                                            This article appears in: Early Fall 2015
-                                            by David A. Norris
-                                            <a href="#alcohol">alcohol</a>
+                                <h1>Forty-rod, Blue Ruin & Oh Be Joyful: Civil War Alcohol Abuse</h1>
+                                                <p>With a plethora of colorful nicknames, <span class="alcohol">alcohol</span> was widely abused in 
+                                                both <span class="Union">Union</span> and <span class="Confederate">Confederate</span> armies 
+                                                during the <span class="CivilWar">Civil War</span>. <br> This article appears in: Early Fall 2015</p>
+                                            <h4>by David A. Norris</h4>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#Union">Union</a>
                                             <a href="#Confederate">Confederate</a>
-                                            <a href="#CivilWar">Civil War</a>
+                                            <a href="#CivilWar">Civil War</a> -->
 
                                             <p>
-                                                Union General <span id="BenjaminButler">Benjamin Butler</span> was baffled. 
+                                                Union General <span class="BenjaminButler">Benjamin Butler</span> was baffled. 
                                                 Every night a picket guard went to an outpost 1½ miles 
-                                                from <span class="location" id="FortMonroe">Fort Monroe</span>, 
-                                                <span class="location" id="Virginia">Virginia</span>. 
+                                                from <span class="location FortMonroe" id="FortMonroe">Fort Monroe</span>, 
+                                                <span class="location Virginia" id="Virginia">Virginia</span>. 
                                                 The soldiers departed for their shift perfectly sober, 
                                                 yet when they returned to the post the next morning they
                                                 caused trouble “on account of being drunk.” Investigations 
-                                                failed to reveal the source of their <span id="whiskey">whiskey</span>. 
+                                                failed to reveal the source of their <span class="whiskey">whiskey</span>. 
                                                 Searches of canteens and gear turned up nothing suspicious. 
-                                                But there was one odd thing about the detachment: someone in <span id="BenjaminButler">Butler</span>’s
+                                                But there was one odd thing about the detachment: someone in <span class="BenjaminButler">Butler</span>’s
                                                 command noticed that the men always held their muskets straight up in a 
                                                 peculiar manner. The mystery unraveled when their muskets were examined. 
-                                                “Every gun barrel,” wrote Butler, “was found to be filled with <span id="whiskey">whiskey</span>.”
-                                                [text_ad]</p>
-                                            <a href="#BenjaminButler">Benjamin Butler</a>
+                                                “Every gun barrel,” wrote Butler, “was found to be filled with <span class="whiskey">whiskey</span>.”
+                                                </p>
+                                            <!-- <a href="#BenjaminButler">Benjamin Butler</a>
                                             <a href="#FortMonroe">Fort Monroe</a>
                                             <a href="#Virginia">Virginia</a>
-                                            <a href="#whiskey">whiskey</a>  
+                                            <a href="#whiskey">whiskey</a>   -->
 
                                             <p>
                                                 Excessive drinking was a constant problem in both armies during 
-                                                the <span id="CivilWar">Civil War</span>. 
+                                                the <span class="CivilWar">Civil War</span>. 
                                                 “No one evil agent so much obstructs this army as the degrading vice of drunkenness,” 
-                                                wrote <span id="GenGeorgMcClellan">Union Maj. Gen. George B. McClellan</span> 
-                                                in <span id="February1862">February 1862</span>. “It is the
+                                                wrote <span class="GenGeorgMcClellan">Union Maj. Gen. George B. McClellan</span> 
+                                                in <span class="February1862">February 1862</span>. “It is the
                                                 cause of by far the greatest part of the disorders which are examined by court-martial.” 
                                                 The complete abolition of <span class="alcohol">alcohol</span>, he believed, “would be 
-                                                worth fifty thousand men to the armies of the <span class="location" id="UnitedStates">United States</span>.”
-                                                And across the <span id="MasonDixonLine">Mason-Dixon Line</span>,
-                                                the <span id="NorfolkDayBook">Norfolk Day-Book</span> complained that Confederate 
-                                                enlisted men and officers in the vicinity were drinking <span id="whiskey">whiskey</span> 
+                                                worth fifty thousand men to the armies of the <span class="location UnitedStates" id="UnitedStates">United States</span>.”
+                                                And across the Mason-Dixon Line,
+                                                the Norfolk Day-Book complained that Confederate 
+                                                enlisted men and officers in the vicinity were drinking <span class="whiskey">whiskey</span> 
                                                 “in quantities which would astonish the nerves of a cast-iron lamp-post, 
                                                 and of a quality which would destroy the digestive organs of an ostrich.”
                                             </p>
-                                            <a href="#CivilWar">Civil War</a>
+                                            <!-- <a href="#CivilWar">Civil War</a>
                                             <a href="#GenGeorgMcClellan">Union Maj. Gen. George B. McClellan</a>
                                             <a href="#Februar1862">February 1862</a>
                                             <a href="#alcohol">alcohol</a>
                                             <a href="#UnitedStates">United States</a>
                                             <a href="#MasonDixonLine">Mason-Dixon Line</a>
-                                            <a href="#NorfolkDayBook">Norfolk Day-Book</a>
+                                            <a href="#NorfolkDayBook">Norfolk Day-Book</a> -->
 
-                                            <h2><span id="whiskey">Whiskey</span> the Drink of Choice for Most Soldiers</h2>
+                                            <h2><span class="whiskey">Whiskey</span> the Drink of Choice for Most Soldiers</h2>
                                             <p>Many if not most soldiers were already well acquainted with 
                                                 <span class="alcohol">alcohol</span> from the antebellum era. 
-                                                <span id="whiskey">Whiskey</span> was far and away the most popular drink 
-                                                in <span id="1861">1861</span>. Often made from corn instead of grain, 
+                                                <span class="whiskey">Whiskey</span> was far and away the most popular drink 
+                                                in <span class="1861">1861</span>. Often made from corn instead of grain, 
                                                 it was distilled at countless locations across the country. 
-                                                Popular nondistilled drinks included <span id="cider">cider</span> and 
-                                                <span id="beer">beer</span>. <span id="cider">Cider</span>, made from apples, 
-                                                was more common, but <span id="beer">beer</span> was quickly growing in favor, 
+                                                Popular nondistilled drinks included <span class="cider">cider</span> and 
+                                                <span class="beer">beer</span>. <span class="cider">Cider</span>, made from apples, 
+                                                was more common, but <span class="beer">beer</span> was quickly growing in favor, 
                                                 its rise fueled by the steady German immigration into 
-                                                <span class="location" id="NorthernStates">Northern states</span>.
+                                                <span class="location NorthernStates" id="NorthernStates">Northern states</span>.
                                             </p>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#whiskey">whiskey</a>  
                                             <a href="#1861">1861</a>  
                                             <a href="#cider">cider</a>  
                                             <a href="#beer">beer</a>  
-                                            <a href="#NorthernStates">Northern states</a>  
+                                            <a href="#NorthernStates">Northern states</a>   -->
 
                                             <p>
-                                                Low-grade <span id="whiskey">whiskey</span> carried with it the threat of poisoning the drinker, 
+                                                Low-grade <span class="whiskey">whiskey</span> carried with it the threat of poisoning the drinker, 
                                                 so makers might start with clear <span class="alcohol">alcohol</span>, water it down, 
                                                 and then doctor the mixture to simulate the color and flavor of the real thing. 
-                                                Chewing <span id="tobacco">tobacco</span>, for example,
-                                                helped approximate the amber tint of <span id="whiskey">whiskey</span> or <span id="brandy">brandy</span>. 
-                                                Harsher ingredients added the bite that drinkers expected in their <span id="whiskey">whiskey</span>. 
-                                                An 1860 inspection of <span id="liquor">liquor</span> samples in <span class="location" id="Cincinnati">Cincinnati</span> 
-                                                found <span id="whiskey">whiskey</span> containing <span id="sulfuricAcid">sulfuric acid</span>, 
-                                                <span id="redPepper">red pepper</span>,
-                                                <span id="caustic">caustic</span>, <span id="soda">soda</span>, 
-                                                <span id="potassium">potassium</span>, and <span id="strychnine">strychnine</span>. 
-                                                It was no wonder that <span id="rotgut">“rotgut”</span> was the most prevalent nickname 
-                                                for cheap <span id="liquor">liquor</span> during the era.
+                                                Chewing <span class="tobacco">tobacco</span>, for example,
+                                                helped approximate the amber tint of <span class="whiskey">whiskey</span> or <span class="brandy">brandy</span>. 
+                                                Harsher ingredients added the bite that drinkers expected in their <span class="whiskey">whiskey</span>. 
+                                                An 1860 inspection of <span class="liquor">liquor</span> samples in <span class="location Cincinnati" id="Cincinnati">Cincinnati</span> 
+                                                found <span class="whiskey">whiskey</span> containing <span class="sulfuricAcid">sulfuric acid</span>, 
+                                                <span class="redPepper">red pepper</span>,
+                                                <span class="caustic">caustic</span>, <span class="soda">soda</span>, 
+                                                <span class="potassium">potassium</span>, and <span class="strychnine">strychnine</span>. 
+                                                It was no wonder that <span class="rotgut">“rotgut”</span> was the most prevalent nickname 
+                                                for cheap <span class="liquor">liquor</span> during the era.
                                             </p>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#whiskey">whiskey</a>  
                                             <a href="#tobacco">tobacco</a>
                                             <a href="#brandy">brandy</a>  
@@ -330,65 +334,65 @@
                                             <a href="#soda">soda</a>  
                                             <a href="#potassium">potassium</a>
                                             <a href="#strychnine">strychnine</a>  
-                                            <a href="#rotgut">rotgut</a>  
+                                            <a href="#rotgut">rotgut</a>   -->
 
                                             <p>
                                                 Countering the growth of <span class="alcohol">alcohol</span> consumption was the temperance 
-                                                movement, which sought to make all forms of alcoholic beverages illegal. <span class="location" id="Maine">Maine</span> 
-                                                enacted a prohibition law in <span id="1851">1851</span>. Several other states or 
+                                                movement, which sought to make all forms of alcoholic beverages illegal. <span class="location Maine" id="Maine">Maine</span> 
+                                                enacted a prohibition law in <span class="1851">1851</span>. Several other states or 
                                                 territories passed dry laws in the
                                                 following years. In most cases, these laws were repealed or overturned within a short time. 
-                                                Per capita consumption peaked in <span id="1830">1830</span> at an equivalent of 7.1 gallons 
+                                                Per capita consumption peaked in <span class="1830">1830</span> at an equivalent of 7.1 gallons 
                                                 of <span class="alcohol">alcohol</span> annually. A swift decline followed, with the annual per capita figure
-                                                dropping to 2.53 gallons by <span id="1860">1860</span>.
+                                                dropping to 2.53 gallons by <span class="1860">1860</span>.
                                             </p>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#Maine">Maine</a>
                                             <a href="#1851">1851</a>
                                             <a href="#1830">1830</a>
-                                            <a href="#1860">1860</a>
+                                            <a href="#1860">1860</a> -->
 
 
-                                            <h2>“<span id="spirit">Spirit</span> Rations” Abolished</h2>
-                                            <a href="#spirit">Spirit</a>
+                                            <h2>“<span class="spirit">Spirit</span> Rations” Abolished</h2>
+                                            <!-- <a href="#spirit">Spirit</a> -->
 
                                             <p>
-                                                <span class="alcohol">Alcohol</span> still had an official presence in the <span id="USArmy">U.S. Army</span> 
-                                                in <span id="1861">1861</span>. A daily <span id="spirit">spirit</span> ration for American soldiers 
-                                                had been abolished in <span id="1832">1832</span>, but officers were permitted to 
-                                                issue special servings of <span id="whiskey">whiskey</span> to relieve fatigue and exposure. 
-                                                Soldiers, naturally, had countless sneaky ways to obtain <span id="whiskey">whiskey</span>. 
-                                                While diligent officers could restrict the flow of <span id="whiskey">whiskey</span> into camp, 
-                                                soldiers could still drink when they received a pass to leave camp. In the <span id="ConfederateArmy">Confederate Army</span>, 
+                                                <span class="alcohol">Alcohol</span> still had an official presence in the <span class="USArmy">U.S. Army</span> 
+                                                in <span class="1861">1861</span>. A daily <span class="spirit">spirit</span> ration for American soldiers 
+                                                had been abolished in <span class="1832">1832</span>, but officers were permitted to 
+                                                issue special servings of <span class="whiskey">whiskey</span> to relieve fatigue and exposure. 
+                                                Soldiers, naturally, had countless sneaky ways to obtain <span class="whiskey">whiskey</span>. 
+                                                While diligent officers could restrict the flow of <span class="whiskey">whiskey</span> into camp, 
+                                                soldiers could still drink when they received a pass to leave camp. In the <span class="ConfederateArmy">Confederate Army</span>, 
                                                 the phrase “running the blockade” meant slipping in and out of camp for illicit purposes, 
                                                 usually involving <span class="alcohol">alcohol</span>.
                                             </p>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#1861">1861</a>
                                             <a href="#spirit">spirit</a>
                                             <a href="#USArmy">USArmy</a>
                                             <a href="#1832">1832</a>
-                                            <a href="#ConfederateArmy">ConfederateArmy</a>
+                                            <a href="#ConfederateArmy">ConfederateArmy</a> -->
 
                                             <p>
-                                                On <span id="27February1862">February 27, 1862</span>, 
-                                                the <span id="ConfederateCongress">Confederate Congress</span> passed a law allowing 
-                                                <span id="PresidentDavis">President Jefferson Davis</span> to suspend habeas corpus and 
+                                                On <span class="February1862">February 27, 1862</span>, 
+                                                the <span class="ConfederateCongress">Confederate Congress</span> passed a law allowing 
+                                                <span class="PresidentDavis">President Jefferson Davis</span> to suspend habeas corpus and 
                                                 declare martial law in areas threatened by the enemy. Immediately, martial law was declared 
-                                                in <span class="location" id="Portsmouth">Portsmouth</span> and
-                                                <span class="location" id="Norfolk">Norfolk</span>, <span class="location" id="Virginia">Virginia</span>, 
-                                                followed by <span class="location" id="Richmond">Richmond</span> on <span id="March 1">March 1</span>. 
-                                                <span class="location" id="Richmond">Richmond</span> came under control of the provost guards commanded 
-                                                by <span id="GenWinder">Brig. Gen. John H. Winder</span>, who prohibited 
-                                                the manufacture of <span id="liquor">liquor</span> and closed the city’s saloons. 
-                                                By then <span id="liquor">liquor</span> sales
+                                                in <span class="location Portsmouth" id="Portsmouth">Portsmouth</span> and
+                                                <span class="location Norfolk" id="Norfolk">Norfolk</span>, <span class="location Virginia" id="Virginia">Virginia</span>, 
+                                                followed by <span class="location Richmond" id="Richmond">Richmond</span> on March 1. 
+                                                <span class="location Richmond" id="Richmond">Richmond</span> came under control of the provost guards commanded 
+                                                by <span class="GenWinder">Brig. Gen. John H. Winder</span>, who prohibited 
+                                                the manufacture of <span class="liquor">liquor</span> and closed the city’s saloons. 
+                                                By then <span class="liquor">liquor</span> sales
                                                 had caused so much trouble and crime among Confederate soldiers and civilian 
-                                                that many in <span class="location" id="Richmond">Richmond</span> welcomed martial law. 
-                                                Winder also barred rail shipments of <span id="whiskey">whiskey</span> into the Confederate capital. 
+                                                that many in <span class="location Richmond" id="Richmond">Richmond</span> welcomed martial law. 
+                                                Winder also barred rail shipments of <span class="whiskey">whiskey</span> into the Confederate capital. 
                                                 Apothecaries were allowed to dispense
-                                                <span id="liquor">liquor</span> only with a doctor’s prescription.
+                                                <span class="liquor">liquor</span> only with a doctor’s prescription.
                                             </p>
-                                            <a href="#27February1862">27 February 1862</a>
+                                            <!-- <a href="#27February1862">27 February 1862</a>
                                             <a href="#ConfederateCongress">Confederate Congress</a>
                                             <a href="#PresidentDavis">President Davis</a>
                                             <a href="#Portsmouth">Portsmouth</a>
@@ -397,88 +401,88 @@
                                             <a href="#whiskey">whiskey</a>
                                             <a href="#Richmond">Richmond</a>
                                             <a href="#GenWinder">Brig. Gen. John H. Winder</a>
-                                            <a href="#liquor">liquor</a>
+                                            <a href="#liquor">liquor</a> -->
 
                                             <p>
-                                                Martial law did not stop the distribution of <span id="whiskey">whiskey</span>, 
+                                                Martial law did not stop the distribution of <span class="whiskey">whiskey</span>, 
                                                 but merely drove it underground. There were still countless cases of drunk and disorderly behavior, 
                                                 as well as arrests for illegal sales of <span class="alcohol">alcohol</span>. 
                                                 Corruption flourished among the provost
                                                 guards, some of whom forged prescriptions for <span class="alcohol">alcohol</span>. 
-                                                After obtaining the <span id="liquor">liquor</span>, they then arrested the apothecaries who 
+                                                After obtaining the <span class="liquor">liquor</span>, they then arrested the apothecaries who 
                                                 had dispensed it, thus adding insult to injury.
                                             </p>
-                                            <a href="#whiskey">whiskey</a>
+                                            <!-- <a href="#whiskey">whiskey</a>
                                             <a href="#liquor">liquor</a>
-                                            <a href="#alcohol">alcohol</a>
+                                            <a href="#alcohol">alcohol</a> -->
 
                                             <h2>A ‘Creature Comfort’ Care Package From Home</h2>
 
                                             <p>
-                                                A great deal of <span id="whiskey">whiskey</span> was sent 
+                                                A great deal of <span class="whiskey">whiskey</span> was sent 
                                                 to army camps on both sides by well-meaning relatives back home. 
                                                 It was a common practice, especially among the Union soldiers, for 
                                                 families to send their loved ones packages of fresh, canned, or smoked
                                                 food and other small creature comforts. Commanding officers quickly realized 
-                                                that a great deal of <span id="whiskey">whiskey</span> was also being smuggled into 
-                                                camp inside these care packages. General <span id="BenjaminButler">Benjamin Butler</span> 
-                                                later testified before <span id="Congress">Congress</span> that a search of an
+                                                that a great deal of <span class="whiskey">whiskey</span> was also being smuggled into 
+                                                camp inside these care packages. General <span class="BenjaminButler">Benjamin Butler</span> 
+                                                later testified before <span class="Congress">Congress</span> that a search of an
                                                 <span id="AdamsExpressCompany">Adams Express Company</span> depot yielded 150 
-                                                different packages of <span id="liquor">liquor</span> in crates and boxes on their way to his command.
+                                                different packages of <span class="liquor">liquor</span> in crates and boxes on their way to his command.
                                             </p>
-                                            <a href="#whiskey">whiskey</a>
+                                            <!-- <a href="#whiskey">whiskey</a>
                                             <a href="#BenjaminButler">Benjamin Butler</a>
                                             <a href="#Congress">Congress</a>
-                                            <a href="#AdamsExpressCompany">Adams Express Company</a>
+                                            <a href="#AdamsExpressCompany">Adams Express Company</a> -->
 
                                             <p>
                                                 Every parcel intended for a soldier had to be opened and inspected by officers of 
-                                                his regiment or brigade. <span id="UnionPrivateBillings">Union Private John D. Billings</span>, 
-                                                in his classic memoir <span id="HardtackCoffee">Hardtack and Coffee</span>, 
+                                                his regiment or brigade. <span class="UnionPrivateBillings">Union Private John D. Billings</span>, 
+                                                in his classic memoir Hardtack and Coffee, 
                                                 recalled, “There was many a growl uttered by men who lost
                                                 their little pint or quart bottle of some choice stimulating beverage, which had been 
-                                                confiscated from a box as contraband of war.” <span id="Union Private John D. Billings">Billings</span> 
-                                                noted some ingenious ways that innocent-looking gifts concealed <span id="whiskey">whiskey</span>. 
+                                                confiscated from a box as contraband of war.” <span class="UnionPrivateBillings">Billings</span> 
+                                                noted some ingenious ways that innocent-looking gifts concealed <span class="whiskey">whiskey</span>. 
                                                 One favorite ruse was hiding
-                                                a bottle of <span id="whiskey">whiskey</span> inside a well-roasted turkey. 
-                                                <span id="whiskey">Whiskey</span> bottles also came into <span id="Union Private John D. Billings">Billings</span>’ 
+                                                a bottle of <span class="whiskey">whiskey</span> inside a well-roasted turkey. 
+                                                <span class="whiskey">Whiskey</span> bottles also came into <span id="UnionPrivateBillings">Billings</span>’ 
                                                 camp in tin cans of small cakes or in loaves of bread with holes cut in the bottom.
                                             </p>
-                                            <a href="#UnionPrivateBillings">Union Private John D. Billings</a>
+                                            <!-- <a href="#UnionPrivateBillings">Union Private John D. Billings</a>
                                             <a href="#HardtackCoffee">Hardtack and Coffee</a>
-                                            <a href="#whiskey">whiskey</a>
+                                            <a href="#whiskey">whiskey</a> -->
 
                                             <p>
-                                                Smuggling <span id="whiskey">whiskey</span> in legitimate-looking containers with 
-                                                false labels was a common practice. A helpful sutler showed <span id="Benjamin Butler">Butler</span> 
+                                                Smuggling <span class="whiskey">whiskey</span> in legitimate-looking containers with 
+                                                false labels was a common practice. A helpful sutler showed <span id="BenjaminButler">Butler</span> 
                                                 several little bottles that supposedly contained hair oil packaged by a 
-                                                <span class="location" id="NewYorkCity">New York City</span> firm. Instead, each bottle
-                                                contained half a pint of <span id="whiskey">whiskey</span>, with a little olive oil on top.
+                                                <span class="location NewYorkCity" id="NewYorkCity">New York City</span> firm. Instead, each bottle
+                                                contained half a pint of <span class="whiskey">whiskey</span>, with a little olive oil on top.
                                                 The bottles were sold wholesale at eight cents each, but soldiers paid 25 cents for them in camp. 
-                                                The distributor claimed to have sold thousands of such bottles at <span class="location" id="FortMonroe">Fort Monroe</span>.
+                                                The distributor claimed to have sold thousands of such bottles at <span class="location FortMonroe" id="FortMonroe">Fort Monroe</span>.
                                             </p>
-                                            <a href="#whiskey">whiskey</a>
+                                            <!-- <a href="#whiskey">whiskey</a>
                                             <a href="#BenjaminButler">Benjamin Butler</a>
                                             <a href="#NewYorkCity">New York City</a>
-                                            <a href="#FortMonroe">Fort Monroe</a>
+                                            <a href="#FortMonroe">Fort Monroe</a> -->
 
                                             <h2><span class="alcohol">Alcohol</span> Restrictions Lead to Officer Impersonation</h2>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a> -->
 
                                             <p>
-                                                In <span id="February1863">February 1863</span>, the <span id="UnionGuardBoatJacobBell">Union guard boat Jacob Bell</span> 
-                                                searched the supply schooner Mail at <span class="location" id="Alexandria, Virginia">Alexandria, Virginia</span>. 
+                                                In <span class="February1863">February 1863</span>, the <span class="UnionGuardBoatJacobBell">Union guard boat Jacob Bell</span> 
+                                                searched the supply schooner Mail at <span class="location Alexandria, Virginia" id="Alexandria, Virginia">Alexandria, Virginia</span>. 
                                                 Aboard the schooner were 428 dozen cans labeled “milk drink” packaged by 
-                                                <span id="Numsen, Carroll & Company">Numsen, Carroll & Company</span>, 
-                                                a <span class="location" id="Baltimore">Baltimore</span> firm. Upon
-                                                closer inspection, <span id="LtMcCrea">Lt. Cmdr. E.P. McCrea</span> 
-                                                learned that the milk drink was actually “villainous eggnog.” <span id="CommodoreHarwood">Commodore Andrew Harwood</span> 
+                                                <span clas="Numsen, Carroll & Company">Numsen, Carroll & Company</span>, 
+                                                a <span class="location Baltimore" id="Baltimore">Baltimore</span> firm. Upon
+                                                closer inspection, <span class="LtMcCrea">Lt. Cmdr. E.P. McCrea</span> 
+                                                learned that the milk drink was actually “villainous eggnog.” <span class="CommodoreHarwood">Commodore Andrew Harwood</span> 
                                                 noted that the cans were not soldered in the usual way. The top and bottom had been heated with a resinous
                                                 substance and the edges bent over so that the cover at either end could be 
-                                                removed to convert the can into a drinking cup. Harwood issued orders to the <span id="PotomacFlotilla">Potomac Flotilla</span> 
+                                                removed to convert the can into a drinking cup. Harwood issued orders to the <span class="PotomacFlotilla">Potomac Flotilla</span> 
                                                 to seize any vessel caught smuggling <span class="alcohol">alcohol</span>.
                                             </p>
-                                            <a href="#alcohol">alcohol</a>
+                                            <!-- <a href="#alcohol">alcohol</a>
                                             <a href="#February1863">February 1863</a>
                                             <a href="#UnionGuardBoatJacobBell">Union Guard Boat Jacob Bell</a>
                                             <a href="#Alexandria">Alexandria, Virginia</a>
@@ -486,19 +490,19 @@
                                             <a href="#Baltimore">Baltimore</a>
                                             <a href="#LtMcCrea">Lt. Cmdr. E.P. McCrea</a>
                                             <a href="#CommodoreHarwood">Commodore Andrew Harwood</a>
-                                            <a href="#PotomacFlotilla">Potomac Flotilla</a>
+                                            <a href="#PotomacFlotilla">Potomac Flotilla</a> -->
 
                                             <p>
-                                                Sutlers were in a good position to profit from <span id="liquor">liquor</span> sales. 
-                                                Regulations prohibited them from selling <span id="liquor">liquor</span> to enlisted personnel, 
+                                                Sutlers were in a good position to profit from <span class="liquor">liquor</span> sales. 
+                                                Regulations prohibited them from selling <span class="liquor">liquor</span> to enlisted personnel, 
                                                 but many of the officially licensed merchants evaded the rules. Sutlers could openly stock 
-                                                <span id="whiskey">whiskey</span> because they
+                                                <span class="whiskey">whiskey</span> because they
                                                 were still allowed to sell it to officers. Brassy enlisted men frequently borrowed a 
-                                                pair of officers’ shoulder straps and purchased <span id="whiskey">whiskey</span> in the shops. 
+                                                pair of officers’ shoulder straps and purchased <span class="whiskey">whiskey</span> in the shops. 
                                                 Others stole bottles from sutler huts, wagons, or tents.
                                             </p>
-                                            <a href="#whiskey">whiskey</a>
-                                            <a href="#liquor">liquor</a>
+                                            <!-- <a href="#whiskey">whiskey</a>
+                                            <a href="#liquor">liquor</a> -->
 
                                             <p>
                                                 Impersonating an officer was only one of the many ways that Union and 
@@ -507,10 +511,10 @@
                                                 <span class="location" id="NorthCarolina">North
                                                 Carolina</span> in <span id="April1862">April 1862</span>, several men in the 
                                                 <span id="51stPennsylvania">51st Pennsylvania</span> were ordered to guard the 
-                                                commissary tent in which a newly arrived shipment of <span id="whiskey">whiskey</span> 
+                                                commissary tent in which a newly arrived shipment of <span class="whiskey">whiskey</span> 
                                                 barrels was stored. One night the guards took the barrels off their muskets. After
                                                 unscrewing the breech plugs, each soldier had a long iron straw, which he inserted into 
-                                                the bung-hole of a <span id="whiskey">whiskey</span> cask and sucked himself into intoxication.
+                                                the bung-hole of a <span class="whiskey">whiskey</span> cask and sucked himself into intoxication.
                                             </p>
                                             <a href="#whiskey">whiskey</a>
                                             <a href="#NorthCarolina">North Carolina</a>
@@ -521,14 +525,14 @@
                                                 Among the busiest routes for smuggling <span class="alcohol">alcohol</span> to the 
                                                 <span id="UnionArmy">Union Army</span> was the <span class="location" id="LongBridge">Long Bridge</span>, 
                                                 which crossed the <span class="location" id="PotomacRiver">Potomac River</span>, linking <span class="location" id="Washington">Washington, D.C.</span>, 
-                                                to <span class="location" id="Virginia">Virginia</span>. On <span id="23November1863">November 23, 1863</span>, 
-                                                all contraband <span id="liquor">liquor</span> seized on the bridge was turned over to the 
+                                                to <span class="location Virginia" id="Virginia">Virginia</span>. On <span id="23November1863">November 23, 1863</span>, 
+                                                all contraband <span class="liquor">liquor</span> seized on the bridge was turned over to the 
                                                 <span id="ArmyMedicalMuseum">Army Medical Museum</span>, located not far from the 
                                                 <span class="location" id="Washington">Washington</span> end of the bridge. 
                                                 At the time, tissue specimens saved for the museum were wrapped in cloth and preserved in a 
-                                                keg of <span class="alcohol">alcohol</span> or <span id="whiskey">whiskey</span>. Each specimen was identified
+                                                keg of <span class="alcohol">alcohol</span> or <span class="whiskey">whiskey</span>. Each specimen was identified
                                                 by a small wooden block, with a description written on it in pencil so that the <span class="alcohol">alcohol</span> 
-                                                would not dissolve the writing. Confiscated <span id="liquor">liquor</span> was distilled again 
+                                                would not dissolve the writing. Confiscated <span class="liquor">liquor</span> was distilled again 
                                                 by the museum into uniform grade 70 percent <span class="alcohol">alcohol</span>, which was deemed perfect for
                                                 preserving specimens.
                                             </p>
@@ -543,7 +547,7 @@
                                             <a href="#PotomacRiver">Potomac River</a>
                                             <a href="#Washington">Washington</a>
 
-                                            <h2><span id="liquor">Liquor</span> Smuggling Gets More Sophisticated</h2>
+                                            <h2><span class="liquor">Liquor</span> Smuggling Gets More Sophisticated</h2>
                                             <a href="#liquor">liquor</a>
 
                                             <p>
@@ -552,12 +556,12 @@
                                                 of tins, made so as to fit unperceived on the body, and thus permit the wearer to
                                                 smuggle <span class="alcohol">alcohol</span> into camp.” Another medical officer, 
                                                 <span id="SurgeonWalsh">Acting Assistant Surgeon Ralph S.L. Walsh</span>, 
-                                                marveled at the ingenuity of <span id="liquor">liquor</span> smugglers. Goods confiscated for the museum, 
+                                                marveled at the ingenuity of <span class="liquor">liquor</span> smugglers. Goods confiscated for the museum, 
                                                 ranging from blackberry wine to straight alcohol, were packed
                                                 in many peculiar vessels. Frequently women were arrested with belts under their skirts to which were 
-                                                fastened tin cans holding between a quart and a gallon of <span id="whiskey">whiskey</span>. 
+                                                fastened tin cans holding between a quart and a gallon of <span class="whiskey">whiskey</span>. 
                                                 In a number of cases the women sported false breasts, each holding a
-                                                quart or more of contraband <span id="liquor">liquor</span>. Guards seized so much 
+                                                quart or more of contraband <span class="liquor">liquor</span>. Guards seized so much 
                                                 <span class="alcohol">alcohol</span> at <span class="location" id="LongBridge">Long Bridge</span> 
                                                 during the war that the <span id="ArmyMedicalMuseum">Army Medical Museum</span> had enough 
                                                 <span class="alcohol">alcohol</span> for its specimens until <span id="1876">1876</span>.
@@ -573,8 +577,8 @@
 
                                             <p>
                                                 In many camps sutlers were allowed to sell patent medicines. Often these remedies 
-                                                were nothing more than <span id="liquor">liquor</span> flavored and tinted with herbal concoctions. 
-                                                Countless posters and newspapers touted the healing power of bitters, <span id="liquor">liquor</span>
+                                                were nothing more than <span class="liquor">liquor</span> flavored and tinted with herbal concoctions. 
+                                                Countless posters and newspapers touted the healing power of bitters, <span class="liquor">liquor</span>
                                                 strongly flavored with herbs. Some medicinal bitters were served as drinks in saloons. 
                                                 The highly advertised <span id="DrakePlantationBitters">Drake’s Plantation Bitters</span>, 
                                                 which blended herbs with <span id="StCroixRum">St. Croix rum</span>, was enormously popular at sutler tents.
@@ -596,7 +600,7 @@
                                                 As <span id="LieutenantTownshend">Townshend</span> reported,
                                                 “Some of the men, who were more chilly than the others, took overdoses and in consequence became staggeringly drunk.” 
                                                 Only then did the mortified adjutant learn that <span id="HostetterBitters">Hostetter’s Bitters</span> was 
-                                                almost pure <span id="whiskey">whiskey</span>.
+                                                almost pure <span class="whiskey">whiskey</span>.
                                             </p>
                                             <a href="#LieutenantTownshend">Lieutenant Luther Tracy Townshend</a>
                                             <a href="#16thVermont">16th Vermont</a>
@@ -610,7 +614,7 @@
                                                 <span id="BrigBlenker">Brig. Gen. Louis Blenker</span>, for one, ordered sutlers to 
                                                 sell beer to the soldiers of his brigade, who were predominantly
                                                 German immigrants, to keep up their morale. His orders caused resentment among non-German units, 
-                                                although this was mollified by sutlers selling <span id="beer">beer</span> to soldiers outside the brigade.
+                                                although this was mollified by sutlers selling <span class="beer">beer</span> to soldiers outside the brigade.
                                             </p>
                                             <a href="#alcohol">alcohol</a>
                                             <a href="#UnionArmy">Union Army</a>
@@ -621,7 +625,7 @@
                                                 Perhaps the most creative dodge was used by a soldier of the 
                                                 <span id="11thOhio">11th Ohio</span>, who killed a snake and, in the words of a marveling comrade, 
                                                 “carefully dissecting the varmint obtained a long, white cartilage, which he carefully cleaned and coiled up.
-                                                Proceeding to the hospital, he politely requested a small quantity of <span id="spirit">spirits</span>
+                                                Proceeding to the hospital, he politely requested a small quantity of <span class="spirit">spirits</span>
                                                 in which to preserve the curiosity (which he represented as a tape worm). 
                                                 The surgeon not only agreed, but complimented the man highly for the interest he
                                                 manifested in natural science!”
@@ -630,12 +634,12 @@
                                             <a href="#spirit">spirit</a>
 
                                             <p>
-                                                <span id="whiskey">Whiskey</span> abuse was not confined to land-based armies. 
+                                                <span class="whiskey">Whiskey</span> abuse was not confined to land-based armies. 
                                                 Both <span id="UnionNavy">Union</span> and <span id="ConfederateNavy">Confederate</span> navies 
                                                 faced abuses of their own. In the 18th century the <span id="BritishRoyalNavy">British Royal Navy</span> 
-                                                routinely issued a ration of <span id="spirit">spirits</span>, usually <span id="rum">rum</span>, 
+                                                routinely issued a ration of <span class="spirit">spirits</span>, usually <span id="rum">rum</span>, 
                                                 to enlisted personnel. Originally
-                                                the ration was eight ounces of distilled <span id="spirit">spirits</span>s per day. 
+                                                the ration was eight ounces of distilled <span class="spirit">spirits</span>s per day. 
                                                 Naval <span id="rum">rum</span> was diluted with water, resulting in the traditional drink called <span id="grog">grog</span>. 
                                                 The practice was associated with <span id="AdmiralEdwardVernon">Admiral Edward Vernon</span>, 
                                                 a famed officer of the mid-1700s whose service
@@ -666,17 +670,17 @@
                                                 as well as the early <span id="USNavy">U.S. Navy</span>, 
                                                 adopted the British ration of half a pint of <span id="grog">grog</span> per day. 
                                                 Before the <span id="War1812">War of 1812</span>, imported <span id="rum">rum</span> 
-                                                from <span id="BritainCaribbeancolonies">Britain’s Caribbean colonies</span> was dropped in favor of American-made <span id="whiskey">whiskey</span>. Despite
+                                                from <span id="BritainCaribbeancolonies">Britain’s Caribbean colonies</span> was dropped in favor of American-made <span class="whiskey">whiskey</span>. Despite
                                                 the switch, sailors and the general public continued calling the naval ration <span id="grog">grog</span>. 
                                                 On land, lower class saloons were called <span id="grog">grog</span>-shops or groggeries. 
-                                                Aboard ship, the crew’s barrels of <span id="whiskey">whiskey</span> and the officers’ private stores 
-                                                of <span id="liquor">liquors</span> and
-                                                <span id="wine">wines</span> were kept locked up in the “<span id="spirit">spirit</span> room.” 
-                                                At the captain’s discretion, extra rations of <span id="spirit">spirits</span>s were doled out 
+                                                Aboard ship, the crew’s barrels of <span class="whiskey">whiskey</span> and the officers’ private stores 
+                                                of <span class="liquor">liquors</span> and
+                                                <span id="wine">wines</span> were kept locked up in the “<span class="spirit">spirit</span> room.” 
+                                                At the captain’s discretion, extra rations of <span class="spirit">spirits</span>s were doled out 
                                                 before and after action, or even during a battle. 
                                                 During the long fight with <span id="CSSVirginia">CSS Virginia</span>, 
                                                 the crew of <span id="USSMonitor">USS Monitor</span> was braced by
-                                                a special issue of two ounces of <span id="whiskey">whiskey</span> per crewman.
+                                                a special issue of two ounces of <span class="whiskey">whiskey</span> per crewman.
                                             </p>
                                             <a href="#ContinentalNavy">Continental Navy</a>
                                             <a href="#USNavy">US Navy</a>
@@ -692,16 +696,16 @@
                                             <a href="#CSSVirginia">CSS Virginia</a>
 
                                             <p>
-                                                Captains also issued extra <span id="liquor">liquor</span> 
+                                                Captains also issued extra <span class="liquor">liquor</span> 
                                                 as a reward for hard work such as the tedious and backbreaking job of loading coal aboard steam warships. 
                                                 Confederate sailors outfitting <span id="SeaKing">Sea King</span>, which was secretly being converted at sea into <span id="CSSShenandoah">CSS Shenandoah</span>, received a serving of grog every two hours. 
-                                                Mariners saw the <span id="spirit">spirit</span> ration as well-deserved compensation for 
+                                                Mariners saw the <span class="spirit">spirit</span> ration as well-deserved compensation for 
                                                 their long months of hard work and isolation at sea. With some reason, temperance advocates saw it instead as a
                                                 severe problem and focused considerable effort on luring sailors away from the bottle. 
-                                                In <span id="1832">1832</span> reformers persuaded <span id="Congress">Congress</span> 
+                                                In <span class="1832">1832</span> reformers persuaded <span class="Congress">Congress</span> 
                                                 to cut the naval ration to one gill, or four ounces, daily. Sailors under the age of 21 and anyone who chose not to
-                                                draw a <span id="spirit">spirit</span> ration received instead a small cash commutation, 
-                                                which had risen to five cents a day by <span id="1861">1861</span>.
+                                                draw a <span class="spirit">spirit</span> ration received instead a small cash commutation, 
+                                                which had risen to five cents a day by <span class="1861">1861</span>.
                                             </p>
                                             <a href="#liquor">liquor</a>
                                             <a href="#SeaKing">Sea King</a>
@@ -712,20 +716,20 @@
                                             <a href="1861">1861</a>
 
                                                 <p>
-                                                After reducing the naval <span id="grog">grog</span> ration, <span id="Congress">Congress</span> 
+                                                After reducing the naval <span id="grog">grog</span> ration, <span class="Congress">Congress</span> 
                                                 debated but did not act further on the temperance movement’s demands for tighter restrictions. 
-                                                A chance to end the <span id="grog">grog</span> ration arose again when Southern members of <span id="Congress">Congress</span> 
+                                                A chance to end the <span id="grog">grog</span> ration arose again when Southern members of <span class="Congress">Congress</span> 
                                                 left the nation’s
                                                 capital after the beginning of the war. Northern representatives and senators were more sympathetic 
                                                 to the temperance cause, and with Southern seats now vacant, there were enough Northern votes to abolish 
-                                                the naval <span id="spirit">spirit</span> rations. A <span id="14July1862">July
-                                                14, 1862</span>, act of <span id="Congress">Congress</span> set <span id="August31">August 31</span> 
+                                                the naval <span class="spirit">spirit</span> rations. A <span id="14July1862">July
+                                                14, 1862</span>, act of <span class="Congress">Congress</span> set <span id="August31">August 31</span> 
                                                 of that same year as the last day for the <span id="grog">grog</span> ration. A correspondent aboard 
-                                                an unnamed vessel wrote to the <span id="PhiladelphiaPress">Philadelphia Press</span> that <span id="Congress">Congress</span> 
+                                                an unnamed vessel wrote to the <span id="PhiladelphiaPress">Philadelphia Press</span> that <span class="Congress">Congress</span> 
                                                 had made a great mistake. He warned that ending the
-                                                <span id="spirit">spirit</span> ration would drive all the old seamen out of the service. 
+                                                <span class="spirit">spirit</span> ration would drive all the old seamen out of the service. 
                                                 Aboard the receiving ship <span class="location" id="NorthCarolina">North Carolina</span> in 
-                                                <span class="location" id="NewYorkCity">New York City</span> harbor, 
+                                                <span class="location NewYorkCity" id="NewYorkCity">New York City</span> harbor, 
                                                 the men met the restriction with muttered growls, but no signs of incipient mutiny were readily apparent.
                                             </p>
                                             <a href="#spirit>">spirit</a>
@@ -740,10 +744,10 @@
                                             <h2>Kegs Auctioned Off & Turned In To Medical Staff</h2>
 
                                             <p>
-                                                <span id="spirit">Spirit</span> kegs remained under lock and key until naval vessels returned to port. About 3,000 kegs were auctioned off and others were turned over to the naval medical service for hospital use. Excess <span id="whiskey">whiskey</span> in the 
+                                                <span class="spirit">Spirit</span> kegs remained under lock and key until naval vessels returned to port. About 3,000 kegs were auctioned off and others were turned over to the naval medical service for hospital use. Excess <span class="whiskey">whiskey</span> in the 
                                                 <span id="NorthAtlanticBlockadingSquadron">North Atlantic Blockading
-                                                Squadron</span> was stored aboard the aptly named ship <span id="Brandywine">Brandywine</span>. As compensation for the loss of the <span id="spirit">spirit</span> ration, the <span id="Navy">Navy</span> added five cents per day to sailors’ pay, a raise of between 8 and 10 percent. Despite the banning of <span id="grog">grog</span>, there was still
-                                                some <span class="alcohol">alcohol</span> aboard Union naval vessels. “Distilled spirituous <span id="liquor">liquors”</span> were allowed on board ship as medical stores. And officers, trusted by <span id="Congress">Congress</span> more than common sailors, were still allowed to have private stores of <span id="liquor">liquors</span> and <span id="wine">wines</span>.
+                                                Squadron</span> was stored aboard the aptly named ship <span id="Brandywine">Brandywine</span>. As compensation for the loss of the <span class="spirit">spirit</span> ration, the <span id="Navy">Navy</span> added five cents per day to sailors’ pay, a raise of between 8 and 10 percent. Despite the banning of <span id="grog">grog</span>, there was still
+                                                some <span class="alcohol">alcohol</span> aboard Union naval vessels. “Distilled spirituous <span class="liquor">liquors”</span> were allowed on board ship as medical stores. And officers, trusted by <span class="Congress">Congress</span> more than common sailors, were still allowed to have private stores of <span class="liquor">liquors</span> and <span id="wine">wines</span>.
                                             </p>
                                             <a href="#spirit">spirit</a>
                                             <a href="#whiskey">whiskey</a>
@@ -757,7 +761,7 @@
 
 
                                             <p>
-                                                <span id="grog">Grog</span> was served in the <span id="ConfederateNavy">Confederate Navy</span> as well. Rebel tars were entitled to one gill of <span id="spirit">spirits</span>s or half a pint of <span id="wine">wine</span> per day. As in the <span id="UnionNavy">Union Navy</span>, a small cash commutation was paid to sailors not taking their <span id="spirit">spirit</span> ration. <span id="ConfederateNavy">Confederate Navy</span> officials had considerable trouble obtaining enough spirituous <span id="liquor">liquor</span> for rations and hospital use. Naval requirements clashed with state regulations that reserved corn and grain for food rather than distillation of <span id="spirit">spirits</span>. Eventually a distillery was set up in <span class="location" id="Augusta">Augusta</span>, <span class="location" id="Georgia">Georgia</span>, to produce <span id="whiskey">whiskey</span> for naval use. Despite the trouble in obtaining <span id="liquor">liquor</span>, the <span id="ConfederateNavy">Confederate Navy</span> never got around to banning its <span id="spirit">spirit</span> ration, and it remained on the books until the war ended in <span id="1865">1865</span>.
+                                                <span id="grog">Grog</span> was served in the <span id="ConfederateNavy">Confederate Navy</span> as well. Rebel tars were entitled to one gill of <span class="spirit">spirits</span>s or half a pint of <span id="wine">wine</span> per day. As in the <span id="UnionNavy">Union Navy</span>, a small cash commutation was paid to sailors not taking their <span class="spirit">spirit</span> ration. <span id="ConfederateNavy">Confederate Navy</span> officials had considerable trouble obtaining enough spirituous <span class="liquor">liquor</span> for rations and hospital use. Naval requirements clashed with state regulations that reserved corn and grain for food rather than distillation of <span class="spirit">spirits</span>. Eventually a distillery was set up in <span class="location" id="Augusta">Augusta</span>, <span class="location" id="Georgia">Georgia</span>, to produce <span class="whiskey">whiskey</span> for naval use. Despite the trouble in obtaining <span class="liquor">liquor</span>, the <span id="ConfederateNavy">Confederate Navy</span> never got around to banning its <span class="spirit">spirit</span> ration, and it remained on the books until the war ended in <span id="1865">1865</span>.
                                             </p>
                                             <a href="#grog">grog</a>
                                             <a href="#ConfederateNavy">Confederate Navy</a>
@@ -770,7 +774,7 @@
                                             <a href="#1865">1865</a>
 
                                             <p>
-                                                Illicit <span class="alcohol">alcohol</span> resulted in a number of embarrassing incidents at sea. <span id="MidshipmanMorgan">Midshipman James Morris Morgan</span>, in his memoir <span id="RecollectionsRebelReefer">Recollections of a Rebel Reefer</span>, wrote about an <span class="alcohol">alcohol</span>-fueled riot on the cruiser <span id="CSSGeorgia">CSS Georgia</span> in <span id="October1863">October 1863</span>. Sailors slipped into a coal bunker and bored through a thin bulkhead separating the coal from the <span id="spirit">spirit</span> room. Then they drilled a hole into the head of a barrel of <span id="liquor">liquor</span> and inserted a lead pipe. The pilfered <span id="grog">grog</span> was distributed among the crew, said
+                                                Illicit <span class="alcohol">alcohol</span> resulted in a number of embarrassing incidents at sea. <span id="MidshipmanMorgan">Midshipman James Morris Morgan</span>, in his memoir <span id="RecollectionsRebelReefer">Recollections of a Rebel Reefer</span>, wrote about an <span class="alcohol">alcohol</span>-fueled riot on the cruiser <span id="CSSGeorgia">CSS Georgia</span> in <span id="October1863">October 1863</span>. Sailors slipped into a coal bunker and bored through a thin bulkhead separating the coal from the <span class="spirit">spirit</span> room. Then they drilled a hole into the head of a barrel of <span class="liquor">liquor</span> and inserted a lead pipe. The pilfered <span id="grog">grog</span> was distributed among the crew, said
                                                 <span id="MidshipmanMorgan">Morgan</span>, “and soon there was a battle royal going on the berth deck which the master-at-arms was unable to stop.” Georgia’s first lieutenant went below and induced most of the men to give themselves up for punishment. One holdout defied
                                                 the officers, but <span id="MidshipmanMorgan">Morgan</span> tackled him and the master-at-arms handcuffed him. Several crewmen were placed in irons and sentenced to a spell in the brig on bread and water.
                                             </p>
@@ -783,11 +787,11 @@
                                             <a href="#liquor">liquor</a>
                                             <a href="#grog">grog</a>
 
-                                            <h2><span id="whiskey">Whiskey</span> As Spoils of War</h2>
+                                            <h2><span class="whiskey">Whiskey</span> As Spoils of War</h2>
                                             <a href="#whiskey">whiskey</a>
 
                                             <p>
-                                                The British <span id="StingRay">blockade-running schooner Sting Ray</span>, under the command of a <span id="CaptainMcCloskey">Captain McCloskey</span>, was captured in the <span class="location" id="GulfMexico">Gulf of Mexico</span> by <span id="USSKineo">USS Kineo</span> on <span id="22May1864">May 22, 1864</span>. An acting ensign with a prize crew of seven men took charge of the vessel and followed in <span id="USSKineo">Kineo</span>’s wake. <span id="CaptainMcCloskey">McCloskey</span> produced a stash of <span id="whiskey">whiskey</span> and offered it to the prize crew. By the time <span id="PaulBorner">Acting Ensign Paul Borner</span> realized what had happened his men were so drunk that they were unable to get back on deck without
+                                                The British <span id="StingRay">blockade-running schooner Sting Ray</span>, under the command of a <span id="CaptainMcCloskey">Captain McCloskey</span>, was captured in the <span class="location" id="GulfMexico">Gulf of Mexico</span> by <span id="USSKineo">USS Kineo</span> on <span id="22May1864">May 22, 1864</span>. An acting ensign with a prize crew of seven men took charge of the vessel and followed in <span id="USSKineo">Kineo</span>’s wake. <span id="CaptainMcCloskey">McCloskey</span> produced a stash of <span class="whiskey">whiskey</span> and offered it to the prize crew. By the time <span id="PaulBorner">Acting Ensign Paul Borner</span> realized what had happened his men were so drunk that they were unable to get back on deck without
                                                 assistance.
                                             </p>
                                             <a href="#CaptainMcCloskey">Captain McCloskey</a>
@@ -799,7 +803,7 @@
                                             <a href="#StingRay">Sting Ray</a>
 
                                             <p>
-                                                <span id="PaulBorner">Borner</span> locked the hatch to keep the men from getting any more <span id="whiskey">whiskey</span>, but <span id="CaptainMcCloskey">McCloskey</span> and his crew jumped <span id="PaulBorner">Borner</span>, took his pistol, and reclaimed the ship. <span id="WilliamMorgan">Union sailor William Morgan</span> fell overboard, and <span id="CaptainMcCloskey">McCloskey</span> tossed a spar into the sea as an improvised life preserver. Another man jumped into a ship’s boat, cut the painter, and escaped. The Confederates followed <span id="USSKineo">Kineo</span> for a time before changing course and making a dash for shore. Seeing  <span id="StingRay">Sting Ray</span> change course, <span id="JohnWatters">Lt. Cmdr. John Watters</span> of <span id="USSKineo">Kineo</span> opened fire with a 20-pounder gun. <span id="CaptainMcCloskey">McCloskey</span> managed to beach the vessel after dodging several Union shells. <span id="PaulBorner">Borner</span> and five of his sailors were captured by the <span id="13thTexas">13th Texas</span>. Only two of <span id="PaulBorner">Borner</span>’s crew avoided capture and were picked up later by <span id="USSKineo">Kineo</span>. <span id="WilliamMorgan">Morgan</span>, according to <span id="JohnWatters">Watters</span>, was “in a beastly state of intoxication, crazy drunk and howling.”
+                                                <span id="PaulBorner">Borner</span> locked the hatch to keep the men from getting any more <span class="whiskey">whiskey</span>, but <span id="CaptainMcCloskey">McCloskey</span> and his crew jumped <span id="PaulBorner">Borner</span>, took his pistol, and reclaimed the ship. <span id="WilliamMorgan">Union sailor William Morgan</span> fell overboard, and <span id="CaptainMcCloskey">McCloskey</span> tossed a spar into the sea as an improvised life preserver. Another man jumped into a ship’s boat, cut the painter, and escaped. The Confederates followed <span id="USSKineo">Kineo</span> for a time before changing course and making a dash for shore. Seeing  <span id="StingRay">Sting Ray</span> change course, <span id="JohnWatters">Lt. Cmdr. John Watters</span> of <span id="USSKineo">Kineo</span> opened fire with a 20-pounder gun. <span id="CaptainMcCloskey">McCloskey</span> managed to beach the vessel after dodging several Union shells. <span id="PaulBorner">Borner</span> and five of his sailors were captured by the <span id="13thTexas">13th Texas</span>. Only two of <span id="PaulBorner">Borner</span>’s crew avoided capture and were picked up later by <span id="USSKineo">Kineo</span>. <span id="WilliamMorgan">Morgan</span>, according to <span id="JohnWatters">Watters</span>, was “in a beastly state of intoxication, crazy drunk and howling.”
                                             </p>
                                             <a href="#PaulBorner>">Paul Borner</a>
                                             <a href="#whiskey">whiskey</a>
@@ -811,7 +815,7 @@
                                             <a href="#JohnWatters">John Watters</a>
 
                                             <p>
-                                                Doctors at the time incorrectly believed that <span class="alcohol">alcohol</span> was a stimulant, so they prescribed it to treat sick or wounded soldiers. Some drugs were soluble in <span class="alcohol">alcohol</span>, and patients received them in doses with <span id="whiskey">whiskey</span> or <span id="brandy">brandy</span>. One treatment for diphtheria was a dose of <span id="brandy">brandy</span> mixed with <span id="ammonia">ammonia</span>. <span class="alcohol">Alcohol</span> itself was seen as having curative powers for some illnesses. <span id="laudanum">Laudanum</span>, a mixture of <span class="alcohol">alcohol</span> and <span id="opium">opium</span>, was a widely prescribed <span id="painkiller">painkiller</span>. Ether was made by distilling <span class="alcohol">alcohol</span> and <span id="sulfuricAcid">sulfuric acid</span>, called “<span id="spirit">spirits</span>s of nitre.” A purer form of <span class="alcohol">alcohol</span> called <span class="alcohol">alcohol</span> fortius was used to make ether and to dissolve various compounds.
+                                                Doctors at the time incorrectly believed that <span class="alcohol">alcohol</span> was a stimulant, so they prescribed it to treat sick or wounded soldiers. Some drugs were soluble in <span class="alcohol">alcohol</span>, and patients received them in doses with <span class="whiskey">whiskey</span> or <span class="brandy">brandy</span>. One treatment for diphtheria was a dose of <span class="brandy">brandy</span> mixed with <span id="ammonia">ammonia</span>. <span class="alcohol">Alcohol</span> itself was seen as having curative powers for some illnesses. <span id="laudanum">Laudanum</span>, a mixture of <span class="alcohol">alcohol</span> and <span id="opium">opium</span>, was a widely prescribed <span id="painkiller">painkiller</span>. Ether was made by distilling <span class="alcohol">alcohol</span> and <span class="sulfuricAcid">sulfuric acid</span>, called “<span class="spirit">spirits</span>s of nitre.” A purer form of <span class="alcohol">alcohol</span> called <span class="alcohol">alcohol</span> fortius was used to make ether and to dissolve various compounds.
                                             </p>
                                             <a href="#alcohol">alcohol</a>
                                             <a href="#whiskey">whiskey</a>
@@ -826,8 +830,8 @@
                                             <h2>A Prized Commodity in Medical Treatment</h2>
 
                                             <p>
-                                                <span id="whiskey">Whiskey</span> or <span id="brandy">brandy</span>, either alone or mixed with other ingredients, were routinely used to treat patients suffering from wounds or illnesses. Usually <span id="whiskey">whiskey</span> was prescribed in frequent but small doses, perhaps one ounce or one tablespoon every few hours. Sometimes it was administered by itself, but it might also be mixed in eggnog or milk punch. One example concerned the case of <span id="AugustusFalls">Private Augustus C. Falls</span> of the <span id="1stNewYorkHeavyArtillery">1st New York Heavy Artillery</span>. Falls was admitted to <span id="DouglasHospital">Douglas Hospital</span> in <span class="location" id="Washington">Washington</span> with diarrhea on <span id="5August1864">August 5, 1864</span>. A surgeon prescribed 11/2 ounces of <span id="whiskey">whiskey</span> each day at dinner. Three days later the dosage was raised to two ounces of <span id="whiskey">whiskey</span> three times a day. On <span id="29September">September 29</span>, the dosage was again
-                                                increased to three ounces of <span id="whiskey">whiskey</span> every four hours. Despite the special treatment, <span id="AugustusFalls">Falls</span> died on <span id="5October">October 5</span>.
+                                                <span class="whiskey">Whiskey</span> or <span class="brandy">brandy</span>, either alone or mixed with other ingredients, were routinely used to treat patients suffering from wounds or illnesses. Usually <span class="whiskey">whiskey</span> was prescribed in frequent but small doses, perhaps one ounce or one tablespoon every few hours. Sometimes it was administered by itself, but it might also be mixed in eggnog or milk punch. One example concerned the case of <span id="AugustusFalls">Private Augustus C. Falls</span> of the <span id="1stNewYorkHeavyArtillery">1st New York Heavy Artillery</span>. Falls was admitted to <span id="DouglasHospital">Douglas Hospital</span> in <span class="location" id="Washington">Washington</span> with diarrhea on <span id="5August1864">August 5, 1864</span>. A surgeon prescribed 11/2 ounces of <span class="whiskey">whiskey</span> each day at dinner. Three days later the dosage was raised to two ounces of <span class="whiskey">whiskey</span> three times a day. On <span id="29September">September 29</span>, the dosage was again
+                                                increased to three ounces of <span class="whiskey">whiskey</span> every four hours. Despite the special treatment, <span id="AugustusFalls">Falls</span> died on <span id="5October">October 5</span>.
                                             </p>
                                             <a href="#whiskey">whiskey</a>
                                             <a href="#brandy">brandy</a>
@@ -840,7 +844,7 @@
                                             <a href="#5October">5October</a>
 
                                             <p>
-                                                One of the few effective <span id="drug">drugs</span> of the era, <span id="quinine">quinine</span>, could prevent <span id="malaria">malaria</span> or ease symptoms for patients who already had the disease. Soldiers often balked at taking their <span id="malaria">malaria</span> medicine, though, because of its markedly bitter taste. To cajole soldiers into taking <span id="quinine">quinine</span>, some surgeons mixed it with <span id="whiskey">whiskey</span>. This created the opposite problem; some soldiers enjoyed the <span id="quinine">quinine</span>-<span id="whiskey">whiskey</span> dose so much that they sneaked through the line for a second prescription. While stationed at <span class="location" id="NewBern_NorthCarolina">New Bern, North Carolina</span>, the men of the <span id="44thMassachusetts">44th Massachusetts</span> found that their medical officers took precautions to limit the soldiers to one dose each. Instead of serving <span id="quinine">quinine</span> in <span id="whiskey">whiskey</span>, the <span id="drug">drug</span> came blended with medical <span class="alcohol">alcohol</span>, water, and cayenne pepper. “No soldier,” wrote a veteran of the regiment, “is known to have acquired a dangerous hankering for the mixture.”
+                                                One of the few effective <span id="drug">drugs</span> of the era, <span id="quinine">quinine</span>, could prevent <span id="malaria">malaria</span> or ease symptoms for patients who already had the disease. Soldiers often balked at taking their <span id="malaria">malaria</span> medicine, though, because of its markedly bitter taste. To cajole soldiers into taking <span id="quinine">quinine</span>, some surgeons mixed it with <span class="whiskey">whiskey</span>. This created the opposite problem; some soldiers enjoyed the <span id="quinine">quinine</span>-<span class="whiskey">whiskey</span> dose so much that they sneaked through the line for a second prescription. While stationed at <span class="location" id="NewBern_NorthCarolina">New Bern, North Carolina</span>, the men of the <span id="44thMassachusetts">44th Massachusetts</span> found that their medical officers took precautions to limit the soldiers to one dose each. Instead of serving <span id="quinine">quinine</span> in <span class="whiskey">whiskey</span>, the <span id="drug">drug</span> came blended with medical <span class="alcohol">alcohol</span>, water, and cayenne pepper. “No soldier,” wrote a veteran of the regiment, “is known to have acquired a dangerous hankering for the mixture.”
                                             </p>
                                             <a href="#drug">drug</a>
                                             <a href="#quinine">quinine</a>
@@ -853,7 +857,7 @@
                                             <h2>Guilty on Charges of Drunkenness</h2>
 
                                             <p>
-                                                Southern medical officers struggled to obtain sufficient quantities of medicinal <span class="alcohol">alcohol</span>. <span id="GeneralSamuelMoore">Surgeon General Samuel P. Moore</span> established distilleries in <span class="location" id="Montgomery">Montgomery</span>, <span class="location" id="Columbia">Columbia</span>, <span class="location" id="Salisbury">Salisbury</span>, and <span class="location" id="Macon">Macon</span> to produce medicinal <span class="alcohol">alcohol</span>. Volunteer committees gathered food, clothing, medicines, and creature comforts from civilians and shipped them to military hospitals. On <span id="22November1861">November 22, 1861</span>, the <span id="CharlestonMercury">Charleston Mercury</span> highlighted the first quarterly report of the city’s <span id="LadiesChristianAssociation">Ladies’ Christian Association</span>. Among numerous shipments sent by the association to hospitals in <span class="location" id="Virginia">Virginia</span> were 34 boxes or crates of alcoholic beverages, including <span id="wine">wine</span>, <span id="brandy">brandy</span>, <span id="blackberryBrandy">blackberry brandy</span>, <span id="claret">claret</span>, <span class="location" id="Madeira">Madeira</span>, <span id="port">port</span>, <span id="whiskey">whiskey</span>, <span id="ale">ale</span>, <span id="bayRum">bay rum</span>, and additional
+                                                Southern medical officers struggled to obtain sufficient quantities of medicinal <span class="alcohol">alcohol</span>. <span id="GeneralSamuelMoore">Surgeon General Samuel P. Moore</span> established distilleries in <span class="location" id="Montgomery">Montgomery</span>, <span class="location" id="Columbia">Columbia</span>, <span class="location" id="Salisbury">Salisbury</span>, and <span class="location" id="Macon">Macon</span> to produce medicinal <span class="alcohol">alcohol</span>. Volunteer committees gathered food, clothing, medicines, and creature comforts from civilians and shipped them to military hospitals. On <span id="22November1861">November 22, 1861</span>, the <span id="CharlestonMercury">Charleston Mercury</span> highlighted the first quarterly report of the city’s <span id="LadiesChristianAssociation">Ladies’ Christian Association</span>. Among numerous shipments sent by the association to hospitals in <span class="location Virginia" id="Virginia">Virginia</span> were 34 boxes or crates of alcoholic beverages, including <span id="wine">wine</span>, <span class="brandy">brandy</span>, <span id="blackberryBrandy">blackberry brandy</span>, <span id="claret">claret</span>, <span class="location" id="Madeira">Madeira</span>, <span id="port">port</span>, <span class="whiskey">whiskey</span>, <span id="ale">ale</span>, <span id="bayRum">bay rum</span>, and additional
                                                 <span class="alcohol">alcohol</span> in the form of medicines and bitters.
                                             </p>
                                             <a href="#alcohol">alcohol</a>
@@ -884,7 +888,7 @@
                                             <a href="#1862">1862</a>
 
                                             <p>
-                                                Generals were not immune from abusing <span class="alcohol">alcohol</span>. Indeed, their vast responsibilities encouraged such abuse. Most notoriously, rumors of alcoholism dogged <span id="UlyssesGrant">Union General Ulysses S. Grant</span>. After <span id="UlyssesGrant">Grant</span>’s capture of <span class="location" id="Vicksburg">Vicksburg</span>, several gentlemen warned <span id="PresidentLincoln">President Lincoln</span> that <span id="UlyssesGrant">Grant</span> drank to excess. <span id="PresidentLincoln">Lincoln</span> was said to have asked what sort of <span id="whiskey">whiskey</span> <span id="UlyssesGrant">Grant</span> drank, because “if it makes him win victories like this <span class="location" id="Vicksburg">Vicksburg</span>, I will send a demijohn of the same kind to every general in the army.”
+                                                Generals were not immune from abusing <span class="alcohol">alcohol</span>. Indeed, their vast responsibilities encouraged such abuse. Most notoriously, rumors of alcoholism dogged <span id="UlyssesGrant">Union General Ulysses S. Grant</span>. After <span id="UlyssesGrant">Grant</span>’s capture of <span class="location" id="Vicksburg">Vicksburg</span>, several gentlemen warned <span id="PresidentLincoln">President Lincoln</span> that <span id="UlyssesGrant">Grant</span> drank to excess. <span id="PresidentLincoln">Lincoln</span> was said to have asked what sort of <span class="whiskey">whiskey</span> <span id="UlyssesGrant">Grant</span> drank, because “if it makes him win victories like this <span class="location" id="Vicksburg">Vicksburg</span>, I will send a demijohn of the same kind to every general in the army.”
                                             </p>
                                             <a href="#alcohol">alcohol</a>
                                             <a href="#UlyssesGrant">Ulysses Grant</a>
@@ -895,7 +899,7 @@
                                             <h2>Generals Just As Guilty As Their Soldiers</h2>
 
                                             <p>
-                                                A serious instance of generals drinking on duty contributed to the Union defeat at the <span id="BattleCrater">Battle of the Crater</span> on <span id="30July1864">July 30, 1864</span>. After successfully detonating a huge explosion in a tunnel dug under the Confederate lines outside <span class="location" id="Petersburg">Petersburg</span>, Union     forces moved in to exploit the break in the Rebel defenses. <span id="JamesLedlie">Brig. Gens. James H. Ledlie</span> and <span id="EdwardFerrero">Edward Ferrero</span> remained behind the lines drinking <span id="liquor">liquor</span> in a bombproof while their neglected divisions floundered without guidance from their commanders. The attack, which had the potential of taking <span class="location" id="Petersburg">Petersburg</span> and shortening the war, bogged down, and the Union regiments were devastated by Confederate counterattacks. After investigations into their drinking and dereliction of duty, <span id="JamesLedlie">Brig. Gens. James H. Ledlie</span> was allowed to resign from the army, but <span id="EdwardFerrero">Edward Ferrero</span> escaped serious penalty. He even managed to be brevetted to major general before the end of the war.
+                                                A serious instance of generals drinking on duty contributed to the Union defeat at the <span id="BattleCrater">Battle of the Crater</span> on <span id="30July1864">July 30, 1864</span>. After successfully detonating a huge explosion in a tunnel dug under the Confederate lines outside <span class="location" id="Petersburg">Petersburg</span>, Union     forces moved in to exploit the break in the Rebel defenses. <span id="JamesLedlie">Brig. Gens. James H. Ledlie</span> and <span id="EdwardFerrero">Edward Ferrero</span> remained behind the lines drinking <span class="liquor">liquor</span> in a bombproof while their neglected divisions floundered without guidance from their commanders. The attack, which had the potential of taking <span class="location" id="Petersburg">Petersburg</span> and shortening the war, bogged down, and the Union regiments were devastated by Confederate counterattacks. After investigations into their drinking and dereliction of duty, <span id="JamesLedlie">Brig. Gens. James H. Ledlie</span> was allowed to resign from the army, but <span id="EdwardFerrero">Edward Ferrero</span> escaped serious penalty. He even managed to be brevetted to major general before the end of the war.
                                             </p>
                                             <a href="#BattleCrater">Battle of the Crater</a>
                                             <a href="#30July1864">30 July 1864</a>
@@ -910,7 +914,7 @@
                                             <a href="#PhoebeYatesPember">Phoebe Yates Pember</a>
 
                                             <p>
-                                                On <span id="21October1863">October 21, 1863</span>, the <span id="CharlestonCourier">Charleston Courier</span> published a recipe for persimmon <span id="brandy">brandy</span>. Mashed by a pestle or simply with one’s hands, persimmons were mixed with warm water and left to ferment for five or six days. Then the mash was ready for distillation. In thrifty fashion, the writer suggested saving the persimmon seeds. They could be used for buttons, or parched and mixed with dried sweet potatoes to make a coffee substitute. <span id="beer">Beer</span> and <span id="wine">wine</span> were simpler to make at home than <span id="whiskey">whiskey</span>, as they needed no distilling apparatus. Newspapers published numerous recipes for persimmon <span id="beer">beer</span>. <span id="wine">Wine</span> and <span id="brandy">brandy</span> were made from any kind of available fruit, including peaches, pears, cherries, blackberries, plums, and even
+                                                On <span id="21October1863">October 21, 1863</span>, the <span id="CharlestonCourier">Charleston Courier</span> published a recipe for persimmon <span class="brandy">brandy</span>. Mashed by a pestle or simply with one’s hands, persimmons were mixed with warm water and left to ferment for five or six days. Then the mash was ready for distillation. In thrifty fashion, the writer suggested saving the persimmon seeds. They could be used for buttons, or parched and mixed with dried sweet potatoes to make a coffee substitute. <span class="beer">Beer</span> and <span id="wine">wine</span> were simpler to make at home than <span class="whiskey">whiskey</span>, as they needed no distilling apparatus. Newspapers published numerous recipes for persimmon <span class="beer">beer</span>. <span id="wine">Wine</span> and <span class="brandy">brandy</span> were made from any kind of available fruit, including peaches, pears, cherries, blackberries, plums, and even
                                                 watermelons.
                                             </p>
                                             <a href="#21October1863">21 October 1863</a>
@@ -921,7 +925,7 @@
                                             <a href="#whiskey">whiskey</a>
 
                                             <p>
-                                                <span id="Porcher">F.P. Porcher</span>’s <span id="1863workResourcesofSouthernFieldsandForests">1863 work Resources of Southern Fields and Forests</span> listed uses for hundreds of plants that grew in the Confederacy. He gave recipes for making <span id="beer">beer</span> from corn, persimmons, and boiled sassafras shoots. Blackberries could also    be used to make <span id="wine">wine</span>, and with the addition of spices and <span id="whiskey">whiskey</span>, a healthy cordial could be concocted. <span id="Porcher">Porcher</span> also mentioned dozens of medicines that could be prepared from native herbs added to <span id="whiskey">whiskey</span>, <span id="wine">wine</span>, or <span id="brandy">brandy</span>. Another way of coping with the lack of <span class="alcohol">alcohol</span> was to make a joke of it. By early 1864, “starvation parties” were becoming a fad in <span class="location" id="Richmond">Richmond</span>. Attendees wore the best finery they could manage. Unlike antebellum parties, there were no imported <span id="wine">wines</span> or <span id="liquor">liquors</span>. The fine punchbowls and glassware remaining from the days before the war held only water from the <span id="JamesRiver">James River</span>.
+                                                <span id="Porcher">F.P. Porcher</span>’s <span id="1863workResourcesofSouthernFieldsandForests">1863 work Resources of Southern Fields and Forests</span> listed uses for hundreds of plants that grew in the Confederacy. He gave recipes for making <span class="beer">beer</span> from corn, persimmons, and boiled sassafras shoots. Blackberries could also    be used to make <span id="wine">wine</span>, and with the addition of spices and <span class="whiskey">whiskey</span>, a healthy cordial could be concocted. <span id="Porcher">Porcher</span> also mentioned dozens of medicines that could be prepared from native herbs added to <span class="whiskey">whiskey</span>, <span id="wine">wine</span>, or <span class="brandy">brandy</span>. Another way of coping with the lack of <span class="alcohol">alcohol</span> was to make a joke of it. By early 1864, “starvation parties” were becoming a fad in <span class="location Richmond" id="Richmond">Richmond</span>. Attendees wore the best finery they could manage. Unlike antebellum parties, there were no imported <span id="wine">wines</span> or <span class="liquor">liquors</span>. The fine punchbowls and glassware remaining from the days before the war held only water from the <span id="JamesRiver">James River</span>.
                                             </p>
                                             <a href="#Porcher">Porcher</a>
                                             <a href="#1863workResourcesofSouthernFieldsandForests">1863 work Resources of Southern Fields and Forests</a>
@@ -935,7 +939,7 @@
                                             <a href="#JamesRiver">James River</a>
 
                                             <p>
-                                                <span id="RobertLee">Robert E. Lee</span> once remarked that it was not possible to have an army without music. He might just as well have said that it was not possible to have an army without <span id="whiskey">whiskey</span>. Whether serving as an innocent aid to relaxation, medication to treat wounds or disease, or a lure to the evils of vice and desertion, <span id="whiskey">whiskey</span> and other types of alcoholic beverages were firmly rooted in the armies of the <span id="1860s">1860s</span>. The many creative ways <span class="alcohol">alcohol</span> found its way to soldiers and sailors, and the methods used to control its influence, are intertwined with the story of battles, generals, regiments, and ships of war.
+                                                <span id="RobertLee">Robert E. Lee</span> once remarked that it was not possible to have an army without music. He might just as well have said that it was not possible to have an army without <span class="whiskey">whiskey</span>. Whether serving as an innocent aid to relaxation, medication to treat wounds or disease, or a lure to the evils of vice and desertion, <span class="whiskey">whiskey</span> and other types of alcoholic beverages were firmly rooted in the armies of the <span id="1860s">1860s</span>. The many creative ways <span class="alcohol">alcohol</span> found its way to soldiers and sailors, and the methods used to control its influence, are intertwined with the story of battles, generals, regiments, and ships of war.
                                             </p>
                                             <a href="#RobertLee">Robert Lee</a>
                                             <a href="#1860s">1860s</a>
@@ -945,7 +949,7 @@
                                             <h2>For Some, Private Distilling Filled the Gap</h2>
 
                                             <p>
-                                                Plagued with food shortages, inflation, and transportation problems, Southern soldiers and civilians dealt with severe shortages of <span class="alcohol">alcohol</span> caused by state legislatures restricting the use of grain, corn and foodstuffs for distilled <span id="liquor">liquor</span>. Private distilling took a blow after the Federal capture of <span class="location" id="Chattanooga">Chattanooga</span> in <span id="September1863">September 1863</span> and advancing Union forces captured copper mines desperately needed by the South. Not only did their loss crimp production of brass artillery pieces, it also threatened the manufacture of percussion caps and artillery friction primers. The <span id="ConfederateOrdnanceBureau">Confederate Ordnance Bureau</span> confiscated scores of copper <span id="whiskey">whiskey</span> stills in western <span class="location" id="NorthCarolina">North Carolina</span>. Metal from the stills went into many of the South’s
+                                                Plagued with food shortages, inflation, and transportation problems, Southern soldiers and civilians dealt with severe shortages of <span class="alcohol">alcohol</span> caused by state legislatures restricting the use of grain, corn and foodstuffs for distilled <span class="liquor">liquor</span>. Private distilling took a blow after the Federal capture of <span class="location" id="Chattanooga">Chattanooga</span> in <span id="September1863">September 1863</span> and advancing Union forces captured copper mines desperately needed by the South. Not only did their loss crimp production of brass artillery pieces, it also threatened the manufacture of percussion caps and artillery friction primers. The <span id="ConfederateOrdnanceBureau">Confederate Ordnance Bureau</span> confiscated scores of copper <span class="whiskey">whiskey</span> stills in western <span class="location" id="NorthCarolina">North Carolina</span>. Metal from the stills went into many of the South’s
                                                 percussion caps made during the remainder of the war.
                                             </p>
                                             <a href="#alcohol">alcohol</a>
@@ -959,8 +963,8 @@
                                             <h2>Persimmon Brandy & Other Homemade Recipes</h2>
 
                                             <p>
-                                                Southern blockade runners brought <span id="wine">wine</span>, <span id="whiskey">whiskey</span>, <span id="brandy">brandy</span> and other potables from <span class="location" id="Europe">Europe</span>. Less popular than <span id="wine">wine</span> and <span id="brandy">brandy</span>, but still showing up in blockade runner holds, were <span id="rum">rum</span>, <span id="gin">gin</span>, <span id="ScotchWhisky">Scotch whisky</span>, <span id="champagne">champagne</span>, <span id="ale">ale</span>, <span id="porter">porter</span>, and
-                                                <span id="schnapps">schnapps</span>. Occasionally one might even find imported cut glass decanters to serve the imported <span id="liquor">liquors</span>. Pure <span class="alcohol">alcohol</span>, intended as medical supplies, also passed through the blockade. Blockade-run <span id="liquor">liquor</span> was beyond the financial means of most Confederates, forcing many people to turn to home-made substitutes. Despite wartime laws, some corn and grain found their way into <span id="whiskey">whiskey</span>. When these standard ingredients were not available, distillers turned to sweet potatoes, rice,
+                                                Southern blockade runners brought <span id="wine">wine</span>, <span class="whiskey">whiskey</span>, <span class="brandy">brandy</span> and other potables from <span class="location" id="Europe">Europe</span>. Less popular than <span id="wine">wine</span> and <span class="brandy">brandy</span>, but still showing up in blockade runner holds, were <span id="rum">rum</span>, <span id="gin">gin</span>, <span id="ScotchWhisky">Scotch whisky</span>, <span id="champagne">champagne</span>, <span id="ale">ale</span>, <span id="porter">porter</span>, and
+                                                <span id="schnapps">schnapps</span>. Occasionally one might even find imported cut glass decanters to serve the imported <span class="liquor">liquors</span>. Pure <span class="alcohol">alcohol</span>, intended as medical supplies, also passed through the blockade. Blockade-run <span class="liquor">liquor</span> was beyond the financial means of most Confederates, forcing many people to turn to home-made substitutes. Despite wartime laws, some corn and grain found their way into <span class="whiskey">whiskey</span>. When these standard ingredients were not available, distillers turned to sweet potatoes, rice,
                                                 sorghum seeds, and persimmons.
                                             </p>
                                             <a href="#wine">wine</a>
@@ -1115,7 +1119,7 @@
                                         led to national prohibition enacted in <span id="1920">1920</span>. 
                                         That system lasted only until <span id="1929">1929</span>, but like war time controls in 
                                         the <span class="location" id="UK">UK</span> it affected patterns of drinking with a move towards 
-                                        spirit drinking and a decline in <span id="beer">beer</span> consumption. 
+                                        spirit drinking and a decline in <span class="beer">beer</span> consumption. 
                                         It came to an end not because prohibition “failed” but because industrial and 
                                         business interests, which had once supported it, removed their support as the <span id="GreatDepression">Great Depression</span> 
                                         took hold. <span id="Prohibition">Prohibition</span> in the 
