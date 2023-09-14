@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre&family=PT+Sans+Narrow:wght@700&display=swap');
 
-#title {
+#maintitle {
     font-size: 9vh;
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
@@ -8,6 +8,22 @@
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#title {
+    text-align: center; margin-top: 0.2em; padding-bottom: 0%; margin-bottom: 1%; font-size: 9vh;
+    transition: transform 0.5s linear;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white !important;
+    background-color: rgb(214, 46, 31);
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    display:inline-block; 
+    text-align: center;
+    position: relative;
+
+left: 33%;
 }
 
 body {
