@@ -91,10 +91,10 @@ a, a:hover, a:focus {
     background: #6d7fcc;
 }
 
-#sidebar ul.components {
+/* #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
-}
+} */
 
 #sidebar ul p {
     color: #fff;
