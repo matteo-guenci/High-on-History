@@ -3,7 +3,7 @@
     
 }
 
-#title {
+#maintitle {
     text-align: center; padding-top: 0.2em; font-size: 5em;
     transition: transform 0.5s linear;
 }
