@@ -6,17 +6,44 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <link href="css/indexcss.css" rel="stylesheet">
-    <!--<link href="css/1960.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/circular_menu.css">
+    <link href="css/1960.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     
 </head>
-<body>
+<body >
+    <nav>
+        <div class="nav-content">
+            <div class="toggle-btn">
+                <i class="bx bx-plus"></i>
+            </div>
+            <span style="--i:1;">
+                <a href="#"><i class="bx bxs-camera"></i></a>
+            </span>
+            <span style="--i:2;">
+                <a href="#"><i class="bx bxs-alarm"></i></a>
+            </span>
+            <span style="--i:3;">
+                <a href="#"><i class="bx bxs-map"></i></a>
+            </span>
+            <span style="--i:4;">
+                <a href="#"><i class="bx bxs-cog"></i></a>
+            </span>
+            <span style="--i:5;">
+                <a href="#"><i class="bx bxs-cog"></i></a>
+            </span>
+            <span style="--i:6;">
+                <a href="#"><i class="bx bxs-cog"></i></a>
+            </span>
+        </div>
+    </nav>
+    <script src="scripts/circular_menu.js"></script>
 
 <!-- Navbar section  -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top">
-        <div class="container-fluid" style="padding-left: 5%">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top navigazione">
+        <div class="container-fluid navigazione" style="padding-left: 5%">
+            <div class="collapse navbar-collapse navigazione" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>

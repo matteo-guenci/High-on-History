@@ -73,7 +73,7 @@ body {
     height: 8%;
     width: 100%;
     background-color: rgb(214, 46, 31);
-    z-index: 999;
+    z-index: 998;
 }
 
 #date {
@@ -95,6 +95,6 @@ body {
     position: absolute;
     bottom: 3%;
     right: 3%;
-    z-index: 999;
+    z-index: 998;
 }
 

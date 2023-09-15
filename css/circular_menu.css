@@ -1,29 +1,24 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    background: #17a2b8;
-    overflow: hidden;
-}
+
 nav{
     position: absolute;
-    top: 20px;
-    right: 0;
-    width: 80px;
-    height: 300px;
+    top: 100px;
+    right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: grab;
+    z-index: 999 !important
 }
 nav .nav-content{
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(-45deg);
+    z-index: 999 !important
 }
 
 .nav-content .toggle-btn{
@@ -35,6 +30,7 @@ nav .nav-content{
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 999 !important
 }
 .nav-content span a{
     height: 40px;
@@ -45,6 +41,7 @@ nav .nav-content{
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 999 !important
 }
 .nav-content .toggle-btn{
     font-size: 35px;
