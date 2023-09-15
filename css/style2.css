@@ -69,6 +69,7 @@ a[data-toggle="collapse"] {
 .text {
     width: 100%;
     overflow: scroll;
+    z-index: 998
 
 }
 
@@ -123,11 +124,6 @@ ul ul a {
 
 #sidebar .list-unstyled {
     padding-left: 10px;
-}
-
-body {
-    background-color: blanchedalmond;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 span:target {
