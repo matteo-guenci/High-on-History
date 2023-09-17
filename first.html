@@ -110,50 +110,77 @@
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
-                <div class="sidebar-header">
+                <!-- <div class="sidebar-header">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                </div>
+                </div> -->
         
                 <ul class="list-unstyled components">
+                            <li class="active">
+                                <a href="#pplSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">People</a>
+                                <ul class="collapse list-unstyled" id="pplSubmenu">
+                                    <button onclick="highlightElement('.OldManMountain')">Old Man of the Mountain</button>        
+                                    <button onclick="highlightElement('.MarcoPolo')">Marco Polo</button>
+                                    <button onclick="highlightElement('.Assassins')">Assassins</button>
+                                    <button onclick="highlightElement('.Nizari')">Nizari</button>
+                                    <button onclick="highlightElement('.berserkers')">Berserkers</button>
+                                    <button onclick="highlightElement('.norse')">Norse</button>
+                                    <button onclick="highlightElement('.NurDin')">Nur al-Din</button>
+                                    <button onclick="highlightElement('.Saladin')">Saladin</button>
+                                    <button onclick="highlightElement('.GenghisKhan')">Genghis Khan</button>
+                                    <button onclick="highlightElement('.KingRichard')">King Richard</button>
+                                    <button onclick="highlightElement('.HassanbenSabbah')">Hassan ben Sabbah</button>
+                                    <button onclick="highlightElement('.ConradMontferrat')">Conrad of Montferrat</button>
+                                    <button onclick="highlightElement('.RashidSinan')">Rashid al-Din Sinan</button>
+                                    <button onclick="highlightElement('.IbnWasil')">Ibn Wasil</button>
+                                    <button onclick="highlightElement('.IbnAthir')">Ibn al-Athir</button>
+                                    <button onclick="highlightElement('.IbnJawzi')">Ibn al-Jawzi</button>
+                                    <button onclick="highlightElement('.IbnMulaib')">Ibn Mula'ib</button>
+                                    <button onclick="highlightElement('.BenjaminTudela')">Benjamin of Tudela</button>
+                                    <button onclick="highlightElement('.RuknKhwurshah')">Rukn al-Din Khwurshah</button>
+                                    <button onclick="highlightElement('.AtaMalikJuvayni')">Ata-Malik Juvayni</button>
+                                    <button onclick="highlightElement('.Alaedin')">Alaedin</button>
+                                    <button onclick="highlightElement('.Baybars')">Baybars</button>
+                                    <button onclick="highlightElement('.HasanSabbah')">Hasan-i Sabbah</button>
+                                    <button onclick="highlightElement('.AbuFiras')">Abu Firas</button>
+                                    <button onclick="highlightElement('.ImamAl-Mustansir')">Imam Al-Mustansir</button>
+                                    <button onclick="highlightElement('.AbuMansurNizar')">Abu Mansur Nizar</button>
+                                    <button onclick="highlightElement('.Al-HadiNizar')">Al-Hadi ibn Nizar</button>
+                                    <button onclick="highlightElement('.UsamaMunqidh')">Usama ibn Munqidh</button>
+                                    <button onclick="highlightElement('.ReynaldChatillon')">Reynald of Chatillon</button>
+                                    <button onclick="highlightElement('.BernardLewis')">Bernard Lewis</button>
+                                    <button onclick="highlightElement('.EdwardFitzgerald')">Edward Fitzgerald</button>
+                                    <button onclick="highlightElement('.OmarKayyam')">Omar Kayyam</button>
+                                    <button onclick="highlightElement('.Robinson')">Robinson</button>
+                                    <button onclick="highlightElement('.HarryAnsiinger')">Harry Ansiinger</button>
+                                    <button onclick="highlightElement('.BurchardStrasbourg')">Burchard of Strasbourg</button>
+                                    <button onclick="highlightElement('.ArnoldLübeck')">Arnold of Lübeck</button>
+                                    <button onclick="highlightElement('.GregoryBarHebraeus')">Gregory Bar Hebraeus</button>
+                                   
+                                </ul>
+                    </li>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="#">Home 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 3</a>
-                            </li>
+                        <a href="#placeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Places</a>
+                        <ul class="collapse list-unstyled" id="placeSubmenu">
+                            <button onclick="highlightElement('.Iceland')">Iceland</button>
+                            <button onclick="highlightElement('.Syria')">Syria</button>
+                            <button onclick="highlightElement('.Egypt')">Egypt</button>
+                            <button onclick="highlightElement('.Iran')">Iran</button>
+                            <button onclick="highlightElement('.HolyLand')">Holy Land</button>
+                            <button onclick="highlightElement('.Scandinavia')">Scandinavia</button>
+                            <button onclick="highlightElement('.Siberia')">Siberia</button>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">People</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <button onclick="highlightElement('.OldManMountain')">Old Man of the Mountain</button>
-                            </li>
-                            <li>
-                                <a href="#">Page 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 3</a>
-                            </li>
+                    <li class="active">
+                        <a href="#timeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Time</a>
+                        <ul class="collapse list-unstyled" id="timeSubmenu">
+                            <button onclick="highlightElement('.MiddleAges')">Middle Ages</button>
+                            <button onclick="highlightElement('.year1090')">Year 1090</button>
+                            <!-- NON FUNZIONA!!! <button onclick="highlightElement('.12thcentury')">12th century</button>  -->
+                            <button onclick="highlightElement('.FirstCrusade')">First Crusade</button>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </nav>

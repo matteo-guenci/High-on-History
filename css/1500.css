@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
+#maintitle {
+    font-size: 9vh;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: -1px;
+    color: rgba(255, 0, 0, 0.849);
+    /* make a border and an image */
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#issues h4 {
+    text-transform: uppercase;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: black;
+    border: 0.1rem outset black;
+    outline: 0.1rem solid black;
+    outline-offset: 0.5rem;
+}
+
+.label {
+    width: 10vw;
+}
+
 body {
     font-family: 'EB Garamond', serif;
     letter-spacing: -1px;
@@ -7,29 +32,66 @@ body {
     text-align: justify; 
   }
 
-h1, h2 {
+.container {
+    border: solid black;
+    border-style:hidden;
+    border-image-source: url(/imgs/gmd18.jpg);
+    border-image-width: 5rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+    padding: 8%;
+}
+
+.image-container {
+    border:none;
+}
+
+img {
+    filter: grayscale(100%);
+}
+
+#navbar-documentation a {
+    text-transform: uppercase; 
+    color:red;
+}
+
+#main-background {
+    column-count: 2;
+    column-gap: 10%;
+}
+
+.container h1, h2 {
     padding-top: 2rem;
+    padding-bottom: 2rem;
     flex-direction: column;
     flex-wrap: nowrap;
     text-transform: uppercase; 
     margin:0;
     text-align: center;
+    color: red;
+    font-weight:bold;
 }
 
-h3 { 
+.container h3 { 
     display: flex;
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
+    text-transform: uppercase;
+}
+
+.container h5 {
+    text-transform: uppercase;
+    color: red;
 }
 
 /* h4 {
     /* font-family:  different from the other one; */
 
 
-p::first-letter {
+#documentation p::first-letter {
     padding-left: 2rem;
-    /* maybe take away colour cause in pure Garamond it was not used (?) */
+    color:red;
     float: left;
     font-size: 3rem;
     line-height: 0.65;
@@ -38,6 +100,7 @@ p::first-letter {
 
 p::first-line {
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .insert {
@@ -49,9 +112,10 @@ p::first-line {
 
 blockquote {
     font-style: italic;
-    /* stand out but how????? */
 }
 
+/* BORDER of the accordion ???? */
+/* 
 .border {
     border: 100px solid black;
     padding: 20px;
@@ -59,11 +123,15 @@ blockquote {
     border-image-width: 8rem;
     border-image-repeat: round;
     border-image-slice: 100% 10%;
-    /* fix border because it's weird - it has to end with text */
-}
+} */
 
 #author {
     font-size: small;
 }
 
+.footer-text {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
 
+}

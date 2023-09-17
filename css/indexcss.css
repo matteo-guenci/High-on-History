@@ -60,22 +60,15 @@
 
 /* css x documentazione */
 
-.second-div {
-    margin: 2% 3% 3% 3%;
-    border: 0.5em solid black;
-    height: 90%;
-    overflow-y: scroll;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    overflow: hidden;
-    transition: transform 0.5s ease;
+#main-background {
+    overflow-y: auto;
+    height: 80vh;
 }
 
-.scrollspy {
-    height: 87vh;
-    overflow-y: scroll;
+#menu-card {
+    height: 80vh;
+    text-align:center;
+    overflow-y: auto; 
 }
 
 .image-row {
@@ -132,8 +125,6 @@
 .footer a:hover {
     text-decoration: underline;
 }
-
-
 
 
 
