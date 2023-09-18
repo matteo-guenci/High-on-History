@@ -1,0 +1,15 @@
+body {
+    background-image: url("imgs/80s_comic_background.jpg");
+    background-size: cover; /* Opzionale: regola la dimensione dell'immagine in modo che copra l'intero elemento */
+    background-repeat: no-repeat; /* Opzionale: evita la ripetizione dell'immagine */
+  }
+
+/* il div in cui c'è la foto deve essere position relative */
+
+  #image_80s{
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    z-index: 998;
+  }
