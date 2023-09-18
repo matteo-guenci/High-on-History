@@ -118,6 +118,10 @@ blockquote {
     font-size: small;
 }
 
+#author {
+    padding-bottom: 2rem;
+}
+
 .footer-text {
     text-align: center;
     padding-left: 20%;
@@ -176,7 +180,7 @@ blockquote {
     border-image-source: url(/imgs/gmd19.jpg);
     border-image-width: 8rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
+    border-image-slice: 100% 5% 100% 5%;
 }
 
 .accordion-body h1, h2 {
@@ -205,14 +209,24 @@ blockquote {
   }
 
 .accordion-body h3, h4 { 
-    display: flex;
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 5%;
 }
 
 .accordion-body h5 {
     text-transform: uppercase;
     color: red;
+}
+
+.accordion-body .insert {
+    border: solid black;
+    border-style:hidden;
+    border-image-source: url(/imgs/gmd18.jpg);
+    border-image-width: 5rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+    padding: 20%;
 }
