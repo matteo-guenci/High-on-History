@@ -5,12 +5,13 @@
 }
 
 
+/* FOR TITLE OF INNER PAGE: USE IMAGE BORDER!!!! */
+
 #maintitle {
     font-size: 9vh;
     font-family: 'Trinigan';
     color: goldenrod;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* make a border and an image */
     padding-left: 10px;
     padding-right: 10px;
     text-transform: uppercase;
@@ -22,6 +23,7 @@ body {
     background-color: #fdf2c9;
 }
 
+/* MAKE THIS BORDER RESPONSIVE!!!! */
 #documentation, #about {
     border-top: solid black;
     border-image-source: url(/imgs/experiment.png);
@@ -47,7 +49,7 @@ body {
 }
 
 img {
-    filter: opacity(80%) saturate(200%); /* Increases saturation by 100% */
+    filter: opacity(80%) saturate(200%); 
 }
 
 /* h4 {
@@ -137,6 +139,8 @@ blockquote {
     padding-right: 20%;
 }
 
+/* MAKE THESE IMAGES RESPONSIVE */
+
 #image_artnouveau {
     display: inline-block;
     position: absolute;
@@ -145,13 +149,17 @@ blockquote {
     z-index: 998;
 }
 
-#woman2 {
+#image_artnouveau2 {
     width: 20%;
     display: inline-block;
     position: absolute;
     bottom:0;
     right: 80%;
     z-index: 1000;
+}
+
+#woman2 {
+    width: 100%; 
 }
 
 #woman {

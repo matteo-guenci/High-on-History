@@ -114,17 +114,6 @@ blockquote {
     font-style: italic;
 }
 
-/* BORDER of the accordion ???? */
-/* 
-.border {
-    border: 100px solid black;
-    padding: 20px;
-    border-image-source: url(/imgs/gmd19.jpg);
-    border-image-width: 8rem;
-    border-image-repeat: round;
-    border-image-slice: 100% 10%;
-} */
-
 #author {
     font-size: small;
 }
@@ -134,4 +123,96 @@ blockquote {
     padding-left: 20%;
     padding-right: 20%;
 
+}
+
+
+/* inner pages */
+
+#title {
+    font-size: 9vh;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: -1px;
+    color: rgba(255, 0, 0, 0.849);
+    /* make a border and an image */
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.accordion-header {
+    background-color: white;
+    text-align: center;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: white;
+    color: black;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button {
+    font-size: 3vh;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: -1px;
+    color: rgba(255, 0, 0, 0.849);
+    /* make a border and an image */
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+}
+
+/* .btn-info {
+    background-color: red;
+} */
+
+.accordion-body {
+    border: 100px solid black;
+    padding: 10%;
+    border-image-source: url(/imgs/gmd19.jpg);
+    border-image-width: 8rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+}
+
+.accordion-body h1, h2 {
+    padding-bottom: 2rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-transform: uppercase; 
+    margin:0;
+    text-align: center;
+    color: red;
+    font-weight:bold;
+}
+
+.accordion-body p {
+    column-count: 2;
+    column-gap: 10%;
+}
+
+.accordion-body p::first-letter {
+    padding-left: 2rem;
+    color:red;
+    float: left;
+    font-size: 3rem;
+    line-height: 0.65;
+    margin: 0.1em 0.1em 0.1em 0;
+  }
+
+.accordion-body h3, h4 { 
+    display: flex;
+    flex-wrap: nowrap;
+    margin:0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.accordion-body h5 {
+    text-transform: uppercase;
+    color: red;
 }
