@@ -58,6 +58,14 @@
     display: none;
 }
 
+#image_artnouveau {
+    display: none;
+}
+
+#image_artnouveau2 {
+    display: none;
+}
+
 /* css x documentazione */
 
 #main-background {
@@ -77,6 +85,7 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
+    height: 50vh; 
 }
 
 
@@ -89,18 +98,19 @@
     padding: 2%;
     flex: 1;
     position: relative;
-    height: 300px;
-    max-height: 300px;
+    height: 50vh; 
+    width: 50vw;
 }
 
 .image-container img {
-    width: 100%; 
+    max-width: 100%; 
     max-height: 100%;
-    height: auto;
 }
 
 .label {
     position: absolute;
+    display: inline-block;
+    padding-top: 5%;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
