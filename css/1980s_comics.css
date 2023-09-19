@@ -1,13 +1,9 @@
 @font-face {
-  font-family: 'BlackCasper';
-  src: url(/fonts/BlackCasper.ttf) format("truetype");
+  font-family: "BlackCasper";
+  src: url(fonts/BlackCasper.ttf);
 }
 
 
-#maintitle {
-  font-size: 9vh;
-  font-family: 'BlackCasper', sans-serif;
-}
 
 body {
     background-image: url("imgs/80s_comic_background.jpg");
@@ -15,7 +11,9 @@ body {
     background-repeat: no-repeat; /* Opzionale: evita la ripetizione dell'immagine */
   }
 
-
+#maintitle{
+  font-family: "BlackCasper", Arial, Helvetica, sans-serif;
+}
 
 
 /* il div in cui c'è la foto deve essere position relative */
