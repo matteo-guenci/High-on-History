@@ -36,7 +36,6 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    
     height:100%;
     background: #7386D5;
     color: #fff;
@@ -141,7 +140,3 @@ span {
     background-color: black;
     height: 5vh;
 }
-
-/* .btn-info {
-    all: unset;
-} */

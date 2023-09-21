@@ -61,23 +61,6 @@ img {
     border:none;
 }
 
-.border {
-    max-width:100%;
-    max-height:100%;
-    padding: 5%;
-    border:30px solid transparent; 
-    outline:3px solid black; 
-    outline-offset:-10px; 
-    background:
-      linear-gradient(black 0 0) top,
-      linear-gradient(black 0 0) left,
-      linear-gradient(black 0 0) bottom,
-      linear-gradient(black 0 0) right;
-    background-size:200% 2px,2px 200%; 
-    background-origin:padding-box;
-    background-repeat:no-repeat;
-}
-
 blockquote {
     padding-left: 10%;
     font-style: italic;
@@ -101,9 +84,9 @@ blockquote {
 
 .insert {
     padding: 5%;
-    border-style:double;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    /* border-style:double; */
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #author {
@@ -146,6 +129,30 @@ blockquote {
     overflow: visible;
 }
 
+#sidebar .sidebar-header {
+    position: relative;
+    height: 20%;
+    background-color: #ffe3dbef;
+}
+
+#sidebar {
+    background-color: #ffe3dbef;
+    border-right: solid 20px #a5c97d79;
+    border-top: solid 20px #a5c97d79;
+    border-style: double;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: black !important;
+    background: #ffe3dbef;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #ffe3dbef;
+}
+
 #image_artnouveau {
     display: inline-block;
     position: absolute;
@@ -164,8 +171,10 @@ blockquote {
     z-index: 1000;
 }
 
-#woman2 {
-    width: 100%; 
+#image_artnouveau3 {
+    width: 100%;
+    position: absolute;
+    top:0;
 }
 
 #woman {
@@ -173,8 +182,13 @@ blockquote {
     position: sticky;
 }
 
-/* SCROLL BAR */
-/* Define scrollbar track and thumb colors as variables */
+#woman2 {
+    width: 100%; 
+}
+
+#woman3 {
+    width: 100%;
+}
 
 :root {
     --scrollbar-track-color: #fdf2c9;
@@ -202,3 +216,118 @@ blockquote {
 }
 
 
+/* inner pages */
+
+#title {
+    font-size: 9vh;
+    font-family: 'Trinigan';
+    color: goldenrod;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+
+.accordion-header {
+    background-color: white;
+    text-align: center;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: white;
+    color: black;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button {
+    font-size: 4vh;
+    font-family: 'Trinigan';
+    color: goldenrod;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+}
+
+/* .btn-info {
+    background-color: image;
+} */
+
+.accordion-body {
+    border: 30px solid black;
+    padding: 7%;
+    border-image-source: url(/imgs/experiment.png);
+    border-image-width: 7rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 5% 100% 5%;
+}
+
+.accordion-body h1, h2 {
+    font-family: 'Trinigan';
+    padding-bottom: 2rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin:0;
+    text-align: center;
+    color: goldenrod;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight:bold;
+}
+
+.accordion-body p::first-letter {
+    font-family: 'Trinigan';
+    float: left;
+    padding-right: 1rem;
+    font-size: 3rem;
+    line-height: 0.75;
+    margin: 0.1em 0.2em 0.1em 0;
+  }
+
+.accordion-body h3, h4 { 
+    flex-wrap: nowrap;
+    margin:0;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.accordion-body h5 {
+    text-transform: uppercase;
+    color: goldenrod;
+}
+
+.accordion-body .insert {
+    border: 100px solid black;
+    border-image-source: url(/imgs/invaluable-art-nouveau-hero.png);
+    border-image-width: 10%;
+    border-image-repeat: round;
+    border-image-slice: 100% 0% 100% 0%;
+    padding: 5%;
+}
+
+/* .border {
+    max-width:100%;
+    max-height:100%;
+    padding: 5%;
+    border:30px solid transparent; 
+    outline:3px solid black; 
+    outline-offset:-20px; 
+    background:
+      linear-gradient(black 0 0) top,
+      linear-gradient(black 0 0) left,
+      linear-gradient(black 0 0) bottom,
+      linear-gradient(black 0 0) right;
+    background-size:100% 4px,4px 100%; 
+    background-origin:padding-box;
+    background-repeat:no-repeat;
+} */
+
+#sidebar button {
+    background: none;
+    border:2px solid #5d862e80;
+    margin:2%;
+}
