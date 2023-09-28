@@ -64,7 +64,9 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-
+#accordionExample {
+    height: 90%
+}
 .text {
     width: 100%;
     overflow: scroll;
@@ -140,3 +142,9 @@ span {
     background-color: black;
     height: 5vh;
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
