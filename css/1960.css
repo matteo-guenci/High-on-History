@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
 #maintitle {
     font-size: 9vh;
@@ -11,7 +11,7 @@
 }
 
 #title {
-    text-align: center; margin-top: 0.2em; padding-bottom: 0%; margin-bottom: 1%; font-size: 9vh;
+    text-align: center; margin-top: 0.2em; padding-bottom: 0%; padding-top: 0%; margin-bottom: 1%; font-size: 9vh;
     transition: transform 0.5s linear;
     font-family: 'PT Sans Narrow', sans-serif;
     color: white !important;
@@ -26,8 +26,23 @@
 left: 33%;
 }
 
+.btn {
+    background-color: rgb(214, 46, 31);
+    border: rgb(214, 46, 31);
+}
+
+.btn:hover {
+    background-color: rgb(214, 46, 31);
+    border: rgb(214, 46, 31);
+}
+
+.btn:active {
+    background-color: rgb(190, 46, 31) !important ;  
+    border: rgb(214, 46, 31);
+}
+
 body {
-    font-family: 'David Libre', serif;
+    font-family: 'STIX Two Text', serif;
 }
 
 #home {

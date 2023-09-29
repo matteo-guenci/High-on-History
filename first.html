@@ -15,64 +15,97 @@
 
 <!-- ESPERIMENTI STILI -->
 <!-- Stefano -->
-    <!-- <link href="css/1960.css" rel="stylesheet"> -->
+    <link href="css/1960.css" rel="stylesheet">
 
 <!-- Lucia -->
     <!-- <link href="css/1500.css"rel="stylesheet"> -->
-    <link href="css/1800.css" rel="stylesheet">
+    <!-- <link href="css/1800.css" rel="stylesheet"> -->
 
-<script>
+    <script>
     
-    var currentIndex = 0;
-    var currentClassName = "";
-
-    function highlightElement(className) {
-        var elements = document.querySelectorAll(className);
-
-        if (currentClassName !== className) {
-            currentIndex = 0;
-            if (currentClassName) {
-                var prevElements = document.querySelectorAll(currentClassName);
-                prevElements.forEach(function (element) {
-                    element.classList.remove("highlight");
-                });
+        var currentIndex = 0;
+        var currentClassName = "";
+    
+        function highlightElement(className) {
+            var elements = document.querySelectorAll(className);
+    
+            if (currentClassName !== className) {
+                currentIndex = 0;
+                if (currentClassName) {
+                    var prevElements = document.querySelectorAll(currentClassName);
+                    prevElements.forEach(function (element) {
+                        element.classList.remove("highlight");
+                    });
+                }
             }
-        }
-
-        if (currentIndex > 0 && currentIndex !== elements.length) {
-            elements[currentIndex - 1].classList.remove("highlight");
-        }
-
-        if (currentIndex < elements.length) {
-            elements[currentIndex].classList.add("highlight");
-            
-            // showing the closes parent '.collapse' of our ID
-            $(elements[currentIndex]).closest('.collapse').collapse('show');
-
-            // smooth animation to our ID
-            
-            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
-                inline: 'center' });
-            currentIndex++;
-        }
-        if (currentIndex == elements.length) {
-            elements[elements.length - 1].classList.remove("highlight");
-            currentIndex = 0;
-            elements[currentIndex].classList.add("highlight");
-            
-            // showing the closes parent '.collapse' of our ID
-            $(elements[currentIndex]).closest('.collapse').collapse('show');
-             // this interval is necessary for bootstrap to complete the accordion animation
-        
-            elements[currentIndex].scrollIntoView({ behavior: "smooth", block: 'center',
-                inline: 'center' });
-        }
-
-
-        currentClassName = className;
-    }
     
-</script>
+            if (currentIndex > 0 && currentIndex !== elements.length) {
+                elements[currentIndex - 1].classList.remove("highlight");
+            }
+    
+            if (currentIndex < elements.length) {
+                desiredFunction(elements[currentIndex])
+                function desiredFunction(elemento) {
+            // checking if element with this ID exists and if the element inside of accordion
+            //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+                if (elemento) {
+                // showing the closes parent '.collapse' of our ID
+                elemento.classList.add("highlight");
+                
+                // showing the closes parent '.collapse' of our ID
+                $(elemento).closest('.collapse').collapse('show');
+    
+                // smooth animation to our ID
+                
+                currentIndex++;
+                setTimeout(function () {
+                // smooth animation to our ID
+                elemento.scrollIntoView({ behavior: "smooth", block: 'center',
+                    inline: 'center' });
+    
+                // behavior: 'auto',
+                    // block: 'center',
+                    // inline: 'center'
+                }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+            }
+            
+            }
+            }
+            if (currentIndex == elements.length) {
+                elements[elements.length - 1].classList.remove("highlight");
+                currentIndex = 0;
+                desiredFunction(elements[currentIndex])
+                function desiredFunction(elemento) {
+            // checking if element with this ID exists and if the element inside of accordion
+            //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
+                if (elemento) {
+                // showing the closes parent '.collapse' of our ID
+                elemento.classList.add("highlight");
+                
+                // showing the closes parent '.collapse' of our ID
+                $(elemento).closest('.collapse').collapse('show');
+    
+                // smooth animation to our ID
+                
+                setTimeout(function () {
+                // smooth animation to our ID
+                elemento.scrollIntoView({ behavior: "smooth", block: 'center',
+                    inline: 'center' });
+    
+                // behavior: 'auto',
+                    // block: 'center',
+                    // inline: 'center'
+                }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+            }
+            
+            }
+            }
+    
+    
+            currentClassName = className;
+        }
+        
+    </script>
 
 <style>
     .highlight {
@@ -2075,8 +2108,10 @@
             document.querySelector(".wrapper").style.height = "94.3%";
             document.querySelector(".wrapper").style.marginBottom = "0%";
             document.querySelector("#title").style.height = "9vh";
-            document.querySelector("#title").style.paddingTop = "0.2em";
-            document.querySelector(".wrapper").style.marginTop = "3.5%";
+            document.querySelector("#title").style.paddingBottom = "6%";
+            document.querySelector("#title").style.paddingTop = "0em";
+            document.querySelector("#title").style.marginBottom = "1%";
+            document.querySelector("#title").style.marginTop = "1%";
                 
             
         }
@@ -2085,7 +2120,7 @@
             document.querySelector(".wrapper").style.height = "91vh";
             document.querySelector("#title").style.paddingTop = "0%";
             document.querySelector("#title").style.marginTop = "0%";
-            document.querySelector("#title").style.paddingBottom = "0%";
+            document.querySelector("#title").style.paddingBottom = "6%";
             document.querySelector("#title").style.marginBottom = "0%";
             document.querySelector("#title").style.height = "1em";
             document.querySelector(".wrapper").style.marginTop = "0%";
