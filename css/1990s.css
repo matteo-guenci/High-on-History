@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
 @font-face {
   font-family: 'BlackCasper';
   src: url(/fonts/BlackCasper.ttf);
+}
+@font-face {
+  font-family: 'Mustasurma';
+  src: url(/fonts/Mustasurma.ttf);
+}
+@font-face {
+  font-family: 'Punktype';
+  src: url(/fonts/Punktype.ttf);
 }
 
 
