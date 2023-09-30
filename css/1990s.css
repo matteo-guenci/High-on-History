@@ -8,16 +8,15 @@
 
 body {
     background-image: url("imgs/punk_wallpaper2.jpeg");
-    background-size: cover; /* Opzionale: regola la dimensione dell'immagine in modo che copra l'intero elemento */
-    background-repeat: no-repeat; /* Opzionale: evita la ripetizione dell'immagine */
+
   }
 
 #maintitle{
   font-family: 'BlackCasper', Arial, Helvetica, sans-serif;
-  color: rgb(204, 0, 0);
-  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+  color: linear-gradient(#FBFF14, #F0A9E3);
+  /* text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
   -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-  0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483; */
 }
 
 #image_90s{
@@ -33,7 +32,7 @@ body {
   font-family: 'BlackCasper';
   border-radius: 10px;
   box-shadow: 50px 50px 100px #000000;
-  background-image: linear-gradient(240deg, #e044ee, #90ec19);
+  background-image: linear-gradient(240deg, #FBFF14, #F0A9E3);
   padding: 5rem;
   transform: rotate(-5deg) skew(-5deg) translateY(5rem);
 }
@@ -49,7 +48,7 @@ body {
   color: #e044ee;
   text-shadow: 50px 50px 100px #000000;
   text-align:center;
-  background-image: linear-gradient(240deg, #e044ee, #90ec19);
+  background-image: linear-gradient(240deg, #FBFF14, #F0A9E3);
   padding: 5rem;
   transform: rotate(7deg) skew(4deg) translateY(-3rem);
 }
