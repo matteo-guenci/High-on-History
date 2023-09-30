@@ -45,6 +45,26 @@ body {
     font-family: 'STIX Two Text', serif;
 }
 
+#sidebar {
+    background-color: white;
+    border: 1px solid grey;
+}
+
+#sidebar .dropdown-toggle {
+    background-color: white !important;
+    border-bottom: 1px solid grey;
+    color: rgb(54, 121, 246) !important;
+    font-family: 'PT Sans Narrow';
+    text-decoration: underline;
+}
+
+#navpage {
+    background-color: white !important;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+
 #home {
     
     font-family: 'PT Sans Narrow', sans-serif;
