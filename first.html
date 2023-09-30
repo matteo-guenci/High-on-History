@@ -149,7 +149,7 @@
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
-                    <div id="image_artnouveau3" class="sidebar-header"><img id="woman3" src="imgs/invaluable-art-nouveau-hero.png"></div>
+                    <!-- <div id="image_artnouveau3" class="sidebar-header"><img id="woman3" src="imgs/invaluable-art-nouveau-hero.png"></div> -->
         
                 <ul class="list-unstyled components">
                             <li class="active">
@@ -217,9 +217,30 @@
                         </ul>
                     </li>
                 </ul>
+                <img src="imgs/long-3.png" id="theImage2" style="width: 100%">
+                <script type="text/javascript">
+                    (function() {
+                  var urls = ['imgs/long-1', 'imgs/long-2', 'imgs/long-3', 'imgs/long-4'];
+                  function swap() {
+                    console.log((urls[Math.round(Math.random() * (urls.length))] + '.png'));
+                  }
+                  if ((urls[Math.round(Math.random() * (urls.length))] + '.png') != 'undefined.png') {
+                        document.getElementById('theImage2').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
+                        if (document.getElementById('theImage2').getAttribute('src')=='undefined.png') {
+                            document.getElementById('theImage2').setAttribute('src', 'imgs/long-3.png');
+                        }}
+                
+                  // Mozilla, Opera and webkit nightlies currently support this event
+                  if ( document.addEventListener ) {
+                    window.addEventListener( 'load', swap, false );
+                  // If IE event model is used
+                  } 
+                })();
+                  </script>
+
             </nav>
             <div class="text" id="prova" >
-                <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top nav-boot">
+                <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top nav-boot" id="navpage">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-xs-0 ">

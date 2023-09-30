@@ -85,7 +85,7 @@ a, a:hover, a:focus {
 }
 
 #sidebar a {
-    color: white !important;
+    color: white ;
 }
 
 #sidebar .sidebar-header {
