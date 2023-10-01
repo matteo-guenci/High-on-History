@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'BlackCasper';
-  src: url(/fonts/BlackCasper.ttf);
+  src: url(/fonts/BlackCasper.ttf) format(ttf);
 }
 @font-face {
   font-family: 'Mustasurma';
-  src: url(/fonts/Mustasurma.ttf);
+  src: url(/fonts/Mustasurma.ttf) format(ttf);
 }
 @font-face {
   font-family: 'Punktype';
-  src: url(/fonts/Punktype.ttf);
+  src: url(/fonts/Punktype.ttf) format(ttf);
 }
 @font-face {
   font-family: 'SniffinPaint';
-  src: url(/fonts/Sniffin_Paint_Regular.ttf);
+  src: url(/fonts/Sniffin_Paint_Regular.ttf) format(ttf);
 }
 
 
@@ -21,6 +21,7 @@ body {
     /* background-image: url("imgs/punk_wallpaper2.jpeg"); */
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
     background-color: #bbb;
+    position: relative
   }
 p, a{
   font-family: 'Punktype';
