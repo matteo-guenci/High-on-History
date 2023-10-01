@@ -22,9 +22,6 @@ body {
     background-color: #bbb;
     position: relative
   }
-.navigazione.image-container{
-  background-color: red;
-}
 
 p, a{
   font-family: 'Punktype';
