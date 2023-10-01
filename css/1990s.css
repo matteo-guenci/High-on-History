@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'BlackCasper';
-  src: url(/fonts/BlackCasper.ttf) format(ttf);
+  src: url('/fonts/BlackCasper.ttf') format(ttf);
 }
 @font-face {
   font-family: 'Mustasurma';
-  src: url(/fonts/Mustasurma.ttf) format(ttf);
+  src: url('/fonts/Mustasurma.ttf') format(ttf);
 }
 @font-face {
   font-family: 'Punktype';
-  src: url(/fonts/Punktype.ttf) format(ttf);
+  src: url('/fonts/Punktype.ttf') format(ttf);
 }
 @font-face {
   font-family: 'SniffinPaint';
-  src: url(/fonts/Sniffin_Paint_Regular.ttf) format(ttf);
+  src: url('/fonts/Sniffin_Paint_Regular.ttf') format(ttf);
 }
 
 
@@ -49,15 +49,29 @@ blockquote{
   0 0 9.5rem #d400ff ; */
 }
 
-
-
-#image_90s{
+#punk{
+  /* width: 20vw;
+  height: 20vh; */
+  position: relative;
+  overflow: visible;
   display: inline-block;
   position: absolute;
-  bottom: 0%;
+  bottom: 5%;
   right: 3%;
   z-index: 998;
   background: transparent;
+}
+
+#punkhead{
+  width: 20vw;
+  height: 45vh;
+  fill: #bbb;
+  display: inline-block;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  z-index: 998;
+  filter: grayscale(100%), contrast(3), brightness(70%);
 }
 
 .image-container {
@@ -91,9 +105,15 @@ blockquote{
   font-size: 2rem;
 }
 
+#main-background {
+  column-count: 2;
+  column-gap: 10%;
+  background-image: url('/imgs/punk_wallpaper2.jpeg') ;
+}
 
 /* per le immagini (principalmente) */
 .zine {
+  z-index: 998;
   box-sizing: border-box;
   width: 300px;
   padding: 20px;
@@ -118,19 +138,19 @@ blockquote{
               6px 5px 7px 1px rgba(0, 0, 0, 0.4);
 }
 
-.zine img {
+.zine.img {
   width: 100%;
   display: block;
   filter: grayscale(100%) contrast(3) brightness(70%);
 }
 
-.zine:before,
-.zine:after {
+.zine::before,
+.zine::after {
   content: '';
   position: absolute;
 }
 
-.zine:before {
+.zine::before {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
   left: 50%;
@@ -156,7 +176,7 @@ blockquote{
                                                                           rgba(0, 0, 0, 0.03) 1.6%);
 }
 
-.zine:after {
+.zine::after {
   width: 100%;
   height: 100%;
   left: 0;
@@ -174,11 +194,7 @@ blockquote{
                                                rgba(255, 255, 255, 0) 3.55%);
 }
 
-body {
-  background-color: mediumturquoise;
-  padding: 60px 20px;
-}
-
+/*
 .container {
   width: 650px;
   display: grid;
@@ -191,7 +207,9 @@ body {
 
 .container > img {
   width: 250px;
-}
+} */
+
+
 
 /* da .zine fino a qui è meglio applicare alle immagini */
 .text-brutal{
