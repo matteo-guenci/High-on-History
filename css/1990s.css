@@ -22,18 +22,18 @@ body {
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
     background-color: #bbb;
   }
-p{
+p, a{
   font-family: 'Punktype';
 }
 
 blockquote{
-  font-family: 'Sniffin_Paint_Regular';
+  font-family: 'SniffinPaint';
   color: black;
   font-size: 3rem;
 }
 
 #maintitle{
-  font-family: 'Sniffin_Paint_Regular', Arial, Helvetica, sans-serif;
+  font-family: 'SniffinPaint', Arial, Helvetica, sans-serif;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
   text-shadow:
   0 0 0 0.5rem #fff,
@@ -58,7 +58,7 @@ blockquote{
 }
 
 .image-container {
-  font-family: 'Sniffin_Paint_Regular';
+  font-family: 'SniffinPaint';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
   /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
@@ -71,7 +71,7 @@ blockquote{
   transform: skew(5deg);
 }
 .container h1, h2{
-  font-family: 'Sniffin_Paint_Regular';
+  font-family: 'SniffinPaint';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 3rem;
@@ -84,7 +84,7 @@ blockquote{
 }
 
 .container h3 {
-  font-family: 'Sniffin_Paint_Regular';
+  font-family: 'SniffinPaint';
   font-size: 2rem;
 }
 
