@@ -10,16 +10,30 @@
   font-family: 'Punktype';
   src: url(/fonts/Punktype.ttf);
 }
+@font-face {
+  font-family: 'SniffinPaint';
+  src: url(/fonts/Sniffin_Paint_Regular.ttf);
+}
 
 
 
 body {
-    background-image: url("imgs/punk_wallpaper2.jpeg");
-
+    /* background-image: url("imgs/punk_wallpaper2.jpeg"); */
+    /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
+    background-color: #bbb;
   }
+p{
+  font-family: 'Punktype';
+}
+
+blockquote{
+  font-family: 'Sniffin_Paint_Regular';
+  color: black;
+  font-size: 3rem;
+}
 
 #maintitle{
-  font-family: 'BlackCasper', Arial, Helvetica, sans-serif;
+  font-family: 'Sniffin_Paint_Regular', Arial, Helvetica, sans-serif;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
   text-shadow:
   0 0 0 0.5rem #fff,
@@ -31,6 +45,8 @@ body {
   0 0 6rem #d400ff,
   0 0 9.5rem #d400ff ;
 }
+
+
 
 #image_90s{
   display: inline-block;
@@ -44,217 +60,96 @@ body {
 .image-container {
   font-family: 'BlackCasper';
   border-radius: 10px;
-  box-shadow: 50px 50px 100px #000000;
-  background-image: linear-gradient(240deg, #FBFF14, #F0A9E3);
+  /* box-shadow: 50px 50px 100px #000000; */
+  /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
+  color: black;
   padding: 5rem;
-  transform: rotate(-5deg) skew(-5deg) translateY(5rem);
+  transform: rotate(-5deg) skew(-5deg);
 }
 
 .image-container > *{
   transform: skew(5deg);
 }
 .container h1, h2{
-  font-family: 'BlackCasper';
+  font-family: 'Sniffin_Paint_Regular';
   border-radius: 10px;
-  box-shadow: 50px 50px 100px #000000;
+  /* box-shadow: 50px 50px 100px #000000; */
   font-size: 3rem;
-  color: #e044ee;
-  text-shadow: 50px 50px 100px #000000;
-  text-align:center;
-  background-image: linear-gradient(240deg, #FBFF14, #F0A9E3);
+  /* color: #e044ee; */
+  color: black;
+  /* text-shadow: 50px 50px 100px #000000; */
+  /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
   padding: 5rem;
-  transform: rotate(7deg) skew(4deg) translateY(-3rem);
+  transform: rotate(12deg) skew(4deg);
 }
 
 .container h3 {
-  font-family: 'BlackCasper';
+  font-family: 'Sniffin_Paint_Regular';
   font-size: 2rem;
 }
-  /* background-image: radial-gradient(
-    ellipse 50% 35% at 50% 50%,
-    #6b1839,
-    transparent
-  );
+
+.zine {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px; 
+  position: relative;
+  background-color: #bbb;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #ddd, #777),
+                    linear-gradient(to right, #ccc, #777),
+                    linear-gradient(to right, #ddd, #777),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+                    linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 3%);
+  background-size: 0.5% 5%, 0.5% 5%, 0.5% 5%, 10% 8%, 10% 8%, 10% 8%, 100% 100%;
+  background-position: 0 10%, 0 50%, 0 90%, 0 9%, 0 50%, 0 91%, 0 0;
+  border-radius: 2px 1px 1px 2px;
+  box-shadow: 2px 1px 0 #ccc, 3px 2px 0 #bbb, 4px 3px 0 #ccc, 6px 4px 0 #aaa, 0 3px 12px rgba(0, 0, 0, 0.2), 6px 5px 7px 1px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%) contrast(3) brightness(70%);
+}
+
+img:before,
+img:after {
+  content: '';
+  position: absolute;
+}
+
+img:before {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  letter-spacing: 2;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.25) 65%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 80%),
+                    linear-gradient(to right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 41.5%, rgba(255, 255, 255, 0) 42%),
+                    linear-gradient(75deg, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0) 30%),
+                    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15) 7%, rgba(0, 0, 0, 0) 12%),
+                    repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0.8%, rgba(0, 0, 0, 0.03) 1%, rgba(0, 0, 0, 0.03) 1.6%);
+}
 
-  text-transform: uppercase;
-  font-size: 6em;
-  color: #ffe6ff;
-  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  animation: shine 2s forwards, flicker 3s infinite;
-  @keyframes blink {
-    0%,
-    22%,
-    36%,
-    75% {
-      color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-    }
-    28%,
-    33% {
-      color: #ff65bd;
-      text-shadow: none;
-    }
-    82%,
-    97% {
-      color: #ff2483;
-      text-shadow: none;
-    }
-  }
-  
-  .flicker {
-    animation: shine 2s forwards, blink 3s 2s infinite;
-  }
-  
-  .fast-flicker {
-    animation: shine 2s forwards, blink 10s 1s infinite;
-  }
-  
-  @keyframes shine {
-    0% {
-      color: #6b1839;
-      text-shadow: none;
-    }
-    100% {
-      color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-    }
-  }
-  
-  @keyframes flicker {
-    from {
-      opacity: 1;
-    }
-  
-    4% {
-      opacity: 0.9;
-    }
-  
-    6% {
-      opacity: 0.85;
-    }
-  
-    8% {
-      opacity: 0.95;
-    }
-  
-    10% {
-      opacity: 0.9;
-    }
-  
-    11% {
-      opacity: 0.922;
-    }
-  
-    12% {
-      opacity: 0.9;
-    }
-  
-    14% {
-      opacity: 0.95;
-    }
-  
-    16% {
-      opacity: 0.98;
-    }
-  
-    17% {
-      opacity: 0.9;
-    }
-  
-    19% {
-      opacity: 0.93;
-    }
-  
-    20% {
-      opacity: 0.99;
-    }
-  
-    24% {
-      opacity: 1;
-    }
-  
-    26% {
-      opacity: 0.94;
-    }
-  
-    28% {
-      opacity: 0.98;
-    }
-  
-    37% {
-      opacity: 0.93;
-    }
-  
-    38% {
-      opacity: 0.5;
-    }
-  
-    39% {
-      opacity: 0.96;
-    }
-  
-    42% {
-      opacity: 1;
-    }
-  
-    44% {
-      opacity: 0.97;
-    }
-  
-    46% {
-      opacity: 0.94;
-    }
-  
-    56% {
-      opacity: 0.9;
-    }
-  
-    58% {
-      opacity: 0.9;
-    }
-  
-    60% {
-      opacity: 0.99;
-    }
-  
-    68% {
-      opacity: 1;
-    }
-  
-    70% {
-      opacity: 0.9;
-    }
-  
-    72% {
-      opacity: 0.95;
-    }
-  
-    93% {
-      opacity: 0.93;
-    }
-  
-    95% {
-      opacity: 0.95;
-    }
-  
-    97% {
-      opacity: 0.93;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
-} */
-
+img:after {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0) 40%),
+                    linear-gradient(to left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0) 40%),
+                    linear-gradient(-140deg, rgba(0, 0, 0, 0.02) 2%, rgba(0, 0, 0, 0.07) 3%, rgba(0, 0, 0, 0.08) 3.2%, rgba(255, 255, 255, 0.04) 3.25%, rgba(255, 255, 255, 0.04) 3.5%, rgba(255, 255, 255, 0) 3.55%);
+}
+/* da .zine fino a qui è meglio applicare alle immagini */
+.text-brutal{
+  display: inline-block;
+  font-size: 45px;
+  transform: rotate(5deg);
+} /*da applicare a porzioni di testo per ingrandirle e rotarle == brutalismo */
 
 /* il div in cui c'è la foto deve essere position relative */
-
