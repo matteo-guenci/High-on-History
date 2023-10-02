@@ -19,65 +19,39 @@
 
 <!-- Matteo -->
     <link href="css/1960.css" rel="stylesheet" id="stile">
-
-    
-    
     
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script>var currentStyle="";</script>
     
 </head>
 <body>
-    <script>
-        const stylesheetLink = document.getElementById('stile');
-        const urlParams = new URLSearchParams(window.location.search);
-        const selectedStyle = urlParams.get('style');
-        if (selectedStyle === 'css/1500.css') {
-            stylesheetLink.href = 'css/1500.css';
-        }
-        else if (selectedStyle === 'css/1800.css') {
-            stylesheetLink.href = 'css/1800.css';
-        }
-        else if (selectedStyle === 'css/1900.css') {
-            stylesheetLink.href = 'css/1900.css';
-        }
-        else if (selectedStyle === 'css/1960.css') {
-            stylesheetLink.href = 'css/1960.css';
-        }
-        else if (selectedStyle === 'css/1990s.css') {
-            stylesheetLink.href = 'css/1990s.css';
-        }
-        else if (selectedStyle === 'css/2030.css') {
-            stylesheetLink.href = 'css/2030.css';
-        }
-
-        const currentStyle=stylesheetLink.getAttribute("href");
-    </script>
     <nav class="navi">
         <div class="nav-content navi">
             <div class="toggle-btn">
                 <i class="bx bx-plus"></i>
             </div>
             <span style="--i:1;">
-                <a href="#" id="it1-1" onClick="change(this.id)"><i class="bx bxs-camera"></i></a>
+                <a href="#" id="it1-1" onClick="change(this.id)"><i class="bx bxs-camera">1500</i></a>
             </span>
             <span style="--i:2;">
-                <a href="#" id="it1-2" onClick="change(this.id)"><i class="bx bxs-alarm"></i></a>
+                <a href="#" id="it1-2" onClick="change(this.id)"><i class="bx bxs-alarm">1800</i></a>
             </span>
             <span style="--i:3;">
-                <a href="#" id="it1-3" onClick="change(this.id)"><i class="bx bxs-map"></i></a>
+                <a href="#" id="it1-3" onClick="change(this.id)"><i class="bx bxs-map">1900</i></a>
             </span>
             <span style="--i:4;">
-                <a href="#" id="it1-4" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-4" onClick="change(this.id)"><i class="bx bxs-cog">1950</i></a>
             </span>
             <span style="--i:5;">
-                <a href="#" id="it1-5" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-5" onClick="change(this.id)"><i class="bx bxs-cog">1990</i></a>
             </span>
             <span style="--i:6;">
-                <a href="#" id="it1-6" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-6" onClick="change(this.id)"><i class="bx bxs-cog">2030</i></a>
             </span>
         </div>
     </nav>
     <script src="scripts/circular_menu.js"></script>
+    
 
 <!-- Navbar section  -->
 
@@ -87,7 +61,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=
-                "location.href=this.href+'?style='+stylesheetLink;return false;">Home</a>
+                "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
                 </li>
                 <li class="nav-item dropdown" style="padding-left: 5%">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,11 +69,11 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item nav-link scrollto" href="first.html" onclick=
-                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 1</a></li>
+                        "location.href=this.href+'?style='+currentStyle;return false;">Issue 1</a></li>
                     <li><a class="dropdown-item nav-link scrollto" href="second.html" onclick=
-                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 2</a></li>
+                        "location.href=this.href+'?style='+currentStyle;return false;">Issue 2</a></li>
                     <li><a class="dropdown-item nav-link scrollto" href="third.html" onclick=
-                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 3</a></li>
+                        "location.href=this.href+'?style='+currentStyle;return false;">Issue 3</a></li>
                 </ul>
                 <li class="nav-item dropdown" style="padding-left: 5%">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -172,123 +146,159 @@
             // TO MAKE THE MAP APPEAR YOU MUST
             // ADD YOUR ACCESS TOKEN FROM
             // https://account.mapbox.com
-        mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
-        const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/sorre33/clm9iatis016j01r714o489li',
-        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
-        zoom: 1.6,
-        center: [-90, 40]
-        });
-
-        map.on('click', (event) => {
-        const features = map.queryRenderedFeatures(event.point, {
-        layers: ['highonhistory']
-        });
-        if (!features.length) {
-        return;
-        }
-        const feature = features[0];
-        const stylesheetLink = document.getElementById('stile').getAttribute("href");
-        const popup = new mapboxgl.Popup({ offset: [0, -15] })
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(
-        `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html?style=${stylesheetLink}#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
-        )
-        .addTo(map);
-        });
         
-        map.on('style.load', () => {
-        map.setFog({}); // Set the default atmosphere style
-        });
-        
-        // The following values can be changed to control rotation speed:
-        
-        // At low zooms, complete a revolution every two minutes.
-        const secondsPerRevolution = 120;
-        // Above zoom level 5, do not rotate.
-        const maxSpinZoom = 5;
-        // Rotate at intermediate speeds between zoom levels 3 and 5.
-        const slowSpinZoom = 3;
-        
-        let userInteracting = false;
-        let spinEnabled = true;
-        
-        function spinGlobe() {
-            const zoom = map.getZoom();
-            if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
-            let distancePerSecond = 360 / secondsPerRevolution;
-            if (zoom > slowSpinZoom) {
-            // Slow spinning at higher zooms
-            const zoomDif =
-            (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
-            distancePerSecond *= zoomDif;
+        </script>
+        <script>
+            const stylesheetLink = document.getElementById('stile');
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedStyle = urlParams.get('style');
+            if (selectedStyle === 'css/1500.css') {
+                stylesheetLink.href = 'css/1500.css';
+                createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
             }
-            const center = map.getCenter();
-            center.lng -= distancePerSecond;
-            // Smoothly animate the map over one second.
-            // When this animation is complete, it calls a 'moveend' event.
-            map.easeTo({ center, duration: 1000, easing: (n) => n });
+            else if (selectedStyle === 'css/1800.css') {
+                stylesheetLink.href = 'css/1800.css';
+                createMap("");
             }
-        }
-        
-        // Pause spinning on interaction
-        map.on('mousedown', () => {
-        userInteracting = true;
-        });
-        
-        // Restart spinning the globe when interaction is complete
-        map.on('mouseup', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        
-        // These events account for cases where the mouse has moved
-        // off the map, so 'mouseup' will not be fired.
-        map.on('dragend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        map.on('pitchend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        map.on('rotateend', () => {
-        userInteracting = false;
-        spinGlobe();
-        });
-        
-        // When animation is complete, start spinning if there is no ongoing interaction
-        map.on('moveend', () => {
-        spinGlobe();
-        });
-
-        // function playpause() {
-        //     var btn = document.getElementsByClassName('btn-spin');
-        //     spinEnabled = !spinEnabled;
-        //     if (spinEnabled) {
-        //         document.addEventListener('click', (e) => {
-        //             spinGlobe();
-        //         });
-        //     } else {
-        //         map.stop();
-        //         btn[0].classList.toggle("pause");
-        //     }
-        // }
-
-
-        function myFunction() {
-            var element = document.getElementById("button");
-            element.classList.toggle("pause");
-            spinEnabled = !spinEnabled;
-            if (spinEnabled) {
-                     spinGlobe();
-             } else {
-                 map.stop();
-             }
+            else if (selectedStyle === 'css/1900.css') {
+                stylesheetLink.href = 'css/1900.css';
+                createMap("");
             }
+            else if (selectedStyle === 'css/1960.css') {
+                stylesheetLink.href = 'css/1960.css';
+                createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+            }
+            else if (selectedStyle === 'css/1990s.css') {
+                stylesheetLink.href = 'css/1990s.css';
+                createMap("");
+            }
+            else if (selectedStyle === 'css/2030.css') {
+                stylesheetLink.href = 'css/2030.css';
+                createMap("");
+            }
+    
+            currentStyle=stylesheetLink.getAttribute("href");
 
-        spinGlobe();
+            function createMap (stylelink, projection) {
+                mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
+                const map = new mapboxgl.Map({
+                container: 'map',
+                style: stylelink,
+                projection: projection, // Display the map as a globe, since satellite-v9 defaults to Mercator
+                zoom: 1.6,
+                center: [-90, 40]
+                });
+
+                map.on('click', (event) => {
+                const features = map.queryRenderedFeatures(event.point, {
+                layers: ['highonhistory']
+                });
+                if (!features.length) {
+                return;
+                }
+                const feature = features[0];
+                const stylesheetLink = document.getElementById('stile').getAttribute("href");
+                const popup = new mapboxgl.Popup({ offset: [0, -15] })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(
+                `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html?style=${stylesheetLink}#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
+                )
+                .addTo(map);
+                });
+                
+                map.on('style.load', () => {
+                map.setFog({}); // Set the default atmosphere style
+                
+                });
+                
+                // The following values can be changed to control rotation speed:
+                
+                // At low zooms, complete a revolution every two minutes.
+                const secondsPerRevolution = 120;
+                // Above zoom level 5, do not rotate.
+                const maxSpinZoom = 5;
+                // Rotate at intermediate speeds between zoom levels 3 and 5.
+                const slowSpinZoom = 3;
+                
+                let userInteracting = false;
+                let spinEnabled = true;
+                
+                function spinGlobe() {
+                    const zoom = map.getZoom();
+                    if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+                    let distancePerSecond = 360 / secondsPerRevolution;
+                    if (zoom > slowSpinZoom) {
+                    // Slow spinning at higher zooms
+                    const zoomDif =
+                    (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+                    distancePerSecond *= zoomDif;
+                    }
+                    const center = map.getCenter();
+                    center.lng -= distancePerSecond;
+                    // Smoothly animate the map over one second.
+                    // When this animation is complete, it calls a 'moveend' event.
+                    map.easeTo({ center, duration: 1000, easing: (n) => n });
+                    }
+                }
+                
+                // Pause spinning on interaction
+                map.on('mousedown', () => {
+                userInteracting = true;
+                });
+                
+                // Restart spinning the globe when interaction is complete
+                map.on('mouseup', () => {
+                userInteracting = false;
+                spinGlobe();
+                });
+                
+                // These events account for cases where the mouse has moved
+                // off the map, so 'mouseup' will not be fired.
+                map.on('dragend', () => {
+                userInteracting = false;
+                spinGlobe();
+                });
+                map.on('pitchend', () => {
+                userInteracting = false;
+                spinGlobe();
+                });
+                map.on('rotateend', () => {
+                userInteracting = false;
+                spinGlobe();
+                });
+                
+                // When animation is complete, start spinning if there is no ongoing interaction
+                map.on('moveend', () => {
+                spinGlobe();
+                });
+
+                // function playpause() {
+                //     var btn = document.getElementsByClassName('btn-spin');
+                //     spinEnabled = !spinEnabled;
+                //     if (spinEnabled) {
+                //         document.addEventListener('click', (e) => {
+                //             spinGlobe();
+                //         });
+                //     } else {
+                //         map.stop();
+                //         btn[0].classList.toggle("pause");
+                //     }
+                // }
+
+
+                function myFunction() {
+                    var element = document.getElementById("button");
+                    element.classList.toggle("pause");
+                    spinEnabled = !spinEnabled;
+                    if (spinEnabled) {
+                            spinGlobe();
+                    } else {
+                        map.stop();
+                    }
+                    }
+
+                spinGlobe();
+                    }
         </script>
     </div>
 
@@ -300,20 +310,20 @@
 <div class="image-row">
       <div class="image-container border zine img">
         <a href="first.html" onclick=
-        "location.href=this.href+'?style='+stylesheetLink;return false;">;
+        "location.href=this.href+'?style='+currentStyle;return false;">;
           <img src="/imgs/assassins-the-users-of-hashish.jpg" alt="Assassins, the users of hashish">
           <div class="label"><h4>Issue 1</h4></div>
         </a>
       </div>
       <div class="image-container border zine img">
-        <a href="second.html" onclick="location.href=this.href+'?style='+stylesheetLink;return false;">
+        <a href="second.html" onclick="location.href=this.href+'?style='+currentStyle;return false;">
           <img src="/imgs/pervitin small package.png" alt="Pervitin, package">
           <div class="label"><h4>Issue 2</h4></div>
         </a>
       </div>
       <div class="image-container border zine img">
         <a href="third.html" onclick=
-        "location.href=this.href+'?style='+stylesheetLink;return false;">
+        "location.href=this.href+'?style='+currentStyle;return false;">
           <img src="/imgs/g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" alt="Vietnam War">
           <div class="label"><h4>Issue 3</h4></div>
         </a>
@@ -331,7 +341,7 @@
             <h2 class="navbar-brand mb-3" href="#item-1">Menu</h2>
             <nav class="nav nav-pills flex-column">
                 <a class="nav-link" href="#main" id="it1" onclick=
-                "location.href=this.href+'?style='+stylesheetLink;return false;">High on History</a>
+                "location.href=this.href+'?style='+currentStyle;return false;">High on History</a>
                 <nav class="nav nav-pills flex-column">
                 <!-- <a class="nav-link ms-3 my-1" href="#item-1-1" id="it1-1">The concept</a> -->
                 <a class="nav-link ms-3 my-1 scrollto" href="#how" id="it1-2">How to use it</a>
@@ -350,23 +360,31 @@
                         
                         if (value === 'it2-1' || value === 'it1-1') {
                             stylesheetLink.href = 'css/1500.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
+                            createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
                         }
                         else if (value === 'it2-2' || value === 'it1-2') {
                             stylesheetLink.href = 'css/1800.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
                         }
                         else if (value === 'it2-3' || value === 'it1-3') {
                             stylesheetLink.href = 'css/1900.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
                         }
                         else if (value === 'it2-4' || value === 'it1-4') {
                             stylesheetLink.href = 'css/1960.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
+                            createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
                         }
                         else if (value === 'it2-5' || value === 'it1-5') {
                             stylesheetLink.href = 'css/1990s.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
                         }
                         else if (value === 'it2-6' || value === 'it1-6') {
                             stylesheetLink.href = 'css/2030.css';
+                            currentStyle=stylesheetLink.getAttribute("href");
                         }
-
+                        
                     }
                 </script>
                 </nav>
