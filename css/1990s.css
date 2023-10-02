@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'BlackCasper';
-  src: url('/fonts/BlackCasper.ttf') format(ttf);
+  src: url(/fonts/BlackCasper.ttf);
 }
 @font-face {
   font-family: 'Mustasurma';
-  src: url('/fonts/Mustasurma.ttf') format(ttf);
+  src: url(/fonts/Mustasurma.ttf);
 }
 @font-face {
   font-family: 'Punktype';
-  src: url('/fonts/Punktype.ttf') format(ttf);
+  src: url(/fonts/Punktype.ttf);
 }
 @font-face {
   font-family: 'SniffinPaint';
-  src: url('/fonts/Sniffin_Paint_Regular.ttf') format(ttf);
+  src: url(/fonts/Sniffin_Paint_Regular.ttf);
 }
 
 
