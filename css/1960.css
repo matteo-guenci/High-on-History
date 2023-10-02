@@ -64,6 +64,9 @@ body {
     border-bottom: 1px solid grey;
 }
 
+#banner-laterale {
+    display: inline-block
+}
 
 #home {
     

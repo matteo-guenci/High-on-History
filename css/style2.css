@@ -74,6 +74,9 @@ a[data-toggle="collapse"] {
 
 }
 
+#banner-laterale {
+    display:none
+}
 /*aside {
     width: 22%; border-left: 0.3em solid black; border-top: 0.3em solid;  position: sticky;
 }*/
