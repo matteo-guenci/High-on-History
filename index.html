@@ -11,14 +11,14 @@
 
 <!-- ESPERIMENTI STILI -->
 <!-- Stefano -->
-    <!-- <link href="css/1960.css" rel="stylesheet"> -->
+    <!-- <link href="css/1960.css" rel="stylesheet" id="stile">  -->
 
 <!-- Lucia -->
-    <!-- <link href="css/1500.css"rel="stylesheet"> -->
-    <!-- <link href="css/1800.css" rel="stylesheet"> -->
+    <!-- <link href="css/1500.css"rel="stylesheet" id="stile"> -->
+    <!-- <link href="css/1800.css" rel="stylesheet" id="stile"> -->
 
 <!-- Matteo -->
-    <link href="css/1990s.css" rel="stylesheet">
+    <link href="css/1960.css" rel="stylesheet" id="stile">
 
     
     
@@ -27,28 +27,53 @@
     
 </head>
 <body>
+    <script>
+        const stylesheetLink = document.getElementById('stile');
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedStyle = urlParams.get('style');
+        if (selectedStyle === 'css/1500.css') {
+            stylesheetLink.href = 'css/1500.css';
+        }
+        else if (selectedStyle === 'css/1800.css') {
+            stylesheetLink.href = 'css/1800.css';
+        }
+        else if (selectedStyle === 'css/1900.css') {
+            stylesheetLink.href = 'css/1900.css';
+        }
+        else if (selectedStyle === 'css/1960.css') {
+            stylesheetLink.href = 'css/1960.css';
+        }
+        else if (selectedStyle === 'css/1990s.css') {
+            stylesheetLink.href = 'css/1990s.css';
+        }
+        else if (selectedStyle === 'css/2030.css') {
+            stylesheetLink.href = 'css/2030.css';
+        }
+
+        const currentStyle=stylesheetLink.getAttribute("href");
+    </script>
     <nav class="navi">
         <div class="nav-content navi">
             <div class="toggle-btn">
                 <i class="bx bx-plus"></i>
             </div>
             <span style="--i:1;">
-                <a href="#"><i class="bx bxs-camera"></i></a>
+                <a href="#" id="it1-1" onClick="change(this.id)"><i class="bx bxs-camera"></i></a>
             </span>
             <span style="--i:2;">
-                <a href="#"><i class="bx bxs-alarm"></i></a>
+                <a href="#" id="it1-2" onClick="change(this.id)"><i class="bx bxs-alarm"></i></a>
             </span>
             <span style="--i:3;">
-                <a href="#"><i class="bx bxs-map"></i></a>
+                <a href="#" id="it1-3" onClick="change(this.id)"><i class="bx bxs-map"></i></a>
             </span>
             <span style="--i:4;">
-                <a href="#"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-4" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
             </span>
             <span style="--i:5;">
-                <a href="#"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-5" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
             </span>
             <span style="--i:6;">
-                <a href="#"><i class="bx bxs-cog"></i></a>
+                <a href="#" id="it1-6" onClick="change(this.id)"><i class="bx bxs-cog"></i></a>
             </span>
         </div>
     </nav>
@@ -61,16 +86,20 @@
             <div class="collapse navbar-collapse navigazione" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=
+                "location.href=this.href+'?style='+stylesheetLink;return false;">Home</a>
                 </li>
                 <li class="nav-item dropdown" style="padding-left: 5%">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Issues
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item nav-link scrollto" href="first.html">Issue 1</a></li>
-                    <li><a class="dropdown-item nav-link scrollto" href="second.html">Issue 2</a></li>
-                    <li><a class="dropdown-item nav-link scrollto" href="third.html">Issue 3</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="first.html" onclick=
+                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 1</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="second.html" onclick=
+                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 2</a></li>
+                    <li><a class="dropdown-item nav-link scrollto" href="third.html" onclick=
+                        "location.href=this.href+'?style='+stylesheetLink;return false;">Issue 3</a></li>
                 </ul>
                 <li class="nav-item dropdown" style="padding-left: 5%">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -132,6 +161,7 @@
   } 
 })();
   </script>
+  
     <div id="map">
         <div id="image_artnouveau"><img id="woman" src="imgs/woman.png"></div>
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
@@ -159,11 +189,11 @@
         return;
         }
         const feature = features[0];
-        
+        const stylesheetLink = document.getElementById('stile').getAttribute("href");
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
         .setLngLat(feature.geometry.coordinates)
         .setHTML(
-        `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
+        `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html?style=${stylesheetLink}#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
         )
         .addTo(map);
         });
@@ -269,19 +299,21 @@
 <h2>Issues</h2>    
 <div class="image-row">
       <div class="image-container border zine img">
-        <a href="first.html">
+        <a href="first.html" onclick=
+        "location.href=this.href+'?style='+stylesheetLink;return false;">;
           <img src="/imgs/assassins-the-users-of-hashish.jpg" alt="Assassins, the users of hashish">
           <div class="label"><h4>Issue 1</h4></div>
         </a>
       </div>
       <div class="image-container border zine img">
-        <a href="second.html">
+        <a href="second.html" onclick="location.href=this.href+'?style='+stylesheetLink;return false;">
           <img src="/imgs/pervitin small package.png" alt="Pervitin, package">
           <div class="label"><h4>Issue 2</h4></div>
         </a>
       </div>
       <div class="image-container border zine img">
-        <a href="third.html">
+        <a href="third.html" onclick=
+        "location.href=this.href+'?style='+stylesheetLink;return false;">
           <img src="/imgs/g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" alt="Vietnam War">
           <div class="label"><h4>Issue 3</h4></div>
         </a>
@@ -298,19 +330,45 @@
         <nav id="navbar-documentation" class="navbar navbar-light flex-column align-items-stretch p-3">
             <h2 class="navbar-brand mb-3" href="#item-1">Menu</h2>
             <nav class="nav nav-pills flex-column">
-                <a class="nav-link" href="#main" id="it1">High on History</a>
+                <a class="nav-link" href="#main" id="it1" onclick=
+                "location.href=this.href+'?style='+stylesheetLink;return false;">High on History</a>
                 <nav class="nav nav-pills flex-column">
                 <!-- <a class="nav-link ms-3 my-1" href="#item-1-1" id="it1-1">The concept</a> -->
                 <a class="nav-link ms-3 my-1 scrollto" href="#how" id="it1-2">How to use it</a>
                 </nav>
                 <a class="nav-link scrollto" href="#layout" id="it2">Layout and typographic styles</a>
                 <nav class="nav nav-pills flex-column">
-                <a class="nav-link ms-3 my-1 scrollto" href="#16thcen" id="it2-1">Early Sixteenth century</a>
-                <a class="nav-link ms-3 my-1 scrollto" href="#19thcen" id="it2-2">Nineteenth century</a>
-                <a class="nav-link ms-3 my-1 scrollto" href="#20thbeginning" id="it2-3">First half of Twentieth Century</a>
-                <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4">Second half of Twentieth Century</a>
-                <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5">Late Twentieth Century</a>
-                <a class="nav-link ms-3 my-1 scrollto" href="#2030" id="it2-6">the Future: 2030</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#16thcen" id="it2-1" onClick="change(this.id)">Early Sixteenth century</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#19thcen" id="it2-2" onClick="change(this.id)">Nineteenth century</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#20thbeginning" id="it2-3" onClick="change(this.id)">First half of Twentieth Century</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change(this.id)">Second half of Twentieth Century</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
+                <a class="nav-link ms-3 my-1 scrollto" href="#2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
+                <script>
+                    function change(value) {
+                        const stylesheetLink = document.getElementById('stile');
+                        
+                        if (value === 'it2-1' || value === 'it1-1') {
+                            stylesheetLink.href = 'css/1500.css';
+                        }
+                        else if (value === 'it2-2' || value === 'it1-2') {
+                            stylesheetLink.href = 'css/1800.css';
+                        }
+                        else if (value === 'it2-3' || value === 'it1-3') {
+                            stylesheetLink.href = 'css/1900.css';
+                        }
+                        else if (value === 'it2-4' || value === 'it1-4') {
+                            stylesheetLink.href = 'css/1960.css';
+                        }
+                        else if (value === 'it2-5' || value === 'it1-5') {
+                            stylesheetLink.href = 'css/1990s.css';
+                        }
+                        else if (value === 'it2-6' || value === 'it1-6') {
+                            stylesheetLink.href = 'css/2030.css';
+                        }
+
+                    }
+                </script>
                 </nav>
             </nav>
         </nav>

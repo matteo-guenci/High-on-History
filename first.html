@@ -8,21 +8,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    
     <link href="css/circular_menu.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
     <link href="css/style2.css" rel="stylesheet"> 
-
-<!-- ESPERIMENTI STILI -->
-<!-- Stefano -->
-    <link href="css/1960.css" rel="stylesheet">
-    <!-- <link href="css/1960.css" rel="stylesheet"> -->
-
-<!-- Lucia -->
-    <!-- <link href="css/1500.css"rel="stylesheet"> -->
-    <!-- <link href="css/1800.css" rel="stylesheet"> -->
-<!-- Matteo -->
-    <!-- <link href="css/1990s.css" rel="stylesheet"> -->
+    <link href="css/1800.css" rel="stylesheet" id="stile">
 
     <script>
     
@@ -109,6 +98,31 @@
         }
         
     </script>
+    <script>
+        const stylesheetLink = document.getElementById('stile');
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedStyle = urlParams.get('style');
+        if (selectedStyle === 'css/1500.css') {
+            stylesheetLink.href = 'css/1500.css';
+        }
+        else if (selectedStyle === 'css/1800.css') {
+            stylesheetLink.href = 'css/1800.css';
+        }
+        else if (selectedStyle === 'css/1900.css') {
+            stylesheetLink.href = 'css/1900.css';
+        }
+        else if (selectedStyle === 'css/1960.css') {
+            stylesheetLink.href = 'css/1960.css';
+        }
+        else if (selectedStyle === 'css/1990s.css') {
+            stylesheetLink.href = 'css/1990s.css';
+        }
+        else if (selectedStyle === 'css/2030.css') {
+            stylesheetLink.href = 'css/2030.css';
+        }
+
+        const currentStyle=stylesheetLink.getAttribute("href");
+    </script>
 
 <style>
     .highlight {
@@ -148,7 +162,8 @@
     <div class="first-div">
         <header>
             <h1 id="title">
-                <a href="index.html" style="text-decoration:none">High On History</a></h1>
+                <a href="index.html" style="text-decoration:none" onclick=
+                "location.href=this.href+'?style='+currentStyle;return false;">High On History</a></h1>
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
@@ -255,7 +270,8 @@
                             </li>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 5%">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 5%" onclick=
+                            "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -278,11 +294,15 @@
                         <nav aria-label="Page navigation example" style="margin-top: 1%">
                             <ul class="pagination justify-content-center">
                                 
-                                <li class="page-item"><a class="page-link" href="first.html">Issue 1</a></li>
-                                <li class="page-item"><a class="page-link" href="second.html">Issue 2</a></li>
-                                <li class="page-item"><a class="page-link" href="third.html">Issue 3</a></li>
+                                <li class="page-item"><a class="page-link" href="first.html" onclick=
+                                    "location.href=this.href+'?style='+currentStyle;return false;">Issue 1</a></li>
+                                <li class="page-item"><a class="page-link" href="second.html" onclick=
+                                    "location.href=this.href+'?style='+currentStyle;return false;">Issue 2</a></li>
+                                <li class="page-item"><a class="page-link" href="third.html" onclick=
+                                    "location.href=this.href+'?style='+currentStyle;return false;">Issue 3</a></li>
                                 <li class="page-item">
-                                <a class="page-link" href="second.html" aria-label="Next">
+                                <a class="page-link" href="second.html" aria-label="Next" onclick=
+                                "location.href=this.href+'?style='+currentStyle;return false;">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                                 </li>
