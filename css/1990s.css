@@ -19,7 +19,7 @@
 body {
     /* background-image: url("imgs/punk_wallpaper2.jpeg"); */
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
-    background-color: #bbb;
+    background-color: rgb(236, 236, 236);
     position: relative
   }
 
@@ -88,7 +88,7 @@ blockquote{
   transform: skew(5deg);
 }
 .container h1, h2{
-  font-family: 'SniffinPaint';
+  font-family: 'Mustasurma';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 3rem;
@@ -100,7 +100,7 @@ blockquote{
   transform: rotate(12deg) skew(4deg);
 }
 
-.container h3 {
+.container h3, h5 {
   font-family: 'SniffinPaint';
   font-size: 2rem;
 }
@@ -108,7 +108,7 @@ blockquote{
 #main-background {
   column-count: 2;
   column-gap: 10%;
-  background-image: url('/imgs/punk_wallpaper2.jpeg') ;
+  /* background-image: url('/imgs/punk_wallpaper2.jpeg') ; */
 }
 
 /* per le immagini (principalmente) */
