@@ -191,7 +191,7 @@ ul ul a {
 }
 
 :root {
-    --scrollbar-track-color: #fdf2c9;
+    --scrollbar-track-color: none;
     --scrollbar-thumb-color: black;
 }
 
@@ -330,4 +330,43 @@ ul ul a {
     background: none;
     border:2px solid #5d862e80;
     margin:2%;
+}
+
+.btn-info {
+    color: black;
+    border: 1px solid;
+    background-color: #fdf2c9;
+    border-color: #a5c97d79;
+    border-style: double;
+}
+
+.btn-info:hover {
+    color: black;
+    background-color: #ffe3dbef;
+    border-color: #a5c97d79;
+    border-style: double;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color:  #a5c97d79 !important;
+}
+
+.page-link {
+    color: black;
+    background-color: #fdf2c9;
+    border: 1px solid #a5c97d79;
+    border-style: double;
+}
+
+#navpage {
+    opacity: 1 !important;
+}
+
+.label_photo {
+    font-size: small !important;
+}
+
+.label_photo p::first-letter {
+    font-family: 'Bodoni Moda', serif;
 }
