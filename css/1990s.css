@@ -17,13 +17,48 @@
 
 
 body {
-  z-index: 998;
     background-image: url("imgs/punk_wallpaper2.jpeg");
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
     background-color: #e9ecef;
     /* position: relative; */
-
+    /* background-image: linear-gradient(to right, #ddd, #777),
+    linear-gradient(to right, #ccc, #777),
+    linear-gradient(to right, #ddd, #777),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 3%);
+    box-shadow: 2px 1px 0 #ccc,
+    3px 2px 0 #bbb,
+    4px 3px 0 #ccc,
+    6px 4px 0 #aaa,
+    0 3px 12px rgba(0, 0, 0, 0.2),
+    6px 5px 7px 1px rgba(0, 0, 0, 0.4); 
+    filter: grayscale(100%) contrast(3) brightness(70%); */
   }
+
+
+/* body::before{
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 60%,
+                                                rgba(255, 255, 255, 0.25) 65%,
+                                                rgba(255, 255, 255, 0.2) 75%,
+                                                rgba(255, 255, 255, 0) 80%),
+                    linear-gradient(to right, rgba(255, 255, 255, 0) 40%,
+                                                rgba(255, 255, 255, 0.1) 41%,
+                                                rgba(255, 255, 255, 0.1) 41.5%,
+                                                rgba(255, 255, 255, 0) 42%),
+                    linear-gradient(75deg, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0) 30%),
+                    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2%,
+                                                                           rgba(0, 0, 0, 0.15) 5%,
+                                                                           rgba(0, 0, 0, 0.15) 7%,
+                                                                           rgba(0, 0, 0, 0) 12%),
+                    repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0.8%,
+                                                                          rgba(0, 0, 0, 0.03) 1%,
+                                                                          rgba(0, 0, 0, 0.03) 1.6%);
+} */
 
 p, a, h4{
   font-family: 'Punktype';
@@ -80,10 +115,22 @@ blockquote{
   padding: 5rem;
   transform: rotate(-5deg) skew(-5deg);
 }
-
+/* div#issues.container {
+  background-color: black;
+  font-family: 'Mustasurma';
+} */
 .image-container > *{
   transform: skew(5deg);
 }
+/* .container h2{
+  font-family: 'Mustasurma';
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  padding: 5rem;
+  transform: rotate(-12deg) skew(-4deg);
+} */
+
 .container h1, h2{
   font-family: 'Mustasurma';
   border-radius: 10px;
@@ -94,7 +141,7 @@ blockquote{
   /* text-shadow: 50px 50px 100px #000000; */
   /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
   padding: 5rem;
-  transform: rotate(12deg) skew(4deg);
+  transform: rotate(7deg) skew(4deg);
 }
 
 .container h3, h5 {
