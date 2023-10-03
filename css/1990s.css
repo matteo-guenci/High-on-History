@@ -17,10 +17,12 @@
 
 
 body {
-    /* background-image: url("imgs/punk_wallpaper2.jpeg"); */
+  z-index: 998;
+    background-image: url("imgs/punk_wallpaper2.jpeg");
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
     background-color: #e9ecef;
-    position: relative
+    /* position: relative; */
+
   }
 
 p, a, h4{
@@ -39,9 +41,9 @@ blockquote{
   rotate: 5deg;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
   text-shadow: 
-  0 0 4px rgba(0, 0, 0, 0.5), /* Subtle shadow */
-  0 0 10px rgba(0, 0, 0, 0.8), /* Slightly stronger shadow */
-  0 0 15px rgba(0, 0, 0, 0.8); /* Bold shadow */
+  0 0 4px #e9ecef, /* Subtle shadow */
+  0 0 10px #e9ecef, /* Slightly stronger shadow */
+  0 0 15px #e9ecef; /* Bold shadow */
 }
 
 #punk{
