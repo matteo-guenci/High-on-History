@@ -1,31 +1,70 @@
-const nav = document.querySelector("nav"),
-    toggleBtn = nav.querySelector(".toggle-btn");
-toggleBtn.addEventListener("click" , () =>{
-    nav.classList.toggle("open")
+const nav = document.querySelector("nav");
+const toggleBtn = nav.querySelector(".toggle-btn");
+let isDragging = false;
+let initialY;
+let initialNavTop;
+const margin = 20; // Margine desiderato dalla parte superiore e inferiore
+const issuesSection = document.getElementById("issues"); // Ottieni la sezione delle issue
+
+toggleBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
 
-function ondrag({movementY}) {
-    const navStyle = window.getComputedStyle(nav),
-        navTop = parseInt(navStyle.top),
-        navHeight = parseInt(navStyle.height),
-        windHeight = window.innerHeight;
-        nav.style.top = navTop > 0 ? `${navTop + movementY}px` : "1px";
-        if(navTop > windHeight - navHeight){
-            nav.style.top = `${windHeight - navHeight}px`;
+function onMouseDown(event) {
+  isDragging = true;
+  initialY = event.clientY;
+  const navStyle = window.getComputedStyle(nav);
+  initialNavTop = parseInt(navStyle.top);
+}
 
-            }
-        }
+function onMouseMove(event) {
+  if (!isDragging) return;
+  const movementY = event.clientY - initialY;
+  nav.style.top = `${initialNavTop + movementY}px`;
+}
 
-nav.addEventListener("mousedown", () =>{
-    nav.addEventListener("mousemove", ondrag);
+function onMouseUp() {
+  isDragging = false;
+}
 
-});
+toggleBtn.addEventListener("mousedown", onMouseDown);
+document.addEventListener("mousemove", onMouseMove);
+document.addEventListener("mouseup", onMouseUp);
 
-nav.addEventListener("mouseup", () =>{
-    nav.removeEventListener("mousemove", ondrag);
+function updateNavPosition() {
+  const navStyle = window.getComputedStyle(nav);
+  const navHeight = parseInt(navStyle.height);
+  const windHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+  const issuesSectionTop = issuesSection.offsetTop; // Ottieni la posizione della sezione delle issue
 
-});
-nav.addEventListener("mouseleave", () =>{
-    nav.removeEventListener("mousemove", ondrag);
+  // Calcola la posizione desiderata del menu
+  let desiredTop = scrollY + margin;
 
-});
+  // Imposta i limiti superiore e inferiore
+  const upperLimit = margin;
+  const lowerLimit = windHeight - navHeight - margin;
+
+  // Limita la posizione del menu nei limiti desiderati
+  if (desiredTop < upperLimit) {
+    desiredTop = upperLimit;
+  } else if (desiredTop > lowerLimit) {
+    desiredTop = lowerLimit;
+  }
+
+  // Aggiungi una condizione per far diventare fisso il menu quando raggiunge la sezione delle issue
+  if (scrollY > issuesSectionTop - margin) {
+    nav.classList.add("fixed");
+  } else {
+    nav.classList.remove("fixed");
+  }
+
+  // Imposta la nuova posizione del menu
+  nav.style.top = `${desiredTop}px`;
+}
+
+window.addEventListener("scroll", updateNavPosition);
+window.addEventListener("resize", updateNavPosition);
+
+// Inizializza la posizione del menu
+updateNavPosition();

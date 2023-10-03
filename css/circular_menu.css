@@ -1,13 +1,22 @@
-.navi{
-    position: absolute;
-    top: 50px;
+.navi {
+    position: absolute; /* Cambia da 'absolute' a 'fixed' per far rimanere il menu fisso */
+    top: 120px; /* Imposta il margine desiderato dalla parte superiore */
     right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: grab;
-    z-index: 999 !important
-}
+    z-index: 999 !important;
+    /* transition: top 0.3s ease; Aggiungi una transizione per l'effetto di scorrimento */
+  }
+  /* Aggiungi un nuovo stile per il menu fisso in alto */
+.navi.fixed {
+    position: sticky;
+    top: 20px; /* Altezza desiderata dal margine superiore */
+    right: 20px;
+    /* transition: top 0.3s ease; Aggiungi una transizione per rendere il movimento più fluido */
+  }
+  
 .navi .nav-content{
     display: flex;
     align-items: center;
