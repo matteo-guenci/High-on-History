@@ -25,7 +25,7 @@
     
 </head>
 <body>
-    <nav class="navi">
+    <nav class="navi fixed">
         <div class="nav-content navi">
             <div class="toggle-btn">
                 <i class="bx bx-plus"></i>
@@ -140,7 +140,7 @@
         <div id="image_artnouveau"><img id="woman" src="imgs/woman.png"></div>
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
         <button id="button" class="btn-spin" onclick="myFunction()"></button>
-        <div class="sign neon" id="main-title"><h1 id="maintitle">High on History</div>
+        <div class="sign" id="main-title"><h1 id="maintitle" class="text-flicker-out-glow">High on History</div>
     <div id="punk"><img id="punkhead" src="imgs/zine_cover.jpeg"></div>
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST
@@ -308,23 +308,26 @@
 <div id="issues" class="container">
 <h2>Issues</h2>    
 <div class="image-row">
-      <div class="image-container border zine img">
+      <div class="image-container border">
         <a href="first.html" onclick=
-        "location.href=this.href+'?style='+currentStyle;return false;">;
-          <img src="/imgs/assassins-the-users-of-hashish.jpg" alt="Assassins, the users of hashish">
+        "location.href=this.href+'?style='+currentStyle;return false;">
+            <div class="zine img">
+          <img src="/imgs/assassins-the-users-of-hashish.jpg" alt="Assassins, the users of hashish"></div>
           <div class="label"><h4>Issue 1</h4></div>
         </a>
       </div>
-      <div class="image-container border zine img">
+      <div class="image-container border">
         <a href="second.html" onclick="location.href=this.href+'?style='+currentStyle;return false;">
-          <img src="/imgs/pervitin small package.png" alt="Pervitin, package">
+            <div class="zine img">
+          <img src="/imgs/pervitin small package.png" alt="Pervitin, package"></div>
           <div class="label"><h4>Issue 2</h4></div>
         </a>
       </div>
-      <div class="image-container border zine img">
+      <div class="image-container border">
         <a href="third.html" onclick=
         "location.href=this.href+'?style='+currentStyle;return false;">
-          <img src="/imgs/g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" alt="Vietnam War">
+        <div class="zine img">
+          <img src="/imgs/g-i-s-drug-use-in-vietnam-soared-with-their-commanders-helps-featured-photo.jpg" alt="Vietnam War"></div>
           <div class="label"><h4>Issue 3</h4></div>
         </a>
       </div>
@@ -396,7 +399,7 @@
     </div>
     <div data-bs-spy="scroll" data-bs-target="#navbar-documentation" data-bs-offset="35" class="scrollspy p-4 col-md-9 col-xs-11" tabindex="0" id="main-background">
             <h3 id="main" class="mb-3 mt-1">High on History</h3>
-            <p>High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual time-travelling experience across past and future typography trends. Nine articles related to the topic of the usage of drugs in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is geo-referenced and its metadata are accessible to the user. 
+            <p>High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual <span class="text-brutal">time travelling experience</span> across past and future typography trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span> in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is geo-referenced and its metadata are accessible to the user. 
 
             <hr>
 
@@ -408,7 +411,7 @@
             <h5 id="layout" class="mb-3 mt-1" >Layout and typographic styles</h5>
 
             <p>
-                The themes were designed according to the organizational characteristics of a historical style in depending on the related time period, and maps are also converted to the graphical style of the chosen time span. Overall, the whole website changes aspect in depending on the style the users chooses. 
+                The themes were designed according to the organizational characteristics of a historical style in depending on the related time period, and <span class="text-brutal">maps</span> are also converted to the graphical style of the chosen time span. Overall, the whole website changes aspect in depending on the style the users chooses. 
             </p>
 
             <hr>
