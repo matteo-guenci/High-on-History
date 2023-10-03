@@ -19,9 +19,11 @@
 body {
     background-image: url("imgs/punk_wallpaper2.jpeg");
     /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
-    background-color: #e9ecef;
+    /* background-color: #e9ecef; */
     /* position: relative; */
-    /* background-image: linear-gradient(to right, #ddd, #777),
+    background-color: #bbb;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #ddd, #777),
     linear-gradient(to right, #ccc, #777),
     linear-gradient(to right, #ddd, #777),
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
@@ -34,11 +36,11 @@ body {
     6px 4px 0 #aaa,
     0 3px 12px rgba(0, 0, 0, 0.2),
     6px 5px 7px 1px rgba(0, 0, 0, 0.4); 
-    filter: grayscale(100%) contrast(3) brightness(70%); */
+    filter: grayscale(100%) contrast(3) brightness(70%);
   }
 
 
-/* body::before{
+body::before{
   transform: translate(-50%, -50%);
   z-index: 2;
   background-repeat: no-repeat;
@@ -58,11 +60,38 @@ body {
                     repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0.8%,
                                                                           rgba(0, 0, 0, 0.03) 1%,
                                                                           rgba(0, 0, 0, 0.03) 1.6%);
-} */
-
-p, a, h4{
-  font-family: 'Punktype';
 }
+body::after{
+  z-index: 3;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0.15) 25%,
+                                                rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0) 40%),
+                    linear-gradient(to left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1) 25%,
+                                               rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0) 40%),
+                    linear-gradient(-140deg, rgba(0, 0, 0, 0.02) 2%,
+                                               rgba(0, 0, 0, 0.07) 3%,
+                                               rgba(0, 0, 0, 0.08) 3.2%,
+                                               rgba(255, 255, 255, 0.04) 3.25%,
+                                               rgba(255, 255, 255, 0.04) 3.5%,
+                                               rgba(255, 255, 255, 0) 3.55%);
+}
+
+p, h4{
+  font-family: 'Punktype';
+  font-weight: 500;
+}
+
+nav.navbar{
+  /* background-color: white; */
+  font-family: 'Punktype';
+  font-weight: bolder;
+  font-size: larger;
+}
+a{
+  font-family: 'Punktype';
+  font-weight: bolder;
+  /* font-size:larger; */
+}
+
 
 blockquote{
   font-family: 'SniffinPaint';
@@ -135,7 +164,7 @@ blockquote{
   font-family: 'Mustasurma';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
-  font-size: 3rem;
+  font-size: 5rem;
   /* color: #e044ee; */
   color: black;
   /* text-shadow: 50px 50px 100px #000000; */
