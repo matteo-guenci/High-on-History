@@ -14,6 +14,10 @@
   font-family: 'SniffinPaint';
   src: url(/fonts/Sniffin_Paint_Regular.ttf);
 }
+@font-face {
+  font-family: 'CorpusType';
+  src: url(/fonts/CorpusType.otf) format(otf);
+}
 
 
 body {
@@ -77,19 +81,23 @@ body::after{
 
 p, h4{
   font-family: 'Punktype';
-  font-weight: 500;
+  /* font-weight: 200; */
 }
+
 
 nav.navbar{
   /* background-color: white; */
-  font-family: 'Punktype';
+  font-family: 'SniffinPaint';
   font-weight: bolder;
   font-size: larger;
 }
 a{
-  font-family: 'Punktype';
+  font-family: 'SniffinPaint';
   font-weight: bolder;
   /* font-size:larger; */
+}
+#it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
+  font-family: 'Punktype';
 }
 
 
@@ -171,6 +179,10 @@ blockquote{
   /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
   padding: 5rem;
   transform: rotate(7deg) skew(4deg);
+}
+
+h2.navbar-brand{
+  font-size: 2rem;
 }
 
 .container h3, h5 {
@@ -554,3 +566,7 @@ blockquote{
 
 
 /* il div in cui c'è la foto deve essere position relative */
+
+.bx .bxs-camera{
+  font-family: 'Punktype';
+}
