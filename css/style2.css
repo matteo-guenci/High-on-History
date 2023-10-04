@@ -145,9 +145,12 @@ span {
     background-color: black;
     height: 5vh;
 }
-<<<<<<< Updated upstream
-=======
 
+.barra {
+    display:none
+}
 
+.paragraph {
+    display:none
+}
 
->>>>>>> Stashed changes

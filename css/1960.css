@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Onest:wght@700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
 #maintitle {
     font-size: 9vh;
@@ -158,7 +158,70 @@ body {
     background-color: white !important;
     font-family: 'Onest', sans-serif;
     text-transform: uppercase;
-    font-size: 4vh
+    font-size: 4vh;
+    font-weight: bold;
+ }
+
+ #accordionExample h1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    
+ }
+
+ #accordionExample h2 {
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
+
+ #accordionExample h3 {
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
+
+ #accordionExample p:first-letter {
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 5vh;
+    float: left;
+    line-height: 0.5;
+    margin: 15px 15px 10px 0;
+}
+
+.paragraph {
+    text-align: justify;
+    column-count: 3;
+    column-gap: 3%;
+}
+ 
+ 
+
+ #accordionExample #subtitle {
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+
+ }
+
+ #accordionExample h4 {
+    font-family: 'Onest', sans-serif; 
+    text-transform: uppercase;
+    font-style: italic
+ }
+
+ .barra{
+   
+    display: inline;
+
+ }
+
+ .barra hr{
+    
+    border: none;
+    height: 3px;
+    background-color: black !important;  /* Modern Browsers */
+    opacity: 1
  }
   
   
