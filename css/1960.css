@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Onest:wght@700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
 #maintitle {
     font-size: 9vh;
@@ -148,5 +148,17 @@ body {
     z-index: 998;
     background: transparent;
   }
+
+ .components button {
+        background-color: white;
+        border: 2px black solid
+ }
+
+ .accordion-button {
+    background-color: white !important;
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    font-size: 4vh
+ }
   
   
