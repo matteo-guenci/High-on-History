@@ -254,10 +254,6 @@ ul ul a {
     background-color: white;
 }
 
-/* .btn-info {
-    background-color: image;
-} */
-
 .accordion-body {
     border: 30px solid black;
     padding: 7%;
@@ -267,7 +263,7 @@ ul ul a {
     border-image-slice: 100% 5% 100% 5%;
 }
 
-.accordion-body h1, h2 {
+.accordion-body h1, .accordion-body h2 {
     font-family: 'Trinigan';
     padding-bottom: 2rem;
     flex-direction: column;
@@ -288,7 +284,7 @@ ul ul a {
     margin: 0.1em 0.2em 0.1em 0;
   }
 
-.accordion-body h3, h4 { 
+.accordion-body h3, .accordion-body h4 { 
     flex-wrap: nowrap;
     margin:0;
     text-align: center;

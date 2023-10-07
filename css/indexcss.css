@@ -32,10 +32,11 @@
         border-color: transparent transparent transparent #ffffff83;
     }
 
+/* commento lucia: ho tolto "bold" dal main title perché mi sfanculava il css dei miei stili */
 
 #maintitle {
     font-size: 9vh;
-    font: bold 80px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font: 80px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     color: white;
     position: absolute;
     top:15%;
@@ -63,10 +64,6 @@
 }
 
 #image_artnouveau2 {
-    display: none;
-}
-
-#image_artnouveau3 {
     display: none;
 }
 
