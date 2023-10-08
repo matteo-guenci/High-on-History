@@ -11,6 +11,10 @@
     font-family: 'Canterbury';
     src: url(/fonts/canterbury.regular.ttf);
 }
+@font-face {
+    font-family:'FirstOrder';
+    src: url(/fonts/Typographer\ Rotunda.ttf);
+}
 
 #maintitle {
     font-size: 10vh;
@@ -57,8 +61,8 @@ body {
     border-image-source: url(/imgs/gmd18.jpg);
     border-image-width: 5rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
-    padding: 8%;
+    border-image-slice: 100% 1% 100% 1%;
+    padding: 7rem;
 }
 
 .image-container {
@@ -79,6 +83,11 @@ img {
 #main-background {
     column-count: 2;
     column-gap: 10%;
+}
+
+.container p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .container h1, .container h2 {
@@ -107,9 +116,6 @@ img {
     color: red;
 }
 
-/* h4 {
-    /* font-family:  different from the other one; */
-
 
 #documentation p::first-letter {
     font-family: 'GoudyInitialen';
@@ -117,7 +123,8 @@ img {
     float: left;
     font-size: 6rem;
     line-height: 0.65;
-    margin: 0.1em 0.1em 0.1em 0;
+    margin-bottom: 0.2rem;
+    margin-right: 0.2rem;
   }
 
 p::first-line {
@@ -133,6 +140,9 @@ p::first-line {
 
 blockquote {
     font-style: italic;
+    padding-left: 5rem;
+    font-size: 1.1rem;
+    padding-right: 5rem;
 }
 
 #author {
@@ -191,11 +201,16 @@ blockquote {
 
 .accordion-body {
     border: 100px solid black;
-    padding: 10%;
+    padding: 3rem;
     border-image-source: url(/imgs/gmd19.jpg);
     border-image-width: 8rem;
     border-image-repeat: round;
-    border-image-slice: 100% 5% 100% 5%;
+    border-image-slice: 100% 1% 100% 1%;
+}
+
+.accordion-body p {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .accordion-body h1, .accordion-body h2 {
@@ -220,15 +235,17 @@ blockquote {
     float: left;
     font-size: 6rem;
     line-height: 0.65;
-    margin: 0.1em 0.1em 0.1em 0;
-  }
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+}
 
 .accordion-body h3, .accordion-body h4 { 
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 5%;
+    padding: 5%;
+    font-weight: bold;
 }
 
 .accordion-body h5 {
@@ -242,8 +259,8 @@ blockquote {
     border-image-source: url(/imgs/gmd18.jpg);
     border-image-width: 5rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
-    padding: 20%;
+    border-image-slice: 100% 1% 100% 1%;
+    padding: 5rem;
 }
 
 :root {
@@ -312,21 +329,47 @@ blockquote {
     background-color: white;
     border: 1px solid red;
     border-style: double;
+    text-transform: uppercase;
 }
 
 #navpage {
     opacity: 1 !important;
 }
 
-.label_photo {
-    font-size: small !important;
+.accordion-body img {
+    max-width: 60vw;
+    border: solid black;
+    border-style:hidden;
+    border-image-source: url(/imgs/gmd19.jpg);
+    border-image-width: 5rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 1% 100% 1%;
+    padding: 6rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.label_photo p {
+    font-size: 1rem !important;
+    column-count: 1 !important;
+    column-gap: none !important;
+    font-style: italic;
+    padding-left: 10vw;
+    padding-right:10vw;
+    font-family:'FirstOrder';
 }
 
 .label_photo p::first-letter {
-    font-family: 'EB Garamond', serif;
+    font-family:'FirstOrder';
     font-size: small !important;
+    float: none !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
 }
-/* NOT ON TWO COLUMNS AND THE FIRST LETTER NEEDS TO BE IN PLACE */
+
+.label_photo p::first-line {
+    text-transform: none !important;
+}
 
 #sidebar .sidebar-header {
     position: relative;
@@ -344,11 +387,13 @@ blockquote {
     color: black !important;
     background: white;
     text-transform: uppercase;
+    max-width: 220px;
 }
 
 ul ul a {
-    font-size: 0.9em !important;
+    font-size: 2vh !important;
     padding-left: 30px !important;
+    padding-right:10px !important;
     background: white;
 }
 
@@ -358,6 +403,21 @@ ul ul a {
     margin:1%;
     text-transform: uppercase;
 }
+
+#sidebarCollapse {
+    background-color: white;
+    text-transform: uppercase;
+}
+
+#sidebarCollapse svg {
+    display: none;
+}
+
+.btn {
+    --bs-btn-box-shadow: none !important;
+}
+
+
 
 /* #sidebar .sidebar-header {
     position: relative;
