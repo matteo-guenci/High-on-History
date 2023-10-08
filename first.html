@@ -138,21 +138,21 @@
                 <i class="bx bx-plus"></i>
             </div>
             <span style="--i:1;">
-                <a href="#" id="it1-1" onClick="change(this.id)"><i class="bx bxs-camera">1500</i></a>
+                <a href="#" id="it1-1" onClick="change(this.id)"><i id="y1500" class="bx bxs-camera">1500</i></a>
             </span>
-            <span style="--i:2;">
+            <span id="y1800" style="--i:2;">
                 <a href="#" id="it1-2" onClick="change(this.id)"><i class="bx bxs-alarm">1800</i></a>
             </span>
-            <span style="--i:3;">
+            <span id="y1900" style="--i:3;">
                 <a href="#" id="it1-3" onClick="change(this.id)"><i class="bx bxs-map">1900</i></a>
             </span>
-            <span style="--i:4;">
+            <span id="y1950" style="--i:4;">
                 <a href="#" id="it1-4" onClick="change(this.id)"><i class="bx bxs-cog">1950</i></a>
             </span>
-            <span style="--i:5;">
+            <span id="y1990" style="--i:5;">
                 <a href="#" id="it1-5" onClick="change(this.id)"><i class="bx bxs-cog">1990</i></a>
             </span>
-            <span style="--i:6;">
+            <span id="y2030" style="--i:6;">
                 <a href="#" id="it1-6" onClick="change(this.id)"><i class="bx bxs-cog">2030</i></a>
             </span>
         </div>
@@ -168,7 +168,6 @@
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
                     <div id="image_artnouveau3" class="sidebar-header"><img id="woman3" src="imgs/invaluable-art-nouveau-hero.png"></div>
-                    <!-- <div id="image_500_sidebar" class="sidebar-header"><img id="decoration_500" src="imgs/gmd18.jpg"></div> -->
         
                 <ul class="list-unstyled components">
                             <li class="active">
@@ -241,6 +240,7 @@
                         </ul>
                     </li>
                 </ul>
+                <div id="img_500"><img src="imgs/granjontail01.jpg" id="press_1500"></div>
                 <div id="banner-laterale"><img src="imgs/long-3.png" id="theImage2" style="width: 100%">
                 <script type="text/javascript">
                     (function() {
@@ -305,7 +305,9 @@
                             "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
-                                <a class="nav-link scrollto" href="index.html#documentation">Documentation</a>
+                                <a class="nav-link scrollto" href="index.html#documentation" onclick=
+                                "location.href=this.href+'?style='+currentStyle;return false;">Documentation</a>
+                                <!-- PERCHE' NON FUNZIONI?? -->
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
                                     <a class="nav-link scrollto" href="index.html#about">Team</a>

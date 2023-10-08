@@ -30,10 +30,25 @@
 
 .mapboxgl-popup-content {
     font-family: 'EB Garamond', serif;
+    font-size: 1rem;
     letter-spacing: -1px;
     justify-content: center; 
     text-align: justify; 
-    font-size: smaller;
+    background-color: rgb(255, 250, 238);
+    border: 0.1rem outset black;
+    outline: 0.1rem solid black;
+    outline-offset: 0.5rem;
+}
+
+.mapboxgl-popup-content h3 {
+    padding-bottom: 0;
+    font-size: 2rem;
+    font-family: 'Canterbury';
+}
+
+.mapboxgl-popup-content p a {
+    color: black;
+    padding-bottom:0;
 }
 
 #issues h4 {
@@ -127,7 +142,11 @@ img {
     margin-right: 0.2rem;
   }
 
-p::first-line {
+#documentation p::first-line {
+    text-transform: uppercase;
+}
+
+.accordion-body p::first-line {
     text-transform: uppercase;
 }
 
@@ -224,9 +243,10 @@ blockquote {
     font-weight:bold;
 }
 
-.accordion-body p {
+.accordion-body p, .accordion-body blockquote {
     column-count: 2;
-    column-gap: 10%;
+    column-gap: 3rem;
+    font-size: 1.2rem;
 }
 
 .accordion-body p::first-letter {
@@ -340,11 +360,11 @@ blockquote {
     max-width: 60vw;
     border: solid black;
     border-style:hidden;
-    border-image-source: url(/imgs/gmd19.jpg);
-    border-image-width: 5rem;
+    border-image-source: url(/imgs/gmd20.jpg);
+    border-image-width: 7rem;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
-    padding: 6rem;
+    padding: 7rem;
     display: block;
     margin: 0 auto;
 }
@@ -354,8 +374,9 @@ blockquote {
     column-count: 1 !important;
     column-gap: none !important;
     font-style: italic;
-    padding-left: 10vw;
-    padding-right:10vw;
+    text-align: center;
+    padding-left: 7rem;
+    padding-right: 7rem;
     font-family:'FirstOrder';
 }
 
@@ -365,10 +386,6 @@ blockquote {
     float: none !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
-}
-
-.label_photo p::first-line {
-    text-transform: none !important;
 }
 
 #sidebar .sidebar-header {
@@ -417,19 +434,22 @@ ul ul a {
     --bs-btn-box-shadow: none !important;
 }
 
-
-
-/* #sidebar .sidebar-header {
-    position: relative;
-    height: 50%;
+.nav-content .toggle-btn {
+    background-image: url(/imgs/garamont09b.jpg);
+    background-size: contain;
 }
 
-#image_500_sidebar {
-    width: 100%;
-    position: absolute;
-    top:0;
+.nav-content span a i:hover{
+    background-image: url(/imgs/garamont09b.jpg) !important;
+    background-size: contain !important;   
+}
+/* IN QUESTO MODO COMPARE DIETRO A TUTTIIIIIII >>> fare in modo che sia solo sul 500!!!!!!! */
+
+#img_500 {
+    display: inline-block;
 }
 
-#decoration_500 {
-    width: 100%;
-} */
+#press_1500 {
+    width: 90%;
+    padding-left: 2rem;
+}

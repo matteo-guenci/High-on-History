@@ -23,15 +23,14 @@ body {
     background-color: #fdf2c9;
 }
 
-/* MAKE THIS BORDER RESPONSIVE!!!! */
 #documentation, #about {
     border-top: solid black;
     border-image-source: url(/imgs/experiment.png);
     border-image-width: 10rem;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
-    padding-top: 30vh;
-    padding-bottom: 30vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 .container h1, h2 {
@@ -258,7 +257,7 @@ ul ul a {
 
 .accordion-body {
     border: 30px solid black;
-    padding: 7%;
+    padding: 8rem;
     border-image-source: url(/imgs/experiment.png);
     border-image-width: 7rem;
     border-image-repeat: round;
@@ -304,25 +303,8 @@ ul ul a {
     border-image-width: 10%;
     border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
-    padding: 5%;
+    padding: 8rem;
 }
-
-/* .border {
-    max-width:100%;
-    max-height:100%;
-    padding: 5%;
-    border:30px solid transparent; 
-    outline:3px solid black; 
-    outline-offset:-20px; 
-    background:
-      linear-gradient(black 0 0) top,
-      linear-gradient(black 0 0) left,
-      linear-gradient(black 0 0) bottom,
-      linear-gradient(black 0 0) right;
-    background-size:100% 4px,4px 100%; 
-    background-origin:padding-box;
-    background-repeat:no-repeat;
-} */
 
 #sidebar button {
     background: none;
