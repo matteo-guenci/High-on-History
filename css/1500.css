@@ -95,14 +95,14 @@ img {
     color:red;
 }
 
-#main-background {
+/* #main-background {
     column-count: 2;
     column-gap: 10%;
-}
+} */
 
 .container p {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: 3rem;
 }
 
 .container h1, .container h2 {
@@ -144,6 +144,24 @@ img {
 
 #documentation p::first-line {
     text-transform: uppercase;
+}
+
+#documentation img {
+    max-width: 280px;
+    border: 0.1rem outset black;
+    outline: 0.1rem solid black;
+    outline-offset: 0.5rem;
+    margin: 2rem auto;
+    display: block;
+    filter: none !important;
+    }
+
+#documentation img:hover {
+    transform: scale(2.5);
+}
+
+#documentation a {
+    color: red;
 }
 
 .accordion-body p::first-line {
@@ -435,13 +453,14 @@ ul ul a {
 }
 
 .nav-content .toggle-btn {
-    background-image: url(/imgs/garamont09b.jpg);
+    background-image: url(/imgs/button_1500.jpg);
     background-size: contain;
+    zoom: 150%;
 }
 
 .nav-content span a i:hover{
-    background-image: url(/imgs/garamont09b.jpg) !important;
-    background-size: contain !important;   
+    background-image: url(/imgs/button_1500.jpg) !important;
+    background-size: contain !important;
 }
 /* IN QUESTO MODO COMPARE DIETRO A TUTTIIIIIII >>> fare in modo che sia solo sul 500!!!!!!! */
 
@@ -452,4 +471,12 @@ ul ul a {
 #press_1500 {
     width: 90%;
     padding-left: 2rem;
+}
+
+.highlight {
+    background-color: rgb(236, 193, 49) !important;
+    border: 3px solid red;
+    padding: 0.2rem;
+    color: blue;
+    font-weight: 500;
 }

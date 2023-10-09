@@ -155,9 +155,9 @@ ul ul a {
 #image_artnouveau {
     display: inline-block;
     position: absolute;
-    width: 40%;
-    bottom: -15%;
-    right: 0%;
+    width: 30vw;
+    bottom: -5vh;
+    right: 0;
     z-index: 998;
 }
 
@@ -179,6 +179,7 @@ ul ul a {
 #woman {
     width: 100%;
     position: sticky;
+    opacity: 1;
 }
 
 #woman2 {
@@ -329,7 +330,7 @@ ul ul a {
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color:  #a5c97d79 !important;
+    background-color:  #fdf2c9 !important;
 }
 
 .page-link {
@@ -349,4 +350,38 @@ ul ul a {
 
 .label_photo p::first-letter {
     font-family: 'Bodoni Moda', serif;
+}
+
+.nav-content .toggle-btn {
+    background-image: url(/imgs/button_1800.jpg);
+    background-size: contain;
+    zoom: 150%;
+}
+
+.nav-content span a i:hover{
+    background-image: url(/imgs/button_1800.jpg) !important;
+    background-size: contain !important;
+}
+/* IN QUESTO MODO COMPARE DIETRO A TUTTIIIIIII >>> fare in modo che sia solo sull'800!!!!!!! */
+
+.mapboxgl-popup-content {
+    font-family: 'Bodoni Moda', serif;
+    text-align: center; 
+    background-color: #fdf2c9;
+}
+
+.mapboxgl-popup-tip {
+    border-top-color: #fdf2c9 !important;
+}
+
+.mapboxgl-popup-content h3 {
+    padding-bottom: 0;
+    font-size: 2rem;
+    font-family: 'Trinigan';
+}
+
+.mapboxgl-popup-content p a {
+    color: rgb(185, 134, 3);
+    font-size: 0.9rem;
+    padding-bottom:0;
 }
