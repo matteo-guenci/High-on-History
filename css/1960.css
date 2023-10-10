@@ -190,9 +190,25 @@ body {
 }
 
 .paragraph {
+    display: block;
     text-align: justify;
     column-count: 3;
     column-gap: 3%;
+}
+
+.label_photo p {
+    font-size: 0.8em !important;
+    text-align: justify !important
+}
+.label_photo {
+    width: 100%
+}
+.label_photo img {
+    width: 100%
+}
+
+.label_photo p::first-letter {
+    all: unset !important
 }
  
  
