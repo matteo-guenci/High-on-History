@@ -190,7 +190,7 @@ body {
 }
 
 .paragraph {
-    display: block;
+    display: block ;
     text-align: justify;
     column-count: 3;
     column-gap: 3%;

@@ -570,3 +570,8 @@ h2.navbar-brand{
 .bx .bxs-camera{
   font-family: 'Punktype';
 }
+
+
+.paragraph {
+  all: unset !important
+}

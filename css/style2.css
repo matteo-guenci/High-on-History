@@ -44,6 +44,9 @@
     z-index:999;
 }
 
+.paragraph {
+    all: unset
+}
 
 
 #sidebar.active {

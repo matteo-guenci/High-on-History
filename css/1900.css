@@ -18,3 +18,7 @@
     padding: 20px;
     background: firebrick !important;
 }
+
+.paragraph {
+    all: unset !important
+}

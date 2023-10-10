@@ -385,3 +385,7 @@ ul ul a {
     font-size: 0.9rem;
     padding-bottom:0;
 }
+
+.paragraph {
+    all: unset !important
+}

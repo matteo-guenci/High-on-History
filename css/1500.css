@@ -480,3 +480,7 @@ ul ul a {
     color: blue;
     font-weight: 500;
 }
+
+.paragraph {
+    all: unset !important
+}
