@@ -44,6 +44,11 @@
     z-index:999;
 }
 
+
+#woman4 {
+    display: none;
+}
+
 .paragraph {
     all: unset
 }

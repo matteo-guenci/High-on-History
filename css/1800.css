@@ -3,40 +3,135 @@
     font-family: 'Trinigan';
     src: url(/fonts/trinigan.ttf);
 }
+@font-face {
+    font-family: 'ArtNouveauCaps';
+    src: url(/fonts/art-nouveau-caps.regular.ttf);
+}
+@font-face {
+    font-family: 'NouveauTitle';
+    src: url(/fonts/Nouveauflf-qZ35.ttf);
+}
 
 
-/* FOR TITLE OF INNER PAGE: USE IMAGE BORDER!!!! */
+/* PALETTE ART NOUVEAU */
+
+/* $gamboge: rgba(231, 157, 50, 1);
+$chestnut: rgba(138, 70, 47, 1);
+$buff: rgba(222, 161, 132, 1);
+$rufous: rgba(160, 34, 19, 1);
+$fawn: rgba(235, 179, 120, 1); */
+
+/* $dark-purple: rgba(46, 26, 46, 1);
+$pale-dogwood: rgba(231, 185, 170, 1);
+$earth-yellow: rgba(232, 175, 89, 1);
+$cornell-red: rgba(171, 41, 29, 1);
+$chinese-violet: rgba(137, 106, 129, 1); */
+
+/* $ecru: rgba(181, 157, 91, 1);
+$olive: rgba(150, 130, 74, 1);
+$dark-goldenrod: rgba(164, 134, 57, 1); */
+
+/* palette inner pages
+$champagne: rgba(249, 227, 203, 1);
+$desert-sand: rgba(233, 190, 165, 1);
+$moss-green: rgba(147, 154, 131, 1); */
 
 #maintitle {
-    font-size: 9vh;
+    font-size: 12vh;
     font-family: 'Trinigan';
-    color: goldenrod;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: rgba(160, 34, 19, 1);
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 40px;
     text-transform: uppercase;
+    font-weight: bolder;
+    background-color: rgba(240, 203, 167, 0.5);
+    border: 2px solid rgba(46, 26, 46, 1);
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 3rem;
+    padding: 2rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
 }
 
 body {
     font-family: 'Bodoni Moda', serif;
     justify-content: center; 
-    background-color: #fdf2c9;
+    background-color: rgba(222, 161, 132, 1);
 }
 
-#documentation, #about {
-    border-top: solid black;
-    border-image-source: url(/imgs/experiment.png);
-    border-image-width: 10rem;
+.dropdown-menu {
+    background-color: rgba(46, 26, 46, 1);
+}
+
+.navbar a:hover {
+    background-color: rgba(171, 41, 29, 1);
+}
+
+#documentation, #about, #issues {
+    border: solid black;
+    border-image-source: url(/imgs/border_art_nouveau.png);
+    border-image-width: 6rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 0 100% 0;
+    padding-top: 9rem;
+    padding-bottom: 10rem;
+}
+
+#woman4 {
+    width: 22%;
+    display: inline-block;
+    position: absolute;
+    bottom:-2;
+    left: 3;
+    z-index: 3000;
+}
+
+#woman4 img {
+    width: 100%;
+}
+
+#issues h4 {
+    font-family: 'NouveauTitle';
+    color: rgba(46, 26, 46, 1);
+    font-size: 1.8rem;
+}
+
+#documentation img {
+    max-width: 280px;
+    margin: 2rem auto;
+    display: block;
+    filter: none !important;
+    border: 2px solid rgba(46, 26, 46, 1);
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 3rem;
+    padding: 3rem;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
 }
 
-.container h1, h2 {
+#documentation img:hover {
+transform: scale(2.5);
+}
+
+#navbar-documentation h2 {
     font-family: 'Trinigan';
     font-size: 3rem;
-    color: rgb(182, 130, 0);
+    color: white;
+}
+
+#navbar-documentation {
+    scroll-padding-bottom: 2rem;
+}
+
+#menu-card {
+    background-color: rgba(46, 26, 46, 1);
+}
+
+.container h1, .container h2 {
+    font-family: 'Trinigan';
+    font-size: 5.5rem;
+    color: rgba(160, 34, 19, 1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align:center;
     padding-bottom: 5%;
@@ -45,29 +140,45 @@ body {
 .container h3 {
     font-family: 'Trinigan';
     font-size: 2rem;
+    padding-top: 1.3em;
+}
+
+.container h5 {
+    font-family: 'NouveauTitle';
+    font-size: 2rem;
+    color: rgba(160, 34, 19, 1);
 }
 
 img {
     filter: opacity(80%) saturate(200%); 
 }
 
-/* h4 {
-    /* font different and smaller size ???  */
-
-/* THIS BORDER IS FOR THE ACCORDION (TO CHECK) */
-
 .image-container {
     border:none;
+    border-top:rgba(0, 0, 0, 0.5);
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 5rem;
+    padding-top: 5em;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 10% 10%;
 }
+
+/* .border_bottom_1800 {
+    display: inline-block;
+    position: absolute;
+    z-index: 998;
+    padding: 2rem;
+    bottom: 0px;
+    right: 0px;
+} */
 
 blockquote {
     padding-left: 10%;
-    font-style: italic;
-    /* make it stand out maybe without using italics */
+    font-family: 'NouveauTitle';
 }
 
 #documentation p::first-letter {
-    font-family: 'Trinigan';
+    font-family: 'ArtNouveauCaps';
     float: left;
     font-size: 3rem;
     line-height: 0.75;
@@ -76,14 +187,20 @@ blockquote {
 
 
 #menu-card, #main-background {
-    border: solid;
-    border-style: double;
-    padding: 3%;
+    border-top:rgba(0, 0, 0, 0.5);
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 3rem;
+    padding-top: 2em;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+}
+
+#main-background {
+    background-color: rgba(235, 179, 120, 1);
 }
 
 .insert {
     padding: 5%;
-    /* border-style:double; */
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -100,17 +217,8 @@ blockquote {
     margin: unset;
 }
 
-/* img {
-    max-width: 80%;
-    max-height: 70%;
-    border: 10px solid transparent;
-
-} */
-
 .footer {
-    background-color: #ffe3dbef;
-    border-top: solid 20px #a5c97d79;
-    border-style: double;
+    background-color: rgba(222, 161, 132, 1);
     position: relative;
 }
 
@@ -121,8 +229,6 @@ blockquote {
     padding-right: 20%;
 }
 
-/* MAKE THESE IMAGES RESPONSIVE */
-
 #map {
     position: relative;
     overflow: visible;
@@ -131,19 +237,25 @@ blockquote {
 #sidebar .sidebar-header {
     position: relative;
     height: 20%;
-    background-color: #ffe3dbef;
+    background-color: rgba(46, 26, 46, 1);
 }
 
 #sidebar {
-    background-color: #ffe3dbef;
-    border-right: solid 20px #a5c97d79;
-    border-top: solid 20px #a5c97d79;
+    background-color: rgba(46, 26, 46, 1);
+    border-right: solid 15px rgba(181, 157, 91, 1);
+    border-top: solid 15px rgba(181, 157, 91, 1);
     border-style: double;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: black !important;
-    background: #ffe3dbef;
+    background: rgba(46, 26, 46, 1);
+}
+
+#sidebar button {
+    background: none;
+    border:2px solid rgba(181, 157, 91, 1);
+    color: white;
+    margin:2%;
 }
 
 ul ul a {
@@ -156,7 +268,7 @@ ul ul a {
     display: inline-block;
     position: absolute;
     width: 30vw;
-    bottom: -5vh;
+    bottom: -7.5vh;
     right: 0;
     z-index: 998;
 }
@@ -171,6 +283,7 @@ ul ul a {
 }
 
 #image_artnouveau3 {
+    display: inline-block;
     width: 100%;
     position: absolute;
     top:0;
@@ -180,6 +293,7 @@ ul ul a {
     width: 100%;
     position: sticky;
     opacity: 1;
+    filter:saturate(200%);
 }
 
 #woman2 {
@@ -192,14 +306,19 @@ ul ul a {
     filter:contrast(100%)
 }
 
+.highlight {
+    background-color: rgba(164, 134, 57, 1);
+}
+
 :root {
     --scrollbar-track-color: none;
-    --scrollbar-thumb-color: black;
+    --scrollbar-thumb-color: rgba(164, 134, 57, 1);
 }
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 5px; 
+    height: 5px;
 }
 
 /* Style the scrollbar thumb */
@@ -223,20 +342,23 @@ ul ul a {
 #title {
     font-size: 9vh;
     font-family: 'Trinigan';
-    color: goldenrod;
+    color: rgba(160, 34, 19, 1);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding-left: 10px;
     padding-right: 10px;
     text-transform: uppercase;
 }
 
-.accordion-header {
-    background-color: white;
+/* .accordion-header {
     text-align: center;
+} */
+
+.accordion-header button {
+    padding-left: 15rem;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: white;
+    background-color: rgba(147, 154, 131, 1);
     color: black;
 }
 
@@ -248,21 +370,25 @@ ul ul a {
 .accordion-button {
     font-size: 4vh;
     font-family: 'Trinigan';
-    color: goldenrod;
+    color: rgba(160, 34, 19, 1);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-transform: uppercase;
     display: inline-block;
     text-align: center;
-    background-color: white;
+    background-color: rgba(193, 161, 93, 1);
 }
 
 .accordion-body {
-    border: 30px solid black;
-    padding: 8rem;
-    border-image-source: url(/imgs/experiment.png);
-    border-image-width: 7rem;
+    border: 2px solid;
+    padding-top: 8rem;
+    padding-bottom: 8rem; 
+    padding-left: 15rem;
+    padding-right: 2rem;
+    border-image-source: url(/imgs/border_art_nouveau.png);
+    border-image-width: 5rem;
     border-image-repeat: round;
-    border-image-slice: 100% 5% 100% 5%;
+    border-image-slice: 100% 0 100% 0;
+    background-color: rgba(249, 227, 203, 1);
 }
 
 .accordion-body h1, .accordion-body h2 {
@@ -272,13 +398,13 @@ ul ul a {
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
-    color: goldenrod;
+    color: rgba(160, 34, 19, 1);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-weight:bold;
 }
 
 .accordion-body p::first-letter {
-    font-family: 'Trinigan';
+    font-family: 'ArtNouveauCaps';
     float: left;
     padding-right: 1rem;
     font-size: 3rem;
@@ -295,47 +421,48 @@ ul ul a {
 
 .accordion-body h5 {
     text-transform: uppercase;
-    color: goldenrod;
+    color: rgba(160, 34, 19, 1);
 }
 
 .accordion-body .insert {
-    border: 100px solid black;
+    border: 100px solid;
     border-image-source: url(/imgs/invaluable-art-nouveau-hero.png);
-    border-image-width: 10%;
+    border-image-width: 5rem;
     border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
-    padding: 8rem;
-}
-
-#sidebar button {
-    background: none;
-    border:2px solid #5d862e80;
-    margin:2%;
 }
 
 .btn-info {
     color: black;
     border: 1px solid;
-    background-color: #fdf2c9;
+    background-color: #ffd4c0;
     border-color: #a5c97d79;
     border-style: double;
 }
 
 .btn-info:hover {
     color: black;
-    background-color: #ffe3dbef;
+    background-color: #ffd4c0;
     border-color: #a5c97d79;
     border-style: double;
 }
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color:  #fdf2c9 !important;
+    background-color:  rgba(46, 26, 46, 1) !important;
+    border: 10px solid rgba(181, 157, 91, 1);
+    border-style: double;
+}
+
+.navbar a {
+    color: white !important;
+    font-family: 'NouveauTitle';
+    font-size: 1.2rem;
 }
 
 .page-link {
     color: black;
-    background-color: #fdf2c9;
+    background-color: #ffd4c0;
     border: 1px solid #a5c97d79;
     border-style: double;
 }
@@ -367,21 +494,25 @@ ul ul a {
 .mapboxgl-popup-content {
     font-family: 'Bodoni Moda', serif;
     text-align: center; 
-    background-color: #fdf2c9;
+    background-color: rgba(240, 203, 167, 1);
+    border: 2px solid rgba(160, 34, 19, 1);
+    border-style: groove;
 }
 
 .mapboxgl-popup-tip {
-    border-top-color: #fdf2c9 !important;
+    border-top-color: rgba(240, 203, 167, 1) !important;
 }
 
 .mapboxgl-popup-content h3 {
     padding-bottom: 0;
     font-size: 2rem;
+    color: rgba(46, 26, 46, 1);
     font-family: 'Trinigan';
+    font-weight: bold;
 }
 
 .mapboxgl-popup-content p a {
-    color: rgb(185, 134, 3);
+    color: rgba(160, 34, 19, 1);
     font-size: 0.9rem;
     padding-bottom:0;
 }

@@ -71,6 +71,10 @@
     display: none;
 }
 
+#documentation img {
+    max-width: 280px;
+}
+
 /* css x documentazione */
 
 #main-background {
@@ -96,7 +100,7 @@
 
 .image-container {
     text-align: center;
-    margin: 0 20px; /* Add some spacing between the image containers */
+    margin: 0 20px; 
     border: solid;
     border-style: double;
     border-color: black;
@@ -115,7 +119,6 @@
 .label {
     position: absolute;
     display: inline-block;
-    padding-top: 5%;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -152,6 +155,10 @@
     right: 3%;
     z-index: 998;
     background: transparent;
-  }
+}
+ 
   
+/* .border_bottom_1800 {
+    display: none;
+} */
 
