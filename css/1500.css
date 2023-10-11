@@ -16,6 +16,12 @@
     src: url(/fonts/Typographer\ Rotunda.ttf);
 }
 
+.img_paragraph a, .img_paragraph .label_photo{
+    all: unset !important;
+    display: none !important;
+    visibility: hidden !important
+}
+
 #maintitle {
     font-size: 10vh;
     font-family: 'CruzQuaste';
@@ -484,3 +490,12 @@ ul ul a {
 .paragraph {
     all: unset !important
 }
+
+.hide_image {
+    all: unset
+}
+
+.second_image {
+    all:unset
+}
+

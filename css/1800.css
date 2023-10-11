@@ -520,3 +520,15 @@ ul ul a {
 .paragraph {
     all: unset !important
 }
+
+.hide_image {
+    all: unset
+}
+
+.second_image {
+    all:unset
+}
+
+.img_paragraph {
+    display: none;
+}

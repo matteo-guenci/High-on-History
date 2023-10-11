@@ -194,6 +194,7 @@ body {
     text-align: justify;
     column-count: 3;
     column-gap: 3%;
+    position: relative
 }
 
 .label_photo p {
@@ -238,6 +239,70 @@ body {
     height: 3px;
     background-color: black !important;  /* Modern Browsers */
     opacity: 1
+ }
+
+
+ .insert img {
+    width: 100%
+ }
+
+ .hide_image {
+    display:none
+ }
+
+.img_paragraph {
+    display: inline !important;
+    margin: 3% 3% 0 3% ;
+    text-align: center !important;
+}
+
+.img_paragraph .label_photo {
+    width: 50%;
+    font-style: italic;
+    padding-top: 1% !important;
+    clear: both;
+    text-align: left !important;
+}
+
+.second_image .label_photo {
+    width: 50%;
+    font-style: italic;
+    padding-top: 2% !important;
+    clear: both;
+    float: right
+    
+}
+
+.second_image {
+    all:unset
+}
+
+.second_image {
+    float: right
+}
+.second_image .label_photo {
+    float: right
+}
+.label_photo p {
+    text-align: right !important;
+}
+
+.img_paragraph .label_photo  {
+    padding-left: 3%;
+}
+
+.img_paragraph p {
+    text-align: left !important
+}
+
+ .img_paragraph img {
+    padding-top: 3% ;
+    width: 90% !important
+ }
+
+ .insert img {
+    
+    float: none
  }
   
   
