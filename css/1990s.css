@@ -18,6 +18,15 @@
   font-family: 'CorpusType';
   src: url(/fonts/CorpusType.otf) format(otf);
 }
+@font-face {
+  font-family: 'Teletype';
+  src: url(/fonts/TELETYPE1945-1985.ttf);
+}
+@font-face {
+  font-family: 'Oldtype';
+  src: url(/fonts/Bohemian_Typewriter.ttf);
+}
+
 
 
 body {
@@ -80,31 +89,54 @@ body::after{
 }
 
 p, h4{
-  font-family: 'Punktype';
+  font-family: 'Oldtype';
   /* font-weight: 200; */
 }
-
-
+p#author{
+  font-family: 'Oldtype';
+}
+#author{
+  font-family: 'Oldtype';
+}
+#circular{
+  font-size: 10rem;
+}
+button{
+  font-family: 'Oldtype';
+  /* font-size: 10rem; */
+}
+/* button.accordion-button{
+  font-family: 'SniffinPaint';
+  font-size: 3rem;
+} */
 nav.navbar{
   /* background-color: white; */
-  font-family: 'SniffinPaint';
-  font-weight: bolder;
+  font-family: 'Oldtype';
+  /* font-weight: bolder; */
   font-size: larger;
 }
-a{
-  font-family: 'SniffinPaint';
-  font-weight: bolder;
-  /* font-size:larger; */
+
+.nav-content .toggle-btn{
+  background-image: url(/imgs/god_save_the_queen.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  zoom: 150%;
 }
+
+.accordion-body{
+  column-count: 2;
+
+}
+
 #it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
-  font-family: 'Punktype';
+  font-family: 'Oldtype';
 }
 
 
 blockquote{
-  font-family: 'SniffinPaint';
+  font-family: 'Oldtype';
   color: black;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 #maintitle{
@@ -117,6 +149,17 @@ blockquote{
   0 0 10px #e9ecef, /* Slightly stronger shadow */
   0 0 15px #e9ecef; /* Bold shadow */
 }
+header{
+  font-family: 'SniffinPaint', Arial, Helvetica, sans-serif;
+  color: black;
+  rotate: 5deg;
+  background: radial-gradient(circle, rgba(73, 22, 94, 1) );
+  text-shadow: 
+  0 0 4px #e9ecef, /* Subtle shadow */
+  0 0 10px #e9ecef, /* Slightly stronger shadow */
+  0 0 15px #e9ecef !important; /* Bold shadow */ 
+}
+
 
 #punk{
   /* width: 20vw;
@@ -167,9 +210,13 @@ blockquote{
   padding: 5rem;
   transform: rotate(-12deg) skew(-4deg);
 } */
+h1{
+  font-family: 'SniffinPaint';
+}
 
 .container h1, h2{
-  font-family: 'Mustasurma';
+  /* font-family: 'Mustasurma'; */
+  font-family: 'SniffinPaint';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 5rem;
@@ -182,6 +229,13 @@ blockquote{
 }
 
 h2.navbar-brand{
+  font-size: 2rem;
+}
+h2{
+  font-size: 2rem;
+}
+
+#subtitle{
   font-size: 2rem;
 }
 
@@ -568,7 +622,7 @@ h2.navbar-brand{
 /* il div in cui c'è la foto deve essere position relative */
 
 .bx .bxs-camera{
-  font-family: 'Punktype';
+  font-family: 'Oldtype';
 }
 
 
