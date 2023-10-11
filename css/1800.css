@@ -37,27 +37,28 @@ $desert-sand: rgba(233, 190, 165, 1);
 $moss-green: rgba(147, 154, 131, 1); */
 
 #maintitle {
+    position: absolute;
     font-size: 12vh;
     font-family: 'Trinigan';
-    color: rgba(160, 34, 19, 1);
-    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
-    padding-left: 10px;
-    padding-right: 40px;
+    color: rgba(171, 41, 29, 1);
+    text-shadow: -3px 0 rgba(232, 175, 89, 1), 0 2px rgba(232, 175, 89, 1), 1px 0 rgba(232, 175, 89, 1), 0 -1px rgba(232, 175, 89, 1);
     text-transform: uppercase;
     font-weight: bolder;
-    background-color: rgba(240, 203, 167, 0.5);
-    border: 2px solid rgba(46, 26, 46, 1);
-    border-image-source: url(/imgs/border_title.png);
-    border-image-width: 3rem;
-    padding: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    padding-right: 3rem; 
+    padding-left: 2rem;
+    /* border: 2px solid;
+    border-image-source: url(/imgs/border_nouveau_2.png);
+    border-image-width: 2rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
+    border-image-slice: 40% 40% 40% 40%; */
 }
 
 body {
     font-family: 'Bodoni Moda', serif;
     justify-content: center; 
-    background-color: rgba(222, 161, 132, 1);
+    background-color: rgba(222, 161, 132, 0.7);
 }
 
 .dropdown-menu {
@@ -102,12 +103,17 @@ body {
     margin: 2rem auto;
     display: block;
     filter: none !important;
-    border: 2px solid rgba(46, 26, 46, 1);
-    border-image-source: url(/imgs/border_title.png);
+    border: 15px solid rgba(181, 157, 91, 1);
+    border-style: double;
+    z-index: -10;
+
+    /* z index does not have an effect because the position is static !! */
+
+    /* border-image-source: url(/imgs/border_title.png);
     border-image-width: 3rem;
     padding: 3rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
+    border-image-slice: 100% 10% 100% 10%; */
 }
 
 #documentation img:hover {
@@ -150,17 +156,21 @@ transform: scale(2.5);
 }
 
 img {
-    filter: opacity(80%) saturate(200%); 
+    filter: saturate(200%); 
 }
 
 .image-container {
     border:none;
-    border-top:rgba(0, 0, 0, 0.5);
-    border-image-source: url(/imgs/border_title.png);
-    border-image-width: 5rem;
-    padding-top: 5em;
+    border-top:10px solid;
+    border-image-source: url(/imgs/border_nouveau_2.png);
+    border-image-width: 2rem;
+    padding-top: 2rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 10% 10%;
+    border-image-slice: 100% 1% 1% 1%;
+}
+
+.image-container img {
+    filter: opacity(80%);
 }
 
 /* .border_bottom_1800 {
@@ -176,6 +186,16 @@ blockquote {
     padding-left: 10%;
     font-family: 'NouveauTitle';
 }
+
+#documentation p {
+    font-weight: bold;
+}
+
+#main-background a {
+    color: rgba(160, 34, 19, 1) !important;
+}
+
+/* otherwise you don't see anything!! */
 
 #documentation p::first-letter {
     font-family: 'ArtNouveauCaps';
@@ -196,7 +216,7 @@ blockquote {
 }
 
 #main-background {
-    background-color: rgba(235, 179, 120, 1);
+    background-color: rgba(235, 179, 120, 0.5);
 }
 
 .insert {
@@ -218,7 +238,7 @@ blockquote {
 }
 
 .footer {
-    background-color: rgba(222, 161, 132, 1);
+    background-color: inherit;
     position: relative;
 }
 
@@ -253,7 +273,7 @@ blockquote {
 
 #sidebar button {
     background: none;
-    border:2px solid rgba(181, 157, 91, 1);
+    border: 2px rgba(181, 157, 91, 1);
     color: white;
     margin:2%;
 }
@@ -317,8 +337,8 @@ ul ul a {
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
-    width: 5px; 
-    height: 5px;
+    width: 8px; 
+    height: 8px;
 }
 
 /* Style the scrollbar thumb */
@@ -340,18 +360,14 @@ ul ul a {
 /* inner pages */
 
 #title {
-    font-size: 9vh;
+    font-size: 10vh;
     font-family: 'Trinigan';
-    color: rgba(160, 34, 19, 1);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: rgba(171, 41, 29, 1);
+    text-shadow: -3px 0 rgba(46, 26, 46, 1), 0 2px rgba(46, 26, 46, 1), 1px 0 rgba(46, 26, 46, 1), 0 -1px rgba(46, 26, 46, 1);
     padding-left: 10px;
     padding-right: 10px;
     text-transform: uppercase;
 }
-
-/* .accordion-header {
-    text-align: center;
-} */
 
 .accordion-header button {
     padding-left: 15rem;
@@ -368,14 +384,14 @@ ul ul a {
 }
 
 .accordion-button {
-    font-size: 4vh;
+    font-size: 6vh;
     font-family: 'Trinigan';
     color: rgba(160, 34, 19, 1);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    text-transform: uppercase;
+    text-shadow: -1px 0 rgba(46, 26, 46, 1), 0 1px rgba(46, 26, 46, 1), 1px 0 rgba(46, 26, 46, 1), 0 -1px rgba(46, 26, 46, 1);
     display: inline-block;
     text-align: center;
     background-color: rgba(193, 161, 93, 1);
+    border: 1px solid rgba(46, 26, 46, 1);
 }
 
 .accordion-body {
@@ -435,16 +451,19 @@ ul ul a {
 .btn-info {
     color: black;
     border: 1px solid;
-    background-color: #ffd4c0;
-    border-color: #a5c97d79;
+    background-color: rgba(249, 227, 203, 1);
     border-style: double;
+    font-family: 'NouveauTitle';
 }
 
+#sidebarCollapse svg {
+    display: none;
+}
+
+
 .btn-info:hover {
-    color: black;
-    background-color: #ffd4c0;
-    border-color: #a5c97d79;
-    border-style: double;
+    color: white;
+    background-color: rgba(171, 41, 29, 1);
 }
 
 .bg-body-tertiary {
@@ -454,21 +473,24 @@ ul ul a {
     border-style: double;
 }
 
-.navbar a {
+.nav-link {
     color: white !important;
     font-family: 'NouveauTitle';
     font-size: 1.2rem;
 }
 
 .page-link {
+    font-family: 'NouveauTitle';
     color: black;
-    background-color: #ffd4c0;
-    border: 1px solid #a5c97d79;
-    border-style: double;
+    background-color: rgba(249, 227, 203, 1);
 }
 
-#navpage {
-    opacity: 1 !important;
+.page-link:hover {
+    color: white;
+}
+
+.text {
+    background-color: rgba(249, 227, 203, 1) !important;
 }
 
 .label_photo {
@@ -477,6 +499,10 @@ ul ul a {
 
 .label_photo p::first-letter {
     font-family: 'Bodoni Moda', serif;
+    font-size: small !important;
+    float: none !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .nav-content .toggle-btn {
@@ -495,7 +521,7 @@ ul ul a {
     font-family: 'Bodoni Moda', serif;
     text-align: center; 
     background-color: rgba(240, 203, 167, 1);
-    border: 2px solid rgba(160, 34, 19, 1);
+    border: 2px solid rgba(232, 175, 89, 1);
     border-style: groove;
 }
 
@@ -506,13 +532,13 @@ ul ul a {
 .mapboxgl-popup-content h3 {
     padding-bottom: 0;
     font-size: 2rem;
-    color: rgba(46, 26, 46, 1);
+    color: rgba(160, 34, 19, 1);
     font-family: 'Trinigan';
     font-weight: bold;
 }
 
 .mapboxgl-popup-content p a {
-    color: rgba(160, 34, 19, 1);
+    color: rgba(46, 26, 46, 1);
     font-size: 0.9rem;
     padding-bottom:0;
 }
