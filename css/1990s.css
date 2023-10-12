@@ -30,14 +30,10 @@
 
 
 body {
-    background-image: url("imgs/punk_wallpaper2.jpeg");
-    /* color: linear-gradient(240deg, #FBFF14, #F0A9E3);  */
-    /* background-color: #e9ecef; */
-    /* position: relative; */
-    background-color: #bbb;
+    /* background-color: #bbb;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, #ddd, #777),
-    linear-gradient(to right, #ccc, #777),
+    linear-gradient(to right, #ccc, #442525),
     linear-gradient(to right, #ddd, #777),
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
@@ -48,7 +44,7 @@ body {
     4px 3px 0 #ccc,
     6px 4px 0 #aaa,
     0 3px 12px rgba(0, 0, 0, 0.2),
-    6px 5px 7px 1px rgba(0, 0, 0, 0.4); 
+    6px 5px 7px 1px rgba(0, 0, 0, 0.4);   */
     filter: grayscale(100%) contrast(3) brightness(70%);
   }
 
@@ -101,7 +97,7 @@ p#author{
 #circular{
   font-size: 10rem;
 }
-button{
+button, li{
   font-family: 'Oldtype';
   /* font-size: 10rem; */
 }
@@ -122,10 +118,16 @@ nav.navbar{
   background-repeat: no-repeat;
   zoom: 150%;
 }
+.accordion{
+  background-color: white;
+}
 
 .accordion-body{
   column-count: 2;
 
+}
+.accordion-item{
+  background-color: white;
 }
 
 #it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
@@ -183,7 +185,7 @@ header{
   bottom: 0%;
   right: 0%;
   z-index: 998;
-  filter: grayscale(100%), contrast(3), brightness(70%);
+  /* filter: grayscale(100%), contrast(3), brightness(70%); */
 }
 
 .image-container {
