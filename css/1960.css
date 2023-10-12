@@ -246,6 +246,7 @@ body {
  .second_image img {
     width: 100%;
     filter: grayscale(100%);
+    margin-bottom: 3%
  }
 
  .hide_image {
@@ -290,7 +291,7 @@ body {
 }
 
 .img_paragraph .label_photo  {
-    padding-left: 5%;
+    padding-left: 8%;
     padding-bottom: 3%
 }
 
@@ -300,7 +301,7 @@ body {
 
  .img_paragraph img {
     padding-top: 3% ;
-    width: 90% !important;
+    width: 85% !important;
     display: block;
   margin-left: auto;
   margin-right: auto;
