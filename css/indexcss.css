@@ -90,7 +90,7 @@
 
 .image-row {
     display: flex; 
-    align-items: center; /* Center the images and labels vertically */
+    align-items: center;
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
@@ -120,7 +120,6 @@
     position: absolute;
     display: inline-block;
     bottom: 0;
-    left: 50%;
     transform: translate(-50%, -50%);
 }
 
