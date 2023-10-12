@@ -21,7 +21,7 @@
 #maintitle {
     font-size: 10vh;
     font-family: 'CruzQuaste';
-    color: red;
+    color: rgba(211, 83, 56, 1);
     background-color: rgb(255, 250, 238);
     padding-left: 10px;
     padding-right: 10px;
@@ -94,7 +94,7 @@ img {
 
 #navbar-documentation a {
     text-transform: uppercase; 
-    color:red;
+    color:rgba(211, 83, 56, 1);
 }
 
 /* #main-background {
@@ -116,7 +116,7 @@ img {
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
-    color: red;
+    color: rgba(211, 83, 56, 1);
 }
 
 .container h3 { 
@@ -130,7 +130,7 @@ img {
 
 .container h5 {
     text-transform: uppercase;
-    color: red;
+    color: rgba(211, 83, 56, 1);
 }
 
 
@@ -163,7 +163,7 @@ img {
 }
 
 #documentation a {
-    color: red;
+    color: rgba(211, 83, 56, 1);
 }
 
 .accordion-body p::first-line {
@@ -209,7 +209,7 @@ blockquote {
 #title {
     font-size: 10vh;
     font-family: 'CruzQuaste';
-    color: red;
+    color: rgba(211, 83, 56, 1);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -232,7 +232,7 @@ blockquote {
 .accordion-button {
     font-size: 4vh;
     font-family: 'Canterbury';
-    color: red;
+    color: rgba(211, 83, 56, 1);
     display: inline-block;
     text-align: center;
     background-color: white;
@@ -259,7 +259,7 @@ blockquote {
     text-transform: uppercase; 
     margin:0;
     text-align: center;
-    color: red;
+    color: rgba(211, 83, 56, 1);
     font-weight:bold;
 }
 
@@ -290,7 +290,7 @@ blockquote {
 
 .accordion-body h5 {
     text-transform: uppercase;
-    color: red;
+    color: rgba(211, 83, 56, 1);
 }
 
 .accordion-body .insert {
@@ -305,7 +305,7 @@ blockquote {
 
 :root {
     --scrollbar-track-color: none;
-    --scrollbar-thumb-color: red;
+    --scrollbar-thumb-color: rgba(211, 83, 56, 1);
 }
 
 /* Style the scrollbar track */
@@ -333,14 +333,19 @@ blockquote {
     color: black;
     border: 1px solid;
     background-color: white;
-    border-color: red;
+    border-color: rgba(211, 83, 56, 1);
     border-style: double;
+}
+
+.btn-info:active {
+    color: black;
+    background-color: white !important;
 }
 
 .btn-info:hover {
     color: black;
     background-color: white;
-    border-color: red;
+    border-color: rgba(211, 83, 56, 1);
     border-style: double;
 }
 
@@ -363,11 +368,14 @@ blockquote {
 .nav-link {
     color: black !important;
 }
+.nav-link.active {
+    background-color: white !important;
+}
 
 .page-link {
     color: black;
     background-color: white;
-    border: 1px solid red;
+    border: 1px solid rgba(211, 83, 56, 1);
     border-style: double;
     text-transform: uppercase;
 }
@@ -416,8 +424,8 @@ blockquote {
 
 #sidebar {
     background-color: white;
-    border-right: solid 2px red;
-    border-top: solid 2px red;
+    border-right: solid 2px rgba(211, 83, 56, 1);
+    border-top: solid 2px rgba(211, 83, 56, 1);
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -436,7 +444,7 @@ ul ul a {
 
 #sidebar button {
     background: none;
-    border:2px solid red;
+    border:2px solid rgba(211, 83, 56, 1);
     margin:1%;
     text-transform: uppercase;
 }
@@ -477,7 +485,7 @@ ul ul a {
 
 .highlight {
     background-color: rgb(236, 193, 49) !important;
-    border: 3px solid red;
+    border: 3px solid rgba(211, 83, 56, 1);
     padding: 0.2rem;
     color: blue;
     font-weight: 500;
