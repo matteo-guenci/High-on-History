@@ -305,12 +305,12 @@
                             "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
-                                <a class="nav-link scrollto" href="index.html#documentation" onclick=
-                                "location.href=this.href+'?style='+currentStyle;return false;">Documentation</a>
-                                <!-- PERCHE' NON FUNZIONI?? -->
+                                <a class="nav-link scrollto" href="index.html" onclick=
+                                "location.href=this.href+'?style='+currentStyle+'#documentation';return false;">Documentation</a>
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
-                                    <a class="nav-link scrollto" href="index.html#about">Team</a>
+                                    <a class="nav-link scrollto" href="index.html" onclick=
+                                    "location.href=this.href+'?style='+currentStyle+'#about';return false;">Team</a>
                             </li>
                         </ul>
                         <nav aria-label="Page navigation example" style="margin-top: 1%">
@@ -419,7 +419,7 @@
                                     In English this word would 
                                     evolve to become <span class="Assassins">assassins</span>.</p>
                                 </div>
-                                <br>
+                                <br><br>
                                 <h2>Origins of the Nizaris</h2>
                                 <div class="paragraph">
                                 <p>The actual history of the people that would be 
@@ -479,7 +479,7 @@
                                     influence out of all proportion to their size.</p>
                                    
                                 </div>
-                                <br>
+                                <br><br>
                                 <h2><span class="RashidSinan">Rashid al-Din Sinan</span></h2>
                                 <div class="paragraph">
                                 <p>After an early period of establishing a firm 
@@ -685,11 +685,11 @@
                                 
                                             <h3>An Early Chirstian and Jewish View</h3>
 
-                                            <img src="imgs/assassins_photo3.png">
+                                            <div class="second_image"><img src="imgs/assassins_photo3.png">
                                             <div class="label_photo"><p>A miniature of the Old Man of the 
                                                 Mountain training Assassins, from 
                                                 a fourteenth-century manuscript of 
-                                                Marco Polo’s writings.</p></div>
+                                                Marco Polo’s writings.</p></div></div>
                                 
                                             <p>The earliest European 
                                                 view of the <span class="Assassins">Assassins</span> 
@@ -843,14 +843,14 @@
                                    
                                 
                                 <br></div>
-                                <div class="paragraph">
+                                <br>
                                 <h2>The murder of <span class="ConradMontferrat">Conrad of Montferrat</span></h2>
-
-                                <img src="imgs/assassins_photo5.png">
+                                <div class="paragraph">
+                                <div class="hide_image"><img src="imgs/assassins_photo5.png">
                                 <div class="label_photo"><p>A fifteenth-century manuscript from 
                                     Iran, depicting a murder in the 
                                     Shahnama. 
-                                    </p></div>
+                                    </p></div></div>
                                 
                                 <p>There is another high-profile assassination 
                                     attempt that has been blamed on 
@@ -889,9 +889,9 @@
                                     stomach, mortally wounding him, before 
                                     running off at full speed!</blockquote>
 
-                                <img src="imgs/assassins_photo4.png">
+                                <div class="second_image"><img src="imgs/assassins_photo4.png">
                                 <div class="label_photo"><p>A miniature showing Conrad of Montferrat's marriage to Isabella of Jerusalem in a 13th century edition of William 
-                                    of Tyre's History of the Crusades.</p></div>
+                                    of Tyre's History of the Crusades.</p></div></div>
                                     
                                 
                                 <p>The chronicler notes that as <span class="ConradMontferrat">Conrad</span> fell 
@@ -1099,8 +1099,14 @@
                                               
                                 
                                         </div>  
-                                
-                                <br></div>
+                                    
+                                <br><br></div>
+                                <div class="img_paragraph" style="display: none;">
+                                    <img src="imgs/assassins_photo5.png">
+                                    <div class="label_photo"><p>A fifteenth-century manuscript from 
+                                        Iran, depicting a murder in the 
+                                        Shahnama. 
+                                        </p></div></div>
                             </div>
                           </div>
                         </div>

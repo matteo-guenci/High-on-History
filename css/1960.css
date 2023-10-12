@@ -175,7 +175,7 @@ body {
 
  #accordionExample h3 {
     font-family: 'Onest', sans-serif;
-    text-transform: uppercase;
+    
     font-weight: bold;
  }
 
@@ -220,6 +220,7 @@ body {
     font-weight: normal;
 
  }
+ 
 
  #accordionExample h4 {
     font-family: 'Onest', sans-serif; 
@@ -242,8 +243,9 @@ body {
  }
 
 
- .insert img {
-    width: 100%
+ .second_image img {
+    width: 100%;
+    filter: grayscale(100%);
  }
 
  .hide_image {
@@ -252,7 +254,7 @@ body {
 
 .img_paragraph {
     display: inline !important;
-    margin: 3% 3% 0 3% ;
+    margin-top: 3% ;
     text-align: center !important;
 }
 
@@ -288,7 +290,8 @@ body {
 }
 
 .img_paragraph .label_photo  {
-    padding-left: 3%;
+    padding-left: 5%;
+    padding-bottom: 3%
 }
 
 .img_paragraph p {
@@ -297,7 +300,11 @@ body {
 
  .img_paragraph img {
     padding-top: 3% ;
-    width: 90% !important
+    width: 90% !important;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
  }
 
  .insert img {
