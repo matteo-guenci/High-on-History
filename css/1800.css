@@ -218,11 +218,24 @@ blockquote {
 
 #content {
     overflow: scroll;
-    margin-left: 2em;
+    margin-left: 3em;
+    padding-right: 2em;
+    width: 55vw;
 }
 
 #menu-card {
+    padding-bottom: 4em;
+    padding-top: 4em;
     background-color: rgba(46, 26, 46, 1);
+    border-top: solid;
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 3rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+}
+
+#menu-content {
+    overflow-y: scroll;
 }
 
 #author {
