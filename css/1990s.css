@@ -26,6 +26,10 @@
   font-family: 'Oldtype';
   src: url(/fonts/Bohemian_Typewriter.ttf);
 }
+@font-face {
+  font-family: 'SniffinGlue';
+  src: url(/fonts/DanielsHandwritingBoldItalic-GABG.ttf);
+}
 
 
 
@@ -45,7 +49,7 @@ body {
     6px 4px 0 #aaa,
     0 3px 12px rgba(0, 0, 0, 0.2),
     6px 5px 7px 1px rgba(0, 0, 0, 0.4);   */
-    filter: grayscale(100%) contrast(3) brightness(70%);
+    filter: grayscale(100%) contrast(1) brightness(100%);
   }
 
 
@@ -101,7 +105,7 @@ button, li{
 }
 
 .accordion-button{
-  font-family: 'SniffinPaint';
+  font-family: 'SniffinGlue';
   font-size: 2.5rem;
 }
 nav.navbar{
@@ -142,7 +146,8 @@ blockquote{
 }
 
 #maintitle{
-  font-family: 'SniffinPaint', Arial, Helvetica, sans-serif;
+  font-family: 'SniffinGlue', Arial, Helvetica, sans-serif;
+  font-size: 5rem;
   color: black;
   rotate: 5deg;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
@@ -152,7 +157,7 @@ blockquote{
   0 0 15px #e9ecef; /* Bold shadow */
 }
 header{
-  font-family: 'SniffinPaint', Arial, Helvetica, sans-serif;
+  font-family: 'SniffinGlue', Arial, Helvetica, sans-serif;
   color: black;
   rotate: 5deg;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
@@ -189,7 +194,7 @@ header{
 }
 
 .image-container {
-  font-family: 'SniffinPaint';
+  font-family: 'SniffinGlue';
   border-radius: 10px;
   /* box-shadow: 50px 50px 100px #000000; */
   /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
@@ -203,6 +208,7 @@ header{
 } */
 .image-container > *{
   transform: skew(5deg);
+  border: none;
 }
 /* .container h2{
   font-family: 'Mustasurma';
@@ -213,13 +219,14 @@ header{
   transform: rotate(-12deg) skew(-4deg);
 } */
 h1{
-  font-family: 'SniffinPaint';
+  font-family: 'SniffinGlue';
+  font-size: 4rem;
 }
 
 .container h1, h2{
   /* font-family: 'Mustasurma'; */
-  font-family: 'SniffinPaint';
-  border-radius: 10px;
+  font-family: 'SniffinGlue';
+  /* border-radius: 10px; */
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 5rem;
   /* color: #e044ee; */
@@ -232,9 +239,11 @@ h1{
 
 h2.navbar-brand{
   font-size: 2rem;
+  font-weight: 700;
 }
 h2{
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
 }
 
 #subtitle{
@@ -242,7 +251,7 @@ h2{
 }
 
 .container h3, h5 {
-  font-family: 'SniffinPaint';
+  font-family: 'SniffinGlue';
   font-size: 2rem;
 }
 
@@ -258,7 +267,7 @@ h2{
   box-sizing: border-box;
   width: 300px;
   padding: 20px;
-  position: relative;
+  /* position: relative; */
   background-color: #bbb;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #ddd, #777),
@@ -281,7 +290,7 @@ h2{
 
 .zine.img {
   width: 100%;
-  display: block;
+  /* display: block; */
   filter: grayscale(100%) contrast(3) brightness(70%);
 }
 
@@ -358,9 +367,9 @@ h2{
 /* testo */
 
 .text-brutal{
-  font-family: 'SniffinPaint';
+  font-family: 'SniffinGlue';
   display: inline-block;
-  font-size: 45px;
+  font-size: 3rem;
   transform: rotate(5deg);
 } /*da applicare a porzioni di testo per ingrandirle e rotarle == brutalismo */
 
