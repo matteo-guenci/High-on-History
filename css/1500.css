@@ -481,11 +481,18 @@ ul ul a {
     zoom: 150%;
 }
 
-.nav-content span a i:hover{
+#it1-1:hover {
     background-image: url(/imgs/button_1500.jpg) !important;
     background-size: contain !important;
+    z-index: 3000;
 }
-/* IN QUESTO MODO COMPARE DIETRO A TUTTIIIIIII >>> fare in modo che sia solo sul 500!!!!!!! */
+
+#it1-2:hover {
+    background-image: url(/imgs/button_1800.jpg) !important;
+    background-size: contain !important;
+    z-index: 3000;
+}
+
 
 #img_500 {
     display: inline-block;
