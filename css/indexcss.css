@@ -87,7 +87,12 @@
     height: 80vh;
     width: 17vw;
     text-align: center;
-    overflow-y: auto;
+    overflow: auto;
+}
+
+/* questo ha un !important perché va in contrasto con boostrap */
+.navbar {
+    display: block !important;
 }
 
 .image-row {

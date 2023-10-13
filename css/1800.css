@@ -16,29 +16,6 @@
     src: url(/fonts/Nerea\ Free\ Font.ttf);
 }
 
-/* PALETTE ART NOUVEAU */
-
-/* $gamboge: rgba(231, 157, 50, 1);
-$chestnut: rgba(138, 70, 47, 1);
-$buff: rgba(222, 161, 132, 1);
-$rufous: rgba(160, 34, 19, 1);
-$fawn: rgba(235, 179, 120, 1); */
-
-/* $dark-purple: rgba(46, 26, 46, 1);
-$pale-dogwood: rgba(231, 185, 170, 1);
-$earth-yellow: rgba(232, 175, 89, 1);
-$cornell-red: rgba(171, 41, 29, 1);
-$chinese-violet: rgba(137, 106, 129, 1); */
-
-/* $ecru: rgba(181, 157, 91, 1);
-$olive: rgba(150, 130, 74, 1);
-$dark-goldenrod: rgba(164, 134, 57, 1); */
-
-/* palette inner pages
-$champagne: rgba(249, 227, 203, 1);
-$desert-sand: rgba(233, 190, 165, 1);
-$moss-green: rgba(147, 154, 131, 1); */
-
 #maintitle {
     position: absolute;
     font-size: 12vh;
@@ -51,11 +28,6 @@ $moss-green: rgba(147, 154, 131, 1); */
     padding-bottom: 2rem;
     padding-right: 3rem; 
     padding-left: 2rem;
-    /* border: 2px solid;
-    border-image-source: url(/imgs/border_nouveau_2.png);
-    border-image-width: 2rem;
-    border-image-repeat: round;
-    border-image-slice: 40% 40% 40% 40%; */
 }
 
 body {
@@ -106,17 +78,12 @@ body {
     margin: 2rem auto;
     display: block;
     filter: none !important;
-    border: 15px solid rgba(181, 157, 91, 1);
-    border-style: double;
-    z-index: -10;
-
-    /* z index does not have an effect because the position is static !! */
-
-    /* border-image-source: url(/imgs/border_title.png);
+    border: 15px solid;
+    border-image-source: url(/imgs/border_title.png);
     border-image-width: 3rem;
     padding: 3rem;
     border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%; */
+    border-image-slice: 100% 10% 100% 10%;
 }
 
 #documentation img:hover {
@@ -127,10 +94,8 @@ transform: scale(2.5);
     font-family: 'Trinigan';
     font-size: 3rem;
     color: white;
-}
-
-#navbar-documentation {
-    scroll-padding-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 0;
 }
 
 .container h1, .container h2 {
@@ -195,21 +160,11 @@ blockquote {
     margin: 0.1em 0.2em 0.1em 0;
 }
 
-
-/* #menu-card, #main-background {
-    border-top: solid;
-    border-image-source: url(/imgs/border_title.png);
-    border-image-width: 3rem;
-    padding-top: 2em;
-    border-image-repeat: round;
-    border-image-slice: 100% 10% 100% 10%;
-} */
-
 #main-background {
     padding-bottom: 4em;
     padding-top: 4em;
     background-color: rgba(240, 196, 170, 1);
-    border-top: solid;
+    border: solid;
     border-image-source: url(/imgs/border_title.png);
     border-image-width: 3rem;
     border-image-repeat: round;
@@ -227,15 +182,17 @@ blockquote {
     padding-bottom: 4em;
     padding-top: 4em;
     background-color: rgba(46, 26, 46, 1);
-    border-top: solid;
+    border: solid;
     border-image-source: url(/imgs/border_title.png);
     border-image-width: 3rem;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
 
-#menu-content {
+#navbar-documentation {
     overflow-y: scroll;
+    height: 55vh;
+    position: static;
 }
 
 #author {
@@ -286,7 +243,7 @@ blockquote {
 
 #sidebar button {
     background: none;
-    border: 2px rgba(181, 157, 91, 1);
+    border: 2px solid rgba(181, 157, 91, 1);
     color: white;
     margin:2%;
 }
@@ -340,7 +297,9 @@ ul ul a {
 }
 
 .highlight {
-    background-color: rgba(164, 134, 57, 1);
+    background-color: rgba(164, 134, 57, 0.8) !important;
+    font-weight: bold;
+    padding: 0.4rem;
 }
 
 :root {
@@ -562,7 +521,7 @@ ul ul a {
 
 .label_photo p::first-letter {
     font-family: 'Nerea';
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     float: none;
     margin-right:0;
     padding-right:0;
