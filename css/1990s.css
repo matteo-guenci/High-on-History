@@ -108,6 +108,11 @@ button, li{
   font-family: 'SniffinGlue';
   font-size: 2.5rem;
 }
+
+.accordionLink{
+  font-family: 'Oldtype';
+  font-weight: 700;
+}
 nav.navbar{
   /* background-color: white; */
   font-family: 'Oldtype';
@@ -220,7 +225,7 @@ header{
 } */
 h1{
   font-family: 'SniffinGlue';
-  font-size: 4rem;
+  font-weight: 900;
 }
 
 .container h1, h2{
@@ -242,17 +247,24 @@ h2.navbar-brand{
   font-weight: 700;
 }
 h2{
+  font-family: 'SniffinGlue';
   font-size: 4rem;
   font-weight: 900;
 }
 
 #subtitle{
-  font-size: 2rem;
-}
-
-.container h3, h5 {
   font-family: 'SniffinGlue';
   font-size: 2rem;
+  font-weight: 700;
+}
+
+h3, h5 {
+  font-family: 'SniffinGlue';
+  font-size: 2rem;
+}
+h3{
+  font-family: 'Oldtype';
+  font-weight: 700;
 }
 
 #main-background {
