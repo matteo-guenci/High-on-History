@@ -61,7 +61,7 @@ $moss-green: rgba(147, 154, 131, 1); */
 body {
     font-family: 'Bodoni Moda', serif;
     justify-content: center; 
-    background-color: rgba(222, 161, 132, 0.7);
+    background-color: rgba(240, 196, 170, 1);
 }
 
 .dropdown-menu {
@@ -69,7 +69,8 @@ body {
 }
 
 .navbar a:hover {
-    background-color: rgba(171, 41, 29, 1);
+    background-color: rgba(46, 26, 46, 1);
+    border: 2px solid rgba(181, 157, 91, 1);
 }
 
 #documentation, #about, #issues {
@@ -132,10 +133,6 @@ transform: scale(2.5);
     scroll-padding-bottom: 2rem;
 }
 
-#menu-card {
-    background-color: rgba(46, 26, 46, 1);
-}
-
 .container h1, .container h2 {
     font-family: 'Trinigan';
     font-size: 5.5rem;
@@ -190,8 +187,6 @@ blockquote {
     color: rgba(160, 34, 19, 1) !important;
 }
 
-/* otherwise you don't see anything!! */
-
 #documentation p::first-letter {
     font-family: 'ArtNouveauCaps';
     float: left;
@@ -201,18 +196,33 @@ blockquote {
 }
 
 
-#menu-card, #main-background {
-    border-top:solid;
+/* #menu-card, #main-background {
+    border-top: solid;
     border-image-source: url(/imgs/border_title.png);
     border-image-width: 3rem;
     padding-top: 2em;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
-}
+} */
 
 #main-background {
-    background-color: rgba(235, 179, 120, 0.5);
-    position: relative;
+    padding-bottom: 4em;
+    padding-top: 4em;
+    background-color: rgba(240, 196, 170, 1);
+    border-top: solid;
+    border-image-source: url(/imgs/border_title.png);
+    border-image-width: 3rem;
+    border-image-repeat: round;
+    border-image-slice: 100% 10% 100% 10%;
+}
+
+#content {
+    overflow: scroll;
+    margin-left: 2em;
+}
+
+#menu-card {
+    background-color: rgba(46, 26, 46, 1);
 }
 
 #author {
@@ -357,7 +367,6 @@ ul ul a {
     padding-left: 10px;
     padding-right: 10px;
     text-transform: uppercase;
-    background-color: rgba(233, 190, 165, 1);
 }
 
 .accordion-header button {
@@ -467,9 +476,8 @@ ul ul a {
 
 .btn-info {
     color: black;
-    border: 1px solid;
+    border: 1px solid rgba(46, 26, 46, 1);
     background-color: rgba(249, 227, 203, 1);
-    border-style: double;
     font-family: 'NouveauTitle';
     font-size: 1.2rem;
 }
@@ -482,6 +490,19 @@ ul ul a {
 .btn-info:hover {
     color: white;
     background-color: rgba(171, 41, 29, 1);
+    border: 1px solid rgba(46, 26, 46, 1);
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(46, 26, 46, 1) !important;
+}
+
+.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle {
+    border-color: rgba(46, 26, 46, 1) !important;
+}
+
+.btn-info.focus,.btn-info:focus {
+    box-shadow: 0 0 0 .2rem rgba(46, 26, 46, 1) !important;
 }
 
 .bg-body-tertiary {
@@ -495,6 +516,11 @@ ul ul a {
     color: white !important;
     font-family: 'NouveauTitle';
     font-size: 1.2rem;
+}
+
+#menu-card .nav-link.active {
+    background-color: rgba(46, 26, 46, 1) !important;
+    border: 2px solid rgba(181, 157, 91, 1);
 }
 
 .page-link {

@@ -78,14 +78,19 @@
 /* css x documentazione */
 
 #main-background {
-    overflow-y: auto;
+    overflow: auto;
     height: 80vh;
 }
 
 #menu-card {
     height: 80vh;
     text-align:center;
-    overflow-y: auto; 
+    overflow: auto;
+    padding-bottom: 2rem;
+}
+
+#menu-card nav {
+    overflow: scroll;
 }
 
 .image-row {

@@ -25,8 +25,8 @@
     background-color: rgb(255, 250, 238);
     padding-left: 10px;
     padding-right: 10px;
-    border: 0.1rem outset black;
-    outline: 0.1rem solid black;
+    border: 0.1rem outset rgba(61, 49, 43, 1);
+    outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
 }
 
@@ -37,8 +37,8 @@
     justify-content: center; 
     text-align: justify; 
     background-color: rgb(255, 250, 238);
-    border: 0.1rem outset black;
-    outline: 0.1rem solid black;
+    border: 0.1rem outset rgba(61, 49, 43, 1);
+    outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .mapboxgl-popup-content p a {
-    color: black;
+    color: rgba(61, 49, 43, 1);
     padding-bottom:0;
 }
 
@@ -57,7 +57,7 @@
     font-family: 'Canterbury';
     padding-left: 10%;
     padding-right: 10%;
-    color: black;
+    color: rgba(61, 49, 43, 1);
     font-size: 2rem;
 }
 
@@ -70,10 +70,11 @@ body {
     letter-spacing: -1px;
     justify-content: center; 
     text-align: justify; 
+    color: rgba(61, 49, 43, 1);
   }
 
 .container {
-    border: solid black;
+    border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(/imgs/gmd18.jpg);
     border-image-width: 5rem;
@@ -83,8 +84,8 @@ body {
 }
 
 .image-container {
-    border: 0.1rem outset solid black;
-    outline: 0.1rem solid black;
+    border: 0.1rem outset solid rgba(61, 49, 43, 1);
+    outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
 }
 
@@ -96,11 +97,6 @@ img {
     text-transform: uppercase; 
     color:rgba(211, 83, 56, 1);
 }
-
-/* #main-background {
-    column-count: 2;
-    column-gap: 10%;
-} */
 
 .container p {
     font-size: 1.2rem;
@@ -150,8 +146,8 @@ img {
 
 #documentation img {
     max-width: 280px;
-    border: 0.1rem outset black;
-    outline: 0.1rem solid black;
+    border: 0.1rem outset rgba(61, 49, 43, 1);
+    outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
     margin: 2rem auto;
     display: block;
@@ -172,7 +168,7 @@ img {
 
 .insert {
     border-style: double;
-    border-color: black;
+    border-color: rgba(61, 49, 43, 1);
     margin: 2rem;
     padding: 6%;
 }
@@ -193,7 +189,7 @@ blockquote {
 }
 
 .footer {
-    background-color: black;
+    background-color: rgba(61, 49, 43, 1);
 }
 
 .footer-text {
@@ -221,7 +217,7 @@ blockquote {
 
 .accordion-button:not(.collapsed) {
     background-color: white;
-    color: black;
+    color: rgba(61, 49, 43, 1);
 }
 
 .accordion-button:focus {
@@ -239,7 +235,7 @@ blockquote {
 }
 
 .accordion-body {
-    border: 100px solid black;
+    border: 100px solid rgba(61, 49, 43, 1);
     padding: 3rem;
     border-image-source: url(/imgs/gmd19.jpg);
     border-image-width: 8rem;
@@ -294,7 +290,7 @@ blockquote {
 }
 
 .accordion-body .insert {
-    border: solid black;
+    border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(/imgs/gmd18.jpg);
     border-image-width: 5rem;
@@ -330,23 +326,21 @@ blockquote {
 }
 
 .btn-info {
-    color: black;
-    border: 1px solid;
+    color: rgba(61, 49, 43, 1);
+    border: 2px solid;
     background-color: white;
     border-color: rgba(211, 83, 56, 1);
-    border-style: double;
 }
 
 .btn-info:active {
-    color: black;
+    color: rgba(61, 49, 43, 1);
     background-color: white !important;
 }
 
 .btn-info:hover {
-    color: black;
+    color: rgba(61, 49, 43, 1);
     background-color: white;
     border-color: rgba(211, 83, 56, 1);
-    border-style: double;
 }
 
 .bg-body-tertiary {
@@ -362,18 +356,19 @@ blockquote {
     text-align: justify; 
     font-size: 3vh;
     text-transform: uppercase;
-    color: black;
+    color: rgba(61, 49, 43, 1);
 }
 
 .nav-link {
-    color: black !important;
+    color: rgba(61, 49, 43, 1) !important;
 }
+
 .nav-link.active {
     background-color: white !important;
 }
 
 .page-link {
-    color: black;
+    color: rgba(61, 49, 43, 1);
     background-color: white;
     border: 1px solid rgba(211, 83, 56, 1);
     border-style: double;
@@ -386,7 +381,7 @@ blockquote {
 
 .accordion-body img {
     max-width: 60vw;
-    border: solid black;
+    border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(/imgs/gmd20.jpg);
     border-image-width: 7rem;
@@ -429,7 +424,7 @@ blockquote {
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: black !important;
+    color: rgba(61, 49, 43, 1) !important;
     background: white;
     text-transform: uppercase;
     max-width: 220px;
@@ -452,6 +447,19 @@ ul ul a {
 #sidebarCollapse {
     background-color: white;
     text-transform: uppercase;
+    color: rgba(61, 49, 43, 1);
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem white !important;
+}
+
+.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle {
+    border-color: rgba(211, 83, 56, 1) !important;
+}
+
+.btn-info.focus,.btn-info:focus {
+    box-shadow: 0 0 0 .2rem rgb(236, 193, 49) !important;
 }
 
 #sidebarCollapse svg {
