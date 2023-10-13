@@ -1,27 +1,27 @@
-@font-face {
+/* @font-face {
   font-family: 'BlackCasper';
   src: url(/fonts/BlackCasper.ttf);
 }
 @font-face {
   font-family: 'Mustasurma';
   src: url(/fonts/Mustasurma.ttf);
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'Punktype';
   src: url(/fonts/Punktype.ttf);
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'SniffinPaint';
   src: url(/fonts/Sniffin_Paint_Regular.ttf);
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'CorpusType';
   src: url(/fonts/CorpusType.otf) format(otf);
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'Teletype';
   src: url(/fonts/TELETYPE1945-1985.ttf);
-}
+} */
 @font-face {
   font-family: 'Oldtype';
   src: url(/fonts/Bohemian_Typewriter.ttf);
@@ -29,6 +29,15 @@
 @font-face {
   font-family: 'SniffinGlue';
   src: url(/fonts/DanielsHandwritingBoldItalic-GABG.ttf);
+}
+
+@font-face {
+  font-family: 'SniffinGlue2';
+  src: url(/fonts/GiottoHandwriting-d0w7.ttf);
+}
+@font-face {
+  font-family: 'SniffinGlue3';
+  src: url(/fonts/AngelasHandwriting-XjLP.ttf);
 }
 
 
@@ -105,8 +114,9 @@ button, li{
 }
 
 .accordion-button{
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   font-size: 2.5rem;
+  font-weight: 900;
 }
 
 .accordionLink{
@@ -119,7 +129,14 @@ nav.navbar{
   /* font-weight: bolder; */
   font-size: larger;
 }
-
+.nav-link {
+  font-family: 'Oldtype';
+  font-weight: 900 !important;
+}
+.page-link{
+  font-family: 'Oldtype';
+  font-weight: 900;
+}
 .nav-content .toggle-btn{
   background-image: url(/imgs/anarchy.jpg);
   rotate: -75deg;
@@ -151,8 +168,9 @@ blockquote{
 }
 
 #maintitle{
-  font-family: 'SniffinGlue', Arial, Helvetica, sans-serif;
+  font-family: 'SniffinGlue2', Arial, Helvetica, sans-serif;
   font-size: 5rem;
+  font-weight: 900;
   color: black;
   rotate: 5deg;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
@@ -162,7 +180,7 @@ blockquote{
   0 0 15px #e9ecef; /* Bold shadow */
 }
 header{
-  font-family: 'SniffinGlue', Arial, Helvetica, sans-serif;
+  font-family: 'SniffinGlue2', Arial, Helvetica, sans-serif;
   color: black;
   rotate: 5deg;
   background: radial-gradient(circle, rgba(73, 22, 94, 1) );
@@ -199,21 +217,15 @@ header{
 }
 
 .image-container {
-  font-family: 'SniffinGlue';
-  border-radius: 10px;
-  /* box-shadow: 50px 50px 100px #000000; */
-  /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
-  color: black;
-  padding: 5rem;
   transform: rotate(-5deg) skew(-5deg);
+  border-radius: 10px;
+  transform: skew(-5deg);
+  border: solid;
+  color: black;
 }
-/* div#issues.container {
-  background-color: black;
-  font-family: 'Mustasurma';
-} */
+
 .image-container > *{
-  transform: skew(5deg);
-  border: none;
+  font-family: 'SniffinGlue2';
 }
 /* .container h2{
   font-family: 'Mustasurma';
@@ -224,17 +236,17 @@ header{
   transform: rotate(-12deg) skew(-4deg);
 } */
 h1{
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   font-weight: 900;
 }
 h2{
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   font-size: 4rem;
   font-weight: 900;
 }
-.container h1, h2{
+.container h1, .container h2{
   /* font-family: 'Mustasurma'; */
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   /* border-radius: 10px; */
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 5rem;
@@ -255,14 +267,15 @@ h2.navbar-brand{
 
 
 #subtitle{
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   font-size: 2rem;
   font-weight: 700;
 }
 
 h3, h5 {
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   font-size: 2rem;
+  font-weight: 900;
 }
 h3{
   font-family: 'Oldtype';
@@ -377,11 +390,16 @@ h3{
 
 /* da .zine fino a qui è meglio applicare alle immagini */
 
-
+#documentation img {
+  max-width: 280px;
+  margin: auto;
+  display: block;
+  z-index: -10;
+}
 /* testo */
 
 .text-brutal{
-  font-family: 'SniffinGlue';
+  font-family: 'SniffinGlue2';
   display: inline-block;
   font-size: 3rem;
   transform: rotate(5deg);
@@ -669,4 +687,13 @@ h3{
 
 .striscia_sx {
   display: none
+}
+
+.image-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    height: 50vh;
 }
