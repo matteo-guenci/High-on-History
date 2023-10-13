@@ -227,14 +227,7 @@ header{
 .image-container > *{
   font-family: 'SniffinGlue2';
 }
-/* .container h2{
-  font-family: 'Mustasurma';
-  background-color: black;
-  color: white;
-  font-size: 3rem;
-  padding: 5rem;
-  transform: rotate(-12deg) skew(-4deg);
-} */
+
 h1{
   font-family: 'SniffinGlue2';
   font-weight: 900;
@@ -244,7 +237,7 @@ h2{
   font-size: 4rem;
   font-weight: 900;
 }
-.container h1, .container h2{
+.container h1, h2{
   /* font-family: 'Mustasurma'; */
   font-family: 'SniffinGlue2';
   /* border-radius: 10px; */
