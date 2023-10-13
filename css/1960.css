@@ -26,9 +26,19 @@
 left: 33%;
 }
 
+.navigazione {
+    background-color: rgb(214, 46, 31) !important;
+}
+
+.navigazione a {
+    color: white 
+}
+
 .btn {
-    background-color: rgb(214, 46, 31);
-    border: rgb(214, 46, 31);
+    margin-top: 2%;
+    background-color: white;
+    border: white;
+    color: rgb(190, 46, 31)
 }
 
 .btn:hover {
@@ -47,21 +57,30 @@ body {
 
 #sidebar {
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid rgb(214, 46, 31);
 }
 
 #sidebar .dropdown-toggle {
     background-color: white !important;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(214, 46, 31);
     color: rgb(54, 121, 246) !important;
     font-family: 'PT Sans Narrow';
     text-decoration: underline;
 }
 
 #navpage {
-    background-color: white !important;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    background-color: rgb(214, 46, 31) !important;
+    border-top: 1px solid rgb(214, 46, 31);
+    border-bottom: 1px solid rgb(214, 46, 31);
+    color: white !important
+}
+
+.pagination a {
+    color: rgb(54, 121, 246) !important;
+}
+
+#navpage a {
+    color: white
 }
 
 #banner-laterale {
@@ -71,8 +90,8 @@ body {
 #home {
     
     font-family: 'PT Sans Narrow', sans-serif;
-    color: white;
-    background-color: rgb(214, 46, 31);
+    color: rgb(214, 46, 31);;
+    background-color: white;
     text-transform: uppercase;
     margin-top: 2px;
     padding-left: 10px;
@@ -311,6 +330,26 @@ body {
  .insert img {
     
     float: none
+ }
+
+ .striscia_sx {
+    height: 100%;
+    width: 4vw;
+    background-color: rgb(214, 46, 31);
+    z-index: 998;
+    position: absolute;
+    left: 0;
+    bottom: 0
+ }
+
+ .striscia_dx {
+    height: 100%;
+    width: 4vw;
+    background-color: rgb(214, 46, 31);
+    z-index: 998;
+    position: absolute;
+    right: 0;
+    bottom: 0
  }
   
   

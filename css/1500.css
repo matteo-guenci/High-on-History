@@ -516,3 +516,7 @@ ul ul a {
     display: none !important;
     visibility: hidden !important
 }
+
+.striscia_sx {
+    display: none
+}
