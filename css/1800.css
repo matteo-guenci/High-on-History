@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
 @font-face {
     font-family: 'Trinigan';
-    src: url(/fonts/trinigan.ttf);
+    src: url(../fonts/trinigan.ttf);
 }
 @font-face {
     font-family: 'ArtNouveauCaps';
-    src: url(/fonts/art-nouveau-caps.regular.ttf);
+    src: url(../fonts/art-nouveau-caps.regular.ttf);
 }
 @font-face {
     font-family: 'NouveauTitle';
-    src: url(/fonts/Nouveauflf-qZ35.ttf);
+    src: url(../fonts/Nouveauflf-qZ35.ttf);
 }
 @font-face {
     font-family: 'Nerea';
-    src: url(/fonts/Nerea\ Free\ Font.ttf);
+    src: url(../fonts/Nerea\ Free\ Font.ttf);
 }
 
 #maintitle {
