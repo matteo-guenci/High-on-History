@@ -284,22 +284,14 @@ h3{
 }
 
 #menu-card {
-  /* column-width: 2; */
-  /* column-gap: 3%; */
   overflow-y: scroll;
   height: 80vh;
-  /* background-image: url('/imgs/punk_wallpaper2.jpeg') ; */
   position: static;
-
-
 }
 
 #content {
-  /* column-count: 2; */
   column-gap: 5%;
   column-count: 2;
-
-
 }
 
 
