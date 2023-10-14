@@ -220,7 +220,7 @@ header{
   transform: rotate(-5deg) skew(-5deg);
   border-radius: 10px;
   transform: skew(-5deg);
-  border: solid;
+  border: none;
   color: black;
 }
 
@@ -231,6 +231,7 @@ header{
 h1{
   font-family: 'SniffinGlue2';
   font-weight: 900;
+  font-size: 4rem;
 }
 h2{
   font-family: 'SniffinGlue2';
@@ -256,6 +257,7 @@ h2.navbar-brand{
   font-size: 2rem;
   font-weight: 700;
   transform: none;
+  padding: 0;
 }
 
 
@@ -275,11 +277,22 @@ h3{
   font-weight: 700;
 }
 
-#main-background {
-  column-count: 2;
-  column-gap: 3%;
+#menu-card {
+  /* column-width: 2; */
+  /* column-gap: 3%; */
+  overflow-y: scroll;
+  height: 80vh;
   /* background-image: url('/imgs/punk_wallpaper2.jpeg') ; */
+  position: static;
 }
+
+#content {
+  /* column-count: 2; */
+  column-gap: 5%;
+  column-count: 2;
+}
+
+
 
 /* per le immagini (principalmente) */
 .zine {
