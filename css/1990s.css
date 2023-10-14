@@ -399,7 +399,7 @@ h3{
 /* da .zine fino a qui è meglio applicare alle immagini */
 
 #documentation img {
-  max-width: 280px;
+  max-width: 300px;
   margin: auto;
   display: block;
   z-index: -10;
@@ -678,30 +678,22 @@ h3{
 
 
 .paragraph {
-  all: unset !important
+  all: unset;
 }
 
-.hide_image {
-  all: unset
+.paragraph img{
+  float: left;
+  max-width: 50vw;
+  max-height: auto;
+  margin: 0;
+  display: block;
 }
-
-.second_image {
-  all:unset
+/* .hide_image{
+  di
 }
-
 .img_paragraph {
   display: none;
-}
-
-.striscia_sx {
-  display: none
-}
-
-.image-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-around;
-    height: 50vh;
+} */
+.label_photo{
+  padding-bottom: 3rem;
 }
