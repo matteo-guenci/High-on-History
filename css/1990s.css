@@ -277,6 +277,12 @@ h3{
   font-weight: 700;
 }
 
+
+#documentation{
+  width: 100%;
+  padding: 10px;
+}
+
 #menu-card {
   /* column-width: 2; */
   /* column-gap: 3%; */
@@ -284,12 +290,16 @@ h3{
   height: 80vh;
   /* background-image: url('/imgs/punk_wallpaper2.jpeg') ; */
   position: static;
+
+
 }
 
 #content {
   /* column-count: 2; */
   column-gap: 5%;
   column-count: 2;
+
+
 }
 
 
