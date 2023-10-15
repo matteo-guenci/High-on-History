@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url(/fonts/SpaceMono-Regular.ttf);
+  }
+@font-face {
+    font-family: 'ProtoMolecule';
+    src: url(/fonts/Protomolecule.ttf);
+  }
+body{
+    background-color: rgb(15, 15, 15);
+}
+.navigazione {
+    background-color: rgb(15, 15, 15) !important; 
+}
+#maintitle {
+    font-family: 'ProtoMolecule';
+    color: rgb(221, 218, 218);
+
+}

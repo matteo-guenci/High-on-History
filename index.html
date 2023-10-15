@@ -144,7 +144,7 @@
         <div id="image_artnouveau"><img id="woman" src="imgs/woman.png"></div>
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
         <button id="button" class="btn-spin" onclick="myFunction()"></button>
-        <div class="sign" id="main-title"><h1 id="maintitle" class="text-flicker-out-glow">High on History</div>
+        <div class="sign" id="main-title"><h1 data-value="High on History" id="maintitle" class="text-flicker-out-glow">High on History</div>
     <div id="punk"><img id="punkhead" src="imgs/zine_cover.jpeg"></div>
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST
@@ -152,6 +152,8 @@
             // https://account.mapbox.com
         
         </script>
+        <script src="maintitle_animation.js"></script>
+
         <script>
             const stylesheetLink = document.getElementById('stile');
             const urlParams = new URLSearchParams(window.location.search);
