@@ -687,13 +687,39 @@ h3{
   max-height: auto;
   margin: 0;
   display: block;
+  filter: grayscale(100%) contrast(2) brightness(90%);  
 }
-/* .hide_image{
-  di
+.hide_image img{
+  /* display: none; */
+  transform: rotate(5deg);
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block;
+  filter: grayscale(100%) contrast(2) brightness(90%);
 }
-.img_paragraph {
+.img_paragraph img {
   display: none;
-} */
+  /* transform: rotate(5deg);
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block; */
+}
+.second_image img{
+  transform: rotate(-5deg);
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  max-width: 30vw;
+  float: right;
+  display: block;
+  filter: grayscale(100%) contrast(2) brightness(90%);
+  /* image-rendering:pixelated; */
+  /* filter: blur(1px); */
+  /* opacity: 0.5; */
+
+}
 .label_photo{
+  font-weight: 700;
   padding-bottom: 3rem;
 }
