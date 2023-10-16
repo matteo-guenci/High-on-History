@@ -107,27 +107,34 @@
 
 .image-container {
     text-align: center;
-    margin: 0 20px; 
+    margin: 0 2vw; 
     border: solid;
     border-style: double;
     border-color: black;
-    padding: 2%;
+    padding: 2em;
     flex: 1;
     position: relative;
-    height: 50vh; 
-    width: 50vw;
+    /* height: 50vh;  */
+    width: 80vw;
 }
 
 .image-container img {
     max-width: 100%; 
     max-height: 100%;
+    padding-bottom: 8vh;
 }
 
 .label {
     position: absolute;
     display: inline-block;
     bottom: 0;
-    transform: translate(-50%, -50%);
+    right: 4em;
+}
+
+@media (max-width: 768px) {
+    .label {
+      font-size: 1.5rem;
+    }
 }
 
 /* Footer styling */

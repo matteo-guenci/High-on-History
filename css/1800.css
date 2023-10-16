@@ -533,18 +533,6 @@ ul ul a {
     zoom: 150%;
 }
 
-#it1-1:hover {
-    background-image: url(/imgs/button_1500.jpg) !important;
-    background-size: contain !important;
-    z-index: 3000;
-}
-
-#it1-2:hover {
-    background-image: url(/imgs/button_1800.jpg) !important;
-    background-size: contain !important;
-    z-index: 3000;
-}
-
 .mapboxgl-popup-content {
     font-family: 'Bodoni Moda', serif;
     text-align: center; 

@@ -86,3 +86,25 @@ nav.open .nav-content span{
 .nav-content span a:hover i{
     opacity: 1;
 }
+
+/* BUTTONS CIRCULAR MENU */
+
+#it1-1:hover {
+    background-image: url(/imgs/button_1500.jpg) !important;
+    background-size: contain !important;
+    z-index: 3000;
+
+    #number_1500 {
+        display: none;
+    }
+}
+
+#it1-2:hover {
+    background-image: url(/imgs/button_1800.jpg) !important;
+    background-size: contain !important;
+    z-index: 3000;
+
+    #number_1800 {
+        display: none;
+    }
+}

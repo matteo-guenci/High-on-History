@@ -53,7 +53,7 @@
     padding-bottom:0;
 }
 
-#issues h4 {
+#issues h4, #about h4 {
     font-family: 'Canterbury';
     padding-left: 10%;
     padding-right: 10%;
@@ -380,6 +380,13 @@ blockquote {
     text-transform: uppercase;
 }
 
+.page-link:hover {
+    color: rgba(61, 49, 43, 1);
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid rgba(211, 83, 56, 1);
+}
+
 #navpage {
     opacity: 1 !important;
 }
@@ -398,7 +405,7 @@ blockquote {
 }
 
 .label_photo p {
-    font-size: 1rem !important;
+    font-size: 1rem;
     column-count: 1 !important;
     column-gap: none !important;
     font-style: italic;
@@ -410,10 +417,14 @@ blockquote {
 
 .label_photo p::first-letter {
     font-family:'FirstOrder';
-    font-size: small !important;
+    font-size: 1rem;
     float: none !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
+}
+
+.label_photo p::first-line {
+    text-transform: none;
 }
 
 #sidebar .sidebar-header {
@@ -426,6 +437,10 @@ blockquote {
     background-color: white;
     border-right: solid 2px rgba(211, 83, 56, 1);
     border-top: solid 2px rgba(211, 83, 56, 1);
+}
+
+#sidebar a {
+    text-decoration: none !important;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -479,18 +494,6 @@ ul ul a {
     background-image: url(/imgs/button_1500.jpg);
     background-size: contain;
     zoom: 150%;
-}
-
-#it1-1:hover {
-    background-image: url(/imgs/button_1500.jpg) !important;
-    background-size: contain !important;
-    z-index: 3000;
-}
-
-#it1-2:hover {
-    background-image: url(/imgs/button_1800.jpg) !important;
-    background-size: contain !important;
-    z-index: 3000;
 }
 
 
