@@ -179,7 +179,14 @@ span {
     display: none;
 }
 
-/* #image_500_sidebar {
+.lod{
     display: none;
-} */
+    width: 100%;
+}
+
+.accordion-body a:hover + .lod,.lod:hover {
+    display: block;
+    position: relative;
+    z-index: 100;
+}
 
