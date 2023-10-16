@@ -47,7 +47,7 @@ body {
 
 #documentation, #about, #issues {
     border: solid black;
-    border-image-source: url(/imgs/border_art_nouveau.png);
+    border-image-source: url(../imgs/border_art_nouveau.png);
     border-image-width: 6rem;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
@@ -79,7 +79,7 @@ body {
     display: block;
     filter: none !important;
     border: 15px solid;
-    border-image-source: url(/imgs/border_title.png);
+    border-image-source: url(../imgs/border_title.png);
     border-image-width: 3rem;
     padding: 3rem;
     border-image-repeat: round;
@@ -126,7 +126,7 @@ transform: scale(2.5);
 .image-container img {
     border: solid;
     filter: opacity(80%) saturate(150%);
-    border-image-source: url(/imgs/border_title.png);
+    border-image-source: url(../imgs/border_title.png);
     border-image-width: 3rem;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -165,7 +165,7 @@ blockquote {
     padding-top: 4em;
     background-color: rgba(240, 196, 170, 1);
     border: solid;
-    border-image-source: url(/imgs/border_title.png);
+    border-image-source: url(../imgs/border_title.png);
     border-image-width: 3rem;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
@@ -183,7 +183,7 @@ blockquote {
     padding-top: 4em;
     background-color: rgba(46, 26, 46, 1);
     border: solid;
-    border-image-source: url(/imgs/border_title.png);
+    border-image-source: url(../imgs/border_title.png);
     border-image-width: 3rem;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
@@ -373,7 +373,7 @@ ul ul a {
     padding-bottom: 8rem; 
     padding-left: 15rem;
     padding-right: 2rem;
-    border-image-source: url(/imgs/border_art_nouveau.png);
+    border-image-source: url(../imgs/border_art_nouveau.png);
     border-image-width: 5rem;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
@@ -421,7 +421,7 @@ ul ul a {
 
 .accordion-body .insert {
     border: 100px solid;
-    border-image-source: url(/imgs/invaluable-art-nouveau-hero.png);
+    border-image-source: url(../imgs/invaluable-art-nouveau-hero.png);
     border-image-width: 6rem;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
@@ -433,7 +433,7 @@ ul ul a {
     max-width: 60vw;
     border: solid black;
     border-style:hidden;
-    border-image-source: url(/imgs/border_art_nouveau_2.png);
+    border-image-source: url(../imgs/border_art_nouveau_2.png);
     border-image-width: 6rem;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
@@ -528,7 +528,7 @@ ul ul a {
 }
 
 .nav-content .toggle-btn {
-    background-image: url(/imgs/button_1800.jpg);
+    background-image: url(../imgs/button_1800.jpg);
     background-size: contain;
     zoom: 150%;
 }

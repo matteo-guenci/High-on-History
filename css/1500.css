@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 @font-face {
     font-family: 'GoudyInitialen';
-    src: url(/fonts/GoudyInitialen.ttf);
+    src: url(../fonts/GoudyInitialen.ttf);
 }
 @font-face {
     font-family: 'CruzQuaste';
-    src: url(/fonts/CruzQuaste_PERSONAL_USE_ONLY.ttf);
+    src: url(../fonts/CruzQuaste_PERSONAL_USE_ONLY.ttf);
 }
 @font-face {
     font-family: 'Canterbury';
-    src: url(/fonts/canterbury.regular.ttf);
+    src: url(../fonts/canterbury.regular.ttf);
 }
 @font-face {
     font-family:'FirstOrder';
-    src: url(/fonts/Typographer\ Rotunda.ttf);
+    src: url(../fonts/Typographer\ Rotunda.ttf);
 }
 
 
@@ -76,7 +76,7 @@ body {
 .container {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
-    border-image-source: url(/imgs/gmd18.jpg);
+    border-image-source: url(../imgs/gmd18.jpg);
     border-image-width: 5rem;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
@@ -242,7 +242,7 @@ blockquote {
 .accordion-body {
     border: 100px solid rgba(61, 49, 43, 1);
     padding: 3rem;
-    border-image-source: url(/imgs/gmd19.jpg);
+    border-image-source: url(../imgs/gmd19.jpg);
     border-image-width: 8rem;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
@@ -297,7 +297,7 @@ blockquote {
 .accordion-body .insert {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
-    border-image-source: url(/imgs/gmd18.jpg);
+    border-image-source: url(../imgs/gmd18.jpg);
     border-image-width: 5rem;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
@@ -395,7 +395,7 @@ blockquote {
     max-width: 60vw;
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
-    border-image-source: url(/imgs/gmd20.jpg);
+    border-image-source: url(../imgs/gmd20.jpg);
     border-image-width: 7rem;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
@@ -491,7 +491,7 @@ ul ul a {
 }
 
 .nav-content .toggle-btn {
-    background-image: url(/imgs/button_1500.jpg);
+    background-image: url(../imgs/button_1500.jpg);
     background-size: contain;
     zoom: 150%;
 }
