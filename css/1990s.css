@@ -62,7 +62,7 @@ body {
   }
 
 
-body::before{
+/* body::before{
   transform: translate(-50%, -50%);
   z-index: 2;
   background-repeat: no-repeat;
@@ -95,8 +95,10 @@ body::after{
                                                rgba(255, 255, 255, 0.04) 3.25%,
                                                rgba(255, 255, 255, 0.04) 3.5%,
                                                rgba(255, 255, 255, 0) 3.55%);
+} */
+#about{
+  padding: 0, 0, 4rem, 0;
 }
-
 p, h4{
   font-family: 'Oldtype';
   /* font-weight: 200; */
