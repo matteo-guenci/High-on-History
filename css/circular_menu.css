@@ -90,7 +90,7 @@ nav.open .nav-content span{
 /* BUTTONS CIRCULAR MENU */
 
 #it1-1:hover {
-    background-image: url(/imgs/button_1500.jpg) !important;
+    background-image: url(../imgs/button_1500.jpg) !important;
     background-size: contain !important;
     z-index: 3000;
 
@@ -100,7 +100,7 @@ nav.open .nav-content span{
 }
 
 #it1-2:hover {
-    background-image: url(/imgs/button_1800.jpg) !important;
+    background-image: url(../imgs/button_1800.jpg) !important;
     background-size: contain !important;
     z-index: 3000;
 
