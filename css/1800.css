@@ -48,11 +48,11 @@ body {
 #documentation, #about, #issues {
     border: solid black;
     border-image-source: url(../imgs/border_art_nouveau.png);
-    border-image-width: 6rem;
+    border-image-width: 6vw;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
-    padding-top: 9rem;
-    padding-bottom: 10rem;
+    padding-top: 15vh;
+    padding-bottom: 25vh;
 }
 
 #woman4 {
@@ -64,8 +64,6 @@ body {
     z-index: 3000;
     filter:saturate(200%);    
 }
-
-
 
 #issues h4 {
     font-family: 'NouveauTitle';
@@ -80,8 +78,8 @@ body {
     filter: none !important;
     border: 15px solid;
     border-image-source: url(../imgs/border_title.png);
-    border-image-width: 3rem;
-    padding: 3rem;
+    border-image-width: 3vw;
+    padding: 6vh;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
@@ -104,7 +102,7 @@ transform: scale(2.5);
     color: rgba(160, 34, 19, 1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align:center;
-    padding-bottom: 5%;
+    padding-bottom: 8vh;
 }
 
 .container h3 {
@@ -127,19 +125,23 @@ transform: scale(2.5);
     border: solid;
     filter: opacity(80%) saturate(150%);
     border-image-source: url(../imgs/border_title.png);
-    border-image-width: 3rem;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    border-image-width: 4vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
 
+#about .image-row {
+    margin-bottom: 20vh; 
+}
+
 .label {
-    top: 13vh;
+    top: -5vh;
 }
 
 blockquote {
-    padding-left: 10%;
+    padding-left: 10vw;
     font-family: 'NouveauTitle';
 }
 
@@ -161,12 +163,12 @@ blockquote {
 }
 
 #main-background {
-    padding-bottom: 4em;
-    padding-top: 4em;
+    padding-bottom: 6vh;
+    padding-top: 6vh;
     background-color: rgba(240, 196, 170, 1);
     border: solid;
     border-image-source: url(../imgs/border_title.png);
-    border-image-width: 3rem;
+    border-image-width: 6vh;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
@@ -179,12 +181,12 @@ blockquote {
 }
 
 #menu-card {
-    padding-bottom: 4em;
-    padding-top: 4em;
+    padding-bottom: 6vh;
+    padding-top: 6vh;
     background-color: rgba(46, 26, 46, 1);
     border: solid;
     border-image-source: url(../imgs/border_title.png);
-    border-image-width: 3rem;
+    border-image-width: 6vh;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
@@ -195,9 +197,8 @@ blockquote {
     position: static;
 }
 
-#author {
-    font-size: small;
-    padding-left: 5%;
+#author p {
+    font-size: 0.5em !important;
 }
 
 #author::first-letter {
@@ -215,8 +216,6 @@ blockquote {
 .footer-text {
     color: black;
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 #map {
@@ -226,7 +225,7 @@ blockquote {
 
 #sidebar .sidebar-header {
     position: relative;
-    height: 20%;
+    height: 15vh;
     background-color: rgba(46, 26, 46, 1);
 }
 
@@ -245,7 +244,7 @@ blockquote {
     background: none;
     border: 2px solid rgba(181, 157, 91, 1);
     color: white;
-    margin:2%;
+    margin:0.3vw;
 }
 
 ul ul a {
@@ -369,12 +368,12 @@ ul ul a {
 .accordion-body {
     font-size: 1.2rem;
     border: 2px solid;
-    padding-top: 8rem;
-    padding-bottom: 8rem; 
-    padding-left: 15rem;
-    padding-right: 2rem;
+    padding-top: 8vh;
+    padding-bottom: 8vh; 
+    padding-left: 20vw;
+    padding-right: 4vw;
     border-image-source: url(../imgs/border_art_nouveau.png);
-    border-image-width: 5rem;
+    border-image-width: 7vw;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
     background-color: rgba(249, 227, 203, 1);
@@ -422,11 +421,11 @@ ul ul a {
 .accordion-body .insert {
     border: 100px solid;
     border-image-source: url(../imgs/invaluable-art-nouveau-hero.png);
-    border-image-width: 6rem;
+    border-image-width: 6vw;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
-    padding: 1rem;
-    margin: 3rem;
+    padding: 2vh;
+    margin: 3vh;
 }
 
 .accordion-body img {
@@ -434,10 +433,10 @@ ul ul a {
     border: solid black;
     border-style:hidden;
     border-image-source: url(../imgs/border_art_nouveau_2.png);
-    border-image-width: 6rem;
+    border-image-width: 6vw;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
-    padding: 7rem;
+    padding: 7vw;
     display: block;
     margin: 0 auto;
 }

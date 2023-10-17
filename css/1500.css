@@ -55,8 +55,6 @@
 
 #issues h4, #about h4 {
     font-family: 'Canterbury';
-    padding-left: 10%;
-    padding-right: 10%;
     color: rgba(61, 49, 43, 1);
     font-size: 2rem;
 }
@@ -77,10 +75,10 @@ body {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 5rem;
+    border-image-width: 5vw;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
-    padding: 7rem;
+    padding: 15vh;
 }
 
 .image-container {
@@ -171,11 +169,11 @@ img {
     text-transform: uppercase;
 }
 
-.insert {
+.accordion-body .insert {
     border-style: double;
     border-color: rgba(61, 49, 43, 1);
     margin: 2rem;
-    padding: 6%;
+    padding: 6vh;
 }
 
 blockquote {
@@ -199,13 +197,7 @@ blockquote {
 
 .footer-text {
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
-
 }
-
-
-/* inner pages */
 
 #title {
     font-size: 10vh;
@@ -241,9 +233,9 @@ blockquote {
 
 .accordion-body {
     border: 100px solid rgba(61, 49, 43, 1);
-    padding: 3rem;
+    padding: 6vh;
     border-image-source: url(../imgs/gmd19.jpg);
-    border-image-width: 8rem;
+    border-image-width: 10vw;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
 }
@@ -285,7 +277,7 @@ blockquote {
     margin:0;
     text-align: center;
     text-transform: uppercase;
-    padding: 5%;
+    padding: 5vh;
     font-weight: bold;
 }
 
@@ -298,10 +290,10 @@ blockquote {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 5rem;
+    border-image-width: 5vw;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
-    padding: 5rem;
+    padding: 7vh;
 }
 
 :root {
@@ -396,10 +388,10 @@ blockquote {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd20.jpg);
-    border-image-width: 7rem;
+    border-image-width: 10vw;
     border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
-    padding: 7rem;
+    padding: 22vh;
     display: block;
     margin: 0 auto;
 }
@@ -427,20 +419,10 @@ blockquote {
     text-transform: none;
 }
 
-#sidebar .sidebar-header {
-    position: relative;
-    height: 20%;
-    background-color: white;
-}
-
 #sidebar {
     background-color: white;
     border-right: solid 2px rgba(211, 83, 56, 1);
     border-top: solid 2px rgba(211, 83, 56, 1);
-}
-
-#sidebar a {
-    text-decoration: none !important;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -460,7 +442,7 @@ ul ul a {
 #sidebar button {
     background: none;
     border:2px solid rgba(211, 83, 56, 1);
-    margin:1%;
+    margin:0.2vw;
     text-transform: uppercase;
 }
 
@@ -503,7 +485,7 @@ ul ul a {
 
 #press_1500 {
     width: 90%;
-    padding-left: 2rem;
+    padding-left: 2vw;
 }
 
 .highlight {

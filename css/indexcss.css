@@ -128,7 +128,8 @@
     position: absolute;
     display: inline-block;
     bottom: 0;
-    right: 4em;
+    right: 7vw;
+    left: 7vw;
 }
 
 @media (max-width: 768px) {
