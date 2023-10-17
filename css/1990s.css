@@ -218,6 +218,8 @@ header{
 
 #about .image-row{
   margin-bottom: 4rem;
+  background-image: url(/imgs/punk_border.png);
+  background-repeat: round;
 }
 .image-container {
   padding-bottom: 2rem;
@@ -324,12 +326,12 @@ a .lod{
 
 
 /* per le immagini (principalmente) */
-.zine {
+/* .zine {
   z-index: 998;
   box-sizing: border-box;
   width: 300px;
   padding: 20px;
-  /* position: relative; */
+  position: relative;
   background-color: #bbb;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #ddd, #777),
@@ -352,7 +354,7 @@ a .lod{
 
 .zine.img {
   width: 100%;
-  /* display: block; */
+  display: block;
   filter: grayscale(100%) contrast(3) brightness(70%);
 }
 
@@ -404,7 +406,7 @@ a .lod{
                                                rgba(255, 255, 255, 0.04) 3.25%,
                                                rgba(255, 255, 255, 0.04) 3.5%,
                                                rgba(255, 255, 255, 0) 3.55%);
-}
+} */
 
 /*
 .container {
