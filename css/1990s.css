@@ -62,7 +62,7 @@ body {
   }
 
 
-body::before{
+/* body::before{
   transform: translate(-50%, -50%);
   z-index: 2;
   background-repeat: no-repeat;
@@ -95,9 +95,9 @@ body::after{
                                                rgba(255, 255, 255, 0.04) 3.25%,
                                                rgba(255, 255, 255, 0.04) 3.5%,
                                                rgba(255, 255, 255, 0) 3.55%);
-}
+} */
 
-p, h4{
+p{
   font-family: 'Oldtype';
   /* font-weight: 200; */
 }
@@ -163,8 +163,8 @@ nav.navbar{
 
 blockquote{
   font-family: 'Oldtype';
-  color: black;
-  font-size: 1rem;
+  font-weight: 700;
+  /* font-size: 1rem; */
 }
 
 #maintitle{
@@ -216,16 +216,25 @@ header{
   /* filter: grayscale(100%), contrast(3), brightness(70%); */
 }
 
+#about .image-row{
+  margin-bottom: 4rem;
+  background-image: url(/imgs/punk_border.png);
+  background-repeat: round;
+}
 .image-container {
+  padding-bottom: 2rem;
   transform: rotate(-5deg) skew(-5deg);
   border-radius: 10px;
   transform: skew(-5deg);
   border: none;
-  color: black;
+  margin-bottom: 2rem;
 }
 
-.image-container > *{
-  font-family: 'SniffinGlue2';
+.image-container .label h4{
+  text-align: center;
+  font-family: 'Oldtype';
+  width: 100%;
+  font-weight: 900;
 }
 
 h1{
@@ -266,23 +275,38 @@ h2.navbar-brand{
   font-size: 2rem;
   font-weight: 700;
 }
+h3{
+  font-family: 'SniffinGlue2';
+  font-size: 3rem;
+  font-weight: 900;
+}
 
-h3, h5 {
+h4{
+  font-family: 'Oldtype';
+  font-weight: 700;
+}
+h5 {
   font-family: 'SniffinGlue2';
   font-size: 2rem;
   font-weight: 900;
 }
-h3{
-  font-family: 'Oldtype';
-  font-weight: 700;
-}
 
+a .lod{
+  display: block;
+  color: black;
+}
 
 #documentation{
   width: 100%;
   padding: 10px;
 }
 
+#documentation img {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+  flex-wrap:wrap ;
+}
 #menu-card {
   overflow-y: scroll;
   height: 80vh;
@@ -293,16 +317,21 @@ h3{
   column-gap: 5%;
   column-count: 2;
 }
+/* #content p {
+  border: 2rem solid;
+  padding: 2rem;
+  border-image: url(/imgs/punk_border.png) 10% round; 
+} */
 
 
 
 /* per le immagini (principalmente) */
-.zine {
+/* .zine {
   z-index: 998;
   box-sizing: border-box;
   width: 300px;
   padding: 20px;
-  /* position: relative; */
+  position: relative;
   background-color: #bbb;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #ddd, #777),
@@ -325,7 +354,7 @@ h3{
 
 .zine.img {
   width: 100%;
-  /* display: block; */
+  display: block;
   filter: grayscale(100%) contrast(3) brightness(70%);
 }
 
@@ -377,7 +406,7 @@ h3{
                                                rgba(255, 255, 255, 0.04) 3.25%,
                                                rgba(255, 255, 255, 0.04) 3.5%,
                                                rgba(255, 255, 255, 0) 3.55%);
-}
+} */
 
 /*
 .container {
@@ -398,276 +427,16 @@ h3{
 
 /* da .zine fino a qui è meglio applicare alle immagini */
 
-#documentation img {
-  max-width: 300px;
-  margin: auto;
-  display: block;
-  z-index: -10;
-}
+
 /* testo */
 
 .text-brutal{
   font-family: 'SniffinGlue2';
   display: inline-block;
+  font-weight: 700;
   font-size: 3rem;
   transform: rotate(5deg);
 } /*da applicare a porzioni di testo per ingrandirle e rotarle == brutalismo */
-
-/* .text-flicker-out-glow {
-	-webkit-animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;
-	        animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;
-}
-
- @-webkit-keyframes text-flicker-out-glow {
-  0% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  13.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  14% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  14.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  15% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  22.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  23% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  24.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  25% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  34.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  35% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  39.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  40% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  42.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  43% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  44.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  45% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  54.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  55% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  69.4% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  69.5% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  69.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  70% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  79.4% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  79.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-  }
-  80% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  89.8% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  89.9% {
-    opacity: 1;
-    text-shadow: none;
-  }
-  90% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes text-flicker-out-glow {
-  0% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  13.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  14% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  14.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  15% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  22.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  23% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  24.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  25% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  34.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  35% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  39.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  40% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  42.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  43% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  44.9% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  45% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  54.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  55% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  69.4% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  69.5% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  69.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  70% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  79.4% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  79.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-  }
-  80% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  89.8% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  89.9% {
-    opacity: 1;
-    text-shadow: none;
-  }
-  90% {
-    opacity: 0;
-    text-shadow: none;
-  }
-  100% {
-    opacity: 0;
-  }
-} */
 
 
 /* il div in cui c'è la foto deve essere position relative */
@@ -676,9 +445,15 @@ h3{
   font-family: 'Oldtype';
 }
 
+.accordion-body{
+  column-count: 1;
+}
 
 .paragraph {
-  all: unset;
+  display: block;
+  break-inside: avoid;
+  margin: 0;
+  column-gap: 20px;
 }
 
 .paragraph img{
@@ -697,8 +472,6 @@ h3{
   float: left;
   display: block;
   filter: grayscale(100%) contrast(2) brightness(90%);  
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  /* border-radius: 10px 20px 30px 40px; */
 }
 .img_paragraph img {
   display: none;
@@ -714,7 +487,7 @@ h3{
   padding-left: 1rem;
   max-width: 30vw;
   float: right;
-  display: block;
+  /* display: block; */
   filter: grayscale(100%) contrast(2) brightness(90%);
   /* image-rendering:pixelated; */
   /* filter: blur(1px); */
@@ -724,4 +497,6 @@ h3{
 .label_photo{
   font-weight: 700;
   padding-bottom: 3rem;
+  padding-top: 3rem;
 }
+
