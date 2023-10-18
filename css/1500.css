@@ -27,8 +27,8 @@
     font-family: 'CruzQuaste';
     color: rgba(211, 83, 56, 1);
     background-color: rgb(255, 250, 238);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
     border: 0.1rem outset rgba(61, 49, 43, 1);
     outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
@@ -54,7 +54,7 @@
 
 .mapboxgl-popup-content p a {
     color: rgba(61, 49, 43, 1);
-    padding-bottom:0;
+    padding-bottom: 0;
 }
 
 body {
@@ -380,7 +380,6 @@ blockquote {
 
 .nav-item {
     font-family: 'EB Garamond', serif;
-    letter-spacing: -1px;
     justify-content: center; 
     text-align: justify; 
     font-size: 3vh;
@@ -427,20 +426,21 @@ blockquote {
     color: rgba(61, 49, 43, 1) !important;
     background: white;
     text-transform: uppercase;
-    max-width: 220px;
+    max-width: 20vw;
 }
 
 ul ul a {
     font-size: 2vh !important;
-    padding-left: 30px !important;
-    padding-right:10px !important;
+    padding-left: 3vw !important;
+    padding-right: 2vw !important;
     background: white;
 }
 
 #sidebar button {
     background: none;
     border:2px solid rgba(211, 83, 56, 1);
-    margin:0.2vw;
+    margin: 0.2vw;
+    margin-right: 2vw;
     text-transform: uppercase;
 }
 

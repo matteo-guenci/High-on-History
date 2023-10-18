@@ -252,12 +252,13 @@ body {
     background: none;
     border: 2px solid rgba(181, 157, 91, 1);
     color: white;
-    margin:0.3vw;
+    margin: 0.3vw;
+    margin-right: 2vw;
 }
 
 ul ul a {
     font-size: 0.9em !important;
-    padding-left: 30px !important;
+    padding-left: 3vw !important;
     background: #ffe3dbef;
 }
 
