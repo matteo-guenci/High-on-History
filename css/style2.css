@@ -188,9 +188,14 @@ span {
     width: 100%;
 }
 
-.accordion-body a:hover + .lod,.lod:hover {
+.accordion-body a:hover + .lod, .lod:hover {
     display: block;
     position: relative;
     z-index: 100;
+}
+
+.lod iframe {
+    width: 15vw; 
+    height: 10vh;
 }
 

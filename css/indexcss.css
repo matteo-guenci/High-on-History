@@ -72,25 +72,22 @@
 }
 
 #documentation img {
-    max-width: 280px;
+    max-width: 35vw;
 }
-
-/* css x documentazione */
 
 #main-background {
     overflow: auto;
-    height: 80vh;
+    height: 90vh;
     width: 65vw;
 }
 
 #menu-card {
-    height: 80vh;
+    height: 90vh;
     width: 17vw;
     text-align: center;
     overflow: auto;
 }
 
-/* questo ha un !important perché va in contrasto con boostrap */
 .navbar {
     display: block !important;
 }
@@ -114,7 +111,6 @@
     padding: 2em;
     flex: 1;
     position: relative;
-    /* height: 50vh;  */
     width: 80vw;
 }
 

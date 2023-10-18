@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 @font-face {
     font-family: 'GoudyInitialen';
     src: url(../fonts/GoudyInitialen.ttf);
 }
+
 @font-face {
     font-family: 'CruzQuaste';
     src: url(../fonts/CruzQuaste_PERSONAL_USE_ONLY.ttf);
 }
+
 @font-face {
     font-family: 'Canterbury';
     src: url(../fonts/canterbury.regular.ttf);
 }
+
 @font-face {
     font-family:'FirstOrder';
     src: url(../fonts/Typographer\ Rotunda.ttf);
 }
 
-
+/* index */
 
 #maintitle {
     font-size: 10vh;
@@ -53,31 +57,25 @@
     padding-bottom:0;
 }
 
-#issues h4, #about h4 {
-    font-family: 'Canterbury';
-    color: rgba(61, 49, 43, 1);
-    font-size: 2rem;
-}
-
-.label {
-    width: 10vw;
-}
-
 body {
     font-family: 'EB Garamond', serif;
     letter-spacing: -1px;
     justify-content: center; 
     text-align: justify; 
     color: rgba(61, 49, 43, 1);
-  }
+}
 
 .container {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 5vw;
+    -webkit-border-image-source: url(../imgs/gmd18.jpg);
+    border-image-width: 8vw;
+    -webkit-border-image-width: 8vw;
     border-image-repeat: round;
-    border-image-slice: 100% 1% 100% 1%;
+    -webkit-border-image-repeat: round;
+    border-image-slice: 100% 0% 100% 0%;
+    -webkit-border-image-slice: 100% 0% 100% 0%;
     padding: 15vh;
 }
 
@@ -87,18 +85,12 @@ body {
     outline-offset: 0.5rem;
 }
 
+.image-row, .row {
+    margin-bottom: 20vh;
+}
+
 img {
     filter: grayscale(100%);
-}
-
-#navbar-documentation a {
-    text-transform: uppercase; 
-    color:rgba(211, 83, 56, 1);
-}
-
-.container p {
-    font-size: 1.2rem;
-    padding: 3rem;
 }
 
 .container h1, .container h2 {
@@ -127,6 +119,25 @@ img {
     color: rgba(211, 83, 56, 1);
 }
 
+.container p {
+    font-size: 1.2rem;
+    padding: 3rem;
+}
+
+.label {
+    width: 10vw;
+}
+
+#issues h4, #about h4 {
+    font-family: 'Canterbury';
+    color: rgba(61, 49, 43, 1);
+    font-size: 2rem;
+}
+
+#navbar-documentation a {
+    text-transform: uppercase; 
+    color:rgba(211, 83, 56, 1);
+}
 
 #documentation p::first-letter {
     font-family: 'GoudyInitialen';
@@ -136,14 +147,13 @@ img {
     line-height: 0.65;
     margin-bottom: 0.2rem;
     margin-right: 0.2rem;
-  }
+}
 
 #documentation p::first-line {
     text-transform: uppercase;
 }
 
 #documentation img {
-    max-width: 280px;
     border: 0.1rem outset rgba(61, 49, 43, 1);
     outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
@@ -165,32 +175,6 @@ img {
     padding-left: 2em;
 }
 
-.accordion-body p::first-line {
-    text-transform: uppercase;
-}
-
-.accordion-body .insert {
-    border-style: double;
-    border-color: rgba(61, 49, 43, 1);
-    margin: 2rem;
-    padding: 6vh;
-}
-
-blockquote {
-    font-style: italic;
-    padding-left: 5rem;
-    font-size: 1.1rem;
-    padding-right: 5rem;
-}
-
-#author {
-    font-size: small;
-}
-
-#author {
-    padding-bottom: 2rem;
-}
-
 .footer {
     background-color: rgba(61, 49, 43, 1);
 }
@@ -199,12 +183,17 @@ blockquote {
     text-align: center;
 }
 
+/* inner page */
+
 #title {
     font-size: 10vh;
     font-family: 'CruzQuaste';
     color: rgba(211, 83, 56, 1);
-    padding-left: 10px;
-    padding-right: 10px;
+}
+
+#author {
+    font-size: small;
+    padding-bottom: 2rem;
 }
 
 .accordion-header {
@@ -233,7 +222,7 @@ blockquote {
 
 .accordion-body {
     border: 100px solid rgba(61, 49, 43, 1);
-    padding: 6vh;
+    padding: 8vh;
     border-image-source: url(../imgs/gmd19.jpg);
     border-image-width: 10vw;
     border-image-repeat: round;
@@ -262,6 +251,12 @@ blockquote {
     font-size: 1.2rem;
 }
 
+blockquote {
+    font-style: italic;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
 .accordion-body p::first-letter {
     font-family: 'GoudyInitialen';
     padding-left: 2rem;
@@ -270,6 +265,10 @@ blockquote {
     line-height: 0.65;
     margin-right: 0.2rem;
     margin-bottom: 0.2rem;
+}
+
+.accordion-body p::first-line {
+    text-transform: uppercase;
 }
 
 .accordion-body h3, .accordion-body h4 { 
@@ -296,55 +295,88 @@ blockquote {
     padding: 7vh;
 }
 
+.accordion-body img {
+    max-width: 60vw;
+    border: solid rgba(61, 49, 43, 1);
+    border-style:hidden;
+    border-image-source: url(../imgs/gmd20.jpg);
+    border-image-width: 10vw;
+    border-image-repeat: round;
+    border-image-slice: 100% 1% 100% 1%;
+    padding: 22vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.label_photo p {
+    font-size: 1rem;
+    column-count: 1;
+    column-gap: none;
+    font-style: italic;
+    text-align: center;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    font-family:'FirstOrder';
+}
+
+.label_photo p::first-letter {
+    font-family:'FirstOrder';
+    font-size: 1rem;
+    float: none;
+    margin-right: 0;
+    padding-left: 0;
+}
+
+.label_photo p::first-line {
+    text-transform: none;
+}
+
+#img_500 {
+    display: inline-block;
+}
+
+#press_1500 {
+    width: 90%;
+    padding-left: 2vw;
+}
+
+/* scroll bars */
+
 :root {
     --scrollbar-track-color: none;
     --scrollbar-thumb-color: rgba(211, 83, 56, 1);
 }
 
-/* Style the scrollbar track */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;  
 }
 
-/* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb-color);
 }
 
-/* Style the scrollbar track */
 ::-webkit-scrollbar-track {
     background: var(--scrollbar-track-color);
 }
 
-/* Style the scrollbar corner (optional) */
 ::-webkit-scrollbar-corner {
-    background: transparent; /* Change the scrollbar corner color */
+    background: transparent; 
 }
 
-.btn-info {
-    color: rgba(61, 49, 43, 1);
-    border: 2px solid;
-    background-color: white;
-    border-color: rgba(211, 83, 56, 1);
+/* Firefox Scrollbar Styles */
+/* Note: Firefox currently only supports styling the thumb and track */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb-color) transparent;
 }
 
-.btn-info:active {
-    color: rgba(61, 49, 43, 1);
-    background-color: white !important;
-}
-
-.btn-info:hover {
-    color: rgba(61, 49, 43, 1);
-    background-color: white;
-    border-color: rgba(211, 83, 56, 1);
-}
+/* navbar and sidebar */
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
     background-color:  white !important;
 }
-
 
 .nav-item {
     font-family: 'EB Garamond', serif;
@@ -364,6 +396,12 @@ blockquote {
     background-color: white !important;
 }
 
+.page-link.focus, .page-link:focus {
+    box-shadow: 0 0 0 .2rem rgba(211, 83, 56, 1) !important;
+    background-color: white !important;
+    color: rgba(61, 49, 43, 1) !important;
+}
+
 .page-link {
     color: rgba(61, 49, 43, 1);
     background-color: white;
@@ -377,46 +415,6 @@ blockquote {
     font-weight: bold;
     background-color: white;
     border: 1px solid rgba(211, 83, 56, 1);
-}
-
-#navpage {
-    opacity: 1 !important;
-}
-
-.accordion-body img {
-    max-width: 60vw;
-    border: solid rgba(61, 49, 43, 1);
-    border-style:hidden;
-    border-image-source: url(../imgs/gmd20.jpg);
-    border-image-width: 10vw;
-    border-image-repeat: round;
-    border-image-slice: 100% 1% 100% 1%;
-    padding: 22vh;
-    display: block;
-    margin: 0 auto;
-}
-
-.label_photo p {
-    font-size: 1rem;
-    column-count: 1 !important;
-    column-gap: none !important;
-    font-style: italic;
-    text-align: center;
-    padding-left: 7rem;
-    padding-right: 7rem;
-    font-family:'FirstOrder';
-}
-
-.label_photo p::first-letter {
-    font-family:'FirstOrder';
-    font-size: 1rem;
-    float: none !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-}
-
-.label_photo p::first-line {
-    text-transform: none;
 }
 
 #sidebar {
@@ -452,6 +450,24 @@ ul ul a {
     color: rgba(61, 49, 43, 1);
 }
 
+.btn-info {
+    color: rgba(61, 49, 43, 1);
+    border: 2px solid;
+    background-color: white;
+    border-color: rgba(211, 83, 56, 1);
+}
+
+.btn-info:active {
+    color: rgba(61, 49, 43, 1);
+    background-color: white !important;
+}
+
+.btn-info:hover {
+    color: rgba(61, 49, 43, 1);
+    background-color: white;
+    border-color: rgba(211, 83, 56, 1);
+}
+
 .btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem white !important;
 }
@@ -460,8 +476,8 @@ ul ul a {
     border-color: rgba(211, 83, 56, 1) !important;
 }
 
-.btn-info.focus,.btn-info:focus {
-    box-shadow: 0 0 0 .2rem rgb(236, 193, 49) !important;
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 .2rem rgba(211, 83, 56, 1) !important;
 }
 
 #sidebarCollapse svg {
@@ -472,29 +488,23 @@ ul ul a {
     --bs-btn-box-shadow: none !important;
 }
 
+/* circular menu */
+
 .nav-content .toggle-btn {
     background-image: url(../imgs/button_1500.jpg);
     background-size: contain;
     zoom: 150%;
 }
 
-
-#img_500 {
-    display: inline-block;
-}
-
-#press_1500 {
-    width: 90%;
-    padding-left: 2vw;
-}
-
 .highlight {
     background-color: rgb(236, 193, 49) !important;
     border: 3px solid rgba(211, 83, 56, 1);
     padding: 0.2rem;
-    color: blue;
+    color: rgba(81, 63, 144, 1); 
     font-weight: 500;
 }
+
+/* classes of the others */
 
 .paragraph {
     all: unset !important
