@@ -84,7 +84,7 @@ body {
     font-size: 1.8rem;
 }
 
-#documentation img {
+.documentation-img {
     margin: 2rem auto;
     display: block;
     filter: none !important;
@@ -94,10 +94,6 @@ body {
     padding: 6vh;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
-}
-
-#documentation img:hover {
-    transform: scale(2.5);
 }
 
 #navbar-documentation h2 {

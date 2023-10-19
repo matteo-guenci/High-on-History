@@ -69,15 +69,13 @@ body {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    -webkit-border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 8vw;
-    -webkit-border-image-width: 8vw;
+    border-image-width: 8vw 0 8vw 0; 
     border-image-repeat: round;
-    -webkit-border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
-    -webkit-border-image-slice: 100% 0% 100% 0%;
     padding: 15vh;
 }
+
+/* check if this works on safari */
 
 .image-container {
     border: 0.1rem outset solid rgba(61, 49, 43, 1);
@@ -154,16 +152,15 @@ img {
 }
 
 #documentation img {
+    display: block;
+    filter: none !important; 
+}
+
+.documentation-img {
     border: 0.1rem outset rgba(61, 49, 43, 1);
     outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
     margin: 2rem auto;
-    display: block;
-    filter: none !important;
-    }
-
-#documentation img:hover {
-    transform: scale(2.5);
 }
 
 #documentation a {
