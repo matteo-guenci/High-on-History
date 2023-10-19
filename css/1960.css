@@ -351,5 +351,35 @@ body {
     right: 0;
     bottom: 0
  }
+
+ .nav-content .toggle-btn {
+    background-image: url(../imgs/button_1950_1.png);
+    background-size: contain;
+    zoom: 150%;
+}
+
+.mapboxgl-popup-content {
+    font-family: 'Onest', sans-serif;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    justify-content: center; 
+    text-align: justify; 
+    background-color: rgb(255, 250, 238);
+    border: 0.5rem solid rgb(214, 46, 31);
+    
+}
+
+.mapboxgl-popup-content h3 {
+    padding-bottom: 0;
+    font-size: 2rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+    
+}
+
+.mapboxgl-popup-content p a {
+    
+    padding-bottom: 0;
+    color: rgb(54, 121, 246)
+}
   
   
