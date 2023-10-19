@@ -40,7 +40,7 @@
                 <a href="#" id="it1-3" onClick="change(this.id)"><i>1900</i></a>
             </span>
             <span style="--i:4;">
-                <a href="#" id="it1-4" onClick="change(this.id)"><i>1950</i></a>
+                <a href="#" id="it1-4" onClick="change(this.id)"><i id="number_1950">1950</i></a>
             </span>
             <span style="--i:5;">
                 <a href="#" id="it1-5" onClick="change(this.id)"><i>1990</i></a>
@@ -250,6 +250,7 @@
                 // Pause spinning on interaction
                 map.on('mousedown', () => {
                 userInteracting = true;
+                myFunction()
                 });
                 
                 // Restart spinning the globe when interaction is complete
@@ -291,23 +292,28 @@
                 //     }
                 // }
 
-
                 function myFunction() {
                     var element = document.getElementById("button");
                     element.classList.toggle("pause");
-                    spinEnabled = !spinEnabled;
+                    var spinEnabled = !spinEnabled;
                     if (spinEnabled) {
                             spinGlobe();
                     } else {
                         map.stop();
                     }
                     }
+                
 
                 spinGlobe();
+                
                     }
-        </script>
-    </div>
 
+                
+                    
+        </script>
+        
+    </div>
+    
 
 <!-- Issues section -->
 <div id="issues" class="container">
