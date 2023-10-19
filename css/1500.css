@@ -69,7 +69,7 @@ body {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 8vw 0 8vw 0; 
+    border-image-width: 0 0 8vw; 
     border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
     padding: 15vh;
@@ -124,6 +124,7 @@ img {
 
 .label {
     width: 10vw;
+    left: 5vw;
 }
 
 #issues h4, #about h4 {

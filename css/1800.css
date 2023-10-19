@@ -146,6 +146,9 @@ body {
 
 .label {
     top: -5vh;
+    right: 7vw;
+    left: 7vw;
+
 }
 
 #documentation p {

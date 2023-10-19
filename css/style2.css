@@ -183,19 +183,17 @@ span {
     display: none;
 }
 
-.lod{
+.lod {
     display: none;
-    width: 100%;
-}
-
-.accordion-body a:hover + .lod, .lod:hover {
-    display: block;
-    position: relative;
+    position: absolute;
     z-index: 100;
+    width: 50vw;
+    height: 40vh;
 }
 
-.lod iframe {
-    width: 15vw; 
-    height: 10vh;
+.link:hover {
+    .lod {
+       display: block; 
+    }  
 }
 
