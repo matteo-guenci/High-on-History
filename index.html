@@ -292,8 +292,18 @@
                     }
                     }
                 
-
+                //var element = document.getElementById("button");
+                //if (!("pause" in element.classList)) { console.log("ok";)spinGlobe();
+                //}
+                //else {
+                //    map.stop()
+                //}
                 spinGlobe();
+                var element = document.getElementById("button");
+                if (spinEnabled) {
+                    element.classList.remove("pause");
+                }
+                
                 return {
                     myFunction: myFunction
                 };
