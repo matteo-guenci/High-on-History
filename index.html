@@ -22,6 +22,7 @@
     
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>var currentStyle="";
+
 </script>
     
 </head>
@@ -128,6 +129,7 @@
   </script>
   
     <div id="map">
+        
         <div id="image_artnouveau"><img id="woman" src="imgs/woman.png"></div>
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
         <button id="button" class="btn-spin" onclick="mappa.myFunction()"></button>
@@ -147,27 +149,27 @@
             const selectedStyle = urlParams.get('style');
             if (selectedStyle === 'css/1500.css') {
                 stylesheetLink.href = 'css/1500.css';
-                var mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+                mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
             }
             else if (selectedStyle === 'css/1800.css') {
                 stylesheetLink.href = 'css/1800.css';
-                var mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
+                mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
             }
             else if (selectedStyle === 'css/1900.css') {
                 stylesheetLink.href = 'css/1900.css';
-                var mappa=createMap("mapbox://styles/sorre33/clmago4ne018701qy9qm7asqs", 'mercator');
+                mappa=createMap("mapbox://styles/sorre33/clmago4ne018701qy9qm7asqs", 'mercator');
             }
             else if (selectedStyle === 'css/1960.css') {
                 stylesheetLink.href = 'css/1960.css';
-                var mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+                mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
             }
             else if (selectedStyle === 'css/1990s.css') {
                 stylesheetLink.href = 'css/1990s.css';
-                var mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
+                mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
             }
             else if (selectedStyle === 'css/2030.css') {
                 stylesheetLink.href = 'css/2030.css';
-                var mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
+                mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
             }
     
             currentStyle=stylesheetLink.getAttribute("href");
@@ -237,7 +239,7 @@
                 // Pause spinning on interaction
                 map.on('mousedown', () => {
                 userInteracting = true;
-                myFunction()
+                
                 });
                 
                 // Restart spinning the globe when interaction is complete
@@ -297,11 +299,15 @@
                 };
                     }
 
+
                 
                     
         </script>
         
     </div>
+    <script>
+        var mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+    </script>
     
 
 <!-- Issues section -->
@@ -368,31 +374,31 @@
                         if (value === 'it2-1' || value === 'it1-1') {
                             stylesheetLink.href = 'css/1500.css';
                             currentStyle=stylesheetLink.getAttribute("href");
-                            var mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+                             mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
                         }
                         else if (value === 'it2-2' || value === 'it1-2') {
                             stylesheetLink.href = 'css/1800.css';
                             currentStyle=stylesheetLink.getAttribute("href");
-                            var mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
+                             mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
                             
                         }
                         else if (value === 'it2-3' || value === 'it1-3') {
                             stylesheetLink.href = 'css/1900.css';
                             currentStyle=stylesheetLink.getAttribute("href");
-                            var mappa=createMap("mapbox://styles/sorre33/clmago4ne018701qy9qm7asqs", 'mercator');
+                             mappa=createMap("mapbox://styles/sorre33/clmago4ne018701qy9qm7asqs", 'mercator');
                         }
                         else if (value === 'it2-4' || value === 'it1-4') {
                             stylesheetLink.href = 'css/1960.css';
                             currentStyle=stylesheetLink.getAttribute("href");
-                            var mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+                             mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
                         }
                         else if (value === 'it2-5' || value === 'it1-5') {
                             stylesheetLink.href = 'css/1990s.css';
-                            var mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
+                             mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
                         }
                         else if (value === 'it2-6' || value === 'it1-6') {
                             stylesheetLink.href = 'css/2030.css';
-                            var mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
+                             mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
                         }
                         
                     }
