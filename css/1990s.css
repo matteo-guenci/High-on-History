@@ -291,11 +291,6 @@ h5 {
   font-weight: 900;
 }
 
-a .lod{
-  display: block;
-  color: black;
-}
-
 #documentation{
   width: 100%;
   padding: 10px;
@@ -309,7 +304,7 @@ a .lod{
 }
 #menu-card {
   overflow-y: scroll;
-  height: 80vh;
+  height: 90vh;
   position: static;
 }
 
