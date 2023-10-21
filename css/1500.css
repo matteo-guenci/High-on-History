@@ -407,6 +407,7 @@ blockquote {
     border: 1px solid rgba(211, 83, 56, 1);
     border-style: double;
     text-transform: uppercase;
+    font-size: 1.2vw;
 }
 
 .page-link:hover {
@@ -453,6 +454,7 @@ ul ul a {
 .btn-info {
     color: rgba(61, 49, 43, 1);
     border: 2px solid;
+    font-size: 1.3vw;
     background-color: white;
     border-color: rgba(211, 83, 56, 1);
 }
