@@ -78,9 +78,9 @@ body {
 /* check if this works on safari */
 
 .image-container {
-    border: 0.1rem outset solid rgba(61, 49, 43, 1);
+    border: 1px solid rgba(61, 49, 43, 1);
     outline: 0.1rem solid rgba(61, 49, 43, 1);
-    outline-offset: 0.5rem;
+    outline-offset: 0.2rem;
 }
 
 .image-row, .row {
@@ -123,14 +123,15 @@ img {
 }
 
 .label {
-    width: 10vw;
+    right: 5vw;
     left: 5vw;
 }
 
 #issues h4, #about h4 {
     font-family: 'Canterbury';
     color: rgba(61, 49, 43, 1);
-    font-size: 2rem;
+    background-color: white;
+    font-size: 3vw;
 }
 
 #navbar-documentation a {
@@ -227,6 +228,12 @@ img {
     border-image-slice: 100% 1% 100% 1%;
 }
 
+@media not all and (min-resolution:.001dpcm) {
+    .accordion-body {
+        border-image-repeat: repeat;
+    }
+}
+
 .accordion-body p {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -260,9 +267,8 @@ blockquote {
     padding-left: 2rem;
     float: left;
     font-size: 6rem;
-    line-height: 0.65;
+    line-height: 0.9;
     margin-right: 0.2rem;
-    margin-bottom: 0.2rem;
 }
 
 .accordion-body p::first-line {

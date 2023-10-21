@@ -93,28 +93,28 @@ nav.open .nav-content span{
     background-image: url(../imgs/button_1500.jpg) !important;
     background-size: contain !important;
     z-index: 3000;
+}
 
-    #number_1500 {
-        display: none;
-    }
+#it1-1:hover #number_1500 {
+    display: none; 
 }
 
 #it1-2:hover {
     background-image: url(../imgs/button_1800.jpg) !important;
     background-size: contain !important;
     z-index: 3000;
+}
 
-    #number_1800 {
-        display: none;
-    }
+#it1-2:hover #number_1800 {
+    display: none; 
 }
 
 #it1-4:hover {
     background-image: url(../imgs/button_1950.png) !important;
     background-size: contain !important;
     z-index: 3000;
+}
 
-    #number_1950 {
-        display: none;
-    }
+#it1-4:hover #number_1950 {
+    display: none; 
 }

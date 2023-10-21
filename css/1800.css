@@ -74,14 +74,14 @@ body {
     border-image-width: 6vw;
     border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
-    padding-top: 15vh;
-    padding-bottom: 25vh;
+    padding-top: 15vw;
 }
 
-#issues h4 {
+#issues h4, #about h4 {
     font-family: 'NouveauTitle';
     color: rgba(46, 26, 46, 1);
-    font-size: 1.8rem;
+    font-size: 2.5vw;
+    background-color: rgba(240, 196, 170, 1);
 }
 
 .documentation-img {
@@ -134,26 +134,26 @@ body {
     filter: opacity(80%) saturate(150%);
     border-image-source: url(../imgs/border_title.png);
     border-image-width: 4vw;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    border-image-outset: 4vw;
     border-image-repeat: round;
     border-image-slice: 100% 10% 100% 10%;
 }
 
 .image-row, .row {
-    margin-bottom: 20vh; 
+    margin-bottom: 13vw; 
 }
 
 .label {
-    top: -5vh;
+    bottom: 1vh;
     right: 7vw;
     left: 7vw;
+    text-align: center;
 
 }
 
 #documentation p {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2vw;
 }
 
 #main-background a {
@@ -416,6 +416,7 @@ ul ul a {
 blockquote {
     padding-left: 10vw;
     font-family: 'NouveauTitle';
+    font-size: 1.6vw;
 }
 
 #author p {
@@ -471,7 +472,7 @@ blockquote {
 }
 
 .accordion-body {
-    font-size: 1.2rem;
+    font-size: 1.7vw;
     border: 2px solid;
     padding-top: 8vh;
     padding-bottom: 8vh; 
@@ -485,9 +486,9 @@ blockquote {
 }
 
 .accordion-body h1, .accordion-body h2 {
-    font-size: 3rem;
+    font-size: 7vw;
     font-family: 'Trinigan';
-    padding: 3rem;
+    padding: 3vw;
     flex-direction: column;
     flex-wrap: nowrap;
     margin:0;
@@ -501,7 +502,7 @@ blockquote {
     flex-wrap: nowrap;
     margin:0;
     text-align: center;
-    padding: 5vh;
+    padding-bottom: 8vw;
     font-weight: bold;
     font-family: 'Nerea';
 }
@@ -514,7 +515,7 @@ blockquote {
 .accordion-body p::first-letter {
     font-family: 'ArtNouveauCaps';
     float: left;
-    font-size: 4rem;
+    font-size: 5vw;
     line-height: 0.7em;
     margin: 0.1em 0.2em 0.1em 0;
 }
@@ -541,14 +542,15 @@ blockquote {
     border-image-width: 6vw;
     border-image-repeat: round;
     border-image-slice: 100% 0 100% 0;
-    padding: 7vw;
+    border-image-outset: 7vw;
     display: block;
     margin: 0 auto;
+    margin-top: 8vw;
 }
 
 .label_photo {
-    padding-top: 0.9rem;
-    font-size: 1.1rem;
+    padding-top: 7vw;
+    font-size: 1.1vw;
     text-align: center;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -558,7 +560,7 @@ blockquote {
 
 .label_photo p::first-letter {
     font-family: 'Nerea';
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     float: none;
     margin-right:0;
     padding-right:0;
