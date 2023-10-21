@@ -224,13 +224,20 @@ img {
     padding: 8vh;
     border-image-source: url(../imgs/gmd19.jpg);
     border-image-width: 10vw;
-    border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
 }
 
-@media not all and (min-resolution:.001dpcm) {
+/* Safari */
+@supports (-webkit-touch-callout:none) {
     .accordion-body {
         border-image-repeat: repeat;
+    }
+}
+  
+  /* All other browsers */
+@supports not (-webkit-touch-callout:none) {
+    .accordion-body {
+        border-image-repeat: round;
     }
 }
 
