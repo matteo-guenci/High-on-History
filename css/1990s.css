@@ -230,11 +230,18 @@ header{
   margin-bottom: 2rem;
 }
 
-.image-container .label h4{
+/* .image-container .label h4{
   text-align: center;
   font-family: 'Oldtype';
   width: 100%;
   font-weight: 900;
+} */
+.label {
+  bottom: 1vh;
+  right: 7vw;
+  left: 7vw;
+  text-align: center;
+
 }
 
 h1{
