@@ -24,7 +24,7 @@
 
 #maintitle {
     position: absolute;
-    font-size: 12vh;
+    font-size: 7vw;
     font-family: 'Trinigan';
     color: rgba(171, 41, 29, 1);
     text-shadow: -3px 0 rgba(232, 175, 89, 1), 0 2px rgba(232, 175, 89, 1), 1px 0 rgba(232, 175, 89, 1), 0 -1px rgba(232, 175, 89, 1);
@@ -50,7 +50,7 @@
 
 .mapboxgl-popup-content h3 {
     padding-bottom: 0;
-    font-size: 2rem;
+    font-size: 2.5vw;
     color: rgba(160, 34, 19, 1);
     font-family: 'Trinigan';
     font-weight: bold;
@@ -58,7 +58,7 @@
 
 .mapboxgl-popup-content p a {
     color: rgba(46, 26, 46, 1);
-    font-size: 0.9rem;
+    font-size: 1.2vw;
     padding-bottom:0;
 }
 
@@ -68,11 +68,12 @@ body {
     background-color: rgba(240, 196, 170, 1);
 }
 
-#documentation, #about, #issues {
-    border: solid black;
+.container {
+    border-top: 5vw solid;
+    border-bottom: 7vw solid;
     border-image-source: url(../imgs/border_art_nouveau.png);
-    border-image-width: 6vw;
-    border-image-repeat: round;
+    border-image-width: 12.5vw;
+    border-image-repeat: stretch;
     border-image-slice: 100% 0% 100% 0%;
     padding-top: 15vw;
 }
@@ -80,7 +81,7 @@ body {
 #issues h4, #about h4 {
     font-family: 'NouveauTitle';
     color: rgba(46, 26, 46, 1);
-    font-size: 2.5vw;
+    font-size: 2vw;
     background-color: rgba(240, 196, 170, 1);
 }
 
@@ -98,7 +99,7 @@ body {
 
 #navbar-documentation h2 {
     font-family: 'Trinigan';
-    font-size: 3rem;
+    font-size: 3vw;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding-bottom: 0;
@@ -106,7 +107,7 @@ body {
 
 .container h1, .container h2 {
     font-family: 'Trinigan';
-    font-size: 5.5rem;
+    font-size: 7vw;
     color: rgba(160, 34, 19, 1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align:center;
@@ -115,13 +116,13 @@ body {
 
 .container h3 {
     font-family: 'Trinigan';
-    font-size: 2rem;
+    font-size: 2vw;
     padding-top: 1.3em;
 }
 
 .container h5 {
     font-family: 'NouveauTitle';
-    font-size: 2rem;
+    font-size: 3vw;
     color: rgba(160, 34, 19, 1);
 }
 
@@ -152,8 +153,7 @@ body {
 }
 
 #documentation p {
-    font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 
 #main-background a {
@@ -163,7 +163,7 @@ body {
 #documentation p::first-letter {
     font-family: 'ArtNouveauCaps';
     float: left;
-    font-size: 3rem;
+    font-size: 4vw;
     line-height: 0.75;
     margin: 0.1em 0.2em 0.1em 0;
 }
@@ -256,7 +256,7 @@ body {
 }
 
 ul ul a {
-    font-size: 0.9em !important;
+    font-size: 0.9vw !important;
     padding-left: 3vw !important;
     background: #ffe3dbef;
 }
@@ -270,7 +270,7 @@ ul ul a {
     border: 1px solid rgba(46, 26, 46, 1);
     background-color: rgba(249, 227, 203, 1);
     font-family: 'NouveauTitle';
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 .btn-info:active {
@@ -306,7 +306,7 @@ ul ul a {
 .nav-link {
     color: white !important;
     font-family: 'NouveauTitle';
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 #menu-card .nav-link.active {
@@ -324,15 +324,12 @@ ul ul a {
     color: white;
 }
 
-/* images  */
-/* FIX THIS AND MAKE IT MORE CLEAR (WITHOUT ID OF IMG) */
+/* images */
 
 #woman4 {
-    width: 22%;
+    width: 23vw;
     display: inline-block;
     position: absolute;
-    bottom:-2;
-    left: 3;
     z-index: 3000;
     filter:saturate(200%);    
 }
@@ -419,17 +416,6 @@ blockquote {
     font-size: 1.6vw;
 }
 
-#author p {
-    font-size: 0.5em !important;
-}
-
-#author::first-letter {
-    font-family: 'Bodoni Moda', serif;
-    font-size: unset;
-    line-height: unset;
-    margin: unset;
-}
-
 .highlight {
     background-color: rgba(164, 134, 57, 0.8) !important;
     font-weight: bold;
@@ -437,7 +423,7 @@ blockquote {
 }
 
 #title {
-    font-size: 10vh;
+    font-size: 5vw;
     font-family: 'Trinigan';
     color: rgba(171, 41, 29, 1);
     text-shadow: -3px 0 rgba(46, 26, 46, 1), 0 2px rgba(46, 26, 46, 1), 1px 0 rgba(46, 26, 46, 1), 0 -1px rgba(46, 26, 46, 1);
@@ -461,7 +447,7 @@ blockquote {
 }
 
 .accordion-button {
-    font-size: 6vh;
+    font-size: 4vw;
     font-family: 'Trinigan';
     color: rgba(160, 34, 19, 1);
     text-shadow: -1px 0 rgba(46, 26, 46, 1), 0 1px rgba(46, 26, 46, 1), 1px 0 rgba(46, 26, 46, 1), 0 -1px rgba(46, 26, 46, 1);
@@ -472,21 +458,22 @@ blockquote {
 }
 
 .accordion-body {
-    font-size: 1.7vw;
-    border: 2px solid;
-    padding-top: 8vh;
-    padding-bottom: 8vh; 
+    font-size: 1.3vw;
+    border-top: 6vw solid;
+    border-bottom: 5vw solid;
+    padding-top: 10vw;
+    padding-bottom: 8vw; 
     padding-left: 20vw;
     padding-right: 4vw;
-    border-image-source: url(../imgs/border_art_nouveau.png);
-    border-image-width: 7vw;
-    border-image-repeat: round;
+    border-image-source: url(../imgs/invaluable-art-nouveau-hero.png);
+    border-image-width: 16vw;
+    border-image-repeat: stretch;
     border-image-slice: 100% 0 100% 0;
     background-color: rgba(249, 227, 203, 1);
 }
 
 .accordion-body h1, .accordion-body h2 {
-    font-size: 7vw;
+    font-size: 5vw;
     font-family: 'Trinigan';
     padding: 3vw;
     flex-direction: column;
@@ -505,19 +492,21 @@ blockquote {
     padding-bottom: 8vw;
     font-weight: bold;
     font-family: 'Nerea';
+    font-size: 4vw;
 }
 
 .accordion-body h5 {
     text-transform: uppercase;
     color: rgba(160, 34, 19, 1);
+    font-size: 3vw;
 }
 
 .accordion-body p::first-letter {
     font-family: 'ArtNouveauCaps';
     float: left;
     font-size: 5vw;
-    line-height: 0.7em;
-    margin: 0.1em 0.2em 0.1em 0;
+    line-height: 0.9;
+    margin: 0.1em 0.1em 0.1em 0em;
 }
 
 .accordion-body p {
@@ -525,32 +514,36 @@ blockquote {
 }
 
 .accordion-body .insert {
-    border: 100px solid;
-    border-image-source: url(../imgs/invaluable-art-nouveau-hero.png);
-    border-image-width: 6vw;
-    border-image-repeat: round;
+    border-top: 15vw solid;
+    border-bottom: 15vw solid;
+    border-image-source: url(../imgs/border_art_nouveau.png);
+    border-image-width: 13vw;
+    border-image-repeat: stretch;
     border-image-slice: 100% 0 100% 0;
     padding: 2vh;
-    margin: 3vh;
+    margin-bottom: 3vw;
+    margin-top: 3vw;
 }
 
 .accordion-body img {
     max-width: 60vw;
-    border: solid black;
+    border-top: 15vw solid;
+    border-bottom: 15vw solid;
     border-style:hidden;
     border-image-source: url(../imgs/border_art_nouveau_2.png);
-    border-image-width: 6vw;
-    border-image-repeat: round;
-    border-image-slice: 100% 0 100% 0;
-    border-image-outset: 7vw;
+    border-image-width: 12vw;
+    border-image-repeat: stretch;
+    border-image-slice: 100% 2% 100% 2%;
+    border-image-outset: 12vw;
     display: block;
     margin: 0 auto;
-    margin-top: 8vw;
+    margin-top: 12vw;
+    margin-bottom: 7vw;
 }
 
 .label_photo {
     padding-top: 7vw;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     text-align: center;
     padding-left: 5rem;
     padding-right: 5rem;
