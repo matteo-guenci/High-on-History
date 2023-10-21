@@ -69,13 +69,23 @@ body {
     border: solid rgba(61, 49, 43, 1);
     border-style:hidden;
     border-image-source: url(../imgs/gmd18.jpg);
-    border-image-width: 0 0 8vw; 
+    border-image-width: 8vw; 
     border-image-repeat: round;
     border-image-slice: 100% 0% 100% 0%;
     padding: 15vh;
 }
 
-/* check if this works on safari */
+@supports (-webkit-appearance: none) {
+  .container {
+    border-image-repeat: repeat !important;
+  }  
+}
+
+/* @media not all and (min-resolution:.001dpcm) { @media {
+    .container {
+      border-image-repeat: repeat !important;
+    }
+}} */
 
 .image-container {
     border: 1px solid rgba(61, 49, 43, 1);
@@ -115,6 +125,7 @@ img {
 .container h5 {
     text-transform: uppercase;
     color: rgba(211, 83, 56, 1);
+    font-weight: bold;
 }
 
 .container p {
@@ -224,21 +235,8 @@ img {
     padding: 8vh;
     border-image-source: url(../imgs/gmd19.jpg);
     border-image-width: 10vw;
+    border-image-repeat: round;
     border-image-slice: 100% 1% 100% 1%;
-}
-
-/* Safari */
-@supports (-webkit-touch-callout:none) {
-    .accordion-body {
-        border-image-repeat: repeat;
-    }
-}
-  
-  /* All other browsers */
-@supports not (-webkit-touch-callout:none) {
-    .accordion-body {
-        border-image-repeat: round;
-    }
 }
 
 .accordion-body p {
