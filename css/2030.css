@@ -23,6 +23,29 @@ body{
   color: rgb(15, 15, 15);
   background-color: rgb(218, 218, 218);
 }
+h1, h2, h3, h4, h5, a, blockquote, div, p{
+  font-family: "ProtoMolecule";
+  color: rgb(218, 218, 218)
+}
+
+#about .image-row{
+  margin-bottom: 4rem;
+}
+.image-container {
+  padding-bottom: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.image-container img{
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 10%;
+  opacity: 70%;
+  filter: blur(1%);
+  /* filter: contrast(5%); */
+}
 
 /* .text-flicker-out-glow {
 	-webkit-animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;
