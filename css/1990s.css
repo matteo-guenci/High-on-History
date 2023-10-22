@@ -190,6 +190,9 @@ header{
   0 0 15px #e9ecef !important; /* Bold shadow */ 
 }
 
+.footer-text{
+  font-size: 1rem;
+}
 
 #punk{
   /* width: 20vw;
@@ -241,6 +244,7 @@ header{
   right: 7vw;
   left: 7vw;
   text-align: center;
+  justify-content: center;
 
 }
 
@@ -261,7 +265,7 @@ h2{
   /* box-shadow: 50px 50px 100px #000000; */
   font-size: 5rem;
   /* color: #e044ee; */
-  color: black;
+  /* color: black; */
   /* text-shadow: 50px 50px 100px #000000; */
   /* background-image: linear-gradient(240deg, #FBFF14, #F0A9E3); */
   padding: 5rem;
@@ -318,6 +322,7 @@ h5 {
 #content {
   column-gap: 5%;
   column-count: 2;
+  font-family: 'Oldtype';
 }
 /* #content p {
   border: 2rem solid;

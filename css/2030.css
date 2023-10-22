@@ -66,6 +66,16 @@ div{
   text-align: center;
 }
 
+.container{
+  /* overflow: hidden;
+  white-space: nowrap; */
+  /* max-width: 100%; */
+}
+.animated-text{
+  border-right: none;
+  display: inline-block;
+}
+
 /* .text-flicker-out-glow {
 	-webkit-animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;
 	        animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;
