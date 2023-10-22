@@ -14,7 +14,7 @@ body{
 }
 #maintitle {
     font-size: 4rem;
-    font-family: 'ProtoMolecule';
+    font-family: 'ProtoMolecule', serif;
     color: rgb(218, 218, 218);
     text-transform: lowercase;
 
@@ -24,18 +24,18 @@ body{
   background-color: rgb(218, 218, 218);
 }
 h1, h2, h3, h4, h5, a, blockquote{
-  font-family: "ProtoMolecule";
+  font-family: "ProtoMolecule", serif;
   color: rgb(218, 218, 218)
 }
 
 p{
-  font-family: "ProtoMolecule";
+  font-family: "ProtoMolecule", serif;
   color: rgb(218, 218, 218);
   font-size: 1rem;
 }
 
 div{
-  font-family: "ProtoMolecule";
+  font-family: "ProtoMolecule", serif;
   color: rgb(218, 218, 218);
   font-size: 1rem;
 }
@@ -65,16 +65,14 @@ div{
   left: 7vw;
   text-align: center;
 }
-
-.container{
-  /* overflow: hidden;
-  white-space: nowrap; */
-  /* max-width: 100%; */
-}
-.animated-text{
-  border-right: none;
+/* .container{
   display: inline-block;
-}
+  text-align: center;
+  justify-content: center;
+} */
+
+
+
 
 /* .text-flicker-out-glow {
 	-webkit-animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;

@@ -3,6 +3,7 @@ let interval = null;
 
 document.querySelector("#maintitle").onmouseover = event => {
     if (loadedStyle === 'css/2030.css') {
+        // console.log("loadedstyle: ", loadedStyle)
         let iteration = 0;
 
         clearInterval(interval);
@@ -27,6 +28,6 @@ document.querySelector("#maintitle").onmouseover = event => {
 
             // Apply animation specific to 'css/2030.css'.
             // You can add your animation logic here.
-        }, 40);
+        }, 50);
     }
 }

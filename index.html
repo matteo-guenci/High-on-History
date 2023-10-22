@@ -142,6 +142,8 @@
         
         </script>
         <script src="scripts/maintitle_animation.js"></script>
+        <script src="scripts/text_animation.js"></script>
+
 
         <script>
             const stylesheetLink = document.getElementById('stile');
@@ -378,7 +380,7 @@
                 <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
                 <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
                 <script>
-                    window.loadedStyle = '';
+                    var loadedStyle = '';
                     function change(value) {
                         const stylesheetLink = document.getElementById('stile');
                         
@@ -421,7 +423,6 @@
                         }
                         
                     }
-                    
                 </script>
                     </nav>
                 </nav>
@@ -434,7 +435,7 @@
     <div data-bs-target="#navbar-documentation" class="col-md-9 col-xs-11" id="main-background">
         <div id="content">
             <h3 id="main">High on History</h3>
-            <p>High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual <span class="text-brutal">time travelling experience</span> across past and future typography trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span> in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is <span class="text-brutal">geo-referenced</span> and its metadata are accessible to the user through a sidebar on the left side of the articles.  
+            <p class="animated-text">High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual <span class="text-brutal">time travelling experience</span> across past and future typography trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span> in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is <span class="text-brutal">geo-referenced</span> and its metadata are accessible to the user through a sidebar on the left side of the articles.  
 
             <hr>
 
@@ -553,6 +554,5 @@
             <p>High on History 2023 <br> All copyrights and related rights on the issues content remain with the original owners of the articles <br> All copyright on the typographic and layout choices are 2023 ©BertoldiniGuenciSorrentino <br> Project developed for the course Web Technology and Development by Fabio Vitali <br> DHDK Master's Degree</p>
     </div>
 </footer>
-<script src="scripts/text_animation.js"></script>
 </body>
 </html>
