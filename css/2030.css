@@ -6,6 +6,9 @@
     font-family: 'ProtoMolecule';
     src: url(/fonts/Protomolecule.ttf);
   }
+
+    /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
+
 body{
     background-color: rgb(15, 15, 15);
 }

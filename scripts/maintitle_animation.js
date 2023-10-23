@@ -1,6 +1,7 @@
+// if (currentStyle.endsWith("2030.css")) soluzione alternativa a if loadedstyle....
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
-
 document.querySelector("#maintitle").onmouseover = event => {
     if (loadedStyle === 'css/2030.css') {
         // console.log("loadedstyle: ", loadedStyle)
