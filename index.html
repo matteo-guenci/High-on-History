@@ -135,7 +135,7 @@
         <div id="image_artnouveau"><img id="woman" src="imgs/woman.png"></div>
         <!-- <button class="btn-spin" onclick="playpause()"></button> -->
         <button id="button" class="btn-spin" onclick="mappa.myFunction()"></button>
-        <div class="sign" id="main-title"><h1 data-value="High on History" id="maintitle" class="text-flicker-out-glow">High on History</div>
+        <div class="sign" id="main-title"><h1 data-value="High on History" id="maintitle">High on History</div>
     <div id="punk"><img id="punkhead" src="imgs/zine_cover.jpeg"></div>
         <script>
             // TO MAKE THE MAP APPEAR YOU MUST
@@ -534,19 +534,39 @@
 <h2>Team</h2>
 <div class="image-row">
     <div class="image-container">
-        <img src="imgs/lucia.jpg" alt="Lucia Bertoldini">
+        <div class="screen">
+            <div class="screen-image">
+                <img src="imgs/lucia.jpg" alt="Lucia Bertoldini">
+            </div>
+            <div class="screen-overlay"></div>
+        </div>
         <div class="label"><h4>Lucia Bertoldini</h4></div>
     </div>
     <div class="image-container">
-        <img src="" alt="participant 2">
+        <div class="screen">
+            <div class="screen-image">
+                <img src="" alt="participant 2">
+            </div>
+            <div class="screen-overlay"></div>
+        </div>
         <div class="label"><h4>Stefano Sorrentino</h4></div>
     </div>
     <div class="image-container">
-        <img src="" alt="participant 3">
-        <div class="label"><h4 class="animated-text">Matteo Guenci</h4></div>
+        <div class="screen">  
+            <div class="screen-image">
+                <img src="imgs/matteo.jpeg" alt="Matteo Guenci">
+            </div>  
+            <div class="screen-overlay"></div>  
+        </div>
+          <div class="label"><h4>Matteo Guenci</h4></div>
+
     </div>
 </div>
 </div>
+
+  
+  
+  
 
 
 <!-- Footer -->
@@ -558,6 +578,6 @@
     </div>
 </footer>
 <script src="scripts/text_animation.js"></script>
-
+<script src="scripts/cards.js"></script>
 </body>
 </html>
