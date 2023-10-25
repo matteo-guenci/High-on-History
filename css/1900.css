@@ -30,3 +30,12 @@
 .striscia_sx {
     display: none
 }
+
+#maintitle {
+    font-size: 9vh;
+    font-family: 'Alata', sans-serif;
+    color: black;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
