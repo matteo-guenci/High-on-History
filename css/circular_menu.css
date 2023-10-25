@@ -109,6 +109,16 @@ nav.open .nav-content span{
     display: none; 
 }
 
+#it1-3:hover {
+    background-image: url(../imgs/boccioni.jpg) !important;
+    background-size: contain !important;
+    z-index: 3000;
+}
+
+#it1-3:hover #number_1900 {
+    display: none; 
+}
+
 #it1-4:hover {
     background-image: url(../imgs/button_1950.png) !important;
     background-size: contain !important;

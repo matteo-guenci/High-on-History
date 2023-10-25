@@ -50,4 +50,10 @@
     z-index: 998;
 }
 
+.nav-content .toggle-btn {
+    background-image: url(../imgs/boccioni2.png);
+    background-size: contain;
+    zoom: 150%;
+}
+
 
