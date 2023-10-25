@@ -24,28 +24,28 @@
 //         });
 //     }
 // );
-console.log("currentStyle: ", currentStyle)
-function typeText(element, text, index) {
-    console.log("ciaoooo")
-    if (index < text.length) {
-        element.textContent += text.charAt(index);
-        setTimeout(function() {
-            typeText(element, text, index + 1);
-        }, 50);
-    }
-}
+// console.log("currentStyle: ", currentStyle)
+// function typeText(element, text, index) {
+//     console.log("ciaoooo")
+//     if (index < text.length) {
+//         element.textContent += text.charAt(index);
+//         setTimeout(function() {
+//             typeText(element, text, index + 1);
+//         }, 50);
+//     }
+// }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Use the already declared loadedStyle variable
-    var currentStyle = stylesheetLink.getAttribute("href");
-    if (currentStyle.endsWith("2030.css"))  {
-        console.log("ciaoooo2")
-        var elements = document.querySelectorAll('.animated-text');
-        elements.forEach(function(element) {
-            var textToType = element.textContent;
-            element.textContent = ''; // Clear the initial text
-            typeText(element, textToType, 0);
-        }
-    );
-    }
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Use the already declared loadedStyle variable
+//     var currentStyle = stylesheetLink.getAttribute("href");
+//     if (currentStyle.endsWith("2030.css"))  {
+//         console.log("ciaoooo2")
+//         var elements = document.querySelectorAll('.animated-text');
+//         elements.forEach(function(element) {
+//             var textToType = element.textContent;
+//             element.textContent = ''; // Clear the initial text
+//             typeText(element, textToType, 0);
+//         }
+//     );
+//     }
+// });
