@@ -39,3 +39,16 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#depero {
+    display:inline-block;
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    z-index: 998;
+}
+
+#campari {
+    width: 100%;
+    position: sticky;
+}

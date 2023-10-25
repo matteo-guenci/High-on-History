@@ -137,12 +137,27 @@
         <button id="button" class="btn-spin" onclick="mappa.myFunction()"></button>
         <div class="sign" id="main-title"><h1 data-value="High on History" id="maintitle">High on History</div>
     <div id="punk"><img id="punkhead" src="imgs/zine_cover.jpeg"></div>
-        <script>
-            // TO MAKE THE MAP APPEAR YOU MUST
-            // ADD YOUR ACCESS TOKEN FROM
-            // https://account.mapbox.com
-        
-        </script>
+    <div id="depero"><img id="campari" src="imgs/campari.png"></div>
+    <script type="text/javascript">
+        (function() {
+      var urls = ['imgs/campari', 'imgs/campari2'];
+      function swap() {
+        console.log((urls[Math.round(Math.random() * (urls.length))] + '.png'));
+        if ((urls[Math.round(Math.random() * (urls.length))] + '.png') != 'undefined.png') {
+            document.getElementById('campari').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
+            if (document.getElementById('campari').getAttribute('src')=='undefined.png') {
+                document.getElementById('campari').setAttribute('src', 'imgs/campari.png');
+            }
+        }
+      }
+    
+      // Mozilla, Opera and webkit nightlies currently support this event
+      if ( document.addEventListener ) {
+        window.addEventListener( 'load', swap, false );
+      // If IE event model is used
+      } 
+    })();
+      </script>
         <!-- <script src="scripts/text_animation.js"></script> -->
 
         <script src="scripts/maintitle_animation.js"></script>
