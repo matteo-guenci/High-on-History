@@ -63,6 +63,11 @@ div{
   object-fit: cover; 
 }
 
+.label h4{
+  /* background-color: aliceblue; */
+  font-size: 1.605em;
+  font
+}
 
 
 
@@ -392,7 +397,7 @@ div{
     transparent 9px
   );
   background-size: 100% 9px;
-  height: 100%;
+  height: 90%;
   width: 100%;
   animation: pan-overlay 22s infinite linear;
   /* position: absolute; */

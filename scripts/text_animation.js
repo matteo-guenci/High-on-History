@@ -49,3 +49,35 @@
 //     );
 //     }
 // });
+
+function typeText(element, text, index) {
+    if (index < text.length) {
+        element.textContent += text.charAt(index);
+        setTimeout(function() {
+            typeText(element, text, index + 1);
+        }, 50);
+    }
+}
+
+function checkStyleAndApplyChanges() {
+    if (loadedStyle === "css/2030.css") {
+        applyChanges();
+    }
+}
+
+function applyChanges() {
+    var elements = document.querySelectorAll('.animated-text');
+    elements.forEach(function(element) {
+        var textToType = element.textContent;
+        element.textContent = ''; // Clear the initial text
+        typeText(element, textToType, 0);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    checkStyleAndApplyChanges(); // Check the style when the page is loaded
+
+    // Set an interval to check and apply changes every second
+    setInterval(checkStyleAndApplyChanges, 10000);
+});
+
