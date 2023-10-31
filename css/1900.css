@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Righteous&display=swap');
 
 .sfondo {
-    background-color: blanchedalmond;
+    background-color: rgb(251, 239, 204);
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -38,8 +38,8 @@
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
-    border-bottom: 5px solid black;
-    border-top: 5px solid black;
+    border-bottom: 5px solid firebrick;
+    border-top: 5px solid firebrick;
 }
 
 #depero {
@@ -56,4 +56,14 @@
     zoom: 150%;
 }
 
+#navpage {
+    background-color: rgb(251, 239, 204) !important;
+    border-top: 4px solid firebrick;
+    border-bottom: 4px solid firebrick;
+    color: black !important
+}
 
+.navigazione {
+    background-color: rgb(251, 239, 204) !important;
+    
+}
