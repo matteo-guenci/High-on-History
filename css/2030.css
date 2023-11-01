@@ -25,6 +25,7 @@ body{
 #maintitle:hover{
   color: rgb(15, 15, 15);
   background-color: rgb(218, 218, 218);
+  box-shadow: 5px 5px 10px rgb(218, 218, 218);
 }
 
 h1, h2, h3, h4, h5, a, blockquote{
@@ -66,7 +67,7 @@ div{
 .label h4{
   /* background-color: aliceblue; */
   font-size: 1.605em;
-  font
+  /* font */
 }
 
 

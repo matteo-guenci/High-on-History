@@ -422,50 +422,73 @@
                 <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
                 <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
                 <script>
-                    var loadedStyle = '';
-                    function change(value) {
-                        const stylesheetLink = document.getElementById('stile');
-                        
-                        if (value === 'it2-1' || value === 'it1-1') {
-                            stylesheetLink.href = 'css/1500.css';
-                            loadedStyle = 'css/1500.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+                        var blocked = false;    
+                        document.addEventListener("changeCss", function(event) {
+                            blocked = false;    
+                            if(event.detail.animation) {
+                                document.querySelector("#maintitle").onmouseover = animazione;
+                                var elements = document.querySelectorAll('.animated-text');    
+                                elements.forEach(function(element) {    
+                                    startTypeText(element) ;    
+                                });    
+                            } else {    
+                                clearInterval(interval);
+                                blocked = true;    
+                                elements.forEach(function(element) {
+                                    startTypeText(element) ;    
+                                });
+                                document.querySelector("#maintitle").textContent = "High on History";
+                                document.querySelector("#maintitle").onmouseover = null;    
+                            };
+                        });    
+                        function change(value) {
+                            const stylesheetLink = document.getElementById('stile');              
+                             var oggetto = {};    
+                            if (value === 'it2-1' || value === 'it1-1') {
+                                oggetto =  { cssname: 'css/1500.css', animation: false };
+                                stylesheetLink.href = 'css/1500.css';
+                                document.querySelector("#maintitle").onmouseover = null;
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+                            }
+                            else if (value === 'it2-2' || value === 'it1-2') {
+                                oggetto =  { cssname: 'css/1800.css', animation: false };
+                                stylesheetLink.href = 'css/1800.css';
+                                document.querySelector("#maintitle").onmouseover = null;
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
+                            }
+                            else if (value === 'it2-3' || value === 'it1-3') {
+                                oggetto =  { cssname: 'css/1900.css', animation: false };
+                                stylesheetLink.href = 'css/1900.css';
+                                document.querySelector("#maintitle").onmouseover = null;
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
+                            }
+                            else if (value === 'it2-4' || value === 'it1-4') {
+                                oggetto =  { cssname: 'css/1960.css', animation: false };
+                                stylesheetLink.href = 'css/1960.css';
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+                            }
+                            else if (value === 'it2-5' || value === 'it1-5') {
+                                oggetto =  { cssname: 'css/1990s.css', animation: false };
+                                stylesheetLink.href = 'css/1990s.css';
+                                document.querySelector("#maintitle").onmouseover = null;
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
+                            }
+                            else if (value === 'it2-6' || value === 'it1-6') {
+                                oggetto =  { cssname: 'css/2030.css', animation: true };
+                                stylesheetLink.href = 'css/2030.css';
+                                currentStyle=stylesheetLink.getAttribute("href");
+                                mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
+                            }
+                            document.dispatchEvent(new CustomEvent("changeCss", {
+                                detail: oggetto
+                             }));    
                         }
-                        else if (value === 'it2-2' || value === 'it1-2') {
-                            stylesheetLink.href = 'css/1800.css';
-                            loadedStyle = 'css/1800.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-                            
-                        }
-                        else if (value === 'it2-3' || value === 'it1-3') {
-                            stylesheetLink.href = 'css/1900.css';
-                            loadedStyle = 'css/1900.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-                        }
-                        else if (value === 'it2-4' || value === 'it1-4') {
-                            stylesheetLink.href = 'css/1960.css';
-                            loadedStyle = 'css/1960.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-                        }
-                        else if (value === 'it2-5' || value === 'it1-5') {
-                            stylesheetLink.href = 'css/1990s.css';
-                            loadedStyle = 'css/1990s.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-                        }
-                        else if (value === 'it2-6' || value === 'it1-6') {
-                            stylesheetLink.href = 'css/2030.css';
-                            loadedStyle = 'css/2030.css';
-                            currentStyle=stylesheetLink.getAttribute("href");
-                             mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-                        }
-                        
-                    }
-                </script>
+                    </script>
                     </nav>
                 </nav>
             </nav>
@@ -564,7 +587,7 @@
 </div>
 </div>
 
-<script src="scripts/fullscreenimage.js"></script>
+<!-- <script src="scripts/fullscreenimage.js"></script> -->
 
 
 <!-- About section  -->
