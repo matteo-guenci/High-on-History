@@ -71,7 +71,12 @@ div{
 }
 
 
-
+.mapbox-improve-map{
+  display: none;
+}
+.mapboxgl-ctrl-attrib-inner{
+  display: none;
+}
 /* .container{
   display: inline-block;
   text-align: center;

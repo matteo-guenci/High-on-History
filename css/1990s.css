@@ -331,7 +331,12 @@ h5 {
 } */
 
 
-
+.mapbox-improve-map{
+  display: none;
+}
+.mapboxgl-ctrl-attrib-inner{
+  display: none;
+}
 /* per le immagini (principalmente) */
 /* .zine {
   z-index: 998;
