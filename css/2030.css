@@ -11,6 +11,7 @@
 
 body{
     background-color: rgb(15, 15, 15);
+    overflow-x: hidden;
 }
 .navigazione {
     background-color: rgb(15, 15, 15) !important; 

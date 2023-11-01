@@ -43,6 +43,7 @@
 
 
 body {
+  overflow-x: hidden;
     /* background-color: #bbb;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, #ddd, #777),
