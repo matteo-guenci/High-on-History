@@ -58,6 +58,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'EB Garamond', serif;
     letter-spacing: -1px;
     justify-content: center; 
