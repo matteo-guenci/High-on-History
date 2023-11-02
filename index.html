@@ -427,16 +427,16 @@
                             blocked = false;    
                             if(event.detail.animation) {
                                 document.querySelector("#maintitle").onmouseover = animazione;
-                                var elements = document.querySelectorAll('.animated-text');    
-                                elements.forEach(function(element) {    
-                                    startTypeText(element) ;    
-                                });    
+                                //var elements = document.querySelectorAll('.animated-text');    
+                                //elements.forEach(function(element) {    
+                                  //  startTypeText(element) ;    
+                                //});    
                             } else {    
                                 clearInterval(interval);
                                 blocked = true;    
-                                elements.forEach(function(element) {
-                                    startTypeText(element) ;    
-                                });
+                                //elements.forEach(function(element) {
+                                   // startTypeText(element) ;    
+                                //});
                                 document.querySelector("#maintitle").textContent = "High on History";
                                 document.querySelector("#maintitle").onmouseover = null;    
                             };
