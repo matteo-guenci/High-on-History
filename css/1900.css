@@ -9,7 +9,7 @@ body {
     font-family: 'IM Fell DW Pica', serif !important;
 }
 #title {
-    font-family: 'Alata', sans-serif;
+    font-family: 'Alata', sans-serif !important;
     text-transform: uppercase
 }
 
@@ -76,3 +76,16 @@ body {
 .navbar {
     border-bottom: 4px solid firebrick !important; 
 }
+
+.components button {
+    background-color: rgb(251, 239, 204);
+    border: 2px black solid
+}
+
+.accordion-button {
+    background-color: rgb(251, 239, 204) !important;
+    font-family: 'IM Fell DW Pica', sans-serif;
+    text-transform: uppercase;
+    font-size: 4vh;
+    font-weight: bold;
+ }

@@ -578,7 +578,7 @@ blockquote {
 }
 
 .second_image {
-    all:unset
+    display: none
 }
 
 .img_paragraph {

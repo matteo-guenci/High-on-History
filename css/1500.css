@@ -513,7 +513,7 @@ ul ul a {
 }
 
 .second_image {
-    all:unset
+    display: none;
 }
 
 .img_paragraph{
