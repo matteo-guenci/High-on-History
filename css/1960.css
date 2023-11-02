@@ -53,6 +53,7 @@ left: 33%;
 
 body {
     font-family: 'STIX Two Text', serif;
+    overflow-x: hidden;
 }
 
 #sidebar {

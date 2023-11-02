@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=IM+Fell+DW+Pica:ital@0;1&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Alata&family=IM+Fell+DW+Pica:ital@0;1&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
+@font-face {
+    font-family: 'News';
+    src: url(../fonts/OldNewspaperTypes.ttf);
+}
 
 .sfondo {
     background-color: rgb(251, 239, 204);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'News', Times, serif;
 }
 body {
-    font-family: 'IM Fell DW Pica', serif !important;
+    font-family: 'News', serif !important;
+    overflow-x: hidden;
 }
 #title {
     font-family: 'Alata', sans-serif !important;
-    text-transform: uppercase
+    text-transform: uppercase;
+    letter-spacing: -5px;
 }
 
 .btn {
@@ -20,10 +26,6 @@ body {
 #sidebar .sidebar-header {
     padding: 20px;
     background: firebrick !important;
-}
-
-.paragraph {
-    all: unset !important
 }
 
 .second_image {
@@ -36,13 +38,14 @@ body {
 
 #maintitle {
     font-size: 9vh;
-    font-family: 'Alata', sans-serif;
+    font-family: 'Alata', sans-serif !important;
     color: black;
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 5px solid firebrick;
     border-top: 5px solid firebrick;
+    letter-spacing: -5px;
 }
 
 #depero {
@@ -68,7 +71,7 @@ body {
 
 .navigazione {
     background-color: rgb(251, 239, 204) !important;
-    font-family: 'IM Fell DW Pica', serif !important;
+    font-family: 'News', serif !important;
     font-style: italic !important;
     
 }
@@ -84,8 +87,57 @@ body {
 
 .accordion-button {
     background-color: rgb(251, 239, 204) !important;
-    font-family: 'IM Fell DW Pica', sans-serif;
+    font-family: 'News', sans-serif;
     text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
     font-size: 4vh;
     font-weight: bold;
  }
+
+ .accordion-body {
+    background-color: rgb(251, 239, 204) !important;
+ }
+
+ .paragraph {
+    font-size: smaller;
+    display: block ;
+    text-align: justify;
+    column-count: 5;
+    column-gap: 1%;
+    position: relative;
+    column-rule: solid 2px;
+}
+
+/* extra */
+
+#punk{
+    /* width: 20vw;
+    height: 20vh; */
+    position: relative;
+    overflow: visible;
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    z-index: 998;
+    background: transparent;
+  }
+
+.hide_image {
+    all: unset
+}
+
+.second_image {
+    display: none;
+}
+
+.img_paragraph{
+    all: unset !important;
+    display: none !important;
+    visibility: hidden !important
+}
+
+.striscia_sx {
+    display: none
+}
