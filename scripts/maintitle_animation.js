@@ -1,26 +1,23 @@
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
-document.querySelector("#maintitle").onmouseover = event => {
-    if (currentStyle.endsWith("2030.css")) {
-    // console.log("loadedstyle: ", loadedStyle)
+function animazione(){
         let iteration = 0;
 
         clearInterval(interval);
 
         interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
+            this.innerText = this.innerText
                 .split("")
                 .map((letter, index) => {
                     if (index < iteration) {
-                        return event.target.dataset.value[index];
+                        return this.dataset.value[index];
                     }
 
                     return letters[Math.floor(Math.random() * 26)]
                 })
                 .join("");
 
-            if (iteration >= event.target.dataset.value.length) {
+            if (iteration >= this.dataset.value.length) {
                 clearInterval(interval);
             }
 
@@ -30,4 +27,3 @@ document.querySelector("#maintitle").onmouseover = event => {
             // You can add your animation logic here.
         }, 50);
     }
-}

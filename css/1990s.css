@@ -43,6 +43,7 @@
 
 
 body {
+  overflow-x: hidden;
     /* background-color: #bbb;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, #ddd, #777),
@@ -331,7 +332,12 @@ h5 {
 } */
 
 
-
+.mapbox-improve-map{
+  display: none;
+}
+.mapboxgl-ctrl-attrib-inner{
+  display: none;
+}
 /* per le immagini (principalmente) */
 /* .zine {
   z-index: 998;
