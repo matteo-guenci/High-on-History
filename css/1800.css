@@ -63,6 +63,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Bodoni Moda', serif;
     justify-content: center; 
     background-color: rgba(240, 196, 170, 1);
