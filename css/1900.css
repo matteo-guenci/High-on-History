@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=IM+Fell+DW+Pica:ital@0;1&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
+
 
 .sfondo {
     background-color: rgb(251, 239, 204);
     font-family: 'Times New Roman', Times, serif;
 }
-
+body {
+    font-family: 'IM Fell DW Pica', serif !important;
+}
 #title {
     font-family: 'Alata', sans-serif;
     text-transform: uppercase
@@ -65,5 +68,11 @@
 
 .navigazione {
     background-color: rgb(251, 239, 204) !important;
+    font-family: 'IM Fell DW Pica', serif !important;
+    font-style: italic !important;
     
+}
+
+.navbar {
+    border-bottom: 4px solid firebrick !important; 
 }
