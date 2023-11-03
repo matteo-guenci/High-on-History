@@ -66,9 +66,11 @@ div{
 }
 
 .label h4{
-  /* background-color: aliceblue; */
-  font-size: 1.605em;
-  /* font */
+  max-width: 100%;
+  min-width: 1.605em;
+  max-height: 100%;
+  min-height: 1.605em;
+  /* font-size: 1.605em; */
 }
 
 
@@ -85,7 +87,14 @@ div{
 } */
 
 
-
+/* .documentation-img{
+  width: 500px;
+  display: flex;
+  border: 3px solid rgba(33, 150, 243, 0.8);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+} */
 
 .text-flicker-out-glow {
 	-webkit-animation: text-flicker-out-glow 2s linear infinite alternate-reverse both;

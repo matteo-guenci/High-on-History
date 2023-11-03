@@ -44,6 +44,7 @@
 
 body {
   overflow-x: hidden;
+  background-image: url(/imgs/carta.jpg);
     /* background-color: #bbb;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, #ddd, #777),
@@ -513,3 +514,7 @@ h5 {
   padding-top: 3rem;
 }
 
+/* .image-row .image-container img{
+  width: 100vw;
+  height: 60vh;
+} */

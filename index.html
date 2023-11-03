@@ -421,74 +421,113 @@
                 <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change(this.id)">Second half of Twentieth Century</a>
                 <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
                 <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
-                <script>
-                        var blocked = false;    
-                        document.addEventListener("changeCss", function(event) {
-                            blocked = false;    
-                            if(event.detail.animation) {
-                                document.querySelector("#maintitle").onmouseover = animazione;
-                                //var elements = document.querySelectorAll('.animated-text');    
-                                //elements.forEach(function(element) {    
-                                  //  startTypeText(element) ;    
-                                //});    
-                            } else {    
-                                clearInterval(interval);
-                                blocked = true;    
-                                //elements.forEach(function(element) {
-                                   // startTypeText(element) ;    
-                                //});
-                                document.querySelector("#maintitle").textContent = "High on History";
-                                document.querySelector("#maintitle").onmouseover = null;    
-                            };
-                        });    
-                        function change(value) {
-                            const stylesheetLink = document.getElementById('stile');              
-                             var oggetto = {};    
-                            if (value === 'it2-1' || value === 'it1-1') {
-                                oggetto =  { cssname: 'css/1500.css', animation: false };
-                                stylesheetLink.href = 'css/1500.css';
-                                document.querySelector("#maintitle").onmouseover = null;
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-                            }
-                            else if (value === 'it2-2' || value === 'it1-2') {
-                                oggetto =  { cssname: 'css/1800.css', animation: false };
-                                stylesheetLink.href = 'css/1800.css';
-                                document.querySelector("#maintitle").onmouseover = null;
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-                            }
-                            else if (value === 'it2-3' || value === 'it1-3') {
-                                oggetto =  { cssname: 'css/1900.css', animation: false };
-                                stylesheetLink.href = 'css/1900.css';
-                                document.querySelector("#maintitle").onmouseover = null;
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-                            }
-                            else if (value === 'it2-4' || value === 'it1-4') {
-                                oggetto =  { cssname: 'css/1960.css', animation: false };
-                                stylesheetLink.href = 'css/1960.css';
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-                            }
-                            else if (value === 'it2-5' || value === 'it1-5') {
-                                oggetto =  { cssname: 'css/1990s.css', animation: false };
-                                stylesheetLink.href = 'css/1990s.css';
-                                document.querySelector("#maintitle").onmouseover = null;
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-                            }
-                            else if (value === 'it2-6' || value === 'it1-6') {
-                                oggetto =  { cssname: 'css/2030.css', animation: true };
-                                stylesheetLink.href = 'css/2030.css';
-                                currentStyle=stylesheetLink.getAttribute("href");
-                                mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-                            }
-                            document.dispatchEvent(new CustomEvent("changeCss", {
-                                detail: oggetto
-                             }));    
-                        }
-                    </script>
+                <script src="scripts/pubsub.js"></script>
+
+<script>
+
+ 
+
+      //esegue la funzione solo dopo che la pagina è stata caricata per intero
+
+      document.addEventListener('DOMContentLoaded', function() {
+
+             init();
+
+      }, false);
+
+ 
+
+      function change(value) {
+
+             const stylesheetLink = document.getElementById('stile');
+
+ 
+
+ 
+
+             var oggetto = {};
+
+             if (value === 'it2-1' || value === 'it1-1') {
+
+                   oggetto = { cssname: 'css/1500.css', animation: false };
+
+                   stylesheetLink.href = 'css/1500.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+
+             }
+
+             else if (value === 'it2-2' || value === 'it1-2') {
+
+                   oggetto = { cssname: 'css/1800.css', animation: false };
+
+                   stylesheetLink.href = 'css/1800.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
+
+ 
+
+             }
+
+             else if (value === 'it2-3' || value === 'it1-3') {
+
+                   oggetto = { cssname: 'css/1900.css', animation: false };
+
+                   stylesheetLink.href = 'css/1900.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
+
+             }
+
+             else if (value === 'it2-4' || value === 'it1-4') {
+
+                   oggetto = { cssname: 'css/1960.css', animation: false };
+
+                   stylesheetLink.href = 'css/1960.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+
+             }
+
+             else if (value === 'it2-5' || value === 'it1-5') {
+
+                   oggetto = { cssname: 'css/1990s.css', animation: false };
+
+                   stylesheetLink.href = 'css/1990s.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
+
+             }
+
+             else if (value === 'it2-6' || value === 'it1-6') {
+
+                   oggetto = { cssname: 'css/2030.css', animation: true };
+
+                   stylesheetLink.href = 'css/2030.css';
+
+                   currentStyle = stylesheetLink.getAttribute("href");
+
+                   mappa = createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
+
+             }
+
+            
+
+             pubSubInstance.publish("changeCss", oggetto);
+
+      }
+
+</script>
                     </nav>
                 </nav>
             </nav>
@@ -500,12 +539,33 @@
     <div data-bs-target="#navbar-documentation" class="col-md-9 col-xs-11" id="main-background">
         <div id="content">
             <h3 id="main">High on History</h3>
-            <p class="animated-text">High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual <span class="text-brutal">time travelling experience</span> across past and future typography trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span> in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is <span class="text-brutal">geo-referenced</span> and its metadata are accessible to the user through a sidebar on the left side of the articles.  
+            <p class="animated-text" data-value='High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps,
+                Magazines and Metadata) project developed to transform reading into a virtual <span
+                class="text-brutal">time travelling experience</span> across past and future typography
+                trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span>
+                in warfare are displayed in three issues of the magazine. The articles are organised in issues
+                according to the time period they relate to. The issues are "Antiquity", "The Two World Wars"
+                and "Contemporaneity". Each article is <span class="text-brutal">geo-referenced</span> and its
+                metadata are accessible to the user through a sidebar on the left side of the articles.'>High on History is a <span class="text-brutal">MMMM</span> (Mixing Maps, Magazines and Metadata) project developed to transform reading into a virtual <span class="text-brutal">time travelling experience</span> across past and future typography trends. Nine articles related to the topic of the usage of <span clas="text-brutal">drugs</span> in warfare are displayed in three issues of the magazine. The articles are organised in issues according to the time period they relate to. The issues are "Antiquity", "The Two World Wars" and "Contemporaneity". Each article is <span class="text-brutal">geo-referenced</span> and its metadata are accessible to the user through a sidebar on the left side of the articles.  
 
             <hr>
 
             <h5 id="how" class="mb-3 mt-1" >Disclaimer</h5>
-            <p>The scope of the project is purely related to the university course "Web Technology and Development" of the Master Degree in Digital Humanities and Digital Knowledge of the University of Bologna taught by Fabio Vitali. Please note that this website does not aim to be an official magazine. The creators of the website are not the authors of the articles displayed, and the grouping of the articles in issues is subjected to the creators of this project. In no way the articles displayed on "High On History" are associated beyond this project. The articles were selected for their lenght and complexity from external sources, and the publication on "High on History" does not intend to replace their original publication. Please refer to the original source of the article for further specifications in relation to the authors, the publication date and the editorial data.
+            <p class="animated-text" data-value='The scope of the project is purely related to the university course "Web Technology and Development" of the Master Degree in Digital Humanities and Digital Knowledge of the University of Bologna taught by Fabio Vitali. Please note that this website does not aim to be an official magazine. The creators of the website are not the authors of the articles displayed, and the grouping of the articles in issues is subjected to the creators of this project. In no way the articles displayed on "High On History" are associated beyond this project. The articles were selected for their lenght and complexity from external sources, and the publication on "High on History" does not intend to replace their original publication. Please refer to the original source of the article for further specifications in relation to the authors, the publication date and the editorial data.
+            <ul>
+                <li><a href="https://www.jstor.org/stable/10.2307/48637201">The Assassins in Fact and Fiction</a></li>
+                <li><a href="https://www.jstor.org/stable/42909562">Hashish, Assassins, and the Love of God</a></li>
+                <li><a href="https://doi.org/10.1016/j.jep.2019.112151">Sagas of the Solanaceae: Speculative ethnobotanical perspectives on the Norse berserkers</a></li>
+                <li><a href="https://warfarehistorynetwork.com/article/forty-rrod-blue-ruin-oh-be-joyful-civil-war-alcohol-abuse/">Forty-rod, Blue Ruin & Oh Be Joyful: Civil War Alcohol Abuse</a></li>
+                <li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)62234-0/fulltext">Drugs, alcohol, and the First World War</a></li>
+                <li><a href="https://time.com/5752114/nazi-military-drugs/">How Methamphetamine Became a Key Part of Nazi Military Strategy</a></li>
+                <li><a href="https://www.hrw.org/news/2008/04/16/coercion-and-intimidation-child-soldiers-participate-violence">Coercion and Intimidation of Child Soldiers to Participate in
+                    Violence</a></li>
+                <li><a href="https://tcf.org/content/report/the-drugs-of-war/">The Drugs of War—Captagon
+                    and the Islamic State</a></li>
+                <li><a href="https://www.army-technology.com/features/featurecreating-supermen-battlefield-performance-enhancing-drugs/">Creating Supermen: battlefield performance enhancing drugs</a></li>
+            </ul>
+        </p>'>The scope of the project is purely related to the university course "Web Technology and Development" of the Master Degree in Digital Humanities and Digital Knowledge of the University of Bologna taught by Fabio Vitali. Please note that this website does not aim to be an official magazine. The creators of the website are not the authors of the articles displayed, and the grouping of the articles in issues is subjected to the creators of this project. In no way the articles displayed on "High On History" are associated beyond this project. The articles were selected for their lenght and complexity from external sources, and the publication on "High on History" does not intend to replace their original publication. Please refer to the original source of the article for further specifications in relation to the authors, the publication date and the editorial data.
                 <ul>
                     <li><a href="https://www.jstor.org/stable/10.2307/48637201">The Assassins in Fact and Fiction</a></li>
                     <li><a href="https://www.jstor.org/stable/42909562">Hashish, Assassins, and the Love of God</a></li>
@@ -536,7 +596,7 @@
             <p>
                 For the general layout of the page, the inspiring document was 
                 <a href="http://guity-novin.blogspot.com/2010/04/history-of-graphic-design-emergence-of.html">"Chapter 24 - The Emergence of Modern Printing Technique"</a> in Guity Novin's History of Graphic Design. 
-                Overall, the webpage aims to resemble the publication of Historia Florentina (1478) by Poggio Bracciolini. The choice of the two column layout comes instead from the publication of the <a href="https://en.wikipedia.org/wiki/Gutenberg_Bible">Gutemberg Bible</a>, printed in 1450s.<div class="documentation-img"><img src="imgs/doc_1500_1.jpg"></div>
+                Overall, the webpage aims to resemble the publication of Historia Florentina (1478) by Poggio Bracciolini. The choice of the two column layout comes instead from the publication of the <a href="https://en.wikipedia.org/wiki/Gutenberg_Bible">Gutemberg Bible</a>, printed in 1450s.<div class="documentation-img screen"><img src="imgs/doc_1500_1.jpg"></div>
             </p>
             <p>The colours of the inital in this edition also inspired the  
                 However, other fonts have also been used, taking inspiration from publications such as "Der Dritt Teil de Brucher des Ehrn" by Martin Luther in 1566.<span class="text-brutal">Italics</span> is used because it is an invention belonging to the European Reinassance, and the colour red is a feature that appears in the book <a href="http://guity-novin.blogspot.com/2010/04/history-of-graphic-design-emergence-of.html">"Qvesta opra da ogni parte e un libro doro"</a> (1476) by Johannes Müller von Königsberg as well as in "Der Dritt Teil de Brucher des Ehrn" (1566) by Martin Luther previously mentioned.<div class="documentation-img"><img src="imgs/doc_1500-2.jpg"></div>
@@ -610,7 +670,7 @@
             </div>
             <div class="screen-overlay"></div>
         </div>
-        <div class="label"><h4>Lucia Bertoldini</h4></div>
+        <div class="label"><h4 class="animated-text" data-value="Lucia Bertoldini">Lucia Bertoldini</h4></div>
     </div>
     <div class="image-container">
         <div class="screen">
@@ -619,24 +679,21 @@
             </div>
             <div class="screen-overlay"></div>
         </div>
-        <div class="label"><h4>Stefano Sorrentino</h4></div>
+        <div class="label"><h4 class="animated-text" data-value="Stefano Sorrentino">Stefano Sorrentino</h4></div>
     </div>
-    <div class="image-container" id="prova">
+    <div class="image-container">
         <div class="screen">  
             <div class="screen-image">
                 <img src="imgs/matteo.jpeg" alt="Matteo Guenci">
             </div>  
             <div class="screen-overlay"></div>  
         </div>
-          <div class="label"><h4>Matteo Guenci</h4></div>
+          <div class="label"><h4 class="animated-text" data-value="Matteo Guenci">Matteo Guenci</h4></div>
 
     </div>
 </div>
 </div>
 
-  
-  
-  
 
 
 <!-- Footer -->
