@@ -63,7 +63,6 @@ body {
     filter: grayscale(100%) contrast(1) brightness(100%);
   }
 
-
 /* body::before{
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -131,9 +130,13 @@ nav.navbar{
   /* font-weight: bolder; */
   font-size: larger;
 }
+nav.navigazione{
+  border-bottom: solid;
+}
 .nav-link {
   font-family: 'Oldtype';
   font-weight: 900 !important;
+  font-size: 1rem;
 }
 .page-link{
   font-family: 'Oldtype';
@@ -260,6 +263,9 @@ h2{
   font-size: 4rem;
   font-weight: 900;
 }
+#issues h2{
+  padding-bottom: 2rem;
+}
 .container h1, h2{
   /* font-family: 'Mustasurma'; */
   font-family: 'SniffinGlue2';
@@ -273,6 +279,9 @@ h2{
   padding: 5rem;
   transform: rotate(7deg) skew(4deg);
 }
+/* .d-none .d-md-block{
+  overflow-y: hidden;
+} */
 
 h2.navbar-brand{
   font-family: 'Oldtype';
@@ -282,7 +291,16 @@ h2.navbar-brand{
   padding: 0;
 }
 
-
+#navbar-documentation h2{
+  all: unset;
+  font-size: 3rem;
+  font-family: 'SniffinGlue2'; 
+  font-weight: 700;
+}
+/* #navbar-documentation .container h2{
+  padding: none;
+  margin: none;
+} */
 #subtitle{
   font-family: 'SniffinGlue2';
   font-size: 2rem;
