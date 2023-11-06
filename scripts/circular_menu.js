@@ -4,6 +4,7 @@ let isDragging = false;
 let initialY;
 let initialNavTop;
 const margin = 20; // Margine desiderato dalla parte superiore e inferiore
+const margin2 = 350
 const issuesSection = document.getElementById("issues"); // Ottieni la sezione delle issue
 
 toggleBtn.addEventListener("click", () => {
@@ -21,7 +22,8 @@ function onMouseMove(event) {
   if (!isDragging) return;
   const movementY = event.clientY - initialY;
   let newTop = (initialNavTop + movementY);
-  if (newTop < 20) newTop = 20;
+  if (newTop < margin) newTop = margin;
+  if (newTop > margin2) newTop = margin2
   nav.style.top = `${newTop}px`;
 }
 
