@@ -12,6 +12,7 @@
 body {
     font-family: 'News', serif !important;
     overflow-x: hidden;
+    background-color: rgb(251, 239, 204);
 }
 #title {
     font-family: 'DM Serif Display', serif !important;
