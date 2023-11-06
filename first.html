@@ -240,18 +240,33 @@
                         </ul>
                     </li>
                 </ul>
+                <div id="banner-1900" style="display: none"><img src="imgs/fernet.png" id="theImage1900" style="width: 100%"></div>
                 <div id="img_500"><img src="imgs/granjontail01.jpg" id="press_1500"></div>
-                <div id="banner-laterale"><img src="imgs/long-3.png" id="theImage2" style="width: 100%">
+                <div id="banner-laterale"><img src="imgs/long-3.png" id="theImage2" style="width: 100%"></div>
+                
                 <script type="text/javascript">
                     (function() {
                   var urls = ['imgs/long-1', 'imgs/long-2', 'imgs/long-3', 'imgs/long-4'];
+                  var urls2 = ['imgs/fernt', 'imgs/generali', 'imgs/bologna'];
                   function swap() {
                     console.log((urls[Math.round(Math.random() * (urls.length))] + '.png'));
+                    
                   }
                   if ((urls[Math.round(Math.random() * (urls.length))] + '.png') != 'undefined.png') {
                         document.getElementById('theImage2').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
                         if (document.getElementById('theImage2').getAttribute('src')=='undefined.png') {
                             document.getElementById('theImage2').setAttribute('src', 'imgs/long-3.png');
+                        }}
+                
+                  // Mozilla, Opera and webkit nightlies currently support this event
+                  if ( document.addEventListener ) {
+                    window.addEventListener( 'load', swap, false );
+                  // If IE event model is used
+                  } 
+                  if ((urls2[Math.round(Math.random() * (urls2.length))] + '.png') != 'undefined.png') {
+                        document.getElementById('theImage1900').setAttribute('src', urls2[Math.round(Math.random() * (urls2.length))] + '.png');
+                        if (document.getElementById('theImage1900').getAttribute('src')=='undefined.png') {
+                            document.getElementById('theImage1900').setAttribute('src', 'imgs/fernet.png');
                         }}
                 
                   // Mozilla, Opera and webkit nightlies currently support this event

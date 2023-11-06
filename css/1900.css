@@ -68,7 +68,8 @@ body {
     background-color: rgb(251, 239, 204) !important;
     border-top: 4px solid firebrick;
     border-bottom: 4px solid firebrick;
-    color: black !important
+    color: black !important;
+    font-style: italic;
 }
 
 #accordionExample h1 {
@@ -100,6 +101,39 @@ body {
     font-size: medium;
 
  }
+
+.page-link {
+    background-color: rgb(251, 239, 204) !important;
+    color: black;
+    border-color: firebrick;
+}
+
+.page-link:hover {
+    background-color: firebrick !important;
+    color: rgb(251, 239, 204);
+    border-color: black;
+}
+
+#sidebar {
+    background-color: rgb(251, 239, 204);
+    border-top: 5px solid firebrick;
+    border-right: 1px solid firebrick;
+    border-left: 1px solid firebrick;
+    border-bottom: 1px solid firebrick;
+}
+
+#sidebar .dropdown-toggle {
+    background-color: rgb(251, 239, 204) !important;
+    border-bottom: 1px solid rgb(214, 46, 31);
+    color: black !important;
+    font-family: 'News';
+    text-decoration: underline;
+}
+
+#sidebar button:hover {
+    background-color:firebrick !important;
+    color: rgb(251, 239, 204) !important;
+}
 
 .paragraph {
     margin: 0
@@ -154,6 +188,10 @@ p { margin:0 }
 .accordion-button:not(.collapsed) {
     
     color: black;
+}
+
+#banner-1900 {
+    display: inline-block !important
 }
 
 /* extra */

@@ -69,6 +69,11 @@ body {
     text-decoration: underline;
 }
 
+#sidebar button:hover {
+    background-color:rgb(54, 121, 246) !important;
+    color: white !important;
+}
+
 #navpage {
     background-color: rgb(214, 46, 31) !important;
     border-top: 1px solid rgb(214, 46, 31);
