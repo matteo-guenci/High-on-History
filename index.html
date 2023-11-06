@@ -22,6 +22,7 @@
     <!-- <link href="css/2030.css" rel="stylesheet" id="stile"> -->
     
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>var currentStyle="";
 
 </script>
@@ -396,31 +397,46 @@
 
 <!-- Documentation section  -->
 
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#hamburger1').on('click', function () {
+        $('#menu-card').toggleClass('active');
+    });
+
+    // Check window width on load and resize
+    $(window).on('load resize', function () {
+        if ($(window).width() >= 768) { // Adjust the breakpoint (768) to your desired medium screen width
+            $('#menu-card').removeClass('active');
+        }
+    });
+});
+
+</script>
+
 <div id="documentation" class="container">
 <div class="row">
     <h2>Documentation</h2>
     <nav class="navbar navbar-expand-md navbar-light col-md-3 col-sm-1">
-        <button class="navbar-toggler" id="hamburger1" type="button" data-toggle="collapse" data-target="#navbar-documentation">
+        <button class="navbar-toggler" id="hamburger1" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-none d-md-block" id="menu-card">
             <div id="menu-content">
-            <nav id="navbar-documentation" class="navbar align-items-stretch">
-                <h2 href="#item-1">Menu</h2>
-            <nav class="nav nav-pills flex-column">
-                <a class="nav-link" href="#main" id="it1" onclick=
-                "location.href=this.href+'?style='+currentStyle;return false;">High on History</a>
+                <nav id="navbar-documentation" class="navbar align-items-stretch">
+                    <h2>Menu</h2>
                     <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1 scrollto" href="#how">How to use it</a>
-                    </nav>
-                <a class="nav-link scrollto" href="#layout" id="it2">Layout and typographic styles</a>
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ms-3 my-1 scrollto" href="#cen16th" id="it2-1" onClick="change(this.id)">Early Sixteenth century</a>
-                    <a class="nav-link ms-3 my-1 scrollto" href="#cen19th" id="it2-2" onClick="change(this.id)">Nineteenth century</a>
-                    <a class="nav-link ms-3 my-1 scrollto" href="#beginning20thcen" id="it2-3" onClick="change(this.id)">First half of Twentieth Century</a>
-                    <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change(this.id)">Second half of Twentieth Century</a>
-                    <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
-                    <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
+                        <a class="nav-link" href="#main" id="it1" onclick="location.href=this.href+'?style='+currentStyle;return false;">High on History</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1 scrollto" href="#how">How to use it</a>
+                        </nav>
+                        <a class="nav-link scrollto" href="#layout" id="it2">Layout and typographic styles</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1 scrollto" href="#cen16th" id="it2-1" onClick="change(this.id)">Early Sixteenth century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#cen19th" id="it2-2" onClick="change(this.id)">Nineteenth century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#beginning20thcen" id="it2-3" onClick="change(this.id)">First half of Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change(this.id)">Second half of Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
 
 <script src="scripts/pubsub.js"></script>
 
@@ -535,16 +551,6 @@
         </div>
     </div>
 </nav>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#hamburger1').on('click', function () {
-            $('#navbar-documentation').toggleClass('active');
-        });
-    });
-</script>
 
     <div data-bs-target="#navbar-documentation" class="col-md-9 col-xs-11" id="main-background">
         <div id="content">

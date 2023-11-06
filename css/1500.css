@@ -138,6 +138,11 @@ img {
     font-size: 3vw;
 }
 
+.navbar-toggler:focus {
+    text-decoration: none;
+    box-shadow: rgba(211, 83, 56, 1) 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
 #navbar-documentation a {
     text-transform: uppercase; 
     color:rgba(211, 83, 56, 1);

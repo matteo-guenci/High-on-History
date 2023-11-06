@@ -175,3 +175,31 @@
 /* .border_bottom_1800 {
     display: none;
 } */
+
+/* pop up menu-card */
+#menu-card.active {
+    display: block !important; 
+    width: fit-content;
+    height: 65vh;
+    position: relative; 
+    top: 35vh; 
+    left: 15vw; 
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    z-index: 1000; 
+}
+
+#hamburger1 {
+    padding-right: 1vw;
+}
+
+.navbar-toggler-icon {
+    width: 4vw !important;
+    height: 4vw !important;
+}
+
+.navbar-toggler {
+    padding: none !important;
+}
+  

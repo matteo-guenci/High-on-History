@@ -200,6 +200,19 @@ body {
     border-image-slice: 100% 10% 100% 10%;
 }
 
+#menu-card.active {
+    background-color: rgba(46, 26, 46, 1);
+}
+
+#menu-card.active #navbar-documentation {
+    height: 50vh;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    box-shadow: rgba(164, 134, 57, 1) 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
 #navbar-documentation {
     overflow-y: scroll;
     height: 70vh;
