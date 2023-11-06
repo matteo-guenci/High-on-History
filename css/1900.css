@@ -21,6 +21,16 @@ body {
     letter-spacing: -5px;
 }
 
+#date2 {
+    display: inline-block !important;
+    margin-right: 5%
+}
+
+#date3 {
+    display: inline-block !important;
+    margin-right: auto;
+}
+
 .btn {
     background-color: firebrick !important;
 }
@@ -113,6 +123,24 @@ body {
     background-color: firebrick !important;
     color: rgb(251, 239, 204);
     border-color: black;
+}
+
+.attuale {
+    background-color: firebrick !important;
+    color: rgb(251, 239, 204);
+    border-color: black;
+}
+
+.btn:hover {
+    background-color: rgb(251, 239, 204) !important;
+    color: firebrick !important;
+    border: firebrick !important;
+}
+
+.btn:active {
+    background-color: rgb(251, 239, 204) !important;
+    color: firebrick !important;
+    border: firebrick !important;
 }
 
 #sidebar {

@@ -424,6 +424,7 @@
                                     "location.href=this.href+'?style='+currentStyle+'#about';return false;">Team</a>
                             </li>
                         </ul>
+                        <p id="date3" style="display: none"></p>
                         <nav aria-label="Page navigation example" style="margin-top: 1%">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item">
@@ -436,7 +437,7 @@
                                     "location.href=this.href+'?style='+currentStyle;return false;">Antiquity</a></li>
                                 <li class="page-item"><a class="page-link" href="second.html" onclick=
                                     "location.href=this.href+'?style='+currentStyle;return false;">The Two World Wars</a></li>
-                                <li class="page-item"><a class="page-link" href="third.html" onclick=
+                                <li class="page-item"><a class="page-link attuale" href="third.html" onclick=
                                     "location.href=this.href+'?style='+currentStyle;return false;">Present-day</a></li>
                                 
                             </ul>
@@ -444,6 +445,14 @@
                         </div>
                     </div>
                 </nav>
+                <script>
+                    n =  new Date();
+                    y = n.getFullYear();
+                    m = n.getMonth() + 1;
+                    d = n.getDate();
+                    
+                    document.getElementById("date3").innerHTML = m + "/" + d + "/" + y;
+                </script>
                 
                 <img id="woman4" src="imgs/woman4.png">
                 <div class="col-12" style="float: left; padding: 2%;">
