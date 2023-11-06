@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Alata&family=IM+Fell+DW+Pica:ital@0;1&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=DM+Serif+Display:ital@0;1&family=David+Libre&family=IM+Fell+DW+Pica:ital@0;1&family=Imbue:opsz,wght@10..100,500&family=Moul&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
 @font-face {
     font-family: 'News';
@@ -14,7 +14,8 @@ body {
     overflow-x: hidden;
 }
 #title {
-    font-family: 'Alata', sans-serif !important;
+    font-family: 'DM Serif Display', serif !important;
+    font-style: italic;
     text-transform: uppercase;
     letter-spacing: -5px;
 }
@@ -38,14 +39,15 @@ body {
 
 #maintitle {
     font-size: 9vh;
-    font-family: 'Alata', sans-serif !important;
+    font-family: 'DM Serif Display', serif !important;
+    font-style: italic;
     color: black;
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 5px solid firebrick;
     border-top: 5px solid firebrick;
-    letter-spacing: -5px;
+    
 }
 
 #depero {
@@ -69,6 +71,40 @@ body {
     color: black !important
 }
 
+#accordionExample h1 {
+    display: none;
+    
+}
+
+#accordionExample h2:first-of-type {
+    font-family: 'Antonio', sans-serif;
+    text-align: left;
+    margin: 1;
+    letter-spacing: -3;
+}
+
+#accordionExample h2 {
+    font-family: 'Imbue', serif;
+    text-align: left;
+    margin: 1;
+}
+
+#accordionExample h3 {
+    font-family: 'Imbue', serif;
+    text-align: left;
+    margin: 1;
+}
+
+#accordionExample h4 {
+    font-family: 'Imbue', sans-serif;
+    font-size: medium;
+
+ }
+
+.paragraph {
+    margin: 0
+}
+
 .navigazione {
     background-color: rgb(251, 239, 204) !important;
     font-family: 'News', serif !important;
@@ -87,11 +123,10 @@ body {
 
 .accordion-button {
     background-color: rgb(251, 239, 204) !important;
-    font-family: 'News', sans-serif;
-    text-transform: uppercase;
+    font-family: 'DM Serif Display', serif;
     text-align: center;
     display: inline-block;
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: bold;
  }
 
@@ -99,14 +134,26 @@ body {
     background-color: rgb(251, 239, 204) !important;
  }
 
- .paragraph {
-    font-size: smaller;
+ .accordion-body {
+    font-size:x-small;
     display: block ;
     text-align: justify;
     column-count: 5;
-    column-gap: 1%;
+    column-gap: 0.5%;
     position: relative;
     column-rule: solid 2px;
+    line-height: 1em;
+}
+
+p { margin:0 }
+
+.paragraph {
+    all: unset
+}
+
+.accordion-button:not(.collapsed) {
+    
+    color: black;
 }
 
 /* extra */
@@ -125,11 +172,11 @@ body {
   }
 
 .hide_image {
-    all: unset
+    display: none
 }
 
-.second_image {
-    display: none;
+.second_image img {
+    display: none
 }
 
 .img_paragraph{
