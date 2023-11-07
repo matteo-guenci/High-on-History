@@ -244,13 +244,14 @@ header{
   width: 100%;
   font-weight: 900;
 } */
-.label {
-  bottom: 1vh;
-  right: 7vw;
-  left: 7vw;
+#issues .label{
+  right: 2vw;
+  white-space: nowrap;
   text-align: center;
-  justify-content: center;
+}
+#issues .label h4{
 
+  font-size: 1.5vw;
 }
 
 h1{

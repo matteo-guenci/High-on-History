@@ -47,6 +47,11 @@ div{
 }
 .image-container{
   border: none;
+  /* position:relative; */
+}
+#issues .image-container .screen {
+  aspect-ratio: 16/9;
+
 }
 #about .image-row{
   margin-bottom: 12rem;
@@ -66,11 +71,19 @@ div{
 }
 
 #issues .label{
-  right: 5vw;
-  left: 5vw;
-  bottom: -3vw;
-  
+  right: 3.8vw;
+  white-space: nowrap;
+  text-align: center;
 }
+#issues .label h4{
+
+  font-size: 1.3vw;
+}
+
+/* #issues .screen .screen-image img{
+  height: 100%;
+  width: 100%;
+} */
 /* .image-row .image-container .label{
   bottom: 1vh;
   right: 7vw;
@@ -190,6 +203,7 @@ div{
   overflow: hidden;
   z-index: 10;
 }
+
 #doc-img-1 img{
   width: 100%;
   height: 100%;
