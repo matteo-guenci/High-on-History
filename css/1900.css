@@ -360,3 +360,10 @@ img:hover {
     margin: 2%;
     text-align: center
 }
+
+.documentation-img {
+    display: block;
+    margin: 2rem auto;
+}
+
+
