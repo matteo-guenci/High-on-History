@@ -5,6 +5,11 @@
     src: url(../fonts/OldNewspaperTypes.ttf);
 }
 
+
+.dropdown-item:active {
+    background-color: lightgrey !important;
+}
+
 .sfondo {
     background-color: rgb(251, 239, 204);
     font-family: 'News', Times, serif;
@@ -14,11 +19,12 @@ body {
     overflow-x: hidden;
     background-color: rgb(251, 239, 204);
 }
+
 #title {
     font-family: 'DM Serif Display', serif !important;
     font-style: italic;
     text-transform: uppercase;
-    letter-spacing: -5px;
+    color: black !important
 }
 
 #date2 {
@@ -254,4 +260,103 @@ p { margin:0 }
 
 .striscia_sx {
     display: none
+}
+
+.mapboxgl-popup-content {
+    font-family: 'News', serif;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    justify-content: center; 
+    text-align: justify; 
+    background-color: rgb(251, 239, 204);
+    border: 0.2rem solid firebrick;
+    
+}
+
+.mapboxgl-popup-content h3 {
+    padding-bottom: 0;
+    font-size: 2rem;
+    font-family: 'Imbue', sans-serif;
+    
+}
+
+.mapboxgl-popup-content p a {
+    
+    padding-bottom: 0;
+    color: black
+}
+
+.container h2 {
+    text-align: center;
+    padding-bottom: 5vh;
+    font-family: "DM Serif Display";
+}
+
+#content {
+    border-top: 0.2rem solid firebrick !important;
+    border-bottom: 0.2rem solid firebrick !important;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+#main-background a {
+    color: firebrick
+}
+
+#navbar-documentation {
+    border-top: 0.2rem solid firebrick !important;
+    border-bottom: 0.2rem solid firebrick !important;
+}
+
+#navbar-documentation a {
+    color: black 
+}
+
+#navbar-documentation a:hover {
+    color: firebrick
+}
+
+.navbar-expand-md {
+    border-bottom: 0px !important
+}
+
+img {
+    filter: grayscale(100%);
+  }
+
+img:hover {
+    filter: none;
+}
+
+.container img {
+    text-align: center !important;
+    height: 40vh
+}
+
+.image-container {
+    padding-top: 3%;
+    border-top: 3px solid firebrick;
+    border-bottom: 3px solid firebrick;
+    border-left: none;
+    border-right: none;
+    height: auto
+}
+
+
+.label {
+    bottom: 1vh;
+    right: 7vw;
+    left: 7vw;
+    text-align: center;
+    font-family: "Imbue", serif;
+    color: black;
+}
+
+.label:hover {
+    color: firebrick;
+}
+
+.screen-image {
+    margin: 2%;
+    text-align: center
 }

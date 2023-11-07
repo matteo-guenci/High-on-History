@@ -71,6 +71,10 @@ body {
 .dropdown-item {
     color: rgb(214, 46, 31) !important;
 }
+.dropdown-item:active {
+    color: rgb(214, 46, 31) !important;
+    background-color: lightgrey !important;
+}
 #sidebar button:hover {
     background-color:rgb(54, 121, 246) !important;
     color: white !important;
@@ -395,5 +399,54 @@ body {
     color: rgb(54, 121, 246)
 }
   
+.container h2 {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+#content {
+    border-top: 0.5rem solid rgb(214, 46, 31) !important;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+#navbar-documentation {
+    border-top: 0.5rem solid rgb(214, 46, 31) !important;
+    padding-top: 10%
+}
+
+.navbar-expand-md {
+    border-bottom: 0px !important
+}
+
+.container img {
+    text-align: center !important;
+    height: 40vh;
+    margin-bottom: 1vh;
+}
+
+.container img:hover {
+    filter:grayscale(100%)
+}
+
+.image-container {
+    padding-top: 3%;
+    border: 7px solid rgb(214, 46, 31);
+    height: auto
+}
+
+
+.label {
+    bottom: 1vh;
+    right: 7vw;
+    left: 7vw;
+    text-align: center;
+    font-family: "PT Sans Narrow", serif;
+    color: black;
+}
+
+.label:hover {
+    color: rgb(54, 121, 246)
+}
 
   
