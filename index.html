@@ -444,109 +444,51 @@ $(document).ready(function () {
 <script src="scripts/pubsub.js"></script>
 
 <script>
-
- 
-
       //esegue la funzione solo dopo che la pagina è stata caricata per intero
-
       document.addEventListener('DOMContentLoaded', function() {
-
              init();
-
       }, false);
-
- 
-
       function change(value) {
-
              const stylesheetLink = document.getElementById('stile');
-
- 
-
- 
-
              var oggetto = {};
-
              if (value === 'it2-1' || value === 'it1-1') {
-
                    oggetto = { cssname: 'css/1500.css', animation: false };
-
                    stylesheetLink.href = 'css/1500.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-
              }
-
              else if (value === 'it2-2' || value === 'it1-2') {
-
                    oggetto = { cssname: 'css/1800.css', animation: false };
-
                    stylesheetLink.href = 'css/1800.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-
- 
-
              }
-
              else if (value === 'it2-3' || value === 'it1-3') {
-
                    oggetto = { cssname: 'css/1900.css', animation: false };
-
                    stylesheetLink.href = 'css/1900.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-
              }
-
              else if (value === 'it2-4' || value === 'it1-4') {
-
                    oggetto = { cssname: 'css/1960.css', animation: false };
-
                    stylesheetLink.href = 'css/1960.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-
              }
-
              else if (value === 'it2-5' || value === 'it1-5') {
-
                    oggetto = { cssname: 'css/1990s.css', animation: false };
-
                    stylesheetLink.href = 'css/1990s.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-
              }
-
              else if (value === 'it2-6' || value === 'it1-6') {
-
                    oggetto = { cssname: 'css/2030.css', animation: true };
-
                    stylesheetLink.href = 'css/2030.css';
-
                    currentStyle = stylesheetLink.getAttribute("href");
-
                    mappa = createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-
              }
-
-            
-
              pubSubInstance.publish("changeCss", oggetto);
-
       }
-
 </script>
                     </nav>
                 </nav>
@@ -619,12 +561,12 @@ $(document).ready(function () {
             <p class="animated-text" data-value='The webpage aims to resemble a publication of the <span class="text-brutal">Nineteenth century</span>, which is why the chosen font is <span class="text-brutal">Bodoni</span>. Indeed, Bodoni owes its name and style to the Italian printer Giambattista Bodoni (1740-1813), who designed several modern typefaces between the end of the Eighteenth century and the beginning of the Nineteenth.
                 However, the headlines of the text are displayed in the font "Trinigan", which aims to resemble the labels on the <span class="text-brutal">posters</span> displayed in "Chapter 25 - Pioneers of the Art Nouveau, Chromolithography and the emergence of the modern poster and cigar box labels" in Guity Novin&apos;s History of Graphic Design.'>
                 The webpage aims to resemble a publication of the <span class="text-brutal">Nineteenth century</span>, which is why the chosen font is <span class="text-brutal">Bodoni</span>. Indeed, Bodoni owes its name and style to the Italian printer Giambattista Bodoni (1740-1813), who designed several modern typefaces between the end of the Eighteenth century and the beginning of the Nineteenth.
-                However, the headlines of the text are displayed in the font "Trinigan", which aims to resemble the labels on the <span class="text-brutal">posters</span> displayed in "Chapter 25 - Pioneers of the Art Nouveau, Chromolithography and the emergence of the modern poster and cigar box labels" in Guity Novin's History of Graphic Design.<div class="documentation-img" id="doc-img-3"><img src="imgs/doc_1800_2.jpg"></div>
+                However, the headlines of the text are displayed in the font "Trinigan", which aims to resemble the labels on the <span class="text-brutal">posters</span> displayed in "Chapter 25 - Pioneers of the Art Nouveau, Chromolithography and the emergence of the modern poster and cigar box labels" in Guity Novin's History of Graphic Design.<div class="documentation-img" id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/doc_1800_2.jpg"></div><div class="screen-overlay"></div></div></div>
             </p>
             <p class="animated-text" data-value='For the other fonts, the article on Art Nouveau Magazines on <a href="https://www.theviennasecession.com/art-nouveau-magazines/">The Vienna Secession website</a> was also an inspiration.
                 The vivid colours of the page are also inspired by the posters of the late Nineteenth century, and the colours where chosen on the basis of a palette extracted from the images that are present on the webpage. The borders were chosen as a typical expression of <span class="text-brutal">Art Nouveau</span> in publications at that time, as shown in "Chapter 64 - A History of Magazine Covers" in Guity Novin&apos;s History of Graphic Design. The women and flower-themed decorations are inspired by the designs of Alphonse Mucha (1860-1939) and other designers at the time.'>
                 For the other fonts, the article on Art Nouveau Magazines on <a href="https://www.theviennasecession.com/art-nouveau-magazines/">The Vienna Secession website</a> was also an inspiration.
-                The vivid colours of the page are also inspired by the posters of the late Nineteenth century, and the colours where chosen on the basis of a palette extracted from the images that are present on the webpage. The borders were chosen as a typical expression of <span class="text-brutal">Art Nouveau</span> in publications at that time, as shown in "Chapter 64 - A History of Magazine Covers" in Guity Novin's History of Graphic Design. The women and flower-themed decorations are inspired by the designs of Alphonse Mucha (1860-1939) and other designers at the time.<div class="documentation-img" id="doc-img-3"><img src="imgs/doc_1800_1.jpg"></div>
+                The vivid colours of the page are also inspired by the posters of the late Nineteenth century, and the colours where chosen on the basis of a palette extracted from the images that are present on the webpage. The borders were chosen as a typical expression of <span class="text-brutal">Art Nouveau</span> in publications at that time, as shown in "Chapter 64 - A History of Magazine Covers" in Guity Novin's History of Graphic Design. The women and flower-themed decorations are inspired by the designs of Alphonse Mucha (1860-1939) and other designers at the time.<div class="documentation-img" id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/doc_1800_1.jpg"></div><div class="screen-overlay"></div></div></div>
             </p>
 
             <hr>
