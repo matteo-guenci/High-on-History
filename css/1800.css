@@ -82,7 +82,7 @@ body {
 #issues h4, #about h4 {
     font-family: 'NouveauTitle';
     color: rgba(46, 26, 46, 1);
-    font-size: 2vw;
+    font-size: 1.5vw;
     background-color: rgba(240, 196, 170, 1);
 }
 
@@ -146,11 +146,10 @@ body {
 }
 
 .label {
-    bottom: 1vh;
+    bottom: 1vw;
     right: 7vw;
     left: 7vw;
     text-align: center;
-
 }
 
 #documentation p, #main-background ul {
