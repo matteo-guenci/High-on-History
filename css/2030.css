@@ -51,8 +51,11 @@ div{
 }
 #issues .image-container .screen {
   aspect-ratio: 16/9;
-
 }
+/* #issues .image-container .screen .screen-image img{
+  height: 100%;
+  width: 200%;
+} */
 #about .image-row{
   margin-bottom: 12rem;
 }
@@ -64,11 +67,11 @@ div{
   overflow: hidden;
   font-family: 'ProtoMolecule';
 }
-#about .image-container img{
+/* #about .image-container img{
   width: 100%;
   height: 100%;
   object-fit: cover; 
-}
+} */
 
 #issues .label{
   right: 3.8vw;
