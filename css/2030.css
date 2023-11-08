@@ -51,8 +51,11 @@ div{
 }
 #issues .image-container .screen {
   aspect-ratio: 16/9;
-
 }
+/* #issues .image-container .screen .screen-image img{
+  height: 100%;
+  width: 200%;
+} */
 #about .image-row{
   margin-bottom: 12rem;
 }
