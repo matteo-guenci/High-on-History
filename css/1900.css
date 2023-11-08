@@ -20,6 +20,8 @@ body {
     background-color: rgb(251, 239, 204);
 }
 
+.
+
 #title {
     font-family: 'DM Serif Display', serif !important;
     font-style: italic;
@@ -68,7 +70,7 @@ body {
 }
 
 #depero {
-    display:inline-block;
+    display:inline-block !important;
     position: absolute;
     bottom: 3%;
     right: 1%;
