@@ -453,4 +453,12 @@ body {
     text-align: center !important;
 }
 
+.documentation-img {
+    display: block;
+    margin: 2rem auto;
+    outline: 6px solid rgb(214, 46, 31);
+    outline-offset: 0.5rem;
+    offset: 3px;
+}
+
   
