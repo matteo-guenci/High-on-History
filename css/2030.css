@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'SpaceMono';
-    src: url(/fonts/SpaceMono-Regular.ttf);
+    src: url(../fonts/SpaceMono-Regular.ttf);
   }
 @font-face {
     font-family: 'ProtoMolecule';
-    src: url(/fonts/Protomolecule.ttf);
+    src: url(../fonts/Protomolecule.ttf);
   }
 
     /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
@@ -12,7 +12,14 @@
 body{
     background-color: rgb(15, 15, 15);
     overflow-x: hidden;
-}
+    /* background-image: url(/imgs/grid_2030.jpg); */
+    /* background-image: radial-gradient(
+      rgba(255, 255, 255, 02) 8%, 
+      transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 1vmin 1vmin; */
+  }
 .navigazione {
     background-color: rgb(15, 15, 15) !important; 
 }
@@ -45,6 +52,12 @@ div{
   color: rgb(218, 218, 218);
   font-size: 1rem;
 }
+.nav-link {
+  color: rgb(218, 218, 218) !important;
+}
+.dropdown-menu{
+  background-color: rgb(15, 15, 15);
+}
 .image-container{
   border: none;
   /* position:relative; */
@@ -52,10 +65,9 @@ div{
 #issues .image-container .screen {
   aspect-ratio: 16/9;
 }
-/* #issues .image-container .screen .screen-image img{
-  height: 100%;
-  width: 200%;
-} */
+#issues .image-container .screen .screen-image img{
+  padding-bottom: 3vh;
+}
 #about .image-row{
   margin-bottom: 12rem;
 }
@@ -74,9 +86,15 @@ div{
 }
 
 #issues .label{
-  right: 3.8vw;
-  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   text-align: center;
+  display: flex;
+  /* right: 7vw; */
+  left: 4.5vw;
+  text-align: center;
+  white-space: nowrap;
 }
 #issues .label h4{
 
@@ -95,13 +113,16 @@ div{
   justify-content: center;
 } */
 #about h4{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  display: flex;
   margin: none;
-  max-width: 100%;
+  /* max-width: 100%;
   min-width: 1.605em;
   max-height: 100%;
-  min-height: 1.605em;
-  text-align: center;
-  justify-content: center;
+  min-height: 1.605em; */
   /* font-size: 1.605em; */
 }
 
