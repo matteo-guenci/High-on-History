@@ -31,7 +31,7 @@ body{
     text-transform: lowercase;
 }
 #maintitle:hover{
-  color: rgba(23, 26, 28, 1);
+  color: rgba(163, 43, 21, 1);
   /* background-color: rgb(218, 218, 218); */
   /* box-shadow: 5px 5px 10px rgb(218, 218, 218); */
 }
@@ -201,7 +201,9 @@ div{
   /* left: 0px;
   top: 0px; */
 }
-
+#content p{
+  padding: 5vh;
+}
 .screen > .screen-image{
   height: 100%;
   width: 100%;
