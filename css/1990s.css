@@ -24,20 +24,20 @@
 } */
 @font-face {
   font-family: 'Oldtype';
-  src: url(/fonts/Bohemian_Typewriter.ttf);
+  src: url(../fonts/Bohemian_Typewriter.ttf);
 }
 @font-face {
   font-family: 'SniffinGlue';
-  src: url(/fonts/DanielsHandwritingBoldItalic-GABG.ttf);
+  src: url(../fonts/DanielsHandwritingBoldItalic-GABG.ttf);
 }
 
 @font-face {
   font-family: 'SniffinGlue2';
-  src: url(/fonts/GiottoHandwriting-d0w7.ttf);
+  src: url(../fonts/GiottoHandwriting-d0w7.ttf);
 }
 @font-face {
   font-family: 'SniffinGlue3';
-  src: url(/fonts/AngelasHandwriting-XjLP.ttf);
+  src: url(../fonts/AngelasHandwriting-XjLP.ttf);
 }
 
 
