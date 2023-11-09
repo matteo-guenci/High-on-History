@@ -60,9 +60,29 @@
 
 <!-- Navbar section  -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-lg-top navigazione">
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#hamburger2').on('click', function () {
+            $('#navbarSupportedContent').toggleClass('active');
+        });
+    
+        // Check window width on load and resize
+        $(window).on('load resize', function () {
+            if ($(window).width() >= 768) { // Adjust the breakpoint (768) to your desired medium screen width
+                $('#navbarSupportedContent').removeClass('active');
+            }
+        });
+    });
+    
+</script>
+
+    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-lg-top navigazione">
         <div class="container-fluid navigazione" style="padding-left: 5%">
-            <div class="collapse navbar-collapse navigazione" id="navbarSupportedContent">
+            <button class="navbar-toggler" id="hamburger2" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navigazione d-none d-sm-block" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=

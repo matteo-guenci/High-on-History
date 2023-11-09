@@ -180,11 +180,37 @@
 #menu-card.active {
     display: block !important; 
     width: fit-content;
-    height: 65vh;
+    height: 65vw;
     position: relative; 
-    top: 35vh; 
+    top: 35vw; 
     left: 15vw; 
     transform: translate(-50%, -50%); 
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    z-index: 1000; 
+}
+
+#navbarSupportedContent.active {
+    display: block !important; 
+    width: fit-content;
+    padding: 3vw;
+    height: 65vw;
+    position: absolute; 
+    top: 2vw;
+    left: 2vw;
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    z-index: 1000; 
+}
+
+#navbarSupportedContent.active {
+    display: block !important; 
+    width: fit-content;
+    padding: 3vw;
+    height: 65vw;
+    position: absolute; 
+    top: 2vw;
+    left: 2vw;
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
     z-index: 1000; 

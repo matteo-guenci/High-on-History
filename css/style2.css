@@ -196,3 +196,26 @@ span {
        display: block; 
     }  
 }
+
+.navbar-toggler-icon {
+    width: 4vw !important;
+    height: 4vw !important;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+.navbar-toggler {
+    padding: none !important;
+}
+
+#navbarSupportedContent.active {
+    display: block !important; 
+    width: fit-content;
+    padding: 3vw;
+    height: 65vw;
+    position: absolute; 
+    top: 2vw;
+    left: 2vw;
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+    z-index: 1000; 
+}

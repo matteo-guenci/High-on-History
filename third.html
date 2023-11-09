@@ -14,6 +14,8 @@
     <link href="css/style2.css" rel="stylesheet"> 
     <link href="css/1960.css" id="stile" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <script>
@@ -399,10 +401,30 @@
                     currentStyle=stylesheetLink.getAttribute("href");
                 }
             </script>
+
+            <script type="text/javascript">
+
+                $(document).ready(function () {
+                    $('#hamburger3').on('click', function () {
+                        $('#navbarSupportedContent').toggleClass('active');
+                    });
+                
+                    $(window).on('load resize', function () {
+                        if ($(window).width() >= 768) {
+                            $('#navbarSupportedContent').removeClass('active');
+                        }
+                    });
+                });
+    
+            </script>
+
             <div class="text" id="prova" >
                 <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top nav-boot" id="navpage">
                     <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <button class="navbar-toggler" id="hamburger3" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse d-none d-sm-block" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-xs-0 ">
                             <li class="nav-item">
                                 <button type="button" id="sidebarCollapse" class="btn btn-info">
