@@ -62,7 +62,8 @@ div{
   color: rgb(218, 218, 218) !important;
 }
 .dropdown-menu{
-  background-color: rgba(23, 26, 28, 1);
+  background-color: rgba(163, 43, 21, 1);
+  border-color: rgba(23, 26, 28, 1);
 }
 #documentation .row h2{
   right: 10rem;
@@ -277,6 +278,62 @@ div{
 
 #navpage{
   background-color: rgba(163, 43, 21, 1) !important;
+}
+.accordion-item{
+  background-color: rgba(23, 26, 28, 1) !important;
+  /* border: none; */
+
+}
+.accordion-button{
+  background-color:rgba(163, 43, 21, 1) ;
+}
+/* .accordion-button:{
+  background-color: rgba(23, 26, 28, 1) !important;
+} */
+.paragraph {
+  column-count: 2;
+  display: block;
+  break-inside: avoid;
+  margin: 0;
+  column-gap: 20px;
+}
+.paragraph img{
+  float: left;
+  max-width: 50vw;
+  max-height: auto;
+  margin: 0;
+  display: block;
+}
+.hide_image img{
+  /* display: none; */
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block;
+}
+.img_paragraph img {
+  display: none;
+  /* transform: rotate(5deg);
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block; */
+}
+.second_image img{
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  max-width: 30vw;
+  float: right;
+  /* display: block; */
+  /* image-rendering:pixelated; */
+  /* filter: blur(1px); */
+  /* opacity: 0.5; */
+
+}
+.label_photo{
+  font-weight: 700;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 :root {

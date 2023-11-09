@@ -150,11 +150,18 @@ nav.navigazione{
   zoom: 150%;
 }
 .accordion{
-  background-color: white;
+  background-image: url(/imgs/carta.jpg);
 }
 
 .accordion-body{
   column-count: 2;
+  background-image: url(/imgs/carta.jpg);
+
+
+}
+.accordion-item, .accordion-button{
+  background-image: url(/imgs/carta.jpg);
+  border: none;
 
 }
 .accordion-item{
