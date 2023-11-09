@@ -11,7 +11,7 @@ function typeText(element, text, index) {
         element.textContent += text.charAt(index);
         setTimeout(function() {
             typeText(element, text, index + 1);
-        }, 1);
+        }, 10);
     }
 }
 
