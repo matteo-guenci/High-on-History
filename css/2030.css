@@ -10,7 +10,7 @@
     /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
 
 body{
-    background-color: rgb(15, 15, 15);
+    background-color: rgba(23, 26, 28, 1);
     overflow-x: hidden;
     /* background-image: url(/imgs/grid_2030.jpg); */
     /* background-image: radial-gradient(
@@ -21,24 +21,30 @@ body{
     background-size: 1vmin 1vmin; */
   }
 .navigazione {
-    background-color: rgb(15, 15, 15) !important; 
+    /* background-color: rgba(163, 43, 21, 1) !important;  */
+    background-color: rgba(163, 43, 21, 1) !important;
 }
 #maintitle {
     font-size: 4rem;
     font-family: 'ProtoMolecule', serif;
     color: rgb(218, 218, 218);
     text-transform: lowercase;
-
 }
 #maintitle:hover{
-  color: rgb(15, 15, 15);
+  color: rgba(23, 26, 28, 1);
   /* background-color: rgb(218, 218, 218); */
   /* box-shadow: 5px 5px 10px rgb(218, 218, 218); */
 }
-
+#title{
+  font-family: "ProtoMolecule", serif;
+  text-transform: lowercase;
+}
 h1, h2, h3, h4, h5, a, blockquote{
   font-family: "ProtoMolecule", serif;
   color: rgb(218, 218, 218)
+}
+#it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
+  font-family: 'ProtoMolecule', serif;
 }
 
 p{
@@ -56,7 +62,30 @@ div{
   color: rgb(218, 218, 218) !important;
 }
 .dropdown-menu{
-  background-color: rgb(15, 15, 15);
+  background-color: rgba(23, 26, 28, 1);
+}
+#documentation .row h2{
+  right: 10rem;
+}
+#menu-card{
+  background-color: rgba(163, 43, 21, 1);
+  border-radius: 1rem;
+}
+#navbar-documentation{
+  background-color: rgba(163, 43, 21, 1);
+  border-radius: 1rem;
+  /* background-color: rgba(23, 26, 28, 1); */
+
+  /* border-radius: 1rem;
+  backface-visibility: hidden; */
+}
+#hamburger1, #hamburger2, #hamburger3{
+  background-color: rgba(163, 43, 21, 1);
+  /* background-color: rgba(23, 26, 28, 1); */
+
+}
+.documentation-container{
+  display: flex;
 }
 .image-container{
   border: none;
@@ -245,3 +274,50 @@ div{
   height: 100%;
   object-fit: cover;
 } */
+
+#navpage{
+  background-color: rgba(163, 43, 21, 1) !important;
+}
+
+:root {
+  --scrollbar-track-color: rgba(23, 26, 28, 1);
+  --scrollbar-thumb-color: rgba(163, 43, 21, 1);
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+}
+
+/* ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+} */
+
+/* Firefox Scrollbar Styles */
+/* Note: Firefox currently only supports styling the thumb and track */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb-color) transparent;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Color Theme Swatches in RGBA */
+.The-Expanse-Color-Scheme-1-rgba { color: rgba(8, 126, 204, 1); }
+.The-Expanse-Color-Scheme-2-rgba { color: rgba(23, 26, 28, 1); }
+.The-Expanse-Color-Scheme-3-rgba { color: rgba(0, 255, 219, 1); }
+.The-Expanse-Color-Scheme-4-rgba { color: rgba(163, 43, 21, 1); }
+.The-Expanse-Color-Scheme-4-rgba { color: #ea5125 }
+
+.The-Expanse-Color-Scheme-5-rgba { color: rgba(204, 16, 14, 1); }
+
+
