@@ -139,13 +139,12 @@ nav.open .nav-content span{
     display: none;
 }
 
-/* #it1-6:hover{
-    background-image: url(../imgs/punk.png) !important;
+#it1-6:hover{
+    background-image: url(../imgs/planet.jpg) !important;
     background-size: contain !important;
-    transform: rotate(-150deg);
     z-index: 3000;
 }
 
 #it1-6:hover #number_2030{
     display: none;
-} */
+}

@@ -28,6 +28,12 @@ body{
   background-color: rgba(163, 43, 21, 1) !important;
 
 }
+.nav-content .toggle-btn{
+  background-image: url(/imgs/alien_ring.jpg);
+  background-size: 170%;
+  background-position: 50% 100%; /* Centered horizontally and vertically */
+  zoom: 150%;
+}
 
 #maintitle {
     font-size: 4rem;
