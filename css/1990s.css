@@ -164,9 +164,13 @@ nav.navigazione{
   border: none;
 
 }
-.accordion-item{
-  background-color: white;
+.highlight{
+  background-color: gray;
+  z-index: 999;
 }
+/* .accordion-item{
+  background-color: white;
+} */
 
 #it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
   font-family: 'Oldtype';
@@ -298,7 +302,10 @@ h2.navbar-brand{
   transform: none;
   padding: 0;
 }
-
+#navpage{
+  border-bottom: solid;
+  border-top: solid;
+}
 #navbar-documentation h2{
   all: unset;
   font-size: 3rem;
@@ -481,9 +488,7 @@ h5 {
 
 /* il div in cui c'è la foto deve essere position relative */
 
-.bx .bxs-camera{
-  font-family: 'Oldtype';
-}
+
 
 .accordion-body{
   column-count: 1;

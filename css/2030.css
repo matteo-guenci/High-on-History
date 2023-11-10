@@ -24,6 +24,11 @@ body{
     /* background-color: rgba(163, 43, 21, 1) !important;  */
     background-color: rgba(163, 43, 21, 1) !important;
 }
+#nav-issue{
+  background-color: rgba(163, 43, 21, 1) !important;
+
+}
+
 #maintitle {
     font-size: 4rem;
     font-family: 'ProtoMolecule', serif;
@@ -42,6 +47,13 @@ body{
 h1, h2, h3, h4, h5, a, blockquote{
   font-family: "ProtoMolecule", serif;
   color: rgb(218, 218, 218)
+}
+#issues h2, #documentation h2, #about h2{
+  font-size: 4vw;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  /* padding-bottom: 6vh; */
 }
 #it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
   font-family: 'ProtoMolecule', serif;
@@ -281,17 +293,53 @@ div{
 #navpage{
   background-color: rgba(163, 43, 21, 1) !important;
 }
+#sidebarCollapse{
+  background-color: rgba(23, 26, 28, 1);
+  border: none;
+}
+#sidebarCollapse:hover{
+  background-color: rgba(163, 43, 21, 1);
+  border: none;
+}
+#sidebar{
+  background-color: rgba(163, 43, 21, 1);
+}
+.dropdown-toggle{
+  background-color: rgba(23, 26, 28, 1) !important;
+}
+#sidebar button{
+  color: rgba(23, 26, 28, 1) !important;
+
+}
 .accordion-item{
   background-color: rgba(23, 26, 28, 1) !important;
   /* border: none; */
 
 }
+.accordion-button:not(.collapsed) {
+  background-color: rgba(23, 26, 28, 1);
+  color: rgb(218, 218, 218);
+}
 .accordion-button{
-  background-color:rgba(163, 43, 21, 1) ;
+  background-color:rgba(163, 43, 21, 1);
+  display: inline-block;
+  text-align: center;
+  font-size: 4vh;
 }
 /* .accordion-button:{
   background-color: rgba(23, 26, 28, 1) !important;
 } */
+
+.page-link {
+  background-color: rgba(23, 26, 28, 1);
+  color: rgb(218, 218, 218);
+  border: none;
+}
+.page-link:hover {
+  background-color: rgba(163, 43, 21, 1);
+  color: rgb(218, 218, 218);
+  border: none;
+}
 .paragraph {
   column-count: 2;
   display: block;
@@ -368,8 +416,13 @@ div{
   scroll-behavior: smooth;
 }
 
-
-
+.highlight{
+  background-color: rgba(163, 43, 21, 1);
+  z-index: 999;
+}
+.footer{
+  background-color: rgba(163, 43, 21, 1);
+}
 /* Color Theme Swatches in RGBA */
 .The-Expanse-Color-Scheme-1-rgba { color: rgba(8, 126, 204, 1); }
 .The-Expanse-Color-Scheme-2-rgba { color: rgba(23, 26, 28, 1); }

@@ -130,9 +130,8 @@ nav.open .nav-content span{
 }
 
 #it1-5:hover{
-    background-image: url(../imgs/punk.png) !important;
+    background-image: url(../imgs/god_save_the_queen.jpg) !important;
     background-size: contain !important;
-    transform: rotate(-150deg);
     z-index: 3000;
 }
 
