@@ -277,7 +277,46 @@ div{
   overflow: hidden;
   z-index: 10;
 }
-
+#doc-img-4{
+  width: 221px;
+  height: 257px;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 36vw;
+  max-height: 62vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-5{
+  aspect-ratio: 1/1;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 45vw;
+  max-height: 45vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-6{
+  aspect-ratio: 16/12;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 50vw;
+  max-height: 80vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
 #doc-img-1 img{
   width: 100%;
   height: 100%;
@@ -289,6 +328,18 @@ div{
 #doc-img-3 img{
   width: 100%;
   height: 31.5%;
+}
+#doc-img-4 img{
+  width: 100%;
+  height: 73%;
+}
+#doc-img-5 img{
+  width: 100%;
+  height: 63%;
+}
+#doc-img-6 img{
+  width: 100%;
+  height: 50%;
 }
 /* .screen > img{
   width: 100%;
@@ -365,11 +416,8 @@ div{
   display: block;
 }
 .hide_image img{
-  /* display: none; */
-  padding: 2rem;
-  max-width: 42vw;
-  float: left;
-  display: block;
+  height: 100%;
+  width: 100%;
 }
 .img_paragraph img {
   display: none;
@@ -380,10 +428,8 @@ div{
   display: block; */
 }
 .second_image img{
-  padding-bottom: 2rem;
-  padding-left: 1rem;
-  max-width: 30vw;
-  float: right;
+  height: 100%;
+  width: 100%;
   /* display: block; */
   /* image-rendering:pixelated; */
   /* filter: blur(1px); */
