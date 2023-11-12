@@ -38,23 +38,26 @@ class PubSubManager {
 }
 
 const pubSubInstance = new PubSubManager();
-
+const myElement = document.querySelector('#maintitle');
 function init() {
-    pubSubInstance.subscribe(document.querySelector("#maintitle"), "changeCss", function (event) {
-        console.log("#maintitle.subscribe: " + event.detail.animation);
+    if(myElement){
+    pubSubInstance.subscribe(myElement, "changeCss", function (event) {
+        // console.log("#maintitle.subscribe: " + event.detail.animation);
         if (event.detail.animation) {
-            document.querySelector("#maintitle").onmouseover = animazione;
+            myElement.onmouseover = animazione;
         } else {
             clearInterval(interval);
-            document.querySelector("#maintitle").textContent = "High on History";
-            document.querySelector("#maintitle").onmouseover = null;
+           myElement.textContent = "High on History";
+            myElement.onmouseover = null;
         }
     });
-
-    var elements = document.querySelectorAll('.animated-text');
-    elements.forEach(function (element) {
+    }
+    const mySecondElement= document.querySelectorAll('.animated-text');
+    // var elements = document.querySelectorAll('.animated-text');
+    if(mySecondElement){
+    mySecondElement.forEach(function (element) {
         pubSubInstance.subscribe(element, "changeCss", function (event) {
-            console.log("#element.subscribe: " + event.detail.animation);
+            // console.log("#element.subscribe: " + event.detail.animation);
             if (event.detail.animation) {
                 element.blocked = false;
                 startTypeText(this);
@@ -68,4 +71,5 @@ function init() {
             element.innerHTML = this.getAttribute("data-value");
         });
     });
+}
 }
