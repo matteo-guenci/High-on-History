@@ -460,31 +460,52 @@
                   </script>
             </nav>
             <script>
+                //esegue la funzione solo dopo che la pagina è stata caricata per intero
+                document.addEventListener('DOMContentLoaded', function() {
+                       init();
+                }, false);
                 function change(value) {
-                    const stylesheetLink = document.getElementById('stile');
-                    
-                    if (value === 'it2-1' || value === 'it1-1') {
-                        stylesheetLink.href = 'css/1500.css';
-                    }
-                    else if (value === 'it2-2' || value === 'it1-2') {
-                        stylesheetLink.href = 'css/1800.css';
-                    }
-                    else if (value === 'it2-3' || value === 'it1-3') {
-                        stylesheetLink.href = 'css/1900.css';
-                    }
-                    else if (value === 'it2-4' || value === 'it1-4') {
-                        stylesheetLink.href = 'css/1960.css';
-                    }
-                    else if (value === 'it2-5' || value === 'it1-5') {
-                        stylesheetLink.href = 'css/1990s.css';
-                    }
-                    else if (value === 'it2-6' || value === 'it1-6') {
-                        stylesheetLink.href = 'css/2030.css';
-                    }
-                    currentStyle=stylesheetLink.getAttribute("href");
-
+                       const stylesheetLink = document.getElementById('stile');
+                       var oggetto = {};
+                       if (value === 'it2-1' || value === 'it1-1') {
+                             oggetto = { cssname: 'css/1500.css', animation: false };
+                             stylesheetLink.href = 'css/1500.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
+                       }
+                       else if (value === 'it2-2' || value === 'it1-2') {
+                             oggetto = { cssname: 'css/1800.css', animation: false };
+                             stylesheetLink.href = 'css/1800.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
+                       }
+                       else if (value === 'it2-3' || value === 'it1-3') {
+                             oggetto = { cssname: 'css/1900.css', animation: false };
+                             stylesheetLink.href = 'css/1900.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
+                       }
+                       else if (value === 'it2-4' || value === 'it1-4') {
+                             oggetto = { cssname: 'css/1960.css', animation: false };
+                             stylesheetLink.href = 'css/1960.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
+                       }
+                       else if (value === 'it2-5' || value === 'it1-5') {
+                             oggetto = { cssname: 'css/1990s.css', animation: false };
+                             stylesheetLink.href = 'css/1990s.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
+                       }
+                       else if (value === 'it2-6' || value === 'it1-6') {
+                             oggetto = { cssname: 'css/2030.css', animation: true };
+                             stylesheetLink.href = 'css/2030.css';
+                             currentStyle = stylesheetLink.getAttribute("href");
+                             mappa = createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
+                       }
+                       pubSubInstance.publish("changeCss", oggetto);
                 }
-            </script>
+          </script>
 
 <script type="text/javascript">
 
@@ -581,8 +602,8 @@
                                                 both <span class="Union">Union</span> and <span class="Confederate">Confederate</span> armies 
                                                 during the <span class="CivilWar">Civil War</span>. <br></h2>
                                             <h4>by David A. Norris. This article appears in: Early Fall 2015</h4>
-                                        <div class="hide_image"><img src="imgs/forty-rod1.jpg"></div>
-                                        <div class="img_paragraph"><img src="imgs/forty-rod1.jpg"> </div><br>
+                                        <div class="hide_image" id="doc-img-7"><div class="screen"><div class="screen-image"><img src="imgs/forty-rod1.jpg"></div><div class="screen-overlay"></div></div></div>
+                                        <div class="img_paragraph"><img src="imgs/forty-rod1.jpg"></div><br>
                                             <div class="paragraph">
                                             <p>
                                                 Union General <span class="BenjaminButler">Benjamin Butler</span> was baffled. 
@@ -630,7 +651,7 @@
                                                 <span class="location NorthernStates" id="NorthernStates">Northern states</span>.
                                             </p>
 
-                                        <div class="second_image"><img src="imgs/Forty-Rod2.jpg"></div>
+                                        <div class="second_image"><div id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/Forty-Rod2.jpg"></div><div class="screen-overlay"></div></div></div></div>
 
                                             <p>
                                                 Low-grade <span class="whiskey">whiskey</span> carried with it the threat of poisoning the drinker, 
@@ -768,7 +789,7 @@
                                                 Others stole bottles from sutler huts, wagons, or tents.
                                             </p>
                                             
-                                            <div class="second_image"><img src="imgs/Forty-Rod3.jpg"></div>
+                                            <div class="second_image"><div id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/Forty-Rod3.jpg"></div><div class="screen-overlay"></div></div></div></div>
 
                                             <p>
                                                 Impersonating an officer was only one of the many ways that Union and 
@@ -901,7 +922,7 @@
                                                 a special issue of two ounces of <span class="whiskey">whiskey</span> per crewman.
                                             </p>
 
-                                            <div class="second_image"><img src="imgs/Forty-Rrod4.jpg"></div>
+                                            <div class="second_image"><div id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/Forty-Rrod4.jpg"></div><div class="screen-overlay"></div></div></div></div>
 
                                             <p>
                                                 Captains also issued extra <span class="liquor">liquor</span> 
@@ -976,7 +997,7 @@
                                                 increased to three ounces of <span class="whiskey">whiskey</span> every four hours. Despite the special treatment, <span class="AugustusFalls">Falls</span> died on <span class="y1864">October 5</span>.
                                             </p>
                                             
-                                            <div class="second_image"><img src="imgs/Forty-Rrod5.jpg"></div>
+                                            <div class="second_image"><div id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/Forty-Rrod5.jpg"></div><div class="screen-overlay"></div></div></div></div>
 
                                             <p>
                                                 One of the few effective <span class="drug">drugs</span> of the era, <span class="quinine">quinine</span>, could prevent malaria or ease symptoms for patients who already had the disease. Soldiers often balked at taking their malaria medicine, though, because of its markedly bitter taste. To cajole soldiers into taking <span class="quinine">quinine</span>, some surgeons mixed it with <span class="whiskey">whiskey</span>. This created the opposite problem; some soldiers enjoyed the <span class="quinine">quinine</span>-<span class="whiskey">whiskey</span> dose so much that they sneaked through the line for a second prescription. While stationed at <span class="location NewBern_NorthCarolina" id="NewBern_NorthCarolina">New Bern, North Carolina</span>, the men of the <span class="a44thMassachusetts">44th Massachusetts</span> found that their medical officers took precautions to limit the soldiers to one dose each. Instead of serving <span class="quinine">quinine</span> in <span class="whiskey">whiskey</span>, the <span class="drug">drug</span> came blended with medical <span class="alcohol">alcohol</span>, water, and cayenne pepper. “No soldier,” wrote a veteran of the regiment, “is known to have acquired a dangerous hankering for the mixture.”
@@ -1013,7 +1034,7 @@
                                                 watermelons.
                                             </p>
                                             
-                                            <div class="second_image"><img src="imgs/Forty-Rrod6.jpg"></div>
+                                            <div class="second_image"><div id="doc-img-6"><div class="screen"><div class="screen-image"><img src="imgs/Forty-Rrod6.jpg"></div><div class="screen-overlay"></div></div></div></div>
 
                                             <p>
                                                 <span class="Porcher">F.P. Porcher</span>’s 1863 work Resources of Southern Fields and Forests listed uses for hundreds of plants that grew in the Confederacy. He gave recipes for making <span class="beer">beer</span> from corn, persimmons, and boiled sassafras shoots. Blackberries could also    be used to make <span class="wine">wine</span>, and with the addition of spices and <span class="whiskey">whiskey</span>, a healthy cordial could be concocted. <span class="Porcher">Porcher</span> also mentioned dozens of medicines that could be prepared from native herbs added to <span class="whiskey">whiskey</span>, <span class="wine">wine</span>, or <span class="brandy">brandy</span>. Another way of coping with the lack of <span class="alcohol">alcohol</span> was to make a joke of it. By early <span class="y1864">1864</span>, “starvation parties” were becoming a fad in <span class="location Richmond" id="Richmond">Richmond</span>. Attendees wore the best finery they could manage. Unlike antebellum parties, there were no imported <span class="wine">wines</span> or <span class="liquor">liquors</span>. The fine punchbowls and glassware remaining from the days before the war held only water from the <span class="JamesRiver">James River</span>.
@@ -1125,7 +1146,7 @@
                                         for <span class="cocaine">cocaine</span>. <span class="location Germany" id="Germany">Germany</span>, <span class="location Canada" id="Canada">Canada</span>, and other 
                                         countries brought in similar controls during the war.</p>
                                     </div>
-                                    <div class="hide_image"><img src="imgs/firstworldwar.png"></div>
+                                    <div class="hide_image" id="doc-img-7"><div class="screen"><div class="screen-image"><img src="imgs/firstworldwar.png"></div><div class="screen-overlay"></div></div></div>
                                     <div class="img_paragraph"><img src="imgs/firstworldwar.png"></div>
 
                                     <br>
@@ -1237,8 +1258,8 @@
                                     <h4>by Peter Andreas</h4>
                                     <h5>January 7th, 2020 11.00 AM EST</h5>
                                     
-                                    <div class="hide_image"><img src="imgs/nazi-tanks.webp" /></div>
-                                    <div class="img_paragraph"><img src="imgs/nazi-tanks.webp" /></div>
+                                    <div class="hide_image" id="doc-img-7"><div class="screen"><div class="screen-image"><img src="imgs/nazi-tanks.webp"/></div><div class="screen-overlay"></div></div></div>
+                                    <div class="img_paragraph"><img src="imgs/nazi-tanks.webp"/></div>
                                     <br><div class="paragraph">
                                     <p>In The Art of War, <span class="SunTzu">Sun Tzu</span> wrote that speed is “the essence of war.” 
                                         While he of course did not have <a class="link" href="https://en.wikipedia.org/wiki/Amphetamine"><span class="amphetamine">amphetamines</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Amphetamine">

@@ -317,6 +317,18 @@ div{
   overflow: hidden;
   z-index: 10;
 }
+#doc-img-7{
+  aspect-ratio: 16/8;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  max-width: 100vw;
+  max-height: 100vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
 #doc-img-1 img{
   width: 100%;
   height: 100%;
@@ -340,6 +352,10 @@ div{
 #doc-img-6 img{
   width: 100%;
   height: 50%;
+}
+#doc-img-7 img{
+  width: 100%;
+  height: 32%;
 }
 /* .screen > img{
   width: 100%;
@@ -404,29 +420,40 @@ div{
 .paragraph {
   column-count: 2;
   display: block;
-  break-inside: avoid;
+  column-gap: 5%;
   margin: 0;
-  column-gap: 20px;
 }
-.paragraph img{
-  float: left;
-  max-width: 50vw;
-  max-height: auto;
-  margin: 0;
-  display: block;
+
+.accordion-body h2{
+  /* text-align: start; */
+  max-width: 40%;
 }
-.hide_image img{
-  height: 100%;
-  width: 100%;
+#subtitle{
+  max-width: 100%;
 }
 .img_paragraph img {
-  display: none;
+  display: none !important;
   /* transform: rotate(5deg);
   padding: 2rem;
   max-width: 42vw;
   float: left;
   display: block; */
 }
+.img_paragraph .label_photo {
+  display: none !important;
+  /* transform: rotate(5deg);
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block; */
+}
+/* .hide_image{
+  display: none;
+} */
+/* #doc-img-3 img.paragraph {
+  margin: 0;
+} */
+
 .second_image img{
   height: 100%;
   width: 100%;
@@ -437,9 +464,7 @@ div{
 
 }
 .label_photo{
-  font-weight: 700;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  text-align: center;
 }
 
 :root {
