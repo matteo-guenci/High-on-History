@@ -423,7 +423,13 @@ div{
   column-gap: 5%;
   margin: 0;
 }
-
+.paragraph p{
+  padding-top: 3%;
+}
+blockquote{
+  text-align: justify;
+  padding: 5%;
+}
 .accordion-body h2{
   /* text-align: start; */
   max-width: 40%;
@@ -439,13 +445,9 @@ div{
   float: left;
   display: block; */
 }
-.img_paragraph .label_photo {
-  display: none !important;
-  /* transform: rotate(5deg);
-  padding: 2rem;
-  max-width: 42vw;
-  float: left;
-  display: block; */
+
+#second_hide{
+  display: none;
 }
 /* .hide_image{
   display: none;
