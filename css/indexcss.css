@@ -228,4 +228,11 @@
 .navbar-toggler {
     padding: none !important;
 }
+
+.mapbox-improve-map{
+    display: none;
+  }
+  .mapboxgl-ctrl-attrib-inner{
+    display: none;
+  }
   

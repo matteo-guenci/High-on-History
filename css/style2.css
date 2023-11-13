@@ -195,12 +195,11 @@ span {
     z-index: 100;
     width: 50vw;
     height: 40vh;
+    top: 100;
 }
 
-.link:hover {
-    .lod {
-       display: block; 
-    }  
+.link:hover .lod {
+    display: block; 
 }
 
 .navbar-toggler-icon {
