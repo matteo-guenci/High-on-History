@@ -250,6 +250,10 @@ p { margin:0 }
     display: none
 }
 
+.hide_image2 {
+    display: none
+}
+
 .second_image img {
     display: none
 }

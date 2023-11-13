@@ -558,3 +558,7 @@ h5 {
   width: 100vw;
   height: 60vh;
 } */
+
+.hide_image2 {
+  display: none
+}

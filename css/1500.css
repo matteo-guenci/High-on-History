@@ -519,6 +519,10 @@ ul ul a {
     all: unset
 }
 
+.hide_image2 {
+    all: unset
+}
+
 .second_image {
     display: none;
 }
