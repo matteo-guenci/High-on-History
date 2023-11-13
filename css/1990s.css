@@ -527,12 +527,12 @@ h5 {
   display: block; */
 }
 .img_paragraph .label_photo {
-  display: none !important;
-  /* transform: rotate(5deg);
+  /* display: none !important; */
+  transform: rotate(5deg);
   padding: 2rem;
   max-width: 42vw;
-  float: left;
-  display: block; */
+  float: bottom;
+  display: block;
 }
 .second_image img{
   transform: rotate(-5deg);
@@ -561,4 +561,7 @@ h5 {
 
 .hide_image2 {
   display: none
+}
+#second_hide{
+  display: none;
 }
