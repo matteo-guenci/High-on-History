@@ -536,3 +536,9 @@ ul ul a {
 .striscia_sx {
     display: none
 }
+#hide_image3 {
+    display: none !important;
+  }
+  #hide_label {
+    display: none !important;  
+  }
