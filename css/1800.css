@@ -596,6 +596,11 @@ blockquote {
     all: unset
 }
 
+.hide_image2 {
+    all: unset
+}
+
+
 .second_image {
     display: none
 }
@@ -608,3 +613,9 @@ blockquote {
     display: none
 }
 
+#hide_image3 {
+    display: none !important;
+  }
+  #hide_label {
+    display: none !important;  
+  }

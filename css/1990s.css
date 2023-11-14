@@ -558,3 +558,32 @@ h5 {
   width: 100vw;
   height: 60vh;
 } */
+
+.hide_image2 {
+  display: none
+}
+#second_hide{
+  display: none;
+}
+#hide_image3 {
+  transform: rotate(-5deg);
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  max-width: 30vw;
+  float: right;
+  /* display: block; */
+  filter: grayscale(100%) contrast(2) brightness(90%);
+  /* image-rendering:pixelated; */
+  /* filter: blur(1px); */
+  /* opacity: 0.5; */
+  
+}
+#hide_label{
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 3rem;
+  padding-top: 3rem;  
+}
+#doc-img-7{
+  display: none;
+}

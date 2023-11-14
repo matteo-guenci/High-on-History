@@ -519,6 +519,10 @@ ul ul a {
     all: unset
 }
 
+.hide_image2 {
+    all: unset
+}
+
 .second_image {
     display: none;
 }
@@ -532,3 +536,9 @@ ul ul a {
 .striscia_sx {
     display: none
 }
+#hide_image3 {
+    display: none !important;
+  }
+  #hide_label {
+    display: none !important;  
+  }

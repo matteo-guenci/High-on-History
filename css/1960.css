@@ -289,6 +289,10 @@ body {
     display:none
  }
 
+ .hide_image2 {
+    display: none
+}
+
 .img_paragraph {
     display: inline !important;
     margin-top: 3% ;
@@ -461,4 +465,9 @@ body {
     offset: 3px;
 }
 
-  
+#hide_image3 {
+  display: none;
+}
+#hide_label {
+  display: none;  
+}
