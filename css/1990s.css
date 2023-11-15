@@ -249,12 +249,6 @@ header{
   margin-bottom: 2rem;
 }
 
-/* .image-container .label h4{
-  text-align: center;
-  font-family: 'Oldtype';
-  width: 100%;
-  font-weight: 900;
-} */
 #issues .label{
   right: 2vw;
   white-space: nowrap;
@@ -339,14 +333,19 @@ h5 {
 
 #documentation{
   width: 100%;
-  padding: 10px;
+  padding: 2%;
 }
 
-#documentation img {
-  max-width: 300px;
+#content img {
+  max-width: 100%;
   margin: auto;
   display: block;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
+  /* padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 10%;
+  padding-left: 10%; */
+  padding: auto;
 }
 #menu-card {
   overflow-y: scroll;
@@ -355,7 +354,7 @@ h5 {
 }
 
 #content {
-  column-gap: 5%;
+  column-gap: 15%;
   column-count: 2;
   font-family: 'Oldtype';
 }
@@ -507,7 +506,7 @@ h5 {
   max-height: auto;
   margin: 0;
   display: block;
-  filter: grayscale(100%) contrast(2) brightness(90%);  
+  /* filter: grayscale(100%) contrast(2) brightness(90%);   */
 }
 .hide_image img{
   /* display: none; */
@@ -516,7 +515,7 @@ h5 {
   max-width: 42vw;
   float: left;
   display: block;
-  filter: grayscale(100%) contrast(2) brightness(90%);  
+  /* filter: grayscale(100%) contrast(2) brightness(90%);   */
 }
 .img_paragraph img {
   display: none !important;
@@ -541,11 +540,14 @@ h5 {
   max-width: 30vw;
   float: right;
   /* display: block; */
-  filter: grayscale(100%) contrast(2) brightness(90%);
+  /* filter: grayscale(100%) contrast(2) brightness(90%); */
   /* image-rendering:pixelated; */
   /* filter: blur(1px); */
   /* opacity: 0.5; */
 
+}
+.second_image2{
+  display: none;
 }
 
 
@@ -576,7 +578,7 @@ h5 {
   max-width: 30vw;
   float: right;
   /* display: block; */
-  filter: grayscale(100%) contrast(2) brightness(90%);
+  /* filter: grayscale(100%) contrast(2) brightness(90%); */
   /* image-rendering:pixelated; */
   /* filter: blur(1px); */
   /* opacity: 0.5; */
@@ -588,6 +590,22 @@ h5 {
   padding-bottom: 3rem;
   padding-top: 3rem;  
 }
-#doc-img-7{
+#doc-img-8{
   display: none;
 }
+
+.label{
+  bottom: 1vh;
+  right: 7vw;
+  left: 7vw;
+  font-family: 'Oldtype';
+  font-weight: 900;
+}
+/* .label {
+  bottom: 1vh;
+  right: 7vw;
+  left: 7vw;
+  text-align: center;
+  font-family: "Imbue", serif;
+  color: black;
+} */
