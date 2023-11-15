@@ -39,6 +39,10 @@ body {
     margin-right: auto;
 }
 
+.highlight {
+    background-color: salmon !important;
+  }
+
 .btn {
     background-color: firebrick !important;
 }

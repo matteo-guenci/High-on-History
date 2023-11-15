@@ -10,8 +10,12 @@
     padding-right: 10px;
 }
 
+header {
+    text-align: center
+}
+
 #title {
-    text-align: center; margin-top: 0.2em; padding-bottom: 0%; padding-top: 0%; margin-bottom: 1%; font-size: 9vh;
+    margin-top: 0.2em; padding-bottom: 0%; padding-top: 0%; margin-bottom: 0.2em; font-size: 9vh;
     transition: transform 0.5s linear;
     font-family: 'PT Sans Narrow', sans-serif;
     color: white !important;
@@ -19,11 +23,7 @@
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
-    display:inline-block; 
-    text-align: center;
-    position: relative;
-
-left: 33%;
+    display: inline-block;
 }
 
 .navigazione {
