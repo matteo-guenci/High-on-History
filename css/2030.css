@@ -145,7 +145,6 @@ div{
   white-space: nowrap;
 }
 #issues .label h4{
-
   font-size: 1.3vw;
 }
 
@@ -328,6 +327,7 @@ div{
   background-color: rgba(33, 150, 243, 0.15);
   overflow: hidden;
   z-index: 10;
+  margin: 5%;
 }
 
 #doc-img-1 img{
@@ -354,7 +354,7 @@ div{
   width: 100%;
   height: 50%;
 }
-#doc-img-7, #doc-img-8 img{
+#doc-img-7 img, #doc-img-8 img{
   width: 100%;
   height: 32%;
 }
@@ -425,7 +425,8 @@ div{
   margin: 0;
 }
 .paragraph p{
-  padding-top: 3%;
+  padding: 3%;
+  margin: 3%;
 }
 blockquote{
   text-align: justify;
