@@ -619,3 +619,7 @@ blockquote {
   #hide_label {
     display: none !important;  
   }
+
+  #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
+    font-size: 100%;
+  }
