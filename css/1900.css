@@ -180,6 +180,8 @@ body {
     margin: 0
 }
 
+
+
 .navigazione {
     background-color: rgb(251, 239, 204) !important;
     font-family: 'News', serif !important;
@@ -249,7 +251,12 @@ p { margin:0 }
     z-index: 998;
     background: transparent;
   }
-
+.second_image2 {
+    display:none
+}
+#hide_image3 {
+    display:none
+}
 .hide_image {
     display: none
 }

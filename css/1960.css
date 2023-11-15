@@ -293,6 +293,13 @@ body {
     display: none
 }
 
+.second_image2 {
+    display:none
+}
+#hide_image3 {
+    display:none
+}
+
 .img_paragraph {
     display: inline !important;
     margin-top: 3% ;
