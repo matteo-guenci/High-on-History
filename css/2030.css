@@ -87,8 +87,10 @@ div{
   color: rgb(218, 218, 218) !important;
 }
 .dropdown-menu{
-  background-color: rgba(163, 43, 21, 1);
-  border-color: rgba(23, 26, 28, 1);
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
+  border-radius: 1rem;
 }
 #documentation .row h2{
   right: 10rem;
@@ -103,6 +105,7 @@ div{
 #doc-navbar{
   border: none;
   box-shadow: none;
+  
 }
 #navbar-documentation{
   all: unset;
@@ -196,6 +199,12 @@ div{
 .mapboxgl-ctrl-attrib-inner{
   display: none;
 }
+.mapboxgl-popup-content{
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
+  border-radius: 1rem;
+}
 
 .screen {
   width: 100%;
@@ -246,7 +255,7 @@ div{
   top: 0px;
   background-size: 300%;
   background-position: 0% 0%;
-  filter: sepia(100%) hue-rotate(160deg);
+  /* filter: sepia(100%) hue-rotate(160deg); */
   opacity: 0.6;
   animation: pan-image 15s linear infinite;
 }
@@ -373,11 +382,10 @@ div{
   width: 100%;
   height: 32%;
 }
-/* .screen > img{
-  width: 100%;
+#doc-img-1 .screen-overlay, #doc-img-2 .screen-overlay, #doc-img-3 .screen-overlay, #doc-img-4 .screen-overlay, #doc-img-5 .screen-overlay, #doc-img-6 .screen-overlay, #doc-img-7 .screen-overlay{
   height: 100%;
-  object-fit: cover;
-} */
+  width: 100%;
+}
 
 #navpage{
   border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
@@ -453,6 +461,12 @@ div{
 blockquote{
   text-align: justify;
   padding: 5%;
+}
+.accordion-body{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  
 }
 .accordion-body h2{
   /* text-align: start; */
