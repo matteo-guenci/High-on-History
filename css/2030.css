@@ -22,10 +22,17 @@ body{
   }
 .navigazione {
     /* background-color: rgba(163, 43, 21, 1) !important;  */
-    background-color: rgba(163, 43, 21, 1) !important;
+    background-color: rgba(23, 26, 28, 1) !important;
+    
+}
+.navbar {
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+
 }
 #nav-issue{
-  background-color: rgba(163, 43, 21, 1) !important;
+  background-color: rgba(23, 26, 28, 1) !important;
 
 }
 .nav-content .toggle-btn{
@@ -85,13 +92,21 @@ div{
 }
 #documentation .row h2{
   right: 10rem;
+  padding-bottom: 5%;
 }
 #menu-card{
-  background-color: rgba(163, 43, 21, 1);
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
   border-radius: 1rem;
 }
+#doc-navbar{
+  border: none;
+  box-shadow: none;
+}
 #navbar-documentation{
-  background-color: rgba(163, 43, 21, 1);
+  all: unset;
+  background-color: rgba(23, 26, 28, 1);
   border-radius: 1rem;
   /* background-color: rgba(23, 26, 28, 1); */
 
@@ -365,7 +380,9 @@ div{
 } */
 
 #navpage{
-  background-color: rgba(163, 43, 21, 1) !important;
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
 }
 #sidebarCollapse{
   background-color: rgba(23, 26, 28, 1);
@@ -395,14 +412,19 @@ div{
 
 }
 .accordion-button:not(.collapsed) {
-  background-color: rgba(23, 26, 28, 1);
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
   color: rgb(218, 218, 218);
 }
 .accordion-button{
-  background-color:rgba(163, 43, 21, 1);
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */;
   display: inline-block;
   text-align: center;
   font-size: 4vh;
+  color: rgb(218, 218, 218);
 }
 /* .accordion-button:{
   background-color: rgba(23, 26, 28, 1) !important;
@@ -506,7 +528,10 @@ blockquote{
   z-index: 999;
 }
 .footer{
-  background-color: rgba(163, 43, 21, 1);
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1);
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+
 }
 /* Color Theme Swatches in RGBA */
 .The-Expanse-Color-Scheme-1-rgba { color: rgba(8, 126, 204, 1); }
@@ -514,6 +539,7 @@ blockquote{
 .The-Expanse-Color-Scheme-3-rgba { color: rgba(0, 255, 219, 1); }
 .The-Expanse-Color-Scheme-4-rgba { color: rgba(163, 43, 21, 1); }
 .The-Expanse-Color-Scheme-4-rgba { color: #ea5125 }
+/* /*colore di mezzo fra quel nero e quel rosso rgba(93, 34.5, 24.5, 1)/* */
 
 .The-Expanse-Color-Scheme-5-rgba { color: rgba(204, 16, 14, 1); }
 
