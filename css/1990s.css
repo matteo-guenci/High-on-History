@@ -343,7 +343,7 @@ h5 {
 }
 
 
-.dropdown-toggle{
+#first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
   font-family: "SniffinGlue2";
   font-size: 2rem !important;
   font-weight: 700;
@@ -356,10 +356,10 @@ h5 {
   border: none;
  }
 
- #sidebar{
+#first #sidebar, #second #sidebar, #third #sidebar{
   background-image: url(/imgs/carta.jpg);
  }
-#sidebar button:nth-child(odd){
+#first #sidebar button:nth-child(odd), #second #sidebar button:nth-child(odd), #third #sidebar button:nth-child(odd){
   rotate: 5deg;
   border: none;
   background-image: url(/imgs/carta.jpg);
@@ -370,7 +370,7 @@ h5 {
   width: 13rem;
   margin-bottom: 1rem;
 }
-#sidebar button:nth-child(even){
+#first #sidebar button:nth-child(even), #second #sidebar button:nth-child(even), #third #sidebar button:nth-child(even){
   rotate: -5deg;
   border: none;
   background-image: url(/imgs/carta.jpg);
@@ -381,12 +381,14 @@ h5 {
   width: 13rem;
   margin-bottom: 1rem;
 }
-#sidebarCollapse{
+#first #sidebarCollapse, #second #sidebarCollapse, #third #sidebarCollapse{
   border: none;
   background-color: gray;
   color: black;
 }
-.page-link {
+#first .page-link, #second .page-link, #third .page-link {
   background-color: gray;
   color: black !important;
 }
+
+/* :is([data-page*="/first/"]) */

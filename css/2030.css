@@ -34,7 +34,7 @@ body{
   background-color: rgba(23, 26, 28, 1) !important;
 
 }
-.nav-content .toggle-btn{
+.nav-content .toggle-btn {
   background-image: url(/imgs/alien_ring.jpg);
   background-size: 170%;
   background-position: 50% 100%; /* Centered horizontally and vertically */
@@ -402,7 +402,7 @@ div{
 #sidebar{
   background-color: rgba(163, 43, 21, 1);
 }
-.dropdown-toggle{
+#first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
@@ -411,7 +411,7 @@ div{
   background-color: rgba(23, 26, 28, 1) !important;
   box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
 }
-#sidebar button{
+#first #sidebar button, #second #sidebar button, #third #sidebar button{
   justify-content: center;
   text-align: center;
   height: 3rem;
@@ -423,7 +423,7 @@ div{
   box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
   color: rgb(218, 218, 218);
 }
-#sidebar button:active{
+#first #sidebar button:active, #second #sidebar button:active, #third #sidebar button:active{
   border-radius: 1rem;
   border: 1px solid rgba(23, 26, 28, 1); /* Colore del bordo (verde neon) */
   box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
