@@ -403,13 +403,30 @@ div{
   background-color: rgba(163, 43, 21, 1);
 }
 .dropdown-toggle{
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
   background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
 }
 #sidebar button{
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 13rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
   background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
   color: rgb(218, 218, 218);
 }
 #sidebar button:active{
+  border-radius: 1rem;
+  border: 1px solid rgba(23, 26, 28, 1); /* Colore del bordo (verde neon) */
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
   background-color: rgba(163, 43, 21, 1) !important;
   color: rgb(218, 218, 218);
 }

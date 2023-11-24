@@ -34,6 +34,10 @@ p, p#author, #author, button, li{
   font-size: 2.5rem;
   font-weight: 900;
 }
+.accordion-button:not(.collapsed) {
+  color: black;
+  border: none;
+}
 
 .accordionLink{
   font-family: 'Oldtype';
@@ -336,4 +340,53 @@ h5 {
 #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
   font-family: "Oldtype";
   font-size: 100%;
+}
+
+
+.dropdown-toggle{
+  font-family: "SniffinGlue2";
+  font-size: 2rem !important;
+  font-weight: 700;
+  color: black !important;
+  rotate: -10deg;
+  background-image: url(/imgs/carta.jpg) !important;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  border: none;
+ }
+
+ #sidebar{
+  background-image: url(/imgs/carta.jpg);
+ }
+#sidebar button:nth-child(odd){
+  rotate: 5deg;
+  border: none;
+  background-image: url(/imgs/carta.jpg);
+
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 13rem;
+  margin-bottom: 1rem;
+}
+#sidebar button:nth-child(even){
+  rotate: -5deg;
+  border: none;
+  background-image: url(/imgs/carta.jpg);
+
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 13rem;
+  margin-bottom: 1rem;
+}
+#sidebarCollapse{
+  border: none;
+  background-color: gray;
+  color: black;
+}
+.page-link {
+  background-color: gray;
+  color: black !important;
 }
