@@ -109,7 +109,9 @@ blockquote{
   0 0 15px #e9ecef; 
 }
 
-
+.footer{
+  margin-top: 5rem;
+}
 .footer-text{
   font-size: 1rem;
 }
@@ -135,11 +137,7 @@ blockquote{
   z-index: 998;
 }
 
-#about .image-row{
-  margin-bottom: 4rem;
-  background-image: url(/imgs/punk_border.png);
-  background-repeat: round;
-}
+
 .image-container {
   padding-bottom: 2rem;
   transform: rotate(-5deg) skew(-5deg);
@@ -148,7 +146,26 @@ blockquote{
   border: none;
   margin-bottom: 2rem;
 }
+#about .image-row{
+  margin-bottom: 4rem;
+  background-image: url(/imgs/punk_border.png);
+  background-repeat: round;
+  background-position: 100%;
 
+}
+
+.image-row .image-container .label{
+  font-family: "SniffinGlue2" !important;
+  text-align: center;
+  justify-content: center;
+  bottom: -6vh;
+  right: 7vw;
+  left: 7vw;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
 #issues .label, .label{
   right: 7vw;
   left: 7vw;
