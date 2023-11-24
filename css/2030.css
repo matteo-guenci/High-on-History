@@ -204,6 +204,9 @@ div{
   background-color: rgba(23, 26, 28, 1);
   border-radius: 1rem;
 }
+.mapboxgl-ctrl-logo{
+  display: none !important;
+}
 
 .screen {
   width: 100%;
