@@ -242,9 +242,10 @@ h5 {
   padding: 2%;
 }
 
-#content img {
+#documentation img {
   max-width: 100%;
-  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   display: block;
   flex-wrap: wrap;
   padding: auto;
