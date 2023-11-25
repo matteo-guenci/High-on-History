@@ -20,7 +20,7 @@
 
 body {
   overflow-x: hidden;
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
   filter: grayscale(100%) contrast(1) brightness(100%);
   }
 
@@ -60,24 +60,24 @@ nav.navigazione{
   font-weight: 900;
 }
 .nav-content .toggle-btn{
-  background-image: url(/imgs/anarchy.jpg);
+  background-image: url(../imgs/anarchy.jpg) !important;
   rotate: -75deg;
   background-size: contain;
   background-repeat: no-repeat;
   zoom: 150%;
 }
 .accordion{
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
 }
 
 .accordion-body{
   column-count: 2;
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
 
 
 }
 .accordion-item, .accordion-button{
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
   border: none;
 
 }
@@ -148,7 +148,7 @@ blockquote{
 }
 #about .image-row{
   margin-bottom: 4rem;
-  background-image: url(/imgs/punk_border.png);
+  background-image: url(../imgs/punk_border.png);
   background-repeat: round;
   background-position: 100%;
 
@@ -159,8 +159,8 @@ blockquote{
   text-align: center;
   justify-content: center;
   bottom: -6vh;
-  right: 7vw;
-  left: 7vw;
+  right: 5vw;
+  left: 5vw;
   text-align: center;
   justify-content: center;
   margin-top: 2rem;
@@ -369,7 +369,7 @@ h5 {
   font-weight: 700;
   color: black !important;
   rotate: -10deg;
-  background-image: url(/imgs/carta.jpg) !important;
+  background-image: url(../imgs/carta.jpg) !important;
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
@@ -377,12 +377,12 @@ h5 {
  }
 
 #first #sidebar, #second #sidebar, #third #sidebar{
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
  }
 #first #sidebar button:nth-child(odd), #second #sidebar button:nth-child(odd), #third #sidebar button:nth-child(odd){
   rotate: 5deg;
   border: none;
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
 
   justify-content: center;
   text-align: center;
@@ -393,7 +393,7 @@ h5 {
 #first #sidebar button:nth-child(even), #second #sidebar button:nth-child(even), #third #sidebar button:nth-child(even){
   rotate: -5deg;
   border: none;
-  background-image: url(/imgs/carta.jpg);
+  background-image: url(../imgs/carta.jpg);
 
   justify-content: center;
   text-align: center;

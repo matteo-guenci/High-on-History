@@ -35,7 +35,7 @@ body{
 
 }
 .nav-content .toggle-btn {
-  background-image: url(/imgs/alien_ring.jpg);
+  background-image: url(../imgs/alien_ring.jpg) !important;
   background-size: 170%;
   background-position: 50% 100%; /* Centered horizontally and vertically */
   zoom: 150%;
