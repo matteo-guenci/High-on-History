@@ -434,10 +434,16 @@ body {
     text-align: center !important;
     height: 40vh;
     margin-bottom: 1vh;
+    object-fit: contain;
 }
+
 
 .container img:hover {
     filter:grayscale(100%)
+}
+
+#navbarSupportedContent.active {
+    background-color: rgb(214, 46, 31);
 }
 
 .image-container {

@@ -347,7 +347,12 @@ img:hover {
 
 .container img {
     text-align: center !important;
-    height: 40vh
+    height: 40vh;
+    object-fit: contain;
+}
+
+#navbarSupportedContent.active {
+    background-color: rgb(251, 239, 204);
 }
 
 .image-container {
