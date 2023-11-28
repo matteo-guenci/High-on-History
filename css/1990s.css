@@ -146,15 +146,14 @@ blockquote{
   border: none;
   margin-bottom: 2rem;
 }
-#about .image-row{
+#about .image-row {
   margin-bottom: 4rem;
-  background-image: url(../imgs/punk_border.png);
-  background-repeat: round;
-  background-position: 100%;
-
+  /* background-image: url(../imgs/punk_border.png);
+  background-size: contain; 
+  background-position: 100%; */
 }
 
-.image-row .image-container .label{
+.image-row .image-container .label {
   font-family: "SniffinGlue2" !important;
   text-align: center;
   justify-content: center;
@@ -166,6 +165,7 @@ blockquote{
   margin-top: 2rem;
   padding-bottom: 2rem;
 }
+
 #issues .label, .label{
   right: 7vw;
   left: 7vw;
