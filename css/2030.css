@@ -147,6 +147,7 @@ div{
 }
 #issues .image-container .screen .screen-image img{
   padding-bottom: 3vh;
+
 }
 #about .image-row{
   margin-bottom: 12rem;
@@ -165,32 +166,20 @@ div{
   object-fit: cover; 
 }
 
-#issues .label{
+#issues .label {
+  display: flex;
   align-items: center;
   justify-content: center;
-  justify-items: center;
-  text-align: center;
-  display: flex;
-  /* right: 7vw; */
-  left: 4.5vw;
   text-align: center;
   white-space: nowrap;
-}
-#issues .label h4{
-  font-size: 1.3vw;
+  left: 4.5vw;
 }
 
-/* #issues .screen .screen-image img{
-  height: 100%;
-  width: 100%;
-} */
-/* .image-row .image-container .label{
-  bottom: 1vh;
-  right: 7vw;
-  left: 7vw;
-  text-align: center;
-  justify-content: center;
-} */
+#issues .label h4 {
+  font-size: 1.3vw;
+  max-width: 100%; 
+}
+
 #about h4{
   align-items: center;
   justify-content: center;
@@ -605,3 +594,4 @@ blockquote{
 #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
   font-size: 100%;
 }
+
