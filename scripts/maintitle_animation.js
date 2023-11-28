@@ -23,7 +23,5 @@ function animazione(){
 
             iteration += 1 / 3;
 
-            // Apply animation specific to 'css/2030.css'.
-            // You can add your animation logic here.
         }, 50);
     }
