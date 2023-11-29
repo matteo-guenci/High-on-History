@@ -172,6 +172,15 @@ body {
     z-index: 998;
 }
 
+@media (max-width:600px) {
+
+    #theImage {
+        height: 20vh !important;
+        width: auto !important
+    }
+
+}
+
 #punk{
     /* width: 20vw;
     height: 20vh; */

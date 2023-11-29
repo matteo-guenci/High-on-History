@@ -383,6 +383,15 @@ img:hover {
     text-align: center
 }
 
+@media (max-width:600px) {
+
+    #campari {
+        height: 20vh !important;
+        width: auto !important
+    }
+
+}
+
 .documentation-img {
     display: block;
     margin: 2rem auto;
