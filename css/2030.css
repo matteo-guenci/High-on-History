@@ -377,7 +377,7 @@ div{
   height: 73%;
 }
 #doc-img-5 img{
-  width: 100%;
+  width: 110%;
   height: 63%;
 }
 #doc-img-6 img{
@@ -593,4 +593,766 @@ blockquote{
 
 #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
   font-size: 100%;
+}
+.container {
+  display: flex;
+}
+
+#doc-navbar {
+  flex: 0 0 25%; /* Set a fixed width for the navbar */
+}
+
+#main-background {
+  flex: 1; /* Allow the main background to take up remaining space */
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  #doc-navbar,
+  #main-background,
+  #about {
+    width: 100%; /* Make both full width on smaller screens */
+  }
+
+  #doc-img-1{
+    aspect-ratio: 10/16;
+    display: flexbox;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: auto;
+    max-width: 18vw;
+    max-height: 60vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  #doc-img-2{
+    aspect-ratio: 16/12;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    margin: auto; 
+    max-width: 36vw;
+    max-height: 62vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+  }
+  #doc-img-3{
+    aspect-ratio: 16/8;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    margin: auto; 
+    max-width: 36vw;
+    max-height: 62vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+  }
+  #doc-img-4{
+    width: 221px;
+    height: 257px;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    margin: auto; 
+    max-width: 36vw;
+    max-height: 62vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+  }
+  #doc-img-5{
+    aspect-ratio: 16/12;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    margin: auto; 
+    max-width: 40vw;
+    max-height: 52vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+  }
+  #doc-img-6{
+    aspect-ratio: 16/12;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    margin: auto; 
+    max-width: 50vw;
+    max-height: 80vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+  }
+  #doc-img-7, #doc-img-8{
+    aspect-ratio: 16/8;
+    display: flexbox;
+    justify-content: center; 
+    align-items: center;  
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 1rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    overflow: hidden;
+    z-index: 10;
+    margin: 5%;
+  }
+  
+  #doc-img-1 img{
+    width: 100%;
+    height: 100%;
+  }
+  #doc-img-2 img{
+    width: 100%;
+    height: 100%;
+  }
+  #doc-img-3 img{
+    width: 100%;
+    height: 31.5%;
+  }
+  #doc-img-4 img{
+    width: 100%;
+    height: 73%;
+  }
+  #doc-img-5 img{
+    width: 100%;
+    height: 100%;
+  }
+  #doc-img-6 img{
+    width: 100%;
+    height: 50%;
+  }
+  #doc-img-7 img, #doc-img-8 img{
+    width: 100%;
+    height: 32%;
+  }
+  #doc-img-1 .screen-overlay, #doc-img-2 .screen-overlay, #doc-img-3 .screen-overlay, #doc-img-4 .screen-overlay, #doc-img-5 .screen-overlay, #doc-img-6 .screen-overlay, #doc-img-7 .screen-overlay{
+    height: 100%;
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  @font-face {
+    font-family: 'SpaceMono';
+    src: url(../fonts/SpaceMono-Regular.ttf);
+  }
+@font-face {
+    font-family: 'ProtoMolecule';
+    src: url(../fonts/Protomolecule.ttf);
+  }
+
+    /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
+
+body{
+    background-color: rgba(23, 26, 28, 1);
+    overflow-x: hidden;
+    /* background-image: url(/imgs/grid_2030.jpg); */
+    /* background-image: radial-gradient(
+      rgba(255, 255, 255, 02) 8%, 
+      transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 1vmin 1vmin; */
+  }
+.navigazione {
+    /* background-color: rgba(163, 43, 21, 1) !important;  */
+    background-color: rgba(23, 26, 28, 1) !important;
+    
+}
+.navbar {
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+}
+#nav-issue{
+  background-color: rgba(23, 26, 28, 1) !important;
+
+}
+.nav-content .toggle-btn {
+  background-image: url(../imgs/alien_ring.jpg) !important;
+  background-size: 170%;
+  background-position: 50% 100%; /* Centered horizontally and vertically */
+  zoom: 150%;
+}
+
+#maintitle {
+    font-size: 4rem;
+    font-family: 'ProtoMolecule', serif;
+    color: rgb(218, 218, 218);
+    text-transform: lowercase;
+}
+#maintitle:hover{
+  color: rgba(163, 43, 21, 1);
+  /* background-color: rgb(218, 218, 218); */
+  /* box-shadow: 5px 5px 10px rgb(218, 218, 218); */
+}
+#title{
+  font-family: "ProtoMolecule", serif;
+  text-transform: lowercase;
+}
+h1, h2, h3, h4, h5, a, blockquote{
+  font-family: "ProtoMolecule", serif;
+  color: rgb(218, 218, 218)
+}
+#issues h2, #documentation h2, #about h2{
+  font-size: 4vw;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  /* padding-bottom: 6vh; */
+}
+#it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
+  font-family: 'ProtoMolecule', serif;
+}
+
+p{
+  font-family: "ProtoMolecule", serif;
+  color: rgb(218, 218, 218);
+  font-size: 1rem;
+}
+
+div{
+  font-family: "ProtoMolecule", serif;
+  color: rgb(218, 218, 218);
+  font-size: 1rem;
+}
+.nav-link {
+  color: rgb(218, 218, 218) !important;
+}
+.dropdown-menu{
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
+  border-radius: 1rem;
+}
+#documentation .row h2{
+  right: 10rem;
+  padding-bottom: 5%;
+}
+/* #menu-card{
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
+  border-radius: 1rem;
+} */
+#doc-navbar{
+  border: none;
+  box-shadow: none;
+  
+}
+#menu-card {
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+
+}
+
+#menu-card.active {
+  background-color: rgba(23, 26, 28, 1);
+}
+
+#menu-card.active #navbar-documentation {
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  height: 67.8vh;
+}
+#navbar-documentation {
+  overflow-y: scroll;
+  height: 90vh;
+  position: static;
+}
+#hamburger1, #hamburger2, #hamburger3{
+  border: 1px solid rgba(163, 43, 21, 1); 
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1);
+}
+.collapse.navbar-collapse.navigazione.d-none.d-sm-block.active {
+  border: 1px solid rgba(163, 43, 21, 1); 
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+}
+.documentation-container{
+  display: flex;
+}
+.image-container{
+  border: none;
+  /* position:relative; */
+}
+#issues .image-container .screen {
+  aspect-ratio: 16/9;
+}
+#issues .image-container .screen .screen-image img{
+  padding-bottom: 3vh;
+
+}
+#about .image-row{
+  margin-bottom: 12rem;
+}
+
+#about .image-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'ProtoMolecule';
+}
+#about .image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+#issues .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  left: 4.5vw;
+}
+
+#issues .label h4 {
+  font-size: 1.3vw;
+  max-width: 100%; 
+}
+
+#about h4{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  display: flex;
+  margin: none;
+  /* max-width: 100%;
+  min-width: 1.605em;
+  max-height: 100%;
+  min-height: 1.605em; */
+  /* font-size: 1.605em; */
+}
+
+
+
+.mapbox-improve-map{
+  display: none;
+}
+.mapboxgl-ctrl-attrib-inner{
+  display: none;
+}
+.mapboxgl-popup-content{
+  border: 1px solid rgba(163, 43, 21, 1); 
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  background-color: rgba(23, 26, 28, 1);
+  border-radius: 1rem;
+}
+.mapboxgl-ctrl-logo{
+  display: none !important;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  aspect-ratio: 10 / 16;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
+}
+
+.screen-overlay {
+  background: linear-gradient(
+    rgba(33, 150, 243, 0.15),
+    rgba(33, 150, 243, 0.15) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+  background-size: 100% 9px;
+  height: 90%;
+  width: 100%;
+  animation: pan-overlay 22s infinite linear;
+  /* position: absolute; */
+  /* z-index: 2; */
+  /* left: 0px;
+  top: 0px; */
+}
+#content p{
+  padding: 5vh;
+}
+.screen > .screen-image{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  background-size: 300%;
+  background-position: 0% 0%;
+  /* filter: sepia(100%) hue-rotate(160deg); */
+  opacity: 0.6;
+  animation: pan-image 15s linear infinite;
+}
+
+#doc-img-1{
+  aspect-ratio: 10/16;
+  display: flexbox;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto;
+  max-width: 18vw;
+  max-height: 60vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+#doc-img-2{
+  aspect-ratio: 16/12;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 36vw;
+  max-height: 62vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-3{
+  aspect-ratio: 16/8;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 36vw;
+  max-height: 62vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-4{
+  width: 221px;
+  height: 257px;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 36vw;
+  max-height: 62vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-5{
+  aspect-ratio: 16/12;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 40vw;
+  max-height: 52vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-6{
+  aspect-ratio: 16/12;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+  max-width: 50vw;
+  max-height: 80vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+#doc-img-7, #doc-img-8{
+  aspect-ratio: 16/8;
+  display: flexbox;
+  justify-content: center; 
+  align-items: center;  
+  max-width: 100vw;
+  max-height: 100vh;
+  border-radius: 1rem;
+  background-color: rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+  z-index: 10;
+  margin: 5%;
+}
+
+#doc-img-1 img{
+  width: 100%;
+  height: 100%;
+}
+#doc-img-2 img{
+  width: 100%;
+  height: 100%;
+}
+#doc-img-3 img{
+  width: 100%;
+  height: 31.5%;
+}
+#doc-img-4 img{
+  width: 100%;
+  height: 73%;
+}
+#doc-img-5 img{
+  width: 100%;
+  height: 100%;
+}
+#doc-img-6 img{
+  width: 100%;
+  height: 50%;
+}
+#doc-img-7 img, #doc-img-8 img{
+  width: 100%;
+  height: 32%;
+}
+#doc-img-1 .screen-overlay, #doc-img-2 .screen-overlay, #doc-img-3 .screen-overlay, #doc-img-4 .screen-overlay, #doc-img-5 .screen-overlay, #doc-img-6 .screen-overlay, #doc-img-7 .screen-overlay{
+  height: 100%;
+  width: 100%;
+}
+
+#navpage{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+}
+#sidebarCollapse{
+  background-color: rgba(23, 26, 28, 1);
+  border: none;
+}
+#sidebarCollapse:hover{
+  background-color: rgba(163, 43, 21, 1);
+  border: none;
+}
+#sidebar{
+  background-color: rgba(163, 43, 21, 1);
+}
+#first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+}
+#first #sidebar button, #second #sidebar button, #third #sidebar button{
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 13rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  color: rgb(218, 218, 218);
+}
+#first #sidebar button:active, #second #sidebar button:active, #third #sidebar button:active{
+  border-radius: 1rem;
+  border: 1px solid rgba(23, 26, 28, 1); /* Colore del bordo (verde neon) */
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  background-color: rgba(163, 43, 21, 1) !important;
+  color: rgb(218, 218, 218);
+}
+.accordion-item{
+  background-color: rgba(23, 26, 28, 1) !important;
+  /* border: none; */
+
+}
+.accordion-button:not(.collapsed) {
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  color: rgb(218, 218, 218);
+}
+.accordion-button{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */;
+  display: inline-block;
+  text-align: center;
+  font-size: 4vh;
+  color: rgb(218, 218, 218);
+}
+/* .accordion-button:{
+  background-color: rgba(23, 26, 28, 1) !important;
+} */
+
+.page-link {
+  background-color: rgba(23, 26, 28, 1);
+  color: rgb(218, 218, 218);
+  border: none;
+}
+.page-link:hover {
+  background-color: rgba(163, 43, 21, 1);
+  color: rgb(218, 218, 218);
+  border: none;
+}
+.paragraph {
+  column-count: 2;
+  display: block;
+  column-gap: 5%;
+  margin: 0;
+}
+.paragraph p{
+  padding: 3%;
+  margin: 3%;
+}
+blockquote{
+  text-align: justify;
+  padding: 5%;
+}
+.accordion-body{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  
+}
+.accordion-body h2{
+  /* text-align: start; */
+  max-width: 40%;
+}
+#subtitle{
+  max-width: 100%;
+}
+.img_paragraph img {
+  display: none !important;
+  /* transform: rotate(5deg);
+  padding: 2rem;
+  max-width: 42vw;
+  float: left;
+  display: block; */
+}
+
+#second_hide{
+  display: none;
+}
+/* .hide_image{
+  display: none;
+} */
+/* #doc-img-3 img.paragraph {
+  margin: 0;
+} */
+
+.second_image img{
+  height: 100%;
+  width: 100%;
+  /* display: block; */
+  /* image-rendering:pixelated; */
+  /* filter: blur(1px); */
+  /* opacity: 0.5; */
+
+}
+.label_photo{
+  text-align: center;
+}
+
+:root {
+  --scrollbar-track-color: rgba(23, 26, 28, 1);
+  --scrollbar-thumb-color: rgba(163, 43, 21, 1);
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+}
+
+/* ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+} */
+
+/* Firefox Scrollbar Styles */
+/* Note: Firefox currently only supports styling the thumb and track */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb-color) transparent;
+  scroll-behavior: smooth;
+}
+
+.highlight{
+  background-color: rgba(163, 43, 21, 1);
+  z-index: 999;
+}
+.footer{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1);
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  border-radius: 1rem;
+}
+/* Color Theme Swatches in RGBA */
+.The-Expanse-Color-Scheme-1-rgba { color: rgba(8, 126, 204, 1); }
+.The-Expanse-Color-Scheme-2-rgba { color: rgba(23, 26, 28, 1); }
+.The-Expanse-Color-Scheme-3-rgba { color: rgba(0, 255, 219, 1); }
+.The-Expanse-Color-Scheme-4-rgba { color: rgba(163, 43, 21, 1); }
+.The-Expanse-Color-Scheme-4-rgba { color: #ea5125 }
+/* /*colore di mezzo fra quel nero e quel rosso rgba(93, 34.5, 24.5, 1)/* */
+
+.The-Expanse-Color-Scheme-5-rgba { color: rgba(204, 16, 14, 1); }
+
+
+.hide_image2 {
+  display: none
+}
+#hide_image3{
+  display: none;
+}
+.second_image2{
+  display: none;
+}
+
+#number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
+  font-size: 100%;
+}
+.container {
+  display: flex;
+}
+
+#doc-navbar {
+  flex: 0 0 25%; /* Set a fixed width for the navbar */
+}
+
+#main-background {
+  flex: 1; /* Allow the main background to take up remaining space */
+}
 }

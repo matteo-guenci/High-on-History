@@ -198,6 +198,7 @@ h2{
 }
 
 
+
 h2.navbar-brand{
   font-family: 'Oldtype';
   font-size: 2rem;
@@ -256,12 +257,28 @@ h5 {
   position: static;
 }
 
+.container {
+  display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+   
+    width: 100%; /* Make both full width on smaller screens */
+  
+  
+}
+
+#doc-navbar {
+  flex: 0 0 25%; /* Set a fixed width for the navbar */
+}
+
+#main-background {
+  flex: 1; /* Allow the main background to take up remaining space */
+}
+
 #content {
   column-gap: 15%;
   column-count: 2;
   font-family: 'Oldtype';
 }
-
 
 
 .mapbox-improve-map{
@@ -412,4 +429,440 @@ h5 {
   color: black !important;
 }
 
+
 /* :is([data-page*="/first/"]) */
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  #doc-navbar,
+  #main-background {
+    width: 100%; /* Make both full width on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @font-face {
+    font-family: 'Oldtype';
+    src: url(../fonts/Bohemian_Typewriter.ttf);
+  }
+  @font-face {
+    font-family: 'SniffinGlue';
+    src: url(../fonts/DanielsHandwritingBoldItalic-GABG.ttf);
+  }
+  
+  @font-face {
+    font-family: 'SniffinGlue2';
+    src: url(../fonts/GiottoHandwriting-d0w7.ttf);
+  }
+  @font-face {
+    font-family: 'SniffinGlue3';
+    src: url(../fonts/AngelasHandwriting-XjLP.ttf);
+  }
+  
+  
+  
+  body {
+    overflow-x: hidden;
+    background-image: url(../imgs/carta.jpg);
+    filter: grayscale(100%) contrast(1) brightness(100%);
+    }
+  
+  
+  p, p#author, #author, button, li{
+    font-family: 'Oldtype';
+  }
+  
+  .accordion-button{
+    font-family: 'SniffinGlue2';
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  .accordion-button:not(.collapsed) {
+    color: black;
+    border: none;
+  }
+  
+  .accordionLink{
+    font-family: 'Oldtype';
+    font-weight: 700;
+  }
+  nav.navbar{
+    font-family: 'Oldtype';
+    font-size: 1rem;
+  }
+  nav.navigazione{
+    border-bottom: solid;
+  }
+  .nav-link {
+    font-family: 'Oldtype';
+    font-weight: 900 !important;
+    font-size: 1rem;
+  }
+  .page-link{
+    font-family: 'Oldtype';
+    font-weight: 900;
+  }
+  .nav-content .toggle-btn{
+    background-image: url(../imgs/anarchy.jpg) !important;
+    rotate: -75deg;
+    background-size: contain;
+    background-repeat: no-repeat;
+    zoom: 150%;
+  }
+  .accordion{
+    background-image: url(../imgs/carta.jpg);
+  }
+  
+  .accordion-body{
+    column-count: 2;
+    background-image: url(../imgs/carta.jpg);
+  
+  
+  }
+  .accordion-item, .accordion-button{
+    background-image: url(../imgs/carta.jpg);
+    border: none;
+  
+  }
+  .highlight{
+    background-color: gray;
+    z-index: 999;
+  }
+  
+  
+  #it1-1, #it1-2, #it1-3, #it1-4, #it1-5, #it1-6{
+    font-family: 'Oldtype';
+  }
+  
+  
+  blockquote{
+    font-family: 'Oldtype';
+    font-weight: 700;
+  }
+  
+  #maintitle{
+    font-family: 'SniffinGlue2', Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: black;
+    rotate: 5deg;
+    text-shadow: 
+    0 0 4px #e9ecef,
+    0 0 10px #e9ecef, 
+    0 0 15px #e9ecef; 
+  }
+  
+  .footer{
+    margin-top: 5rem;
+  }
+  .footer-text{
+    font-size: 1rem;
+  }
+  
+  #punk{
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    z-index: 998;
+  }
+  
+  #punkhead{
+    width: 40vw;
+    height: 20vh;
+    fill: #bbb;
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 998;
+  }
+  
+  
+  .image-container {
+    padding-bottom: 2rem;
+    transform: rotate(-5deg) skew(-5deg);
+    border-radius: 10px;
+    transform: skew(-5deg);
+    border: none;
+    margin-bottom: 2rem;
+  }
+  #about .image-row {
+    margin-bottom: 4rem;
+    /* background-image: url(../imgs/punk_border.png);
+    background-size: contain; 
+    background-position: 100%; */
+  }
+  
+  .image-row .image-container .label {
+    font-size: 1vw !important;
+    font-family: "SniffinGlue2" !important;
+    text-align: center;
+    justify-content: center;
+    bottom: 4vh;
+    right: 5vw;
+    left: 5vw;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  #issues .label, .label{
+    right: 7vw;
+    left: 7vw;
+    font-family: 'Oldtype';
+    font-weight: 900;
+  }
+  #issues .label h4{
+  
+    font-size: 1.5vw;
+  }
+  
+  h1{
+    font-family: 'SniffinGlue2';
+    font-weight: 900;
+    font-size: 4rem;
+  }
+  h2{
+    font-family: 'SniffinGlue2';
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  #issues h2{
+    padding-bottom: 2rem;
+  }
+  .container{
+    display: flex;
+
+  }
+  .container h1, h2{
+    font-family: 'SniffinGlue2';
+    font-size: 5rem;
+    padding: 5rem;
+    transform: rotate(7deg) skew(4deg);
+  }
+  
+  
+  h2.navbar-brand{
+    font-family: 'Oldtype';
+    font-size: 2rem;
+    font-weight: 700;
+    transform: none;
+    padding: 0;
+  }
+  #navpage{
+    border-bottom: solid;
+    border-top: solid;
+  }
+  #main-background h2{
+    all: unset;
+    font-size: 3rem;
+    font-family: 'SniffinGlue2'; 
+    font-weight: 700;
+  }
+  #main-background{
+    width: 100%;
+  }
+  
+  
+  #subtitle{
+    font-family: 'SniffinGlue2';
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h3{
+    font-family: 'SniffinGlue2';
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  h4{
+    font-family: 'Oldtype';
+    font-weight: 700;
+  }
+  h5 {
+    font-family: 'SniffinGlue2';
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  #documentation{
+    width: 100%;
+    padding: 2%;
+  }
+  
+  .documentation-img {    
+    display: block;
+    margin: 2rem auto;  
+  }
+  #menu-card {
+    overflow-y: scroll;
+    height: 100vh;
+    position: center;
+  }
+  
+  #content {
+    justify-self: center;
+    column-count: 1;
+    font-family: 'Oldtype';
+  }
+  
+
+  
+  .mapbox-improve-map{
+    display: none;
+  }
+  .mapboxgl-ctrl-attrib-inner{
+    display: none;
+  }
+  .mapboxgl-ctrl-logo{
+    display: none !important;
+  }
+  
+  /* testo */
+  
+  .text-brutal{
+    font-family: 'SniffinGlue2';
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2rem;
+    transform: rotate(5deg);
+  } /*da applicare a porzioni di testo per ingrandirle e rotarle == brutalismo */
+  
+  .accordion-body{
+    column-count: 1;
+  }
+  
+  .paragraph {
+    display: block;
+    break-inside: avoid;
+    margin: 0;
+    column-gap: 20px;
+  }
+  
+  .paragraph img{
+    float: left;
+    max-width: 50vw;
+    max-height: auto;
+    margin: 0;
+    display: block;
+  }
+  .hide_image img{
+    /* display: none; */
+    transform: rotate(5deg);
+    padding: 2rem;
+    max-width: 42vw;
+    float: left;
+    display: block;
+  }
+  .img_paragraph img {
+    display: none !important;
+  }
+  .img_paragraph .label_photo {
+    display: none !important;
+  }
+  .second_image img{
+    transform: rotate(-5deg);
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    max-width: 30vw;
+    float: right;
+  }
+  
+  .second_image2{
+    display: none;
+  }
+  
+  .label_photo{
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  
+  .hide_image2 {
+    display: none
+  }
+  #second_hide{
+    display: none;
+  }
+  #hide_image3 {
+    transform: rotate(-5deg);
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    max-width: 30vw;
+    float: right;  
+  }
+  #hide_label{
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 3rem;
+    padding-top: 3rem;  
+  }
+  #doc-img-8{
+    display: none;
+  }
+  
+  #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
+    font-family: "Oldtype";
+    font-size: 100%;
+  }
+  
+  
+  #first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
+    font-family: "SniffinGlue2";
+    font-size: 2rem !important;
+    font-weight: 700;
+    color: black !important;
+    rotate: -10deg;
+    background-image: url(../imgs/carta.jpg) !important;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    border: none;
+   }
+  
+  #first #sidebar, #second #sidebar, #third #sidebar{
+    background-image: url(../imgs/carta.jpg);
+   }
+  #first #sidebar button:nth-child(odd), #second #sidebar button:nth-child(odd), #third #sidebar button:nth-child(odd){
+    rotate: 5deg;
+    border: none;
+    background-image: url(../imgs/carta.jpg);
+  
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+  #first #sidebar button:nth-child(even), #second #sidebar button:nth-child(even), #third #sidebar button:nth-child(even){
+    rotate: -5deg;
+    border: none;
+    background-image: url(../imgs/carta.jpg);
+  
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+  #first #sidebarCollapse, #second #sidebarCollapse, #third #sidebarCollapse{
+    border: none;
+    background-color: gray;
+    color: black;
+  }
+  #first .page-link, #second .page-link, #third .page-link {
+    background-color: gray;
+    color: black !important;
+  }
+}
+
+#about .container {
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+ 
+  width: 100%; /* Make both full width on smaller screens */
+}
