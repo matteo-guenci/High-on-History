@@ -1222,7 +1222,7 @@ div{
   border: none;
 }
 .paragraph {
-  column-count: 2;
+  column-count: 1;
   display: block;
   column-gap: 5%;
   margin: 0;
