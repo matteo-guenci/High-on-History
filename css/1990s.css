@@ -19,6 +19,7 @@
 
 
 body {
+  width: 100%;
   overflow-x: hidden;
   background-image: url(../imgs/carta.jpg);
   filter: grayscale(100%) contrast(1) brightness(100%);
@@ -465,6 +466,8 @@ h5 {
   
   
   body {
+    width: 100%;
+
     overflow-x: hidden;
     background-image: url(../imgs/carta.jpg);
     filter: grayscale(100%) contrast(1) brightness(100%);
@@ -544,6 +547,7 @@ h5 {
   }
   
   #maintitle{
+    margin-top: 10vh;
     font-family: 'SniffinGlue2', Arial, Helvetica, sans-serif;
     font-size: 5rem;
     font-weight: 900;
@@ -556,7 +560,7 @@ h5 {
   }
   
   .footer{
-    margin-top: 5rem;
+    margin-top: 55vh;
   }
   .footer-text{
     font-size: 1rem;

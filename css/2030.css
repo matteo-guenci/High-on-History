@@ -10,6 +10,8 @@
     /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
 
 body{
+  width: 100%;
+
     background-color: rgba(23, 26, 28, 1);
     overflow-x: hidden;
     /* background-image: url(/imgs/grid_2030.jpg); */
@@ -764,6 +766,8 @@ blockquote{
     /* colore alternativo un po' più geek(verde classico hacker diciamo) === #88ff00 */ 
 
 body{
+  width: 100%;
+
     background-color: rgba(23, 26, 28, 1);
     overflow-x: hidden;
     /* background-image: url(/imgs/grid_2030.jpg); */
