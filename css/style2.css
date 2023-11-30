@@ -215,9 +215,9 @@ span {
     display: block !important; 
     width: fit-content;
     padding: 3vw;
-    height: 65vw;
+    height: 50vw;
     position: absolute; 
-    top: 2vw;
+    top: 9vw;
     left: 2vw;
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  

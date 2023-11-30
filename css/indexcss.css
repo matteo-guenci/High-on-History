@@ -80,6 +80,12 @@
     max-width: fit-content;
 }
 
+#documentation .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #main-background {
     overflow: auto;
     height: 90vh;
@@ -207,13 +213,14 @@
     display: block !important; 
     width: fit-content;
     padding: 3vw;
-    height: 65vw;
+    height: 50vw;
     position: absolute; 
-    top: 2vw;
+    top: 9vw;
     left: 2vw;
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
     z-index: 1000; 
+    overflow-y: scroll;
 }
 
 #hamburger1 {

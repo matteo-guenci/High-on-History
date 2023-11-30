@@ -23,12 +23,12 @@
 /* index */
 
 #maintitle {
-    font-size: 10vh;
+    position: absolute;
+    font-size: 5vw;
     font-family: 'CruzQuaste';
     color: rgba(211, 83, 56, 1);
     background-color: rgb(255, 250, 238);
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding: 1.5rem;
     border: 0.1rem outset rgba(61, 49, 43, 1);
     outline: 0.1rem solid rgba(61, 49, 43, 1);
     outline-offset: 0.5rem;
@@ -93,7 +93,7 @@ img {
 
 .container h1, .container h2 {
     font-family: 'Canterbury';
-    font-size: 4vw;
+    font-size: 5vw;
     padding-top: 2rem;
     padding-bottom: 2rem;
     flex-direction: column;
