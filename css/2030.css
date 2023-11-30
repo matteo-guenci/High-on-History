@@ -612,7 +612,7 @@ blockquote{
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
   }
@@ -751,7 +751,7 @@ blockquote{
   
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   @font-face {
     font-family: 'SpaceMono';
     src: url(../fonts/SpaceMono-Regular.ttf);

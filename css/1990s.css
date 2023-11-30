@@ -431,7 +431,7 @@ h5 {
 
 
 /* :is([data-page*="/first/"]) */
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
   }
@@ -440,9 +440,10 @@ h5 {
   #main-background {
     width: 100%; /* Make both full width on smaller screens */
   }
+  
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   @font-face {
     font-family: 'Oldtype';
     src: url(../fonts/Bohemian_Typewriter.ttf);
