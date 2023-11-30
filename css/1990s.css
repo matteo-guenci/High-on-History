@@ -431,7 +431,7 @@ h5 {
 
 
 /* :is([data-page*="/first/"]) */
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
   }
@@ -440,9 +440,10 @@ h5 {
   #main-background {
     width: 100%; /* Make both full width on smaller screens */
   }
+  
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   @font-face {
     font-family: 'Oldtype';
     src: url(../fonts/Bohemian_Typewriter.ttf);
@@ -591,34 +592,45 @@ h5 {
     border: none;
     margin-bottom: 2rem;
   }
-  #about .image-row {
-    margin-bottom: 4rem;
-    /* background-image: url(../imgs/punk_border.png);
-    background-size: contain; 
-    background-position: 100%; */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50vh; /* Adjust as needed */
+
   }
   
+  .image-container {
+    flex: 0 0 50%; /* Each container takes up 33.33% of the width */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 10px; /* Adjust as needed */
+  }
+  
+  .screen {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .screen-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .image-row .image-container .label {
     font-size: 1vw !important;
     font-family: "SniffinGlue2" !important;
     text-align: center;
     justify-content: center;
-    bottom: 4vh;
-    right: 5vw;
-    left: 5vw;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+
   }
   
   #issues .label, .label{
-    right: 7vw;
-    left: 7vw;
+
     font-family: 'Oldtype';
     font-weight: 900;
   }
   #issues .label h4{
   
-    font-size: 1.5vw;
+    font-size: 5vw;
   }
   
   h1{
@@ -744,19 +756,19 @@ h5 {
   }
   
   .paragraph img{
-    float: left;
+    display: block;
+    margin: 2rem auto;
     max-width: 50vw;
     max-height: auto;
     margin: 0;
-    display: block;
   }
   .hide_image img{
     /* display: none; */
     transform: rotate(5deg);
     padding: 2rem;
     max-width: 42vw;
-    float: left;
     display: block;
+    margin: 2rem auto;
   }
   .img_paragraph img {
     display: none !important;
@@ -769,7 +781,8 @@ h5 {
     padding-bottom: 2rem;
     padding-left: 1rem;
     max-width: 30vw;
-    float: right;
+    display: block;
+    margin: 2rem auto;
   }
   
   .second_image2{
