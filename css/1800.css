@@ -207,6 +207,10 @@ body {
     height: 50vh;
 }
 
+.navbar-toggler {
+    box-shadow: rgba(164, 134, 57, 0.5) 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
 .navbar-toggler:focus {
     text-decoration: none;
     box-shadow: rgba(164, 134, 57, 1) 0 0 0 var(--bs-navbar-toggler-focus-width);
