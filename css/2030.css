@@ -596,6 +596,11 @@ blockquote{
 }
 .container {
   display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+   
+    width: 100%; /* Make both full width on smaller screens */
+  
+  
 }
 
 #doc-navbar {
@@ -899,22 +904,10 @@ div{
   padding-bottom: 3vh;
 
 }
-#about .image-row{
-  margin-bottom: 12rem;
-}
 
-#about .image-container {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  font-family: 'ProtoMolecule';
-}
-#about .image-container img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
+
+
+ 
 
 #issues .label {
   display: flex;
@@ -929,7 +922,9 @@ div{
   font-size: 1.3vw;
   max-width: 100%; 
 }
-
+#about {
+  margin-bottom: 180vh;
+}
 #about h4{
   align-items: center;
   justify-content: center;
@@ -941,7 +936,7 @@ div{
   min-width: 1.605em;
   max-height: 100%;
   min-height: 1.605em; */
-  /* font-size: 1.605em; */
+  font-size: 4vw;
 }
 
 
@@ -1014,6 +1009,11 @@ div{
   /* filter: sepia(100%) hue-rotate(160deg); */
   opacity: 0.6;
   animation: pan-image 15s linear infinite;
+}
+.screen-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 #doc-img-1{
@@ -1344,10 +1344,17 @@ blockquote{
 #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
   font-size: 100%;
 }
-.container {
+.container { 
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25vh;
 }
 
+.image-container {
+  flex: 0 0 80%; /* Each container takes up 33.33% of the width */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  margin-bottom: 2vh;
+}
 #doc-navbar {
   flex: 0 0 25%; /* Set a fixed width for the navbar */
 }
@@ -1356,3 +1363,4 @@ blockquote{
   flex: 1; /* Allow the main background to take up remaining space */
 }
 }
+
