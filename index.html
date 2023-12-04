@@ -38,22 +38,22 @@
                 <i class="bx bx-plus"></i>
             </div>
             <span id="circular" style="--i:1;">
-                <a href="#" id="it1-1" onClick="change(this.id)"><i id="number_1500">1500</i></a>
+                <a href="#" id="it1-1" onClick="change('css/1500.css')"><i id="number_1500">1500</i></a>
             </span>
             <span style="--i:2;">
-                <a href="#" id="it1-2" onClick="change(this.id)"><i id="number_1800">1800</i></a>
+                <a href="#" id="it1-2" onClick="change('css/1800.css')"><i id="number_1800">1800</i></a>
             </span>
             <span style="--i:3;">
-                <a href="#" id="it1-3" onClick="change(this.id)"><i id="number_1900">1920</i></a>
+                <a href="#" id="it1-3" onClick="change('css/1900.css')"><i id="number_1900">1920</i></a>
             </span>
             <span style="--i:4;">
-                <a href="#" id="it1-4" onClick="change(this.id)"><i id="number_1960">1960</i></a>
+                <a href="#" id="it1-4" onClick="change('css/1960.css')"><i id="number_1960">1960</i></a>
             </span>
             <span style="--i:5;">
-                <a href="#" id="it1-5" onClick="change(this.id)"><i id="number_1990">1980</i></a>
+                <a href="#" id="it1-5" onClick="change('css/1990s.css')"><i id="number_1990">1980</i></a>
             </span>
             <span style="--i:6;">
-                <a href="#" id="it1-6" onClick="change(this.id)"><i id="number_2030">2030</i></a>
+                <a href="#" id="it1-6" onClick="change('css/2030.css')"><i id="number_2030">2030</i></a>
             </span>
         </div>
     </nav>
@@ -88,7 +88,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=
-                "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
+                "location.href=this.href+'?style='+currentStyle;change(currentStyle);return false;">Home</a>
                 </li>
                 <li class="nav-item dropdown" style="padding-left: 5%">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-issue">
@@ -466,62 +466,15 @@ $(document).ready(function () {
                         </nav>
                         <a class="nav-link scrollto" href="#layout" id="it2">Layout and typographic styles</a>
                         <nav class="nav nav-pills flex-column">
-                            <a class="nav-link ms-3 my-1 scrollto" href="#cen16th" id="it2-1" onClick="change(this.id)">Early Sixteenth century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#cen19th" id="it2-2" onClick="change(this.id)">Nineteenth century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#beginning20thcen" id="it2-3" onClick="change(this.id)">First half of Twentieth Century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change(this.id)">Second half of Twentieth Century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change(this.id)">Late Twentieth Century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change(this.id)">the Future: 2030</a>
-
+                            <a class="nav-link ms-3 my-1 scrollto" href="#cen16th" id="it2-1" onClick="change('css/1500.css')">Early Sixteenth century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#cen19th" id="it2-2" onClick="change('css/1800.css')">Nineteenth century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#beginning20thcen" id="it2-3" onClick="change('css/1900.css')">First half of Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change('css/1960.css')">Second half of Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change('css/1900s.css')">Late Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change('css/2030.css')">the Future: 2030</a>
+                            <!-- sostituire this.id con il nome del css scelto (css/1500.css) -->
 <script src="scripts/pubsub.js"></script>
 
-<script>
-      //esegue la funzione solo dopo che la pagina è stata caricata per intero
-      document.addEventListener('DOMContentLoaded', function() {
-             init();
-      }, false);
-      function change(value) {
-             const stylesheetLink = document.getElementById('stile');
-             var oggetto = {};
-             if (value === 'it2-1' || value === 'it1-1') {
-                   oggetto = { cssname: 'css/1500.css', animation: false };
-                   stylesheetLink.href = 'css/1500.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-             }
-             else if (value === 'it2-2' || value === 'it1-2') {
-                   oggetto = { cssname: 'css/1800.css', animation: false };
-                   stylesheetLink.href = 'css/1800.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-             }
-             else if (value === 'it2-3' || value === 'it1-3') {
-                   oggetto = { cssname: 'css/1900.css', animation: false };
-                   stylesheetLink.href = 'css/1900.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-             }
-             else if (value === 'it2-4' || value === 'it1-4') {
-                   oggetto = { cssname: 'css/1960.css', animation: false };
-                   stylesheetLink.href = 'css/1960.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-             }
-             else if (value === 'it2-5' || value === 'it1-5') {
-                   oggetto = { cssname: 'css/1990s.css', animation: false };
-                   stylesheetLink.href = 'css/1990s.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-             }
-             else if (value === 'it2-6' || value === 'it1-6') {
-                   oggetto = { cssname: 'css/2030.css', animation: true };
-                   stylesheetLink.href = 'css/2030.css';
-                   currentStyle = stylesheetLink.getAttribute("href");
-                   mappa = createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-             }
-             pubSubInstance.publish("changeCss", oggetto);
-      }
-</script>
                     </nav>
                 </nav>
             </nav>

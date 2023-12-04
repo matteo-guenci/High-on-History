@@ -1366,3 +1366,9 @@ blockquote{
 }
 }
 
+#navbarSupportedContent.active{
+  border: 1px solid rgba(163, 43, 21, 1); /* Colore del bordo (verde neon) */
+  background-color: rgba(23, 26, 28, 1) !important;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); /* Creazione dell'effetto neon con box-shadow */
+  border-radius: 1rem;
+}
