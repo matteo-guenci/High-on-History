@@ -86,7 +86,8 @@ function init() {
 }
 
 
-
+window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('load', init);
 //esegue la funzione solo dopo che la pagina è stata caricata per intero
 document.addEventListener('DOMContentLoaded', function () {
     init();
@@ -105,4 +106,6 @@ function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa"
     currentStyle = stylesheetLink.getAttribute("href");
     mappa = createMap("mapbox://styles/sorre33/" + params['idMappa'], params['globeOrMerc']);
     pubSubInstance.publish("changeCss", oggetto);
+    console.log("currentStyle:", currentStyle);
+    console.log("oggetto:", oggetto);
 }

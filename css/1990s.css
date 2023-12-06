@@ -883,3 +883,10 @@ h5 {
  
   width: 100%; /* Make both full width on smaller screens */
 }
+
+#navbarSupportedContent.active{
+  height: auto;
+  width: auto;
+  /* font-size: 70%; */
+
+}
