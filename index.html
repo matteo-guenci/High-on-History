@@ -136,7 +136,6 @@
     (function() {
   var urls = ['imgs/cigarettes', 'imgs/coke', 'imgs/can', 'imgs/burger'];
   function swap() {
-    console.log((urls[Math.round(Math.random() * (urls.length))] + '.png'));
     if ((urls[Math.round(Math.random() * (urls.length))] + '.png') != 'undefined.png') {
         document.getElementById('theImage').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
         if (document.getElementById('theImage').getAttribute('src')=='undefined.png') {
@@ -168,7 +167,7 @@
         (function() {
       var urls = ['imgs/campari', 'imgs/campari2', 'imgs/campari3', 'imgs/campari4'];
       function swap() {
-        console.log((urls[Math.round(Math.random() * (urls.length))] + '.png'));
+        
         if ((urls[Math.round(Math.random() * (urls.length))] + '.png') != 'undefined.png') {
             document.getElementById('campari').setAttribute('src', urls[Math.round(Math.random() * (urls.length))] + '.png');
             if (document.getElementById('campari').getAttribute('src')=='undefined.png') {
