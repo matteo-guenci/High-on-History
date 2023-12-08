@@ -25,9 +25,12 @@
     
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>var currentStyle="";
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="scripts/pubsub.js"></script>
+<script src="scripts/maintitle_animation.js"></script>
+<script src="scripts/text_animation.js"></script>
 
-</script>
+<script>var currentStyle="css/1500.css";</script>
 
     
 </head>
@@ -57,7 +60,6 @@
             </span>
         </div>
     </nav>
-    <script src="scripts/circular_menu.js"></script>
     
 
 <!-- Navbar section  -->
@@ -88,7 +90,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=
-                "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
+                "location.href=this.href+'?style='+currentStyle;change(currentStyle);return false;">Home</a>
 
                 <!-- <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick="change(currentStyle);return false;">Home</a> -->
 
@@ -114,10 +116,8 @@
             </ul>
             <p id="date2" style="display: none"></p>
             </div>
-        </div>
-        
+        </div>      
         </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
 <!-- Map section -->
 <div class="striscia_sx"></div>
@@ -188,208 +188,11 @@
       </script>
         <!-- <script src="scripts/text_animation.js"></script> -->
 
-        <script src="scripts/maintitle_animation.js"></script>
+        <script src="scripts/circular_menu.js"></script>
 
-
-        <script>
-            const stylesheetLink = document.getElementById('stile');
-            const urlParams = new URLSearchParams(window.location.search);
-            const selectedStyle = urlParams.get('style');
-            if (selectedStyle === 'css/1500.css') {
-                stylesheetLink.href = 'css/1500.css';
-                mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-            }
-            else if (selectedStyle === 'css/1800.css') {
-                stylesheetLink.href = 'css/1800.css';
-                mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-            }
-            else if (selectedStyle === 'css/1900.css') {
-                stylesheetLink.href = 'css/1900.css';
-                mappa=createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-            }
-            else if (selectedStyle === 'css/1960.css') {
-                stylesheetLink.href = 'css/1960.css';
-                mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-            }
-            else if (selectedStyle === 'css/1990s.css') {
-                stylesheetLink.href = 'css/1990s.css';
-                mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-            }
-            else if (selectedStyle === 'css/2030.css') {
-                stylesheetLink.href = 'css/2030.css';
-                mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-            }
-    
-            currentStyle=stylesheetLink.getAttribute("href");
-
-            function createMap (stylelink, projection) {
-                mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
-                const map = new mapboxgl.Map({
-                container: 'map',
-                style: stylelink,
-                projection: projection, // Display the map as a globe, since satellite-v9 defaults to Mercator
-                zoom: 1.6,
-                center: [-90, 40]
-                });
-
-                map.on('click', (event) => {
-                const features = map.queryRenderedFeatures(event.point, {
-                layers: ['highonhistory']
-                });
-                if (!features.length) {
-                return;
-                }
-                const feature = features[0];
-                const stylesheetLink = document.getElementById('stile').getAttribute("href");
-                const popup = new mapboxgl.Popup({ offset: [0, -15] })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML(
-                `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html?style=${stylesheetLink}#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
-                )
-                .addTo(map);
-                });
-                
-                map.on('style.load', () => {
-                map.setFog({}); // Set the default atmosphere style
-                
-                });
-                
-                // The following values can be changed to control rotation speed:
-                
-                // At low zooms, complete a revolution every two minutes.
-                const secondsPerRevolution = 120;
-                // Above zoom level 5, do not rotate.
-                const maxSpinZoom = 5;
-                // Rotate at intermediate speeds between zoom levels 3 and 5.
-                const slowSpinZoom = 3;
-                
-                let userInteracting = false;
-                let spinEnabled = true;
-                
-                function spinGlobe() {
-                    const zoom = map.getZoom();
-                    if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
-                    let distancePerSecond = 360 / secondsPerRevolution;
-                    if (zoom > slowSpinZoom) {
-                    // Slow spinning at higher zooms
-                    const zoomDif =
-                    (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
-                    distancePerSecond *= zoomDif;
-                    }
-                    const center = map.getCenter();
-                    center.lng -= distancePerSecond;
-                    // Smoothly animate the map over one second.
-                    // When this animation is complete, it calls a 'moveend' event.
-                    map.easeTo({ center, duration: 1000, easing: (n) => n });
-                    }
-                }
-                
-                // Pause spinning on interaction
-                map.on('mousedown', () => {
-                userInteracting = true;
-                
-                });
-                
-                // Restart spinning the globe when interaction is complete
-                map.on('mouseup', () => {
-                userInteracting = false;
-                spinGlobe();
-                });
-                
-                // These events account for cases where the mouse has moved
-                // off the map, so 'mouseup' will not be fired.
-                map.on('dragend', () => {
-                userInteracting = false;
-                spinGlobe();
-                });
-                map.on('pitchend', () => {
-                userInteracting = false;
-                spinGlobe();
-                });
-                map.on('rotateend', () => {
-                userInteracting = false;
-                spinGlobe();
-                });
-                
-                // When animation is complete, start spinning if there is no ongoing interaction
-                map.on('moveend', () => {
-                spinGlobe();
-                });
-
-                // function playpause() {
-                //     var btn = document.getElementsByClassName('btn-spin');
-                //     spinEnabled = !spinEnabled;
-                //     if (spinEnabled) {
-                //         document.addEventListener('click', (e) => {
-                //             spinGlobe();
-                //         });
-                //     } else {
-                //         map.stop();
-                //         btn[0].classList.toggle("pause");
-                //     }
-                // }
-
-                function myFunction() {
-                    var element = document.getElementById("button");
-                    element.classList.toggle("pause");
-                    spinEnabled = !spinEnabled;
-                    if (spinEnabled) {
-                            spinGlobe();
-                    } else {
-                        map.stop();
-                    }
-                    }
-                
-                //var element = document.getElementById("button");
-                //if (!("pause" in element.classList)) { console.log("ok";)spinGlobe();
-                //}
-                //else {
-                //    map.stop()
-                //}
-                spinGlobe();
-                var element = document.getElementById("button");
-                if (spinEnabled) {
-                    element.classList.remove("pause");
-                }
-                
-                return {
-                    myFunction: myFunction
-                };
-                    }
-
-
-                
-                    
-        </script>
         
     </div>
-    <script>
-        var mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-        if (selectedStyle === 'css/1500.css') {
-                stylesheetLink.href = 'css/1500.css';
-                mappa=createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-            }
-            else if (selectedStyle === 'css/1800.css') {
-                stylesheetLink.href = 'css/1800.css';
-                mappa=createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-            }
-            else if (selectedStyle === 'css/1900.css') {
-                stylesheetLink.href = 'css/1900.css';
-                mappa=createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-            }
-            else if (selectedStyle === 'css/1960.css') {
-                stylesheetLink.href = 'css/1960.css';
-                mappa=createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-            }
-            else if (selectedStyle === 'css/1990s.css') {
-                stylesheetLink.href = 'css/1990s.css';
-                mappa=createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-            }
-            else if (selectedStyle === 'css/2030.css') {
-                stylesheetLink.href = 'css/2030.css';
-                mappa=createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-            }
-    </script>
+
     
 
 <!-- Issues section -->
@@ -475,7 +278,6 @@ $(document).ready(function () {
                             <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change('css/1900s.css')">Late Twentieth Century</a>
                             <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change('css/2030.css')">the Future: 2030</a>
                             <!-- sostituire this.id con il nome del css scelto (css/1500.css) -->
-<script src="scripts/pubsub.js"></script>
 
                     </nav>
                 </nav>
@@ -719,7 +521,5 @@ $(document).ready(function () {
             <p>High on History 2023 <br> All copyrights and related rights on the issues content remain with the original owners of the articles <br> All copyright on the typographic and layout choices are 2023 ©BertoldiniGuenciSorrentino <br> Project developed for the course Web Technology and Development by Fabio Vitali <br> DHDK Master's Degree</p>
     </div>
 </footer>
-<script src="scripts/text_animation.js"></script>
-<script src="scripts/cards.js"></script>
 </body>
 </html>

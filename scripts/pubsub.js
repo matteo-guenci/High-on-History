@@ -49,8 +49,9 @@ class PubSubManager {
 }
 
 const pubSubInstance = new PubSubManager();
-const myElement = document.querySelector('#maintitle');
 function init() {
+    const myElement = document.querySelector('#maintitle');
+
     if (myElement) {
         pubSubInstance.subscribe(myElement, "changeCss", function (event) {
             // console.log("#maintitle.subscribe: " + event.detail.animation);
@@ -83,11 +84,19 @@ function init() {
             });
         });
     }
+    const urlParams = new URLSearchParams(window.location.search);
+    let selectedStyle = urlParams.get('style');
+    if(selectedStyle == null){
+        selectedStyle = currentStyle;
+    }
+    change(currentStyle);
 }
 
 
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('load', init);
+
+//prendere la window location e vedere se quello che è stato chiamato è index piuttsto che first, in base a questo chiamare create map
 //esegue la funzione solo dopo che la pagina è stata caricata per intero
 document.addEventListener('DOMContentLoaded', function () {
     init();
@@ -109,3 +118,143 @@ function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa"
     console.log("currentStyle:", currentStyle);
     console.log("oggetto:", oggetto);
 }
+
+
+function createMap (stylelink, projection) {
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: stylelink,
+    projection: projection, // Display the map as a globe, since satellite-v9 defaults to Mercator
+    zoom: 1.6,
+    center: [-90, 40]
+    });
+
+    map.on('click', (event) => {
+    const features = map.queryRenderedFeatures(event.point, {
+    layers: ['highonhistory']
+    });
+    if (!features.length) {
+    return;
+    }
+    const feature = features[0];
+    const stylesheetLink = document.getElementById('stile').getAttribute("href");
+    const popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML(
+    `<h3>${feature.properties.place_name}</h3><p><a href="${feature.properties.publication}.html?style=${stylesheetLink}#${feature.properties.title}" class="accordionLink">${feature.properties.description}</a></p>`
+    )
+    .addTo(map);
+    });
+    
+    map.on('style.load', () => {
+    map.setFog({}); // Set the default atmosphere style
+    
+    });
+    
+    // The following values can be changed to control rotation speed:
+    
+    // At low zooms, complete a revolution every two minutes.
+    const secondsPerRevolution = 120;
+    // Above zoom level 5, do not rotate.
+    const maxSpinZoom = 5;
+    // Rotate at intermediate speeds between zoom levels 3 and 5.
+    const slowSpinZoom = 3;
+    
+    let userInteracting = false;
+    let spinEnabled = true;
+    
+    function spinGlobe() {
+        const zoom = map.getZoom();
+        if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+        let distancePerSecond = 360 / secondsPerRevolution;
+        if (zoom > slowSpinZoom) {
+        // Slow spinning at higher zooms
+        const zoomDif =
+        (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+        distancePerSecond *= zoomDif;
+        }
+        const center = map.getCenter();
+        center.lng -= distancePerSecond;
+        // Smoothly animate the map over one second.
+        // When this animation is complete, it calls a 'moveend' event.
+        map.easeTo({ center, duration: 1000, easing: (n) => n });
+        }
+    }
+    
+    // Pause spinning on interaction
+    map.on('mousedown', () => {
+    userInteracting = true;
+    
+    });
+    
+    // Restart spinning the globe when interaction is complete
+    map.on('mouseup', () => {
+    userInteracting = false;
+    spinGlobe();
+    });
+    
+    // These events account for cases where the mouse has moved
+    // off the map, so 'mouseup' will not be fired.
+    map.on('dragend', () => {
+    userInteracting = false;
+    spinGlobe();
+    });
+    map.on('pitchend', () => {
+    userInteracting = false;
+    spinGlobe();
+    });
+    map.on('rotateend', () => {
+    userInteracting = false;
+    spinGlobe();
+    });
+    
+    // When animation is complete, start spinning if there is no ongoing interaction
+    map.on('moveend', () => {
+    spinGlobe();
+    });
+
+    // function playpause() {
+    //     var btn = document.getElementsByClassName('btn-spin');
+    //     spinEnabled = !spinEnabled;
+    //     if (spinEnabled) {
+    //         document.addEventListener('click', (e) => {
+    //             spinGlobe();
+    //         });
+    //     } else {
+    //         map.stop();
+    //         btn[0].classList.toggle("pause");
+    //     }
+    // }
+
+    function myFunction() {
+        var element = document.getElementById("button");
+        element.classList.toggle("pause");
+        spinEnabled = !spinEnabled;
+        if (spinEnabled) {
+                spinGlobe();
+        } else {
+            map.stop();
+        }
+        }
+    
+    //var element = document.getElementById("button");
+    //if (!("pause" in element.classList)) { console.log("ok";)spinGlobe();
+    //}
+    //else {
+    //    map.stop()
+    //}
+    spinGlobe();
+    var element = document.getElementById("button");
+    if (spinEnabled) {
+        element.classList.remove("pause");
+    }
+    
+    return {
+        myFunction: myFunction
+    };
+        }
+
+
+    
+        
