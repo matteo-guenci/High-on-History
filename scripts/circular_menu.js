@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 const nav = document.querySelector("nav");
 const toggleBtn = nav.querySelector(".toggle-btn");
 let isDragging = false;
@@ -72,3 +74,4 @@ document.addEventListener("mouseup", onMouseUp);
 
 // Inizializza la posizione del menu
 // updateNavPosition();
+});

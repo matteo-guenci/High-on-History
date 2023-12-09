@@ -84,12 +84,11 @@ function init() {
             });
         });
     }
-    const urlParams = new URLSearchParams(window.location.search);
-    let selectedStyle = urlParams.get('style');
-    if(selectedStyle == null){
-        selectedStyle = currentStyle;
-    }
-    change(currentStyle);
+    // let urlParams = new URLSearchParams(window.location.search);
+    //const selectedStyle = urlParams.get("style") !== null ? urlParams.get("style") : currentStyle
+    const selectedStyle = leggisessiondata("currentStyle") !== null ? leggisessiondata("currentStyle") : "css/1500.css";
+
+    change(selectedStyle);
 }
 
 
@@ -113,12 +112,19 @@ function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa"
     oggetto = { cssname: cssName, animation: params['animation'] };
     stylesheetLink.href = cssName;
     currentStyle = stylesheetLink.getAttribute("href");
+    scrivesessiondata(currentStyle);
     mappa = createMap("mapbox://styles/sorre33/" + params['idMappa'], params['globeOrMerc']);
     pubSubInstance.publish("changeCss", oggetto);
     console.log("currentStyle:", currentStyle);
     console.log("oggetto:", oggetto);
 }
 
+function scrivesessiondata(currentStyle){
+    sessionStorage.setItem("currentStyle", currentStyle);
+}
+function leggisessiondata(key){
+    return sessionStorage.getItem(key)
+}
 
 function createMap (stylelink, projection) {
     mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
@@ -254,7 +260,3 @@ function createMap (stylelink, projection) {
         myFunction: myFunction
     };
         }
-
-
-    
-        

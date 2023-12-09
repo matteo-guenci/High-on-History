@@ -11,10 +11,13 @@
     <link href="css/circular_menu.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
     <link href="css/style2.css" rel="stylesheet"> 
-    <link href="css/1960.css" id="stile" rel="stylesheet">
-
+    <link href="css/1500.css" id="stile" rel="stylesheet">
+    <script src="scripts/circular_menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+<script src="scripts/pubsub.js"></script>
+
 <script>
     
     var currentIndex = 0;
@@ -100,31 +103,7 @@
     }
     
 </script>
-<script>
-    const stylesheetLink = document.getElementById('stile');
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedStyle = urlParams.get('style');
-    if (selectedStyle === 'css/1500.css') {
-        stylesheetLink.href = 'css/1500.css';
-    }
-    else if (selectedStyle === 'css/1800.css') {
-        stylesheetLink.href = 'css/1800.css';
-    }
-    else if (selectedStyle === 'css/1900.css') {
-        stylesheetLink.href = 'css/1900.css';
-    }
-    else if (selectedStyle === 'css/1960.css') {
-        stylesheetLink.href = 'css/1960.css';
-    }
-    else if (selectedStyle === 'css/1990s.css') {
-        stylesheetLink.href = 'css/1990s.css';
-    }
-    else if (selectedStyle === 'css/2030.css') {
-        stylesheetLink.href = 'css/2030.css';
-    }
 
-    var currentStyle=stylesheetLink.getAttribute("href");
-</script>
 
 <style>
     .highlight {
@@ -141,31 +120,29 @@
                 <i class="bx bx-plus"></i>
             </div>
             <span style="--i:1;">
-                <a href="#" id="it1-1" onClick="change(this.id)"><i id="number_1500" class="bx bxs-camera">1500</i></a>
+                <a href="#" id="it1-1" onClick="change('css/1500.css')"><i id="number_1500" class="bx bxs-camera">1500</i></a>
             </span>
-            <span style="--i:2;">
-                <a href="#" id="it1-2" onClick="change(this.id)"><i id="number_1800" class="bx bxs-alarm">1800</i></a>
+            <span id="y1800" style="--i:2;">
+                <a href="#" id="it1-2" onClick="change('css/1800.css')"><i id="number_1800" class="bx bxs-alarm">1800</i></a>
             </span>
-            <span style="--i:3;">
-                <a href="#" id="it1-3" onClick="change(this.id)"><i id="number_1900" class="bx bxs-map">1920</i></a>
+            <span id="y1900" style="--i:3;">
+                <a href="#" id="it1-3" onClick="change('css/1900.css')"><i id="number_1900" class="bx bxs-map">1920</i></a>
             </span>
-            <span style="--i:4;">
-                <a href="#" id="it1-4" onClick="change(this.id)"><i id="number_1960" class="bx bxs-cog">1960</i></a>
+            <span id="y1950" style="--i:4;">
+                <a href="#" id="it1-4" onClick="change('css/1960.css')"><i id="number_1960"class="bx bxs-cog">1960</i></a>
             </span>
-            <span style="--i:5;">
-                <a href="#" id="it1-5" onClick="change(this.id)"><i id="number_1990" class="bx bxs-cog">1980</i></a>
+            <span id="y1990" style="--i:5;">
+                <a href="#" id="it1-5" onClick="change('css/1990s.css')"><i id="number_1990" class="bx bxs-cog">1980</i></a>
             </span>
-            <span style="--i:6;">
-                <a href="#" id="it1-6" onClick="change(this.id)"><i id="number_2030" class="bx bxs-cog">2030</i></a>
+            <span id="y2030" style="--i:6;">
+                <a href="#" id="it1-6" onClick="change('css/2030.css')"><i id="number_2030" class="bx bxs-cog">2030</i></a>
             </span>
         </div>
     </nav>
-    <script src="scripts/circular_menu.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <div class="first-div">
         <header>
             <h1 id="title"><a href="index.html" style="text-decoration:none" onclick=
-                "location.href=this.href+'?style='+currentStyle;return false;">High On History</a></h1>
+                "location.href=this.href;return false;">High On History</a></h1>
         </header>
         <div class="wrapper" onscroll="scrollFunction()">
             <nav id="sidebar" class="active">
@@ -459,55 +436,8 @@
                 })();
                   </script>
             </nav>
-<script src="scripts/pubsub.js"></script>
 
-            <script>
-                //esegue la funzione solo dopo che la pagina è stata caricata per intero
-                document.addEventListener('DOMContentLoaded', function() {
-                       init();
-                }, false);
-                function change(value) {
-                       const stylesheetLink = document.getElementById('stile');
-                       var oggetto = {};
-                       if (value === 'it2-1' || value === 'it1-1') {
-                             oggetto = { cssname: 'css/1500.css', animation: false };
-                             stylesheetLink.href = 'css/1500.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/clmaazdjm015r01nz0xz1fm7b", 'mercator');
-                       }
-                       else if (value === 'it2-2' || value === 'it1-2') {
-                             oggetto = { cssname: 'css/1800.css', animation: false };
-                             stylesheetLink.href = 'css/1800.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/clma93nbc014h01qu98yscg1j", 'mercator');
-                       }
-                       else if (value === 'it2-3' || value === 'it1-3') {
-                             oggetto = { cssname: 'css/1900.css', animation: false };
-                             stylesheetLink.href = 'css/1900.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/clo5ph8r100qd01qx03q9cxe8", 'mercator');
-                       }
-                       else if (value === 'it2-4' || value === 'it1-4') {
-                             oggetto = { cssname: 'css/1960.css', animation: false };
-                             stylesheetLink.href = 'css/1960.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/clm9iatis016j01r714o489li", 'globe');
-                       }
-                       else if (value === 'it2-5' || value === 'it1-5') {
-                             oggetto = { cssname: 'css/1990s.css', animation: false };
-                             stylesheetLink.href = 'css/1990s.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/cln9gfiul03hh01pfce00avi5", 'globe');
-                       }
-                       else if (value === 'it2-6' || value === 'it1-6') {
-                             oggetto = { cssname: 'css/2030.css', animation: true };
-                             stylesheetLink.href = 'css/2030.css';
-                             currentStyle = stylesheetLink.getAttribute("href");
-                             mappa = createMap("mapbox://styles/sorre33/cln9gjoxx01o601qndbqqh4m1", 'globe');
-                       }
-                       pubSubInstance.publish("changeCss", oggetto);
-                }
-          </script>
+
 
 <script type="text/javascript">
 
@@ -542,15 +472,15 @@
                             </li>
                             <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 5%" onclick=
-                            "location.href=this.href+'?style='+currentStyle;return false;">Home</a>
+                            "location.href=this.href;return false;">Home</a>
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
                                 <a class="nav-link scrollto" href="index.html" onclick=
-                                "location.href=this.href+'?style='+currentStyle+'#documentation';return false;">Documentation</a>
+                                "location.href=this.href+'#documentation';return false;">Documentation</a>
                             </li>
                             <li class="nav-item" style="padding-left: 5%">
                                     <a class="nav-link scrollto" href="index.html" onclick=
-                                    "location.href=this.href+'?style='+currentStyle+'#about';return false;">Team</a>
+                                    "location.href=this.href+'#about';return false;">Team</a>
                             </li>                          
                         </ul>
                         <p id="date3" style="display: none"></p>
@@ -558,19 +488,19 @@
                             <ul class="pagination justify-content-center">
                                 <li class="page-item">
                                 <a class="page-link" href="first.html" aria-label="Previous" onclick=
-                                "location.href=this.href+'?style='+currentStyle;return false;">
+                                "location.href=this.href;return false;">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="first.html" onclick=
-                                    "location.href=this.href+'?style='+currentStyle;return false;">Antiquity</a></li>
+                                    "location.href=this.href;return false;">Antiquity</a></li>
                                 <li class="page-item"><a class="page-link attuale" href="second.html" onclick=
-                                    "location.href=this.href+'?style='+currentStyle;return false;">Modern Wars</a></li>
+                                    "location.href=this.href;return false;">Modern Wars</a></li>
                                 <li class="page-item"><a class="page-link" href="third.html" onclick=
-                                    "location.href=this.href+'?style='+currentStyle;return false;">Present-day</a></li>
+                                    "location.href=this.href;return false;">Present-day</a></li>
                                 <li class="page-item">
                                 <a class="page-link" href="third.html" aria-label="Next" onclick=
-                                "location.href=this.href+'?style='+currentStyle;return false;">
+                                "location.href=this.href;return false;">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                                 </li>

@@ -29,12 +29,13 @@
 <script src="scripts/pubsub.js"></script>
 <script src="scripts/maintitle_animation.js"></script>
 <script src="scripts/text_animation.js"></script>
+<script src="scripts/circular_menu.js"></script>
 
 <script>var currentStyle="css/1500.css";</script>
 
     
 </head>
-<body>
+<body id="index">
     <nav class="navi fixed">
         <div class="nav-content navi">
             <div class="toggle-btn">
@@ -60,7 +61,7 @@
             </span>
         </div>
     </nav>
-    
+
 
 <!-- Navbar section  -->
 
@@ -90,7 +91,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick=
-                "location.href=this.href+'?style='+currentStyle;change(currentStyle);return false;">Home</a>
+                "location.href=this.href;return false;">Home</a>
 
                 <!-- <a class="nav-link active" aria-current="page" href="index.html" id="home" onclick="change(currentStyle);return false;">Home</a> -->
 
@@ -101,11 +102,11 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item nav-link scrollto" href="first.html" onclick=
-                        "location.href=this.href+'?style='+currentStyle;return false;">Antiquity</a></li>
+                        "location.href=this.href;return false;">Antiquity</a></li>
                     <li><a class="dropdown-item nav-link scrollto" href="second.html" onclick=
-                        "location.href=this.href+'?style='+currentStyle;return false;">Modern Wars</a></li>
+                        "location.href=this.href;return false;">Modern Wars</a></li>
                     <li><a class="dropdown-item nav-link scrollto" href="third.html" onclick=
-                        "location.href=this.href+'?style='+currentStyle;return false;">Present-day</a></li>
+                        "location.href=this.href;return false;">Present-day</a></li>
                 </ul>
                 <li class="nav-item" style="padding-left: 5%">
                 <a class="nav-link scrollto" href="#documentation">Documentation</a>
@@ -188,7 +189,6 @@
       </script>
         <!-- <script src="scripts/text_animation.js"></script> -->
 
-        <script src="scripts/circular_menu.js"></script>
 
         
     </div>
@@ -275,7 +275,7 @@ $(document).ready(function () {
                             <a class="nav-link ms-3 my-1 scrollto" href="#cen19th" id="it2-2" onClick="change('css/1800.css')">Nineteenth century</a>
                             <a class="nav-link ms-3 my-1 scrollto" href="#beginning20thcen" id="it2-3" onClick="change('css/1900.css')">First half of Twentieth Century</a>
                             <a class="nav-link ms-3 my-1 scrollto" href="#half20th" id="it2-4" onClick="change('css/1960.css')">Second half of Twentieth Century</a>
-                            <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change('css/1900s.css')">Late Twentieth Century</a>
+                            <a class="nav-link ms-3 my-1 scrollto" href="#late20th" id="it2-5" onClick="change('css/1990s.css')">Late Twentieth Century</a>
                             <a class="nav-link ms-3 my-1 scrollto" href="#y2030" id="it2-6" onClick="change('css/2030.css')">the Future: 2030</a>
                             <!-- sostituire this.id con il nome del css scelto (css/1500.css) -->
 
@@ -437,10 +437,10 @@ $(document).ready(function () {
 
             <h5 id="y2030" class="mb-3 mt-1" >the Future: 2030</h5>
 
-            <p class="animated-text" data-value='For the 2030&apos;s style, the possibilities were almost <span class="text-brutal">endless</span>. Since I wanted to combine both a design that was beautiful to look at and one that was easy/pragmatic to use, I almost immediately abandoned any kind of retro-futuristic, post-apocalyptic or dystopian inspiration. What I had in mind aligned perfectly with a TV series called <a href="https://www.hudsandguis.com/home/2021/theexpanse">"The Epanse"</a> which explores a future neither too near nor too far, in which mankind is now a permanent visitor to almost every planet, moon, asteroid in the solar system. 
+            <p class="animated-text" data-value='For the 2030&apos;s style, the possibilities were almost <span class="text-brutal">endless</span>. Since I wanted to combine both a design that was beautiful to look at and one that was easy/pragmatic to use, I almost immediately abandoned any kind of retro-futuristic, post-apocalyptic or dystopian inspiration. What I had in mind aligned perfectly with a TV series called <a href="https://www.hudsandguis.com/home/2021/theexpanse">"The Expanse"</a> which explores a future neither too near nor too far, in which mankind is now a permanent visitor to almost every planet, moon, asteroid in the solar system. 
             So stable of a frequenter that in the course of generations, the different portions of humans who have now left Earth have begun to experience generational changes due to the difference in gravity, the lack of direct sunlight and all those things that Earthlings take for granted. Mars declared its independence and so did "The Belt", all those moons, asteroids and small planets in the outer belt of the solar system. Without delving further into the complex plot of this TV series, what can be seen immediately is that red and black are the most present colours. 
             This is because I wanted to choose the faction of the Martians as the "faction", since in the economy of this TV series, <span class="text-brutal">the Martians</span> are the most technologically advanced faction as they are constantly driven by a war economy. 
-            '>For the 2030's style, the possibilities were almost <span class="text-brutal">endless</span>. Since I wanted to combine both a design that was beautiful to look at and one that was easy/pragmatic to use, I almost immediately abandoned any kind of retro-futuristic, post-apocalyptic or dystopian inspiration. What I had in mind aligned perfectly with a TV series called <a href="https://www.hudsandguis.com/home/2021/theexpanse">"The Epanse"</a> which explores a future neither too near nor too far, in which mankind is now a permanent visitor to almost every planet, moon, asteroid in the solar system. 
+            '>For the 2030's style, the possibilities were almost <span class="text-brutal">endless</span>. Since I wanted to combine both a design that was beautiful to look at and one that was easy/pragmatic to use, I almost immediately abandoned any kind of retro-futuristic, post-apocalyptic or dystopian inspiration. What I had in mind aligned perfectly with a TV series called <a href="https://www.hudsandguis.com/home/2021/theexpanse">"The Expanse"</a> which explores a future neither too near nor too far, in which mankind is now a permanent visitor to almost every planet, moon, asteroid in the solar system. 
                 So stable of a frequenter that in the course of generations, the different portions of humans who have now left Earth have begun to experience generational changes due to the difference in gravity, the lack of direct sunlight and all those things that Earthlings take for granted. Mars declared its independence and so did 'the Belt', all those moons, asteroids and small planets in the outer belt of the solar system. Without delving further into the complex plot of this TV series, what can be seen immediately is that red and black are the most present colours. 
                 This is because I wanted to choose the faction of the Martians as the 'faction', since in the economy of this TV series, <span class="text-brutal">the Martians</span> are the most technologically advanced faction as they are constantly driven by a war economy. 
                 <div class="documentation-img" id="doc-img-3"><div class="screen"><div class="screen-image"><img src="imgs/the_expanse_schermo3.png"></div><div class="screen-overlay"></div></div></div>
