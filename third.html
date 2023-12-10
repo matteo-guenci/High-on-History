@@ -22,99 +22,6 @@
 
 </head>
 
-<script>
-    
-    var currentIndex = 0;
-    var currentClassName = "";
-
-    function highlightElement(className) {
-        var elements = document.querySelectorAll(className);
-
-        if (currentClassName !== className) {
-            currentIndex = 0;
-            if (currentClassName) {
-                var prevElements = document.querySelectorAll(currentClassName);
-                prevElements.forEach(function (element) {
-                    element.classList.remove("highlight");
-                });
-            }
-        }
-
-        if (currentIndex > 0 && currentIndex !== elements.length) {
-            elements[currentIndex - 1].classList.remove("highlight");
-        }
-
-        if (currentIndex < elements.length) {
-            desiredFunction(elements[currentIndex])
-            function desiredFunction(elemento) {
-        // checking if element with this ID exists and if the element inside of accordion
-        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
-            if (elemento) {
-            // showing the closes parent '.collapse' of our ID
-            elemento.classList.add("highlight");
-            
-            // showing the closes parent '.collapse' of our ID
-            $(elemento).closest('.collapse').collapse('show');
-
-            // smooth animation to our ID
-            
-            currentIndex++;
-            setTimeout(function () {
-            // smooth animation to our ID
-            elemento.scrollIntoView({ behavior: "smooth", block: 'center',
-                inline: 'center' });
-
-            // behavior: 'auto',
-                // block: 'center',
-                // inline: 'center'
-            }, 400); // this interval is necessary for bootstrap to complete the accordion animation
-        }
-        
-        }
-        }
-        if (currentIndex == elements.length) {
-            elements[elements.length - 1].classList.remove("highlight");
-            currentIndex = 0;
-            desiredFunction(elements[currentIndex])
-            function desiredFunction(elemento) {
-        // checking if element with this ID exists and if the element inside of accordion
-        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
-            if (elemento) {
-            // showing the closes parent '.collapse' of our ID
-            elemento.classList.add("highlight");
-            
-            // showing the closes parent '.collapse' of our ID
-            $(elemento).closest('.collapse').collapse('show');
-
-            // smooth animation to our ID
-            
-            setTimeout(function () {
-            // smooth animation to our ID
-            elemento.scrollIntoView({ behavior: "smooth", block: 'center',
-                inline: 'center' });
-
-            // behavior: 'auto',
-                // block: 'center',
-                // inline: 'center'
-            }, 400); // this interval is necessary for bootstrap to complete the accordion animation
-        }
-        
-        }
-        }
-
-
-        currentClassName = className;
-    }
-    
-</script>
-
-
-<style>
-    .highlight {
-      background-color: yellow;
-    }
-</style>
-
 <body id="third" class="sfondo" onReady="scroll()">
     <nav class="navi">
         <div class="nav-content navi">
@@ -294,20 +201,20 @@
                         <a href="#timeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Time</a>
                         <ul class="collapse list-unstyled" id="timeSubmenu">
                             <br>
-                            <button onclick="highlightElement('.1994')">1994</button>
-                            <button onclick="highlightElement('.1996')">1996</button>
-                            <button onclick="highlightElement('.2001')">2001</button>
-                            <button onclick="highlightElement('.2002')">2002</button>
-                            <button onclick="highlightElement('.1993')">1993</button>
-                            <button onclick="highlightElement('.1995')">1995</button>
-                            <button onclick="highlightElement('.1990')">1990</button>
-                            <button onclick="highlightElement('.2011')">2011</button>
-                            <button onclick="highlightElement('.2013')">2013</button>
+                            <button onclick="highlightElement('.y1994')">1994</button>
+                            <button onclick="highlightElement('.y1996')">1996</button>
+                            <button onclick="highlightElement('.y2001')">2001</button>
+                            <button onclick="highlightElement('.y2002')">2002</button>
+                            <button onclick="highlightElement('.y1993')">1993</button>
+                            <button onclick="highlightElement('.y1995')">1995</button>
+                            <button onclick="highlightElement('.y1990')">1990</button>
+                            <button onclick="highlightElement('.y2011')">2011</button>
+                            <button onclick="highlightElement('.y2013')">2013</button>
                             <button onclick="highlightElement('.March2000')">March 2000</button>
-                            <button onclick="highlightElement('.1980s')">1980s</button>
+                            <button onclick="highlightElement('.decade1980s')">1980s</button>
                             <button onclick="highlightElement('.SyrianConflict')">Syrian conflict</button>
                             <button onclick="highlightElement('.CivilWar')">civil war</button>
-                            <button onclick="highlightElement('.2014')">2014</button>
+                            <button onclick="highlightElement('.y2014')">2014</button>
                             <button onclick="highlightElement('.WorldWarII')">World War II</button>
                             <button onclick="highlightElement('.November')">November</button>
                             <br>
@@ -452,7 +359,7 @@
                                     <p id="hide_label">A fourteen-year-old member of the AUC in Medellìn. Credits: Marcello Salinas.</p>
                                 <p>Thousands of children under the age of 18 currently participate in armed conflicts in at least 18
                                 countries worldwide, as part of government armies, paramilitaries, and armed opposition
-                                groups. Since <span class="1994">1994</span>, <a class="link" href="https://en.wikipedia.org/wiki/Human_Rights_Watch"><span class="HumanRightsWatch">Human Rights Watch</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Human_Rights_Watch">
+                                groups. Since <span class="y1994">1994</span>, <a class="link" href="https://en.wikipedia.org/wiki/Human_Rights_Watch"><span class="HumanRightsWatch">Human Rights Watch</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Human_Rights_Watch">
                                 </iframe></a> has reported on the use and recruitment of child
                                 soldiers in 15 countries. Both girls and boys are used as child soldiers. They serve as porters or
                                 cooks, guards, messengers or spies. Many are pressed into combat, where they may be forced to
@@ -497,7 +404,7 @@
                                 </iframe></a> faced
                                 harsh discipline for infractions and especially severe penalties for attempting to escape. To deter
                                 desertion, commanders forced child recruits to watch and participate in the execution of
-                                captured escapees. Children demobilized from <span class="UNITA">UNITA</span> forces in <span class="1996">1996</span> explained that when one
+                                captured escapees. Children demobilized from <span class="UNITA">UNITA</span> forces in <span class="y1996">1996</span> explained that when one
                                 child who had escaped was captured, the others would have to assist in his execution even if that
                                 person were a family member.</p>
                                 
@@ -538,8 +445,8 @@
                                 was <span class="ThetNaingSoe">Thet Naing Soe</span>, he was 18. After that the <span class="NCO">NCO</span>s said, "If you run away we'll do the same
                                 to you."</blockquote>
 
-                                <p><span class="SaiSeng">Sai Seng</span>, a 16-year-old <span class="Shan">Shan</span> farmer who was taken as a porter in mid-<span class="2001">2001</span> and then forced into
-                                the army, told <span class="HumanRightsWatch">Human Rights Watch</span> in <span class="2002">2002</span>,</p>
+                                <p><span class="SaiSeng">Sai Seng</span>, a 16-year-old <span class="Shan">Shan</span> farmer who was taken as a porter in mid-<span class="y2001">2001</span> and then forced into
+                                the army, told <span class="HumanRightsWatch">Human Rights Watch</span> in <span class="y2002">2002</span>,</p>
 
 
                                 <blockquote>After a while the soldiers couldn't bear it anymore and they ran away. When people ran
@@ -583,8 +490,8 @@
                                 
 
                                 <p>Child soldiers are also compelled to take part in the destruction of villages in areas where the
-                                army is pursuing a scorched earth policy. From the time of his recruitment at age thirteen in <span class="1995">1995</span>
-                                until he fled the army in late <span class="2001">2001</span>, <span class="MoeShwe">Moe Shwe</span> says, "I saw it twelve times. There were some <span class="Karen">Karen</span>
+                                army is pursuing a scorched earth policy. From the time of his recruitment at age thirteen in <span class="y1995">1995</span>
+                                until he fled the army in late <span class="y2001">2001</span>, <span class="MoeShwe">Moe Shwe</span> says, "I saw it twelve times. There were some <span class="Karen">Karen</span>
                                 soldiers in the village, or if there's a battle near a village we burned the village." When asked if he
                                 actually torched houses himself, he answered, "Yes, three times. About two or three houses each
                                 time. We had to do it. We were ordered. If not they'd punch me. I felt very sorry and unhappy,
@@ -669,7 +576,7 @@
 
 
                                 <p>Child soldiers and their counselors told <span class="HumanRightsWatch">Human Rights Watch</span> that children were frequently
-                                severely mistreated by the warring factions. <span class="KN">KN</span>, a 13 year old recruited by the <span class="NPFL">NPFL</span> in <span class="1993">1993</span>, told
+                                severely mistreated by the warring factions. <span class="KN">KN</span>, a 13 year old recruited by the <span class="NPFL">NPFL</span> in <span class="y1993">1993</span>, told
                                 <span class="HumanRightsWatch">Human Rights Watch</span>:</p>
                                 
 
@@ -707,7 +614,7 @@
                                 fear; they were told they would be killed if they didn't carry out orders to kill.
                             </blockquote>
 
-                                <p>In <span class="1990">1990</span>, 15-year-old <span class="FW">FW</span> was "arrested" by <span class="INPFL">INPFL</span> soldiers at a checkpoint and asked to join the
+                                <p>In <span class="y1990">1990</span>, 15-year-old <span class="FW">FW</span> was "arrested" by <span class="INPFL">INPFL</span> soldiers at a checkpoint and asked to join the
                                 group, but he refused. He said he was then told to kill a captured <span class="AFL">AFL</span> soldier who was being
                                 beaten. He refused. The <span class="INPFL">INPFL</span> fighters told him that he would be killed if he did not kill the
                                 soldier. At knifepoint, he carried out the order.</p>
@@ -937,7 +844,7 @@
                                 <h3>According to numerous accounts, <span class="Captagon">Captagon</span> has become immensely popular with the fighters of the Islamic State.</h3>
                                 <p>According to numerous accounts, <span class="Captagon">Captagon</span> has become immensely popular with the fighters of the <span class="IslamicState">Islamic State</span>. <a class="link" href="https://en.wikipedia.org/wiki/The_Washington_Post">The <span class="WashingtonPost"><i>Washington Post</i></span><iframe class="lod" src="https://en.wikipedia.org/wiki/The_Washington_Post"></iframe></a> says <span class="Captagon">Captagon</span> is “fueling <span class="location Syria" id="Syria">Syria</span>’s war and turning fighters into superhuman soldiers.”1 According to other reports, the gunmen in the terrorist attack on <span class="location Paris" id="Paris">Paris</span> last <span class="November">November</span> had used the pills, which might explain what some observers described as their relentless, “zombie-like” focus during the assault.2 A series of alarming news stories have described the drug as a form of “chemical courage,”3 instilling those who take it with incredible strength and endurance, and the coldly robotic, fearless detachment that allows them to engage in a murderous rampage.</p>
 
-                                <p>So far, so terrifying. But these stories are, to at least some degree, at odds with what we actually know about the <span class="drugs">drug</span>. To begin with, the very name <span class="Captagon">Captagon</span> is something of a misnomer: there was an <span class="amphetamine">amphetamine</span> that was commercially manufactured under that name until the <span class="1980s">1980s</span>, when it was banned on the grounds that it was too addictive. The <span class="drugs">drug</span> is no longer manufactured under license, but it is still very widely produced, and variants of it can contain <span class="amphetamine">amphetamine</span> and <span class="caffeine">caffeine</span>, and sometimes also—reportedly—<span class="methamphetamine">methamphetamine</span> and <span class="ephedrine">ephedrine</span>.4 Like any <span class="amphetamine">amphetamine</span>, <span class="Captagon">Captagon</span> boosts your energy and can increase your focus and help you to stay awake for long periods of time. It can also create a feeling of euphoria.</p>
+                                <p>So far, so terrifying. But these stories are, to at least some degree, at odds with what we actually know about the <span class="drugs">drug</span>. To begin with, the very name <span class="Captagon">Captagon</span> is something of a misnomer: there was an <span class="amphetamine">amphetamine</span> that was commercially manufactured under that name until the <span class="decade1980s">1980s</span>, when it was banned on the grounds that it was too addictive. The <span class="drugs">drug</span> is no longer manufactured under license, but it is still very widely produced, and variants of it can contain <span class="amphetamine">amphetamine</span> and <span class="caffeine">caffeine</span>, and sometimes also—reportedly—<span class="methamphetamine">methamphetamine</span> and <span class="ephedrine">ephedrine</span>.4 Like any <span class="amphetamine">amphetamine</span>, <span class="Captagon">Captagon</span> boosts your energy and can increase your focus and help you to stay awake for long periods of time. It can also create a feeling of euphoria.</p>
 
 
                                 <p>“The brigade leader came and told us, ‘This pill gives you energy. Try it,’” one former fighter told the <a class="link" href="https://en.wikipedia.org/wiki/BBC"><span class="BBC">BBC</span><iframe class="lod" src="https://en.wikipedia.org/wiki/BBC"></iframe></a>. “So we took it the first time. You feel physically fit. And if there were ten people in front of you, you could catch them and kill them. You’re awake all the time. You don’t have any problems. You don’t even think about sleeping. You don’t think to leave the checkpoint. It gives you great courage and power.” One former veteran of the Syrian war tells <a class="link" href="https://en.wikipedia.org/wiki/New_York_(magazine)"><span class="NewYorkMagazine"><i>New York Magazine</i></span><iframe class="lod" src="https://en.wikipedia.org/wiki/New_York_(magazine)"></iframe></a>: “Some people take so much, if you shoot them, they won’t drop.”6</p>
@@ -958,11 +865,11 @@
                                 <div class="paragraph">
                                 <h3><span class="Captagon">Captagon</span> may not make you superhuman, but it is highly addictive. And it has long been a wildly popular drug in the <span class="location MiddleEast" id="MiddleEast">Middle East</span>.</h3>
 
-                                <p>Is the manufacture and sale of <span class="Captagon">Captagon</span> driving the war? <span class="Captagon">Captagon</span> may not make you superhuman, but it is highly addictive. And it has long been a wildly popular drug in the <span class="location MiddleEast" id="MiddleEast">Middle East</span>. In <span class="2014">2014</span>, the <span class="UNDOC">United Nations Office of Drugs and Crime (UNDOC)</span> reported that half of all <span class="amphetamine">amphetamine</span> seizures worldwide were in the <span class="location MiddleEast" id="MiddleEast">Middle East</span>. Last year, a Saudi prince, <span class="AbdelMohsenBinWalidBinAbdulaziz">Abdel Mohsen Bin Walid Bin Abdulaziz</span>, was arrested in <span class="location Beirut" id="Beirut">Beirut</span> as he tried to smuggle forty suitcases of <span class="Captagon">Captagon</span> into <span class="location Riyadh" id="Riyadh">Riyadh</span> on a private jet.14 Every year, tens of millions of <span class="Captagon">Captagon</span> pills are seized in <span class="location SaudiArabia" id="SaudiArabia">Saudi Arabia</span> alone. Prior to the <span class="CivilWar">civil war</span>, <span class="location Syria" id="Syria">Syria</span> had a significant pharmaceutical industry that supplied the region, and there is evidence that since the advent of the war, there has been an increase in production of <span class="Captagon">Captagon</span> inside <span class="location Syria" id="Syria">Syria</span>. According to the <span class="Guardian"><i>Guardian</i></span>, production of the drug in the <span class="location BekaaValley" id="BekaaValley">Bekaa valley</span> fell 90 percent between <span class="2011">2011</span> and <span class="2013">2013</span>, “with the decline largely attributed to production inside <span class="location Syria" id="Syria">Syria</span>.”</p>
+                                <p>Is the manufacture and sale of <span class="Captagon">Captagon</span> driving the war? <span class="Captagon">Captagon</span> may not make you superhuman, but it is highly addictive. And it has long been a wildly popular drug in the <span class="location MiddleEast" id="MiddleEast">Middle East</span>. In <span class="y2014">2014</span>, the <span class="UNDOC">United Nations Office of Drugs and Crime (UNDOC)</span> reported that half of all <span class="amphetamine">amphetamine</span> seizures worldwide were in the <span class="location MiddleEast" id="MiddleEast">Middle East</span>. Last year, a Saudi prince, <span class="AbdelMohsenBinWalidBinAbdulaziz">Abdel Mohsen Bin Walid Bin Abdulaziz</span>, was arrested in <span class="location Beirut" id="Beirut">Beirut</span> as he tried to smuggle forty suitcases of <span class="Captagon">Captagon</span> into <span class="location Riyadh" id="Riyadh">Riyadh</span> on a private jet.14 Every year, tens of millions of <span class="Captagon">Captagon</span> pills are seized in <span class="location SaudiArabia" id="SaudiArabia">Saudi Arabia</span> alone. Prior to the <span class="CivilWar">civil war</span>, <span class="location Syria" id="Syria">Syria</span> had a significant pharmaceutical industry that supplied the region, and there is evidence that since the advent of the war, there has been an increase in production of <span class="Captagon">Captagon</span> inside <span class="location Syria" id="Syria">Syria</span>. According to the <span class="Guardian"><i>Guardian</i></span>, production of the drug in the <span class="location BekaaValley" id="BekaaValley">Bekaa valley</span> fell 90 percent between <span class="y2011">2011</span> and <span class="y2013">2013</span>, “with the decline largely attributed to production inside <span class="location Syria" id="Syria">Syria</span>.”</p>
                                 
 
 
-                                <p>If the armies of the <span class="IslamicState">Islamic State</span> are using the <span class="drugs">drug</span>, this would explain the uptick in production inside <span class="location Syria" id="Syria">Syria</span>, but it’s also important to remember the entrepreneurial tendencies of this group. <span class="Captagon">Captagon</span> sells for $10 or more per pill,16 and if some recent seizures are any indication—such as the 17 million pills confiscated by <span class="DubaiPolice">Dubai police</span> in <span class="2014">2014</span> 17—the drug is a big business. Fighters on all sides of the <span class="SyrianConflict">Syrian conflict</span> are reportedly using <span class="Captagon">Captagon</span>, and warlords benefit from the illicit trade in the drug—whether in spheres controlled by the government, the <a class="link" href="https://en.wikipedia.org/wiki/Free_Syrian_Army"><span class="FreeSyrianArmy">Free Syrian Army</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Free_Syrian_Army"></iframe></a>, or <span class="Islamists">Islamists</span>. <a class="link" href="https://en.wikipedia.org/wiki/Islamic_State"><span class="ISIL">ISIL</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Islamic_State"></iframe></a> has demonstrated its willingness to sell oil and loot antiquities, there is no reason to believe that the group would not make a lucrative business of selling drugs. The drug is so addictive, a former Free Syrian Army fighter told the <span class="BBC">BBC</span>, that combatants in Syria “would stop providing food for their children so they [could] buy <span class="Captagon">Captagon</span>.”18 In the ruthless calculus of the drug business, that’s a great product. According to the <a class="link" href="https://en.wikipedia.org/wiki/United_Nations_Office_on_Drugs_and_Crime"><span class="UNDOC">UNODC</span><iframe class="lod" src="https://en.wikipedia.org/wiki/United_Nations_Office_on_Drugs_and_Crime"></iframe></a>, it is now being increasingly manufactured in <span class="location Syria" id="Syria">Syria</span> and trafficked through the <span class="location MiddleEast" id="MiddleEast">Middle East</span>.19 As <span class="MasoodKarimipour">Masood Karimipour</span> of the <span class="UNDOC">UNODC</span> told <span class="TheTimes"><i>The Times</i></span>: “If you’re in organized crime, <span class="CivilWar">civil war</span> is good for business.”</p>
+                                <p>If the armies of the <span class="IslamicState">Islamic State</span> are using the <span class="drugs">drug</span>, this would explain the uptick in production inside <span class="location Syria" id="Syria">Syria</span>, but it’s also important to remember the entrepreneurial tendencies of this group. <span class="Captagon">Captagon</span> sells for $10 or more per pill,16 and if some recent seizures are any indication—such as the 17 million pills confiscated by <span class="DubaiPolice">Dubai police</span> in <span class="y2014">2014</span> 17—the drug is a big business. Fighters on all sides of the <span class="SyrianConflict">Syrian conflict</span> are reportedly using <span class="Captagon">Captagon</span>, and warlords benefit from the illicit trade in the drug—whether in spheres controlled by the government, the <a class="link" href="https://en.wikipedia.org/wiki/Free_Syrian_Army"><span class="FreeSyrianArmy">Free Syrian Army</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Free_Syrian_Army"></iframe></a>, or <span class="Islamists">Islamists</span>. <a class="link" href="https://en.wikipedia.org/wiki/Islamic_State"><span class="ISIL">ISIL</span><iframe class="lod" src="https://en.wikipedia.org/wiki/Islamic_State"></iframe></a> has demonstrated its willingness to sell oil and loot antiquities, there is no reason to believe that the group would not make a lucrative business of selling drugs. The drug is so addictive, a former Free Syrian Army fighter told the <span class="BBC">BBC</span>, that combatants in Syria “would stop providing food for their children so they [could] buy <span class="Captagon">Captagon</span>.”18 In the ruthless calculus of the drug business, that’s a great product. According to the <a class="link" href="https://en.wikipedia.org/wiki/United_Nations_Office_on_Drugs_and_Crime"><span class="UNDOC">UNODC</span><iframe class="lod" src="https://en.wikipedia.org/wiki/United_Nations_Office_on_Drugs_and_Crime"></iframe></a>, it is now being increasingly manufactured in <span class="location Syria" id="Syria">Syria</span> and trafficked through the <span class="location MiddleEast" id="MiddleEast">Middle East</span>.19 As <span class="MasoodKarimipour">Masood Karimipour</span> of the <span class="UNDOC">UNODC</span> told <span class="TheTimes"><i>The Times</i></span>: “If you’re in organized crime, <span class="CivilWar">civil war</span> is good for business.”</p>
                                 
 
                                 <p>It may be, in the end, that the superman qualities of <span class="Captagon">Captagon</span> are a red herring—a mere <span class="placeboeffect">placebo effect</span>, or a mantra for soldiers on the battlefield. But the properties of <span class="Captagon">Captagon</span> as an addictive drug—one that could potentially generate tens or even hundreds of millions of dollars a year for <span class="ISIL">ISIL</span>—are much more significant, and this is an issue in which much more research is needed. Those funds could be used to purchase weapons, to finance attacks, and to perpetuate the conflict. In that respect, <span class="Captagon">Captagon</span> may be driving the war after all.</p>
