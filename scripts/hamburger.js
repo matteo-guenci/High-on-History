@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     setupToggle('hamburger1', 'menu-card');
     setupToggle('hamburger2', 'menu-card');
+    setupToggle('hamburger2', 'navbarSupportedContent');
     setupToggle('hamburger3', 'navbarSupportedContent');
+
 
     // Additional setup functions as needed
 
