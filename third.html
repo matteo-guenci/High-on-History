@@ -13,6 +13,7 @@
     <script src="scripts/title.js"></script>
     <script src="scripts/sidebar.js"></script>
     <script src="scripts/highlight.js"></script>
+    <script src="scripts/hamburger.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
     <link href="css/style2.css" rel="stylesheet"> 
     <link href="css/1500.css" id="stile" rel="stylesheet">
@@ -263,21 +264,6 @@
             </nav>
 
 
-            <script type="text/javascript">
-
-                $(document).ready(function () {
-                    $('#hamburger3').on('click', function () {
-                        $('#navbarSupportedContent').toggleClass('active');
-                    });
-                
-                    $(window).on('load resize', function () {
-                        if ($(window).width() >= 768) {
-                            $('#navbarSupportedContent').removeClass('active');
-                        }
-                    });
-                });
-    
-            </script>
 
             <div class="text" id="prova" >
                 <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top nav-boot" id="navpage">

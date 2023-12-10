@@ -614,7 +614,7 @@ blockquote{
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
   }
@@ -753,6 +753,22 @@ blockquote{
   
 }
 
+#menu-card {
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+
+}
+
+#menu-card.active {
+  background-color: rgba(23, 26, 28, 1);
+}
+
+#menu-card.active #navbar-documentation {
+  box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
+  height: auto;
+  width: auto;
+}
+
 @media only screen and (max-width: 480px) {
   @font-face {
     font-family: 'SpaceMono';
@@ -876,7 +892,8 @@ div{
 
 #menu-card.active #navbar-documentation {
   box-shadow: 0 0 10px rgba(23, 26, 28, 1), 0 0 20px rgba(23, 26, 28, 1), 0 0 30px rgba(163, 43, 21, 1); 
-  height: 67.8vh;
+  height: auto;
+  width: auto;
 }
 #navbar-documentation {
   overflow-y: scroll;

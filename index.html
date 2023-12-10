@@ -21,6 +21,8 @@
 <script src="scripts/maintitle_animation.js"></script>
 <script src="scripts/text_animation.js"></script>
 <script src="scripts/circular_menu.js"></script>
+<script src="scripts/hamburger.js"></script>
+
 
 <script>var currentStyle="css/1500.css";</script>
 
@@ -226,20 +228,7 @@
 
 <!-- Documentation section  -->
 
-<script type="text/javascript">
-$(document).ready(function () {
-    $('#hamburger1').on('click', function () {
-        $('#menu-card').toggleClass('active');
-    });
 
-    $(window).on('load resize', function () {
-        if ($(window).width() >= 768) { 
-            $('#menu-card').removeClass('active');
-        }
-    });
-});
-
-</script>
 
 <div id="documentation" class="container">
 <div class="row">
