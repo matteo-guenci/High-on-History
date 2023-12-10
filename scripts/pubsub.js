@@ -1,9 +1,9 @@
 cssToMapboxMap = new Map();
 cssToMapboxMap.set('css/1500.css', {animation: false, idMappa: 'clmaazdjm015r01nz0xz1fm7b', globeOrMerc: 'mercator'});
-cssToMapboxMap.set('css/1800.css', {animation: false, idMappa:'clma93nbc014h01qu98yscg1j', globeOrMerc: 'mercator'});
-cssToMapboxMap.set('css/1900.css', {animation: false, idMappa:'clo5ph8r100qd01qx03q9cxe8',globeOrMerc: 'mercator'});
-cssToMapboxMap.set('css/1960.css', {animation: false, idMappa:'clm9iatis016j01r714o489li', globeOrMerc: 'globe'});
-cssToMapboxMap.set('css/1990s.css', {animation: false, idMappa:'cln9gfiul03hh01pfce00avi5', globeOrMerc: 'globe'});
+cssToMapboxMap.set('css/1800.css', {animation: false, idMappa: 'clma93nbc014h01qu98yscg1j', globeOrMerc: 'mercator'});
+cssToMapboxMap.set('css/1900.css', {animation: false, idMappa: 'clo5ph8r100qd01qx03q9cxe8', globeOrMerc: 'mercator'});
+cssToMapboxMap.set('css/1960.css', {animation: false, idMappa: 'clm9iatis016j01r714o489li', globeOrMerc: 'globe'});
+cssToMapboxMap.set('css/1990s.css', {animation: false, idMappa: 'cln9gfiul03hh01pfce00avi5', globeOrMerc: 'globe'});
 cssToMapboxMap.set('css/2030.css', {animation: true, idMappa: 'cln9gjoxx01o601qndbqqh4m1', globeOrMerc: 'globe'});
 
 
