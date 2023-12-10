@@ -48,6 +48,44 @@ class PubSubManager {
     }
 }
 
+function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa" (cssname sarebbe equivalente a value) IDMappa lo passi sopra sul click dei piccoli menu (parte variabile da incollare esempio == clmaazdjm015r01nz0xz1fm7b)
+    const stylesheetLink = document.getElementById('stile');
+    var oggetto = {};
+    //qui non c'è più bisogno dell if visto che value una volta sostituito sopra l'id sarebbela stringa stessa del css scelto -->
+    //oggetto = { cssname: value, animation: false };
+    //mappa = createMap("mapbox://styles/sorre33/" + idMappa, 'mercator');
+
+    params = cssToMapboxMap.get(cssName);
+    oggetto = { cssname: cssName, animation: params['animation'] };
+    stylesheetLink.href = cssName;
+    currentStyle = stylesheetLink.getAttribute("href");
+    scrivesessiondata(currentStyle);
+    mappa = createMap("mapbox://styles/sorre33/" + params['idMappa'], params['globeOrMerc']);
+    pubSubInstance.publish("changeCss", oggetto);
+    console.log("currentStyle:", currentStyle);
+    console.log("oggetto:", oggetto);
+}
+
+function changeAndScroll(cssFile, targetId) {
+    change(cssFile);
+
+    // Delay the scroll to allow time for CSS changes to apply
+    setTimeout(function() {
+        var targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100); 
+}
+
+function scrivesessiondata(currentStyle){
+    sessionStorage.setItem("currentStyle", currentStyle);
+}
+function leggisessiondata(key){
+    return sessionStorage.getItem(key)
+}
+
+
 const pubSubInstance = new PubSubManager();
 function init() {
     const myElement = document.querySelector('#maintitle');
@@ -92,8 +130,8 @@ function init() {
 }
 
 
-window.addEventListener('DOMContentLoaded', init);
-window.addEventListener('load', init);
+// window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('load', init);
 
 //prendere la window location e vedere se quello che è stato chiamato è index piuttsto che first, in base a questo chiamare create map
 //esegue la funzione solo dopo che la pagina è stata caricata per intero
@@ -101,42 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     init();
 }, false);
 
-function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa" (cssname sarebbe equivalente a value) IDMappa lo passi sopra sul click dei piccoli menu (parte variabile da incollare esempio == clmaazdjm015r01nz0xz1fm7b)
-    const stylesheetLink = document.getElementById('stile');
-    var oggetto = {};
-    //qui non c'è più bisogno dell if visto che value una volta sostituito sopra l'id sarebbela stringa stessa del css scelto -->
-    //oggetto = { cssname: value, animation: false };
-    //mappa = createMap("mapbox://styles/sorre33/" + idMappa, 'mercator');
 
-    params = cssToMapboxMap.get(cssName);
-    oggetto = { cssname: cssName, animation: params['animation'] };
-    stylesheetLink.href = cssName;
-    currentStyle = stylesheetLink.getAttribute("href");
-    scrivesessiondata(currentStyle);
-    mappa = createMap("mapbox://styles/sorre33/" + params['idMappa'], params['globeOrMerc']);
-    pubSubInstance.publish("changeCss", oggetto);
-    console.log("currentStyle:", currentStyle);
-    console.log("oggetto:", oggetto);
-}
-
-function changeAndScroll(cssFile, targetId) {
-    change(cssFile);
-
-    // Delay the scroll to allow time for CSS changes to apply
-    setTimeout(function() {
-        var targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, 100); 
-}
-
-function scrivesessiondata(currentStyle){
-    sessionStorage.setItem("currentStyle", currentStyle);
-}
-function leggisessiondata(key){
-    return sessionStorage.getItem(key)
-}
 
 function createMap (stylelink, projection) {
     mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
