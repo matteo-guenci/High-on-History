@@ -119,6 +119,18 @@ function change(cssName) { //qui di passare due parametri, "CssName" e "IdMappa"
     console.log("oggetto:", oggetto);
 }
 
+function changeAndScroll(cssFile, targetId) {
+    change(cssFile);
+
+    // Delay the scroll to allow time for CSS changes to apply
+    setTimeout(function() {
+        var targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100); 
+}
+
 function scrivesessiondata(currentStyle){
     sessionStorage.setItem("currentStyle", currentStyle);
 }
