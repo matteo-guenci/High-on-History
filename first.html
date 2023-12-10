@@ -13,9 +13,11 @@
     <link href="css/style2.css" rel="stylesheet"> 
     <link href="css/1500.css" rel="stylesheet" id="stile">
     <script src="scripts/pubsub.js"></script>
+    <script src="scripts/sidebar.js"></script>
+    <script src="scripts/title.js"></script>
     <script src="scripts/circular_menu.js"></script>
+    <script src="scripts/accordion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -2133,85 +2135,5 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
-    <script>
-        
-        const scrollableDiv = document.getElementById('prova');
-
-       
-        scrollableDiv.addEventListener('scroll', function() {
-      
-        if (scrollableDiv.scrollTop <30) {
-            
-            document.querySelector("#title").style.transform = "scale(1)";
-            document.querySelector(".wrapper").style.height = "94.3%";
-            document.querySelector(".wrapper").style.marginBottom = "0%";
-            
-            
-            document.querySelector("#title").style.paddingTop = "0em";
-            document.querySelector("#title").style.marginBottom = "1%";
-            document.querySelector("#title").style.marginTop = "1%";
-                
-            
-        }
-        else {
-            document.querySelector("#title").style.transform = "scale(0.4)";
-            document.querySelector(".wrapper").style.height = "91vh";
-            document.querySelector("#title").style.paddingTop = "0%";
-            document.querySelector("#title").style.marginTop = "0%";
-            
-            document.querySelector("#title").style.marginBottom = "0%";
-            
-            document.querySelector(".wrapper").style.marginTop = "0%";
-        }
-        });
-
-    </script>
-    <script>
-        // looking for hash in URL
-        if (location.hash) {
-        let desiredHash = window.location.hash.split('#')[1]; //getting data from the left and right from #, and calling the right one by '[1]'  
-        desiredFunction(desiredHash); // calling function and sending hash
-        }
-
-        // better to use some class like '.accordionLink' and check a link for it so other links with '#' will work as they should, without a conflict
-        $('a[href*="#"].accordionLink').click(function (e) {		
-        e.preventDefault();
-        let linkId = $.attr(this, 'href').split('#')[1]; //getting data from the left and right from #, and calling the right one by '[1]'  
-        desiredFunction(linkId); // calling function and sending hash
-        //$('#'+linkId).scrollIntoView();
-        });
-
-        function desiredFunction(desiredId) {
-        // checking if element with this ID exists and if the element inside of accordion
-        //if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
-        if (($('#'+desiredId).length) && ($('#'+desiredId).closest('.collapse').length)) {
-            // showing the closes parent '.collapse' of our ID
-            $('#'+desiredId).closest('.collapse').collapse('show'); 
-            setTimeout(function () {
-            // smooth animation to our ID
-            document.getElementById(window.location.hash.split('#')[1]).scrollIntoView({
-                
-                // behavior: 'auto',
-                // block: 'center',
-                // inline: 'center'
-            });
-            }, 300); // this interval is necessary for bootstrap to complete the accordion animation
-        }
-        
-        }
-
-
-    </script>
-    <script>
-
-        
-    </script>
 </body>
 </html>
