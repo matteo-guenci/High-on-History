@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Onest:wght@300;700&family=PT+Sans+Narrow:wght@700&family=STIX+Two+Text&display=swap');
 
 #maintitle {
+    position: absolute;
     font-size: 9vh;
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
@@ -170,15 +171,6 @@ body {
     bottom: 3%;
     right: 3%;
     z-index: 998;
-}
-
-@media (max-width:600px) {
-
-    #theImage {
-        height: 20vh !important;
-        width: auto !important
-    }
-
 }
 
 #punk{
@@ -459,6 +451,34 @@ body {
     padding-top: 3%;
     border: 7px solid rgb(214, 46, 31);
     height: auto
+}
+
+@media (max-width:600px) {
+
+    #theImage {
+        height: 20vh !important;
+        width: auto !important
+    }
+
+    .container img {
+        text-align: center !important;
+        height: 25vh;
+        margin-bottom: 1vh;
+        object-fit: contain;
+    }
+
+    .container h4{
+        font-size: medium !important;
+    }
+
+    #maintitle {
+        font-size: 5vh;
+    }
+
+    #ad {
+        padding-right: 25%;
+    }
+
 }
 
 

@@ -390,6 +390,20 @@ img:hover {
         width: auto !important
     }
 
+    .container img {
+        text-align: center !important;
+        height: 25vh;
+        margin-bottom: 1vh;
+        object-fit: contain;
+    }
+
+    .container h4{
+        font-size: medium !important;
+    }
+
+    #maintitle {
+        font-size: 5vh;
+    }
 }
 
 .documentation-img {
