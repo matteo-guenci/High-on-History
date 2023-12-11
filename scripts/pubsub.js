@@ -39,7 +39,7 @@ class PubSubManager {
             return;
 
         // get every element where you want to dispatch the event
-        this.subscribers[eventId].forEach(function (element) {
+        this.subscribers[eventId].forEach(function (element) {   
             element.dispatchEvent(new CustomEvent(eventId, {
                 bubbles: true,
                 detail: payload
@@ -91,7 +91,7 @@ function init() {
     const myElement = document.querySelector('#maintitle');
 
     if (myElement) {
-        pubSubInstance.subscribe(myElement, "changeCss", function (event) {
+        pubSubInstance.subscribe(myElement, "changeCss", function (event) { //event qui è il payload, quindi "oggetto"
             // console.log("#maintitle.subscribe: " + event.detail.animation);
             if (event.detail.animation) {
                 myElement.onmouseover = animazione;
@@ -149,6 +149,7 @@ function createMap (stylelink, projection) {
         console.log("This script should only run on index.html");
         return;
     }
+    else{
     mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
     const map = new mapboxgl.Map({
     container: 'map',
@@ -282,4 +283,4 @@ function createMap (stylelink, projection) {
         myFunction: myFunction
     };
         }
-
+    }
