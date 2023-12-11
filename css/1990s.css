@@ -23,7 +23,9 @@ html {
 body {
   width: 100%;
   overflow-x: hidden;
-  background-image: url(../imgs/carta.jpg);
+  background-image: url(../imgs/gray-texture.avif);
+  background-position: center;
+
   filter: grayscale(100%) contrast(1) brightness(100%);
   }
 
@@ -390,7 +392,8 @@ h5 {
   font-weight: 700;
   color: black !important;
   rotate: -10deg;
-  background-image: url(../imgs/carta.jpg) !important;
+  /* background-image: url(../imgs/gray-texture.avif) !important; */
+  background: transparent !important;
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
@@ -398,13 +401,14 @@ h5 {
  }
 
 #first #sidebar, #second #sidebar, #third #sidebar{
-  background-image: url(../imgs/carta.jpg);
+  /* background-image: url(../imgs/gray-texture.avif); */
+  background: transparent;
  }
 #first #sidebar button:nth-child(odd), #second #sidebar button:nth-child(odd), #third #sidebar button:nth-child(odd){
   rotate: 5deg;
   border: none;
-  background-image: url(../imgs/carta.jpg);
-
+  /* background-image: url(../imgs/carta.jpg); */
+  background: transparent;
   justify-content: center;
   text-align: center;
   height: 3rem;
@@ -414,8 +418,7 @@ h5 {
 #first #sidebar button:nth-child(even), #second #sidebar button:nth-child(even), #third #sidebar button:nth-child(even){
   rotate: -5deg;
   border: none;
-  background-image: url(../imgs/carta.jpg);
-
+  background: transparent;
   justify-content: center;
   text-align: center;
   height: 3rem;
@@ -552,7 +555,6 @@ h5 {
   }
   
   #maintitle{
-    margin-top: 10vh;
     font-family: 'SniffinGlue2', Arial, Helvetica, sans-serif;
     font-size: 5rem;
     font-weight: 900;
@@ -841,7 +843,8 @@ h5 {
     font-weight: 700;
     color: black !important;
     rotate: -10deg;
-    background-image: url(../imgs/carta.jpg) !important;
+    /* background-image: url(../imgs/gray-texture.avif) !important; */
+    background: transparent;
     justify-content: center;
     text-align: center;
     margin-top: 1rem;
@@ -849,13 +852,14 @@ h5 {
    }
   
   #first #sidebar, #second #sidebar, #third #sidebar{
-    background-image: url(../imgs/carta.jpg);
+    /* background-image: url(../imgs/carta.jpg); */
+    background: transparent;
    }
   #first #sidebar button:nth-child(odd), #second #sidebar button:nth-child(odd), #third #sidebar button:nth-child(odd){
     rotate: 5deg;
     border: none;
-    background-image: url(../imgs/carta.jpg);
-  
+    /* background-image: url(../imgs/carta.jpg); */
+    background: transparent;
     justify-content: center;
     text-align: center;
     height: 3rem;
@@ -865,8 +869,8 @@ h5 {
   #first #sidebar button:nth-child(even), #second #sidebar button:nth-child(even), #third #sidebar button:nth-child(even){
     rotate: -5deg;
     border: none;
-    background-image: url(../imgs/carta.jpg);
-  
+    /* background-image: url(../imgs/carta.jpg); */
+    background: transparent;
     justify-content: center;
     text-align: center;
     height: 3rem;

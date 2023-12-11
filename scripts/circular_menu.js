@@ -7,7 +7,7 @@ let initialY;
 let initialNavTop;
 const margin = 20; // Margine desiderato dalla parte superiore e inferiore
 const margin2 = 350
-const issuesSection = document.getElementById("issues"); // Ottieni la sezione delle issue
+// const issuesSection = document.getElementById("issues"); // Ottieni la sezione delle issue
 
 toggleBtn.addEventListener("click", () => {
   nav.classList.toggle("open");
