@@ -16,7 +16,9 @@
   src: url(../fonts/AngelasHandwriting-XjLP.ttf);
 }
 
-
+html {
+  font-size: 16px; 
+}
 
 body {
   width: 100%;
@@ -32,7 +34,7 @@ p, p#author, #author, button, li{
 
 .accordion-button{
   font-family: 'SniffinGlue2';
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 .accordion-button:not(.collapsed) {
@@ -154,7 +156,7 @@ blockquote{
   background-position: 100%; */
 }
 
-.image-row .image-container .label {
+/* .image-row .image-container .label {
   font-family: "SniffinGlue2" !important;
   text-align: center;
   justify-content: center;
@@ -165,7 +167,7 @@ blockquote{
   justify-content: center;
   margin-top: 2rem;
   padding-bottom: 2rem;
-}
+} */
 
 #issues .label, .label{
   right: 7vw;
@@ -175,7 +177,7 @@ blockquote{
 }
 #issues .label h4{
 
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 h1{
@@ -378,7 +380,7 @@ h5 {
 
 #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
   font-family: "Oldtype";
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 
@@ -443,6 +445,9 @@ h5 {
   }
   
 }
+#issues .label h4 {
+  font-size: 1rem; /* Adjust for smaller screens */
+}
 
 @media only screen and (max-width: 480px) {
   @font-face {
@@ -467,10 +472,10 @@ h5 {
   
   body {
     width: 100%;
-
-    overflow-x: hidden;
-    background-image: url(../imgs/carta.jpg);
-    filter: grayscale(100%) contrast(1) brightness(100%);
+    font-size: 0.8rem;
+    /* overflow-x: hidden; */
+    /* background-image: url(../imgs/carta.jpg);
+    filter: grayscale(100%) contrast(1) brightness(100%); */
     }
   
   
@@ -619,13 +624,13 @@ h5 {
     height: auto;
     display: block;
   }
-  .image-row .image-container .label {
+  /* .image-row .image-container .label {
     font-size: 1vw !important;
     font-family: "SniffinGlue2" !important;
     text-align: center;
     justify-content: center;
 
-  }
+  } */
   
   #issues .label, .label{
 
@@ -634,9 +639,10 @@ h5 {
   }
   #issues .label h4{
   
-    font-size: 5vw;
+    font-size: 1rem;
   }
   
+
   h1{
     font-family: 'SniffinGlue2';
     font-weight: 900;
@@ -825,7 +831,7 @@ h5 {
   
   #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
     font-family: "Oldtype";
-    font-size: 100%;
+    font-size: 1rem;
   }
   
   
