@@ -142,6 +142,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function createMap (stylelink, projection) {
+    const currentPath = window.location.pathname;
+    const fileName = currentPath.substring(currentPath.lastIndexOf("/") + 1);
+
+    if (fileName !== "index.html") {
+        console.log("This script should only run on index.html");
+        return;
+    }
     mapboxgl.accessToken = 'pk.eyJ1Ijoic29ycmUzMyIsImEiOiJjbGpzY3pkZTYwcjNlM21tanlmYThuMWxuIn0.93a8Z_pxuLbk19TY37tOzg';
     const map = new mapboxgl.Map({
     container: 'map',
