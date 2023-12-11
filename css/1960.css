@@ -480,7 +480,7 @@ body {
     }
 
     #title {
-        font-size: 5vh;
+        font-size: 5vh !important;
     }
 
 }
