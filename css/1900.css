@@ -404,6 +404,10 @@ img:hover {
     #maintitle {
         font-size: 5vh;
     }
+
+    #title {
+        font-size: 5vh;
+    }
 }
 
 .documentation-img {

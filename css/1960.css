@@ -479,6 +479,10 @@ body {
         padding-right: 25%;
     }
 
+    #title {
+        font-size: 5vh;
+    }
+
 }
 
 
