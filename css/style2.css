@@ -69,7 +69,6 @@
 }
 
 
-
 a[data-toggle="collapse"] {
     position: relative;
 }
@@ -110,7 +109,6 @@ a:hover, a:focus {
     transition: all 0.3s;
 }
 
-/* a l'ho messo con l'underline perché altrimenti non mi faceva vedere i link a wikipedia sottolineati */
 
 a {
     color: inherit;
@@ -151,6 +149,7 @@ a {
     color: #fff;
     background: #6d7fcc;
 }
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
@@ -222,8 +221,9 @@ span {
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
     z-index: 1000; 
+    overflow-y: scroll;
 }
 
 .highlight {
     background-color: yellow;
-  }
+}

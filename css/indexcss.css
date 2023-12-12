@@ -32,8 +32,6 @@
         border-color: transparent transparent transparent #ffffff83;
     }
 
-/* commento lucia: ho tolto "bold" dal main title perché mi sfanculava il css dei miei stili */
-
 #maintitle {
     font-size: 9vh;
     font: 80px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -155,11 +153,10 @@
 
 
 .footer a {
-    color: #fff; /* Link text color */
-    text-decoration: none; /* Remove underlines from links */
+    color: #fff; 
+    text-decoration: none; 
 }
 
-    /* Style links on hover */
 .footer a:hover {
     text-decoration: underline;
 }
@@ -176,13 +173,26 @@
     z-index: 998;
     background: transparent;
 }
- 
-  
-/* .border_bottom_1800 {
+
+.navbar-toggler-icon {
+    width: 4vw !important;
+    height: 4vw !important;
+}
+
+.navbar-toggler {
+    padding: none !important;
+}
+
+.mapbox-improve-map{
     display: none;
-} */
+}
+
+.mapboxgl-ctrl-attrib-inner{
+    display: none;
+}
 
 /* pop up menu-card */
+
 #menu-card.active {
     display: block !important; 
     width: fit-content;
@@ -191,19 +201,6 @@
     top: 35vw; 
     left: 15vw; 
     transform: translate(-50%, -50%); 
-    background-color: white; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
-    z-index: 1000; 
-}
-
-#navbarSupportedContent.active {
-    display: block !important; 
-    width: fit-content;
-    padding: 3vw;
-    height: 65vw;
-    position: absolute; 
-    top: 2vw;
-    left: 2vw;
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
     z-index: 1000; 
@@ -226,20 +223,4 @@
 #hamburger1 {
     padding-right: 1vw;
 }
-
-.navbar-toggler-icon {
-    width: 4vw !important;
-    height: 4vw !important;
-}
-
-.navbar-toggler {
-    padding: none !important;
-}
-
-.mapbox-improve-map{
-    display: none;
-  }
-  .mapboxgl-ctrl-attrib-inner{
-    display: none;
-  }
   

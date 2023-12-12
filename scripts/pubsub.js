@@ -73,7 +73,8 @@ function changeAndScroll(cssFile, targetId) {
     setTimeout(function() {
         var targetElement = document.querySelector(targetId);
         if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center',
+            inline: 'center'});
         }
     }, 100); 
 }

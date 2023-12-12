@@ -501,6 +501,8 @@ ul ul a {
     zoom: 150%;
 }
 
+/* highlight metadata */
+
 .highlight {
     background-color: rgb(236, 193, 49) !important;
     border: 3px solid rgba(211, 83, 56, 1);
