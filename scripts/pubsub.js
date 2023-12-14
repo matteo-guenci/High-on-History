@@ -96,7 +96,7 @@ function init() {
             // console.log("#maintitle.subscribe: " + event.detail.animation);
             if (event.detail.animation) {
                 myElement.onmouseover = function () {
-                    animazione(myElement);
+                    animazione(this);
                 };
             } else {
                 clearInterval(interval);
