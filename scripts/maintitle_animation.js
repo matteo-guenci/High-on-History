@@ -1,27 +1,27 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
-function animazione(){
-        let iteration = 0;
 
-        clearInterval(interval);
+function animazione(element) {
+    let iteration = 0;
 
-        interval = setInterval(() => {
-            this.innerText = this.innerText
-                .split("")
-                .map((letter, index) => {
-                    if (index < iteration) {
-                        return this.dataset.value[index];
-                    }
+    clearInterval(interval);
 
-                    return letters[Math.floor(Math.random() * 26)]
-                })
-                .join("");
+    interval = setInterval(() => {
+        element.innerText = element.innerText
+            .split("")
+            .map((letter, index) => {
+                if (index < iteration) {
+                    return element.dataset.value[index];
+                }
 
-            if (iteration >= this.dataset.value.length) {
-                clearInterval(interval);
-            }
+                return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
 
-            iteration += 1 / 3;
+        if (iteration >= element.dataset.value.length) {
+            clearInterval(interval);
+        }
 
-        }, 50);
-    }
+        iteration += 1 / 3;
+    }, 50);
+}

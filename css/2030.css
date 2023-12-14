@@ -129,6 +129,9 @@ div{
   height: 90vh;
   position: static;
 }
+#navbar-documentation h2{
+width: 100%;
+}
 #hamburger1, #hamburger2, #hamburger3{
   border: 1px solid rgba(163, 43, 21, 1); 
   border-radius: 1rem;
@@ -770,6 +773,9 @@ blockquote{
 #issues .label h4 {
   font-size: 0.5rem;
   /* max-width: 100%;  */
+}
+#navbar-documentation h2{
+width: 100%;
 }}
 @media only screen and (max-width: 480px) {
   @font-face {

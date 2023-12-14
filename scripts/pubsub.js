@@ -95,7 +95,9 @@ function init() {
         pubSubInstance.subscribe(myElement, "changeCss", function (event) { //event qui è il payload, quindi "oggetto"
             // console.log("#maintitle.subscribe: " + event.detail.animation);
             if (event.detail.animation) {
-                myElement.onmouseover = animazione;
+                myElement.onmouseover = function () {
+                    animazione(myElement);
+                };
             } else {
                 clearInterval(interval);
                 myElement.textContent = "High on History";
