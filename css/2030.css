@@ -403,7 +403,7 @@ width: 100%;
   border: none;
 }
 #sidebar{
-  background-color: rgba(163, 43, 21, 1);
+  background: transparent;
 }
 #first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
   justify-content: center;
@@ -1194,7 +1194,7 @@ div{
   border: none;
 }
 #sidebar{
-  background-color: rgba(163, 43, 21, 1);
+  background: transparent;
 }
 #first .dropdown-toggle, #second .dropdown-toggle, #third .dropdown-toggle{
   justify-content: center;
