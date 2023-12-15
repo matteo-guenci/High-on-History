@@ -187,20 +187,15 @@ width: 100%;
   max-width: 100%; 
 }
 
-#about h4{
+.label > h4{
   align-items: center;
-  justify-content: center;
-  justify-items: center;
   text-align: center;
-  display: flex;
+  display: flex ;
   margin: none;
-  /* max-width: 100%;
-  min-width: 1.605em;
-  max-height: 100%;
-  min-height: 1.605em; */
-  /* font-size: 1.605em; */
+  max-width: 90vw;
+  height: 8vh;
+  font-size: 1.2rem;
 }
-
 
 
 .mapbox-improve-map{
@@ -775,7 +770,21 @@ blockquote{
 }
 #navbar-documentation h2{
 width: 100%;
-}}
+}
+
+.label > h4{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  /* max-width: 100%;
+  min-width: 1.605em;
+  max-height: 100%;
+  min-height: 1.605em; */
+  font-size: 1rem;
+  max-width: 90%;
+  max-height: 8vh;
+}
+}
 @media only screen and (max-width: 480px) {
   @font-face {
     font-family: 'SpaceMono';
@@ -954,13 +963,17 @@ div{
   justify-content: center;
 
 }
-#about h4{
-
+.label > h4{
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
   /* max-width: 100%;
   min-width: 1.605em;
   max-height: 100%;
   min-height: 1.605em; */
-  font-size: 2rem;
+  font-size: 1.2rem;
+  width: 90%;
+  max-height: auto;
 }
 
 
