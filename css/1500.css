@@ -538,13 +538,44 @@ ul ul a {
 .striscia_sx {
     display: none
 }
+
 #hide_image3 {
     display: none !important;
-  }
-  #hide_label {
-    display: none !important;  
-  }
+}
 
-  #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
+#hide_label {
+    display: none !important;  
+}
+
+#number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
     font-size: 100%;
-  }
+}
+
+/* media queries */
+
+@media only screen and (max-width: 480px) {
+
+    .image-container {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    #issues, #about {
+        padding-bottom: 70vh;
+    }
+
+    #issues h4, #about h4 {
+        font-size: 2vh;
+    }
+
+    .accordion-body p, .accordion-body blockquote {
+        column-count: 1;
+        column-gap: 0;
+        font-size: 3vw;
+    }
+
+    blockquote {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
