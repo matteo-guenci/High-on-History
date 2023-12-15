@@ -35,13 +35,12 @@ function highlightElement(className) {
         currentIndex++;
         setTimeout(function () {
         // smooth animation to our ID
-        elemento.scrollIntoView({ behavior: "smooth", block: 'center',
-            inline: 'center' });
+        elemento.scrollIntoView({ behavior: "smooth", block: 'center'});
 
         // behavior: 'auto',
             // block: 'center',
             // inline: 'center'
-        }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+        }, 400); 
     }
     
     }
@@ -64,13 +63,12 @@ function highlightElement(className) {
         
         setTimeout(function () {
         // smooth animation to our ID
-        elemento.scrollIntoView({ behavior: "smooth", block: 'center',
-            inline: 'center' });
+        elemento.scrollIntoView({ behavior: "smooth", block: 'center'});
 
         // behavior: 'auto',
             // block: 'center',
             // inline: 'center'
-        }, 400); // this interval is necessary for bootstrap to complete the accordion animation
+        }, 400); 
     }
     
     }

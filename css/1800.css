@@ -66,6 +66,7 @@ body {
     overflow-x: hidden;
     font-family: 'Bodoni Moda', serif;
     justify-content: center; 
+    text-align: justify; 
     background-color: rgba(240, 196, 170, 1);
 }
 
@@ -627,3 +628,42 @@ blockquote {
   #number_1500, #number_1800, #number_1900, #number_1960, #number_1990, #number_2030{
     font-size: 100%;
   }
+
+/* media queries */
+
+@media only screen and (max-width: 480px) {
+
+    .image-container {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    #issues, #about {
+        padding-bottom: 70vh;
+    }
+
+    #issues h4, #about h4 {
+        font-size: 2vh;
+    }
+
+    #image_artnouveau {
+        bottom: -3vh;
+        width: 50vw;
+    }
+
+    #image_artnouveau2 {
+        width: 30vw;
+    }
+
+    #woman4 {
+        width: 30vw;
+    }
+
+    .accordion-header button {
+        padding-left: 5rem;
+    }
+
+    .accordion-body p, .accordion-body blockquote {
+        font-size: 3vw;
+    }
+}
