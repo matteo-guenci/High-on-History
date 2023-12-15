@@ -173,21 +173,21 @@ width: 100%;
   object-fit: cover; 
 }
 
-#issues .label {
+
+
+#issues .label h4 {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  left: 4.5vw;
+  margin: none;
+  width: 1vw;
+  /* height: 8vh; */
+  font-size: 0.8rem;
 }
 
-#issues .label h4 {
-  font-size: 0.7rem;
-  max-width: 100%; 
-}
-
-.label > h4{
+#about .label > h4{
   align-items: center;
   text-align: center;
   display: flex ;
@@ -755,24 +755,22 @@ blockquote{
   width: auto;
 }
 
-#issues .label {
+#issues .label h4 {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  left: 4.5vw;
-}
-
-#issues .label h4 {
+  margin: none;
+  width: 1vw;
+  /* height: 8vh; */
   font-size: 0.5rem;
-  /* max-width: 100%;  */
 }
 #navbar-documentation h2{
 width: 100%;
 }
 
-.label > h4{
+#about .label > h4{
   text-align: center;
   justify-content: center;
   display: flex;
@@ -947,13 +945,16 @@ div{
   margin-bottom: 50vh;
 }
 
-#issues .label {
-  right: 0vh;
-}
-
 #issues .label h4 {
-  font-size: 1rem;
-  max-width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  margin: none;
+  width: 1vw;
+  /* height: 8vh; */
+  font-size: 0.8rem;
 }
 #about {
   margin-bottom: 180vh;
@@ -963,7 +964,7 @@ div{
   justify-content: center;
 
 }
-.label > h4{
+#about .label > h4{
   text-align: center !important;
   justify-content: center !important;
   display: flex !important;
