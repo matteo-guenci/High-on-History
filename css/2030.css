@@ -183,11 +183,11 @@ width: 100%;
 }
 
 #issues .label h4 {
-  font-size: 0.7rem;
-  max-width: 100%; 
+  font-size: 0.8rem;
+  max-width: fit-content; 
 }
 
-.label > h4{
+#about .label > h4{
   align-items: center;
   text-align: center;
   display: flex ;
@@ -772,7 +772,7 @@ blockquote{
 width: 100%;
 }
 
-.label > h4{
+#about .label > h4{
   text-align: center;
   justify-content: center;
   display: flex;
@@ -963,7 +963,7 @@ div{
   justify-content: center;
 
 }
-.label > h4{
+#about .label > h4{
   text-align: center !important;
   justify-content: center !important;
   display: flex !important;
